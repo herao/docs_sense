@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/map.dtd">
+<map id="cm_front_matter_preface_mini">
+    
+        <topicref href="common/c_anlytc_guide_1-preface_snsg.xml">
+            <topicref href="common/c_anlytc_guide_2-Audience-for-this-Bo_snsg.xml"/>
+            <topicref href="common/c_common_6-Organization_snsg.xml"/>
+            <topicref href="common/c_common-3-Road-Map-to-SenDocs_snsg.xml"/>
+            <topicref href="common/c_common_4-DocConventions_snsg.xml"/>
+            <topicref href="common/c_common_5-ContactingTechSupport_snsg.xml"/>
+        </topicref>
+    
+
+    
+</map>

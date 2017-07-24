@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_6_8">
+   <title>force-upgrade</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>force-upgrade &lt;table_name&gt;</codeph>
+            </pt>
+            <pd>To avoid modifying terabytes of data during upgrades, the EDW only upgrades the file format
+       of its data files as new data is loaded. Over multiple upgrades, this can result in a data
+       store with many versions of the files some rare cases, newer versions of the data store
+       provide better performance or other features, and it is advantageous to manually upgrade
+       production tables to the latest version.
+       <note type="important"> Consult IgniteTech Support before using this command, because it can be very
+         slow and results in the table being unreadable by older versions of the EDW.</note>
+            </pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

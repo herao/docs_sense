@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3">
+   <title>Viewing Reports, Charts, and Models</title>
+   <conbody>
+    <p>This chapter describes how to use SenSage AP Analyzer to view and filter reports, and display
+      charts and data models.</p>
+    <p>This chapter contains these sections:<ul id="ul_xqy_xzl_zx">
+        <li><xref href="c_sen_anal-3_1-Viewing-Reports_crm.xml"/></li>
+        <li><xref href="c_sen_anal-3_2-Viewing-a-Default-Re_crm.xml"/></li>
+        <li><xref href="c_sen_anal-3_3-Using-Other-Report-V_crm.xml"/></li>
+        <li><xref href="c_sen_anal-3_4-Changing-the-Default_crm.xml"/></li>
+        <li><xref href="c_sen_anal-3_5-Filtering-a-Report-b_crm.xml"/></li>
+        <li><xref href="c_sen_anal-3_6-Using-Quick-Filters-_crm.xml"/></li>
+        <li><xref href="c_sen_anal-3_7-Using-Filters-to-fin_crm.xml"/></li>
+        <li><xref href="c_sen_anal-3_8-Removing-a-Report-Fi_crm.xml"/></li>
+        <li><xref href="c_sen_anal-3_9-Using-Sort-to-Find-a_crm.xml"/></li>
+        <li><xref href="c_sen_anal-3_10-Using-Viewing-Featur_crm.xml"/></li>
+        <li><xref href="c_sen_anal-3_11-Viewing-Models_crm.xml"/></li>
+      </ul></p>
+  </conbody>
+</concept>

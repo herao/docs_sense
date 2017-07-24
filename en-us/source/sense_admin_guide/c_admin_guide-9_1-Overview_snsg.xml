@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_1">
+   <title id="title_a37">Overview</title>
+   <conbody>
+      <p>To authenticate and authorize users in SenSage AP, you can do one of the following:</p>
+      <ul>
+         <li>Specify “native” users who are stored in Postgres for authentication and authorization.
+         Note that this is the default when you install SenSage AP.</li>
+         <li>Use LDAP (Light-weight Directory Access Protocol) for authentication which you have the
+         option to select when you install SenSage AP. With LDAP authentication user names and
+         passwords are stored in LDAP and users are authenticated against LDAP at login time.</li>
+         <li>Use Active Directory (AD) to delegate SenSage AP Analyzer user authentication to AD. You
+         use Analyzer to synchronize users and groups with the ones in AD. Those users and groups that
+         are members of the AD domain specified in Analyzer are automatically mapped to SenSage AP.</li>
+      </ul>
+      <note>An Analyzer "admin" account is created in Analyzer during product installation. This
+      account has the privilege to create a user account that matches the user name of an LDAP user
+      and provides that user with appropriate group and role permissions.</note>
+   </conbody>
+</concept>

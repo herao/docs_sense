@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_2_3">
+   <title>Setting up Analyzer Users with Postgres</title>
+   <conbody>
+      <p>The Postgres users (roles) and their associated EDW actions and schema (namespace)
+      permissions specify what areas of the EDW, SenSage AP Analyzer, and event-log data are
+      accessible to a given SenSage AP user and what actions the user may perform.</p>
+      <p>You initially create users through a tool like <b>pgadmin</b> and maintain users through the
+      SenSage AP Analyzer interface. When creating a new Analyzer User, you need to determine which
+      log data a specific Postgres user is allowed to access, that is, which log schemas the user
+      can view. You will need to consider what Postgres users already exist and what schemas these
+      users can access. Note that multiple Analyzer users can use the same Postgres user and an
+      application user can be mapped to a Postgres user by the value of the user’s postgresUser
+      attribute.</p>
+      <p>To create a new Postgres user, follow the example steps below:</p>
+      <ol id="ol_o1t_zlz_vx">
+         <li>Log into the Analyzer.</li>
+         <li>Create a Postgres user (role); in the example below the user is named
+               abc:<codeblock xml:space="preserve">psql -h localhost -p5432 -d controller -U hexis -c "CREATE ROLE abc NOSUPERUSER
+NOCREATEDB NOCREATEROLE INHERIT NOLOGIN;"</codeblock><note>NOLOGIN
+               prevents direct login from outside the application.</note></li>
+         <li>Grant access to the schema(s) this user is allowed to access. as noted in the following
+            sample commands below.<ol>
+               <li>This command allows access to schema <b>oae</b> to allow user <b>abc</b> Postgres
+                  extension over the
+                  EDW:<codeblock xml:space="preserve">psql -h localhost -p5432 -d controller -U hexis -c "GRANT USAGE ON SCHEMA oae TO abc";</codeblock></li>
+               <li>This command allows user <b>abc</b> access to schema
+                  <b>default_analytics</b>:<codeblock xml:space="preserve">psql -h localhost -p5432 -d controller -U hexis -c "GRANT USAGE ON SCHEMA default_analytics TO abc";</codeblock></li>
+               <li>This command allows user <b>abc</b> access to query all tables in schema
+                     <b>default_analytics</b>:<codeblock xml:space="preserve">psql -h localhost -p5432 -d controller -U hexis -c "GRANT SELECT ON ALL TABLES IN SCHEMA default_analytics TO abc";</codeblock></li>
+            </ol></li>
+         <li>Update the Analyzer Application user’s Postgres user setting.<ol>
+               <li>Logon as <b>admin</b>.</li>
+               <li>Go to <b>Administration</b> tab and <b>Manager Users</b> screen.</li>
+               <li>Edit the user(s) whose schema security you want to change. Do not grant access to
+                  the <b>saved_result</b> schema. Only an Administrator should have access to the
+                     <b>siem</b> schema.</li>
+               <li>Change the user’s Postgres User setting to the new Postgres user/role created in
+                  step 1. </li>
+               <li>Verify that only the expected schemas exist.</li>
+               <li>Log into the Analyzer application as the user you edited in step 3. </li>
+               <li>Create a new report.</li>
+               <li>Verify the correct schemas show up in the list of available schemas.</li>
+               <li>Run a report that the user has privilege to access.</li>
+               <li>Run a report in which the user has no privilege to access.</li>
+            </ol></li>
+         <li>To allow a user to query to all tables from SenSage AP 5.0.0 to 6.0.0 (instead of issuing
+        the command in example 2C above) perform the following steps on the SenSage AP 5.0.0 system:<ol>
+               <li>Issue the follow command; in the example below, the user is named
+                  <b>abc</b>:<codeblock xml:space="preserve">psql -h localhost -p54321 -d controller -U hexis -c "SELECT ’GRANT SELECT ON default_analytics.’ || relname || ’TO abc ’FROM pg_class JOIN pg_namespace ON pg_namespace.oid=pg_class.relanmespace WHERE nspname = ’mysls_analytics" AND relkind IN (’r’, ’v’);"</codeblock>
+               </li>
+               <li>Save the output and create a file
+            <filepath>mySavedGrants.sql</filepath>:<codeblock xml:space="preserve">psql -h localhost -p5432 -d controller -U lms -c mySavedGrants.sql</codeblock>
+               </li>
+            </ol>
+         </li>
+      </ol>
+      <p>After you have created a user that has the correct access, run the AP Analyzer application
+      and use the Administration function to create or edit the user’s Postgres user attribute and
+      select the Postgres user you just created. For details, see the <i>SenSage AP Analyzer
+        Guide</i>.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_5_2">
+   <title>Replacing an Expired Self-signed Certificate for Deployment Manager</title>
+   <conbody>
+      <ol id="ol_f2q_hnh_vx">
+         <li>Stop the Ambari server:<p>
+               <codeblock xml:space="preserve">ambari-server stop</codeblock>
+            </p></li>
+         <li>Go to <filepath>/var/lib/ambari-server/keys</filepath> and delete the following:<filepath>
+          https.crt</filepath> and <filepath>https.key</filepath>.</li>
+         <li>Go to<filepath> /var/lib/ambari-server/resources</filepath> and delete the following:
+          <filepath>ssl.crt </filepath>and <filepath>ssl.key</filepath>.</li>
+         <li>Issue the following
+            commands:<codeblock xml:space="preserve">fqdn=’hostname -f’
+openssl req -x509 -nodes -newkey rsa:2048 -days 365 \
+-keyout /var/lib/ambari-server/resources/ssl.key \
+-out /var/lib/ambari-server/resources/ssl.crt \
+-subj "/CN=$fqdn/O=Hexis Cyber Solutions./C=US"</codeblock></li>
+         <li>Issue the following command to set up the certificate:<p>
+               <codeblock xml:space="preserve">ambari-server setup-security</codeblock>
+            </p></li>
+         <li>Start the Ambari server:<codeblock xml:space="preserve">ambari-server start</codeblock>
+         </li>
+      </ol>
+   </conbody>
+</concept>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_11">
+   <title>Viewing Models</title>
+   <conbody>
+    <p>To view models:</p>
+    <ol id="ol_ilx_ggm_zx">
+      <li> Go to the Analyzer dashboard, select Data Design from the dropdown list, and click
+        Analytics Workbench, make sure the Models tab is selected, and click New Model. The palette
+        and model canvas are displayed as shown below. <p>Figure 2-16: Palette and Model Canvas</p><p>
+          <image href="./media/Image_110.png" id="image_jlx_ggm_zx" placement="break" scale="40"/>
+        </p></li>
+      <li>
+        Expand the entire model libraries menu by clicking on the black triangle icon to the left
+          of a category and pressing the shift + click (Figure 2-17). All models in the system to
+          which you have access are displayed. You can press shift + click again to collapse them
+          all at once.
+        <fig><title>Figure 2-17: Model Libraries</title><image href="./media/Image_111.jpg" height="239" width="292" id="image_klx_ggm_zx"/></fig>
+      </li>
+      <li> To view a model: <ol>
+          <li>Select the checkbox to the left of the model name, you want to view. <fig>
+              <title>Figure 2-18: Viewing a Model</title>
+            </fig><image href="./media/Image_110.png" placement="break" scale="40"/></li>
+          <li>Click <image href="media/button_expandModel.png" placement="inline"/> to render the
+            model in the canvas.</li>
+          <li>To search for a model, you can type the full or partial name of the model in the text
+            box below the model menu. The list of models will be filtered by the string that you
+            provide.</li>
+          <li>To expand a category of models, click the triangle to the left of the category name.
+            If you hold down the shift key when you click, all the categories will be expanded or
+            collapsed at once. <p>
+              <note>To close a category of models, click again, the triangle to the left of the
+                category name.</note>
+            </p> Figure 2-19:Model Viewing <p>
+              <image href="./media/Image_112.jpg" id="image_llx_ggm_zx" placement="break"/>
+            </p></li>
+          <li>You can render multiple models and they are all placed as tabs in the canvas. Click a
+            tab to view the rendered model. See the screenshot below.<p>Figure 2-20: Model Canvas
+              Example</p><p>
+              <image href="./media/Image_113.png" id="image_mlx_ggm_zx" placement="break" scale="40"/>
+            </p></li>
+        </ol>
+      </li>
+      <li>To collapse the model or expand (basic) or expand all parts of the model on the canvas,
+        click the corresponding icon on the Model menu.<p>
+          <image href="./media/Image_114.jpg" id="image_nlx_ggm_zx" placement="break" scale="60"/>
+        </p><p>In the screenshot below, "Expand (basic)" shows all input and output
+            parameters.<image href="media/Image_115_2.png" placement="break" scale="40"/></p><p>In
+          the screenshot below, use the collapse button to collapse all input and output
+            parameters.<image href="media/Image_115_1.png" placement="break" scale="40"/></p><p>As
+          shown in the screenshot below, "Expand (all)" lets you expand all input and output
+            parameters.<image href="media/Image_115_3.png" placement="break" scale="40"/></p></li>
+    </ol>
+  </conbody>
+</concept>

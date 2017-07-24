@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_8_2">
+   <title>Deleting or Modifying an Existing User</title>
+   <conbody>
+      <p>To delete or modify an existing Deployment Manager user:</p>
+      <ol id="ol_axg_tsh_vx">
+         <li>From the Deployment Manager Dashboard, select the Admin tab. <fig><title>Edit/Delete a
+            User</title><image href="./media/Image_078.jpg" placement="break" id="image_qzp_21t_ny"/>
+        </fig>
+      </li>
+         <li>To delete an existing user, browse through the current list of usernames until you find
+        the user that want to delete. Go to the Action field and click delete.<p>The user is deleted
+          and can no longer able to access Deployment Manager.</p>
+         </li>
+         <li>To modify an existing user, browse through the current list of usernames until you find
+        the user that you want to modify Go to the Action field and click edit.</li>
+         <li>To change the password of a local user: retype the password; save your changes. 
+      </li>
+      </ol>
+      <p>To change the password of an existing user:</p>
+      <ol id="ol_lwb_zsh_vx">
+         <li>Login as any admin user.</li>
+         <li>Go to the Admin tab; click edit in the row that lists the username whose password
+           requires the change.</li>
+         <li>In the current password, enter the password of the user you are logged in as. </li>
+         <li>In the new password, enter new password for the target user.</li>
+         <li>Click the Save button when you are done.<note>A user without Admin privileges cannot
+           change the password for any user, including his or her own.</note>
+         </li>
+      </ol>
+   </conbody>
+</concept>

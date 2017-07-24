@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11_3">
+   <title>Exporting Charts</title>
+   <conbody>
+    <p>To export a chart:</p>
+    <ol id="ol_x5c_yjs_zx">
+      <li>Select or display the report containing the chart you want to export OR access or display
+        the chart from a pod on the dashboard. (For details on accessing a report, see “Viewing
+        Reports”, on page 31.)</li>
+      <li>On the chart screen, hover the mouse over the upper-right portion of a graph and select
+        the Export icon shown below.<p>A pop-up menu (<image href="./media/Image_426.jpg"
+            id="image_y5c_yjs_zx" scale="60"/>) presents three options for exporting the chart to
+          three types of files: JPEG, PNG, and PDF as shown in Figure 10-7.</p><p>Figure 10-7: File
+          Type Options for Exporting Charts</p><p>
+          <image href="./media/Image_427.png" placement="break" scale="80"/>
+        </p><p>Exported chats are downloaded in the specified format to your local drive.
+          </p><p> </p></li>
+    </ol>
+  </conbody>
+</concept>

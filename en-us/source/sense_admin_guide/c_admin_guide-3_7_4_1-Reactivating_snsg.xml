@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_7_4_1">
+   <title>Reactivating</title>
+   <conbody>
+      <p>To later reactivate the EDW instance, in the Host Summary Display screen, click the Action
+      drop- down and Select Start to reactivate the EDW instance.</p>
+   </conbody>
+</concept>

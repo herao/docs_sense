@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_5_5">
+   <title>Arguments</title>
+   <conbody>
+      <table id="table_hhx_nm5_vx">
+         <tgroup cols="3">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <colspec colnum="3" colname="col3"/>
+            <thead>
+               <row>
+                  <entry>Argument</entry>
+                  <entry>Additional Arguments</entry>
+                  <entry>Description</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <i>&lt;tablename&gt;</i>
+                  </entry>
+                  <entry>target table name</entry>
+                  <entry/>
+               </row>
+               <row>
+                  <entry>
+                     <i>
+                        <codeph>&lt;command&gt;</codeph>
+                     </i>
+                  </entry>
+                  <entry>
+                     <codeph>
+                UPLOADS &lt;upload_id&gt; [,
+                &lt;upload_id&gt;[...]][DURING &lt;timestamp&gt;,
+                &lt;timestamp&gt;]
+              </codeph>
+                     <p>Deletes the data associated with specified load(s)— specified by upload
+                ID.BEFORE</p>
+                     <p>&lt;timestamp_expression&gt; Deletesdatawhosetimestamp('ts')value is
+                prior to the specified timestamp expression.</p>
+                  </entry>
+                  <entry>
+                     <p>One of two deletion commands to perform on the specified table</p>
+                     <p>For more information, see <xref href="c_admin_guide-4_5_7-Specifying-the-Data-_snsg.xml#topic_4_5_7"/>.</p>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_5_3">
+   <title>Using a Custom Certificate for Analyzer</title>
+   <conbody>
+      <p>If you have a private key, an SSL certificate, and a certificate bundle from a
+          Certificate Authority (CA), you can use OpenSSL to create a certificate keystore that
+          Tomcat can use for Analyzer access.</p>
+      <p>The following components are required to create a keystore for Tomcat:</p>
+      <ul id="ul_dwk_vnh_vx">
+         <li>
+            <p>OpenSSL</p>
+         </li>
+         <li>
+            <p>Private key with a key file extension from CA</p>
+         </li>
+         <li>
+            <p>SSL certificate file from CA</p>
+         </li>
+         <li>
+            <p>java keytool</p>
+            <note>keytool is only available in Oracle. keytool is NOT available in open-jdk)</note>
+         </li>
+      </ul>
+      <p>Before you begin, note the assumptions which are made in the procedure that follows:</p>
+      <table id="table_ewk_vnh_vx">
+         <tgroup cols="2">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <tbody>
+               <row>
+                  <entry>File Type</entry>
+                  <entry>File Name</entry>
+               </row>
+               <row>
+                  <entry>SSL Private Key File name</entry>
+                  <entry>ssl.key</entry>
+               </row>
+               <row>
+                  <entry>SSL Cert File name</entry>
+                  <entry>ssl.cnt</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+      <p>To access Analyzer using custom certificate, follow these steps:</p>
+      <ol id="ol_nwk_vnh_vx">
+         <li>Copy the <filepath>ssl.crt</filepath> and <filepath>ssl.key</filepath> files to the
+        following directory: <filepath>/opt/hexis/hawkeye-ap/etc/customkeys</filepath>
+         </li>
+         <li>Restart Analyzer from Ambari web or hawkeye-deploy.</li>
+         <li>Browse Analyzer URL.<p>The new SSL certificate is now visible in the browser.</p>
+         </li>
+      </ol>
+   </conbody>
+</concept>

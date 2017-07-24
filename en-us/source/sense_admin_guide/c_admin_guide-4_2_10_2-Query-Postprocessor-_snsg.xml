@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+         id="topic_4_2_10_2">
+   <title>Query Postprocessor API</title>
+   <conbody>
+      <ul>
+         <li><xref href="#topic_4_2_10_2/topic_4_2_10_2_sec1"/></li>
+         <li><xref href="#topic_4_2_10_2/topic_4_2_10_2_sec2"/></li>
+      </ul>
+      <section id="topic_4_2_10_2_sec1">
+         <title>Perl Functions that a Postprocessor Provides</title>
+         <p>The first aspect of the postprocessor API a developer must understand is the set of Perl
+        functions the postprocessor must implement. Some of these functions are optional, as
+        indicated below.<ul id="ul_hlf_1gs_vx">
+               <li>
+                  <codeph>postprocInit</codeph> — postprocessor initialization [optional
+                     function]<p>The <codeph>atquery</codeph> utility calls the
+                        <codeph>postprocInit</codeph> function before any input rows from the EDW
+                     results are submitted to the <codeph>postprocRow()</codeph> function. The
+                        <codeph>atquery</codeph> utility invokes <codeph>postprocInit</codeph> once
+                     before proceeding with results from each individual query, and that a single
+                     postprocessor (and its local variables) may be employed for multiple
+                     queries.<codeblock xml:space="preserve">sub postprocInit {
+	# The postprocInit function is passed:
+	#
+	# * a "response" object, representing the response from the SLS --
+	# this "response" handles both the "incoming" and "outgoing" schema and
+	# rows for query postprocessing
+	#
+	my ($response) = @_;
+	# ... Postprocessor initialization code follows -- implementation-specific ...
+	}</codeblock>
+                  </p>A postprocessor typically uses the initialization function to set up the
+                  “outgoing” schema for the postprocessed query, to initialize Perl variables
+                  required to perform aggregations, and so on.</li>
+               <li>
+                  <codeph>postprocRow</codeph> — a call invoked per row of input arriving from the EDW
+            [required function]<p>Do not assume that <codeph>postprocRow</codeph> is called at least
+              once because, at times, the EDW may return no rows for a given
+              query.<codeblock xml:space="preserve">sub postprocRow {
+	# The postprocRow function is passed:
+	#
+	# * a "response" object
+	# * an "input row" object, which holds the column values for a row of data
+	# incoming from the SLS server
+	#
+	my ($response, $inputRow) = @_;
+	# ... Postprocessor per-row code follows -- implementation-specific ...
+	}</codeblock>
+                  </p>
+                  <p>A
+              postprocessor typically uses the per-row function to lookup and modify the value of
+              one or more columns for each input row, or to do data aggregation, finding a
+              particular input row's effects on the aggregated values.</p>
+               </li>
+               <li>
+                  <codeph>postprocFinal</codeph> — postprocessor finalization [optional function]<p>The
+                <codeph>atquery</codeph> utility calls the postprocFinal function after all input
+              rows from the EDW results are submitted to the postprocRow
+              function.<codeblock xml:space="preserve">sub postprocFinal {
+	# The postprocFinal function is passed:
+	#
+	# * a "response" object
+	#
+	my ($response) = @_;
+	# ... Postprocessor finalization code follows -- implementation-specific ...
+	}</codeblock>A
+              postprocessor typically uses the finalization function to put out aggregated
+              values.</p>
+               </li>
+            </ul>
+         </p>
+         <p>The <codeph>atquery</codeph> utility does not pass errors directly to any postprocessor
+        function. If a fatal error occurs in transmitting the query to the EDW, while processing the
+        query within the EDW, or while receiving results from the EDW, postprocessing stops and
+          <codeph>atquery</codeph> handles the error as it would for any other query.</p>
+      </section>
+      <section id="topic_4_2_10_2_sec2">
+         <title>Perls Functions that a Postprocessor Calls</title>
+         <p>To compute results, a postprocessor can use local Perl variables, subroutines, or other
+        features. At some point, however, the postprocessor must interact with the
+          <codeph>$response</codeph> and <codeph>$inputRow</codeph> objects. Those interactions are
+        described below.</p>
+         <ul id="ul_cyz_khs_vx">
+            <li>
+               <codeph>$response-&gt;getIncomingSchema()</codeph>
+               <p>Returns an array containing the column
+            names and SQL data types for the postprocessor's incoming schema. An example return
+            value might be:</p>
+               <p>
+                  <codeph>[ "ts:timestamp", "v1:varchar", "v2:int32", "v3:int64",
+              "v4:bool", "v5:timestamp" ]</codeph>
+               </p>
+               <p>
+                  <note>The returned values can be either in upper or lower case.</note>
+               </p>
+            </li>
+            <li>
+               <codeph>$response-&gt;setMetadata(schema =&gt; @outputSchema)</codeph>
+               <p>Sets the schema for
+            the output displayed by atquery.</p>
+               <p>Passes in an array of the same form as that
+            returned by the <codeph>$response-&gt;getIncomingSchema()</codeph> function.</p>
+            </li>
+            <li>
+               <codeph>$response-&gt;getSchema()</codeph>
+               <p>Returns an array containing the column names
+            and SQL data types for the postprocessor's outgoing schema (same format as the
+              <codeph>$response-&gt;getIncomingSchema()</codeph> function).</p>
+            </li>
+            <li>
+               <codeph>$response-&gt;addRowData(rowdata =&gt; { "col1" =&gt; "value1", "col2" =&gt; "value2"
+            })</codeph>
+               <p>Adds a row of data to the response. The row conforms to the
+            postprocessor's outgoing schema and any number of column names and values can be
+            specified. Any unspecified columns take on the value "" (empty string), and any extra
+            columns that don't conform to the output schema are ignored.</p>
+            </li>
+            <li>
+               <codeph>$inputRow-&gt;getColumnValue("col1")</codeph>
+               <p>Returns the value for a particular
+            column of data within the input row.</p>
+            </li>
+            <li>
+               <codeph>my $hashRef = {}; $response-&gt;copyValuesForOutputSchema($inputRow,
+            $hashRef)</codeph>
+               <p>Convenience function that copies column values from an input row of
+            data to a Perl hash.</p>
+               <p>Only those values from the input row whose column names match
+            the outgoing schema are copied to the hash. The hash can subsequently be used (perhaps
+            after further modification) to submit a row of data, with
+              <codeph>$response-&gt;addRowData(rowdata =&gt; $hashRef)</codeph>.</p>
+               <note>You are not
+            required to use the function <codeph>$response-&gt;setMetadata(schema
+              =&gt;@outputSchema)</codeph> if the outgoing schema matches the incoming schema.
+              The <codeph>atquery</codeph> utility does this for you implicitly.</note>
+            </li>
+         </ul>
+      </section>
+   </conbody>
+</concept>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_3">
+   <title>Services Tab</title>
+   <conbody>
+      <p>Click the <uicontrol>Services</uicontrol> tab to view the metrics for a service in a SenSage
+      AP Cluster, as shown in the screenshot below. The default selection for viewing is "SenSage
+      AP", which is displayed on the menu bar. The two other selections are "Nagios" and "Ganglia",
+      which provide the metrics and monitoring capabilities of the SenSage AP system.</p>
+      <fig>
+         <title>Services Screen</title>
+         <image href="./media/Image_023.jpg" id="image_dph_z2h_vx" placement="break" scalefit="yes"/>
+      </fig>
+   </conbody>
+</concept>

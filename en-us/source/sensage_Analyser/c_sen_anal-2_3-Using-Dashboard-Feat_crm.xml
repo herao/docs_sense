@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_3">
+   <title id="title_a3">Using Dashboard Features</title>
+   <conbody>
+    <p>At the top right of the Dashboard, you will see six icons that represent Dashboard features
+      described below. Note that when you click the Gear icon, you have access to customizing your
+      dashboard layout and creating new dashboards and pods.</p>
+   
+    <fig><title>Dashboard Icons</title><image href="./media/Image_022.png" placement="break" id="image_wbt_wsl_zx" scale="50"/></fig>
+    <p>The following table describes the use of each Dashboard Icon:</p>
+    <table id="table_xbt_wsl_zx">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1" colwidth="1*"/>
+        <colspec colnum="2" colname="col2" colwidth="1.48*"/>
+        <colspec colnum="3" colname="col3" colwidth="4.65*"/>
+        <thead>
+          <row>
+            <entry>Icon</entry>
+            <entry>Name</entry>
+            <entry>Use to...</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_023.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">Refresh Dashboard</entry>
+            <entry align="left" valign="middle">Refresh the dashboard. This will rerun the reports
+              that make up each pod on the dashboard.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_024.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">Access Control</entry>
+            <entry align="left" valign="middle">Modify access control to the dashboard if you have
+              dashboard edit privileges.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_025.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">Lock Pods</entry>
+            <entry align="left" valign="middle">Lock the pods into position for the remainder of the
+              session if you want to resize your browser. For more details, see <xref
+                href="c_sen_anal-2_3_1-Moving-and-Re-organi_crm.xml"/>.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_026.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">Share Dashboard</entry>
+            <entry align="left" valign="middle">Share the dashboard by creating a link in an email
+              message on the local client.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_027.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">View Full-Screen Dashboard or Pod</entry>
+            <entry align="left" valign="middle">View the dashboard full screen. (Press ESC to return
+              to regular size viewing.)</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_028.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">Modify the Dashboard</entry>
+            <entry align="left" valign="middle">Modify the dashboard if you have dashboard edit
+              privileges. For more details on modifying dashboard, see <xref
+                href="c_sen_anal-4-CREATING-ANDMODIFYI_crm.xml"/>.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </conbody>
+</concept>

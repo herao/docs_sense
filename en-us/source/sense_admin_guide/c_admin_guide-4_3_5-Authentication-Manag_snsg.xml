@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_5">
+   <title>Authentication Management</title>
+   <conbody>
+      <p>Authentication Management is provided through the Analyzer tool that enables administrators
+      to manage users, roles, and passwords. For conceptual information, see <xref href="c_admin_guide-8_2-SenSage-AP-Security-_snsg.xml#topic_8_2"/>. For details on using the Analyzer, see the SenSage AP Analyzer
+      documentation.</p>
+   </conbody>
+</concept>

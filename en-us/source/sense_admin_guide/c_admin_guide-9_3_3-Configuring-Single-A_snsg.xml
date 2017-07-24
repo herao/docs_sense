@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_3_3">
+   <title>Configuring Single-AD Integration</title>
+   <conbody>
+      <p>Follow these steps if you have a single-AD server environment. Otherwise, go to the next
+      section to configure a multi-AD server environment.</p>
+      <ol>
+         <li>From the Deployment Manager console, go to the Services tab and select the SenSage AP
+        cluster link.</li>
+         <li>Stop the SenSage AP cluster.</li>
+         <li>Under the Analyzer Server section of the Configs tab, select the “ad” option and provide
+        the following settings as shown in see Figure 8-3.<draft-comment translate="no">SCREENSHOT NEEDED WITHOUT
+          RED BOX - PLEASE PROVIDE FULL AMBARI SCREENSHOT <u>WHICH IS NEEDED FOR INSTALLATION GUIDE
+            AND OTHER SECTION OF ADMIN GUIDE</u>
+            </draft-comment>
+            <fig>
+               <title> Configuring a Single-AD Server</title>
+               <image href="./media/Image_265.jpg" placement="break" id="image_esd_gb4_wx"/>
+            </fig>
+         </li>
+         <li>In the LDAP/AD Base URL field, provide the URL connection string for your first or only
+        AD. For example:<codeblock xml:space="preserve">ldap://ad_host.customer.com:389</codeblock>
+         </li>
+         <li>In the LDAP/AD Enumerator DN field, provide the enumerator account details. For
+        example:<codeblock xml:space="preserve">CN=analyzeradmin,OU=org,DC=customer,DC=com</codeblock>
+         </li>
+         <li>In the LDAP/AD Password field, provide the password for the AD enumerator (Enumerator
+          DN).<draft-comment translate="no">IN STEP 7, THE EXAMPLE PROVIDED IS THE ANALYZER ADMIN. WHY DO YOU SAY
+          THAT THE USER MUST ENTER THE FULL DISTINGUISHED NAME OF THE "SYSTEM ADMINISTRATOR? "ARE
+          YOU REALLY IMPLYING THE USER CAN BE WHATEVER AD USER IS SET AS LONG AS IT IS A VALID SAM
+          ACCOUNT? SEE WHERE I GOT THE TERM "SYSTEM ADMINISTRATOR" BELOW STEP 7 <u>FROM YOUR
+            DESCRIPTION.</u>
+            </draft-comment>
+         </li>
+         <li>In the LDAP/AD Admin DN field, provide the fully-distinguished name of the System
+        Administrator in AD. For example:
+          <codeblock xml:space="preserve">CN=analyzer admin,OU=org,DC=customer,DC=com</codeblock>
+            <draft-comment translate="no">The value
+          that the user enters into the "LDAP/AD Admin DN" field will be the full distinguished name
+          of the system administrator in LDAP or AD. The system will lookup this user in the first
+          server as configured on the same screen. It will find the Sam Account name of the user. It
+          will than make the necessary changes to the Analyzer administrative account (which by
+          default is "admin") so that the Username of the administrative user becomes the Sam
+          Account name of <u>the entered DN.</u>
+            </draft-comment>
+            <note>All LDAP elements (like CN and
+          OU) must be in uppercase.</note>
+         </li>
+         <li>In the LDAP/AD User Pattern, enter the required AD user pattern. For
+        example:<codeblock xml:space="preserve">CN=Users,DC=dev-ap,DC=local</codeblock>
+         </li>
+         <li>Save the changes and start the SenSage AP cluster.</li>
+         <li>Go to <xref href="c_admin_guide-9_3_5-UpdatingScheduling-_snsg.xml#topic_9_3_5"/> to synchronize users to the AD server.</li>
+      </ol>
+   </conbody>
+</concept>

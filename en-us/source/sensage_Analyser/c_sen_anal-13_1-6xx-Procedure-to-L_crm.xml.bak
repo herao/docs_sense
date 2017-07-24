@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_13_1">
+   <title id="title_a25">6.x.x Procedure to Limit a User's Access to a Namespace(s)</title>
+   <conbody>
+     <note>NOTE: The commands below are for Postgres role abc and schema default_analytics.</note>
+    <ol id="ol_j3q_nls_zx">
+      <li>
+        <p>Create a Postgres user/role:</p>
+        <p>psql -h localhost -p5432 -d controller -U hexis -c "CREATE ROLE abc NOSUPERUSER
+          NOCREATEDB NOCREATEROLE INHERIT NOLOGIN;</p>
+      </li>
+      <li>
+        <p>Grant Access:</p>
+        <p>psql -h localhost -p5432 -d controller -U hexis -c "GRANT USAGE ON SCHEMA oae TO
+          abc;"psql -h localhost -p5432 -d controller -U hexis -c "GRANT USAGE ON SCHEMA
+          default_analytics TO abc;"psql -h localhost -p5432 -d controller -U hexis -c "GRANT SELECT
+          ON ALL TABLES IN SCHEMA</p>
+        <p>default_analytics TO abc;"</p>
+      </li>
+      <li>
+        <p>Update the Analyzer Application user's Postgres user setting. a Logon as admin.</p>
+        <p>b Go to Administration tab and Manager Users screen.</p>
+        <p>c Edit the user whose schema security you want to change.</p>
+        <p>d Change the users Postgres User setting to the new Postgres user/role created in Step
+          1.</p>
+      </li>
+      <li>
+        <p>Verify that only the expected schemas exist.</p>
+      </li>
+      <li>
+        <p>Logon to the Analyzer Application as the user you edited in Step 3.</p>
+      </li>
+      <li>
+        <p>Create a new report.</p>
+      </li>
+      <li>
+        <p>Verify that the correct schemas show up in the list of available schemas.</p>
+      </li>
+      <li>
+        <p>Run a report that the user has privilege to access.</p>
+      </li>
+      <li>
+        <p>Run a report in which the user has no privilege to access.</p>
+      </li>
+    </ol>
+  </conbody>
+</concept>

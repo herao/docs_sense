@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_2_1">
+   <title>Parts of a Model Component</title>
+   <conbody>
+    <p>Each component has its associated data types and input and output properties. Generally the
+      value of input properties are set by the preceding component or by an input parameter. Output
+      properties generally set the value of the next component or an output parameter.</p>
+    <p>The model pictured in Figure 6-4 below has four components all with the same label “Analytic
+      Component Sum”.</p>
+    <p>Figure 6-4: Sample Model with Four Components</p>
+    <p><image href="./media/Image_258.jpg" height="293" width="616" id="image_ozx_mbr_zx"/></p>
+    <p>Following is an in depth description of each part of the model:</p>
+    <table id="table_pzx_mbr_zx">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <tbody>
+          <row>
+            <entry>Item</entry>
+            <entry>Description</entry>
+          </row>
+          <row>
+            <entry>Input parameters</entry>
+            <entry>Data elements that are likely to change each time the model runs. These
+              parameters can be set manually in the model or can be set (over-ridden) when the model
+              is scheduled. The model in Figure 6-4 has two input parameters both labeled “Input
+              List”.</entry>
+          </row>
+          <row>
+            <entry>Connections</entry>
+            <entry>Lines that connect input and output parameters and properties. These lines define
+              the logical flow of data through the model. There is no limit to the number of
+              branches a model can have. If an input property has more than one connection numbers
+              will appear that define the order of precedence for data coming in from the different
+              connections. Connections are depicted in black in the model pictured in Figure
+              6-4.</entry>
+          </row>
+          <row>
+            <entry>Data Type Identifiers</entry>
+            <entry>
+              <p>Used to identify the type of data that is applicable for any given input or output
+                parameter or property. Types are represented with a different icon for each data
+                type. See “Adding and Modifying Model Components to a New or Existing Model”, on
+                page 119 for a a list of icons.</p>
+              <p>For example in the model pictured above the calculator icon represents a single
+                number and the calculator with multiple blue rectangles represents a list of
+                numbers.</p>
+            </entry>
+          </row>
+          <row>
+            <entry>Output Parameters</entry>
+            <entry>The final result of the model execution. There can be any number of output
+              parameters. The values of the output parameters are shown in a dialog box after model
+              execution. If the output parameter is of type file. the file is generated on the
+              Analyzer and a link is provided in the dialog box.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </conbody>
+</concept>

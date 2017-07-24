@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_4_3">
+   <title>Failed Loads</title>
+   <conbody>
+      <p>On failed loads, you need to get the unloaded files back into the system. Loads can fail in
+      two locations:</p>
+      <ul><li>In the main queue directory; here, rename log files with the <filepath>.noload</filepath>
+      extension to <filepath>.log</filepath> and restart the Collector.</li>
+      <li>In the spool directory (means that preprocessing failed); rename the
+        <filepath>.noload</filepath> files to <filepath>.raw</filepath>, then rerun the
+      preprocessor.</li></ul>
+      <p>To trace back to the failure, set the logging level to 3 and investigate
+        <filepath>activity.log</filepath>.</p>
+      <p>For more information, see <xref href="c_admin_guide-7_3_2-Setting-the-Logging-_snsg.xml#topic_7_3_2"/> and <xref href="c_admin_guide-7_4-Handling-Unsuccessfu_snsg.xml#topic_7_4"/>.</p>
+   </conbody>
+</concept>

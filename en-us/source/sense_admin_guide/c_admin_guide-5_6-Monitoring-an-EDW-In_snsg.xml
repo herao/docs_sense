@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_6">
+   <title id="title_a22">Monitoring an EDW Instance</title>
+   <conbody>
+      <p>The following topics provide general guidelines for monitoring your EDW cluster:<ul id="ul_zmw_njv_vx">
+            <li>
+               <xref href="c_admin_guide-5_6_1-Monitoring-CPU-and-M_snsg.xml#topic_5_6_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-5_6_2-Verify-Hosts-Are-Up-_snsg.xml#topic_5_6_2"/>
+            </li>
+         </ul>
+      </p>
+      <p>
+         <note>Many of the messages reported by the EDW are informational and require no action.</note>
+      </p>
+   </conbody>
+</concept>

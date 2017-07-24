@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_3_1">
+   <title>Summary</title>
+   <conbody>
+      <p>The Summary area to the left displays the nodes and the components that make up your SenSage
+      AP deployment and the status of each. You can individually start and stop any of the
+      components using the start and stop icons. If any component or service is stopped, the start
+      icon will be displayed. and like the dashboard, this can alert you to a component that is not
+      operating.</p>
+   </conbody>
+</concept>

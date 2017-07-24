@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_13_2">
+   <title>Renaming Report(s)</title>
+   <conbody>
+    <p>To rename a report, you can use one of the following two methods listed below.</p>
+    <note>Keep in mind that either method does not perform a <b>Save As </b>of the report, but
+      actually renames the same report.</note>
+    <ol id="ol_wjd_mnq_zx">
+      <li>Rename the report from the report listing:<ol><li>Go to the Analyzer dashboard, select Data Design from the dropdown list, click Reports.<p>The
+              Manage Report screen with the current listing of reports is displayed.</p></li><li>Double-click a report and edit its name in place as shown in Figure 4-46.<p>Figure 4-46:
+              Renaming a Report - NEED NEW SCREENSHOT</p><p><image href="./media/Image_205.png" placement="break" scale="50"/></p></li></ol></li>
+      <li>Rename the report from the report listing:
+    
+    <ol><li>Go to the Analyzer dashboard, select Data Design from the dropdown list, click Reports.<p>The
+              Manage Report screen with the current listing of reports is displayed.</p></li>
+    <li>Scroll or use filters to find the report you want to rename. For details on finding reports,
+            see Chapter 2: Viewing Reports.</li>
+    <li>Check the report that you want to rename and click the Edit button. d On the report’s
+            screen, retype the name in the Report Title box.</li>
+    <li>Click Save and Close. <p>The report is now displayed with its new name in the Manage Reports
+              screen.</p></li></ol></li></ol>
+  </conbody>
+</concept>

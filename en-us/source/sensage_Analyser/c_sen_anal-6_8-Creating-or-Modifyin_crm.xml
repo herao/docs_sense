@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="topic_6_8">
+ <title>Creating and Modifying a Trending Chart</title>
+ <conbody>
+  <p>This chapter describes how to create data models for advanced analytics, which can be later
+   integrated with a report as described in <xref
+    href="c_sen_anal-5_11-Integrating-Data-Mod_crm.xml"/>.<ul id="ul_nyx_bbr_zx">
+    <li><xref href="c_sen_anal-7_1-What-is-a-Data-Model_crm.xml"/>, Next</li>
+    <li><xref href="c_sen_anal-7_2-Defining-a-Model_crm.xml"/></li>
+    <li><xref href="c_sen_anal-7_3-Creating-and-Editing_crm.xml"/></li>
+    <li><xref href="c_sen_anal-7_4-Creating-a-New-Model_crm.xml"/></li>
+    <li><xref href="c_sen_anal-7_5-Nesting-embedding-_crm.xml"/></li>
+    <li><xref href="c_sen_anal-7_6-Adding-and-Modifying_crm.xml"/></li>
+    <li><xref href="c_sen_anal-7_7-Using-Model-Menu-Ite_crm.xml"/></li>
+    <li><xref href="c_sen_anal-7_8-Sharing-Models_crm.xml"/></li>
+    <li><xref href="c_sen_anal-7_9-Creating-a-Report-wi_crm.xml"/></li>
+    <li><xref href="c_sen_anal-7_10-Creating-a-Schedule-_crm.xml"/></li>
+   </ul></p>
+ </conbody>
+</concept>

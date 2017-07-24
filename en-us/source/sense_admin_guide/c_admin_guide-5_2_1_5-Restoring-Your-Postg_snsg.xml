@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_2_1_5">
+   <title>Restoring Your PostgreSQL Server</title>
+   <conbody>
+      <p>To restore your PostgreSQL server:<ol id="ol_xyq_mz5_vx">
+            <li>Execute the following commands on the OAE host as the Hexis
+          user:<codeblock xml:space="preserve">service sensage_atpgsql stop
+rm -rf &lt;OAE_data_directory&gt;/*
+/opt/hexis/hawkeye-ap/bin/initdb -E UTF8 -D &lt;OAE_data_directory&gt;
+rm &lt;OAE_data_directory&gt;/pg_hba.conf
+rm &lt;OAE_data_directory&gt;/postgresql.conf
+ln -s /opt/hexis/hawkeye-ap/etc/atpgsql/pg_hba.conf &lt;OAE_data_directory&gt;/
+pg_hba.conf
+ln -s /opt/hexis/hawkeye-ap/etc/atpgsql/postgresql.conf &lt;OAE_data_directory&gt;/
+postgresql.conf</codeblock>
+            </li>
+            <li> Use the Deployment Manager to start OAE.</li>
+            <li>Create a Postgres user by executing the following command and entering at the password
+          prompt,
+          controller.<codeblock xml:space="preserve">/opt/hexis/hawkeye-ap/bin/createuser -U hexis --pwprompt --createdb --nocreaterole
+controller</codeblock>
+            </li>
+            <li> Issue the following psql
+          commands:<codeblock xml:space="preserve">/opt/hexis/hawkeye-ap/bin/psql -U hexis -d template1 -c "set autocommit to on; ALTER ROLE hexis PASSWORD 'changeme';
+create role sls noinherit connection limit 4 password 'sls';"
+
+/opt/hexis/hawkeye-ap/bin/psql -U hexis -d template1 -f &lt;controller_backup_file&gt;</codeblock>
+        </li>
+         </ol>
+      </p>
+   </conbody>
+</concept>

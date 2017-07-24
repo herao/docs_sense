@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_2_1_3">
+   <title>Restoring Your LDAP Server</title>
+   <conbody>
+      <p>To restore your LDAP server, run the following commands as the hexis user on the host running
+      the LDAP Server:</p>
+      <ol id="ol_s34_vy5_vx">
+         <li>Stop atslapd<codeblock xml:space="preserve">service sensage_atslapd stop</codeblock>
+         </li>
+         <li>Remove the corrupted atslapd data directory. The data directory can be determined by
+        running:<codeblock xml:space="preserve">grep "^directory" /opt/hexis/hawkeye-ap/etc/atslapd/slapd.conf</codeblock>
+         </li>
+         <li>Create a new atslapd data
+        directory:<codeblock xml:space="preserve">mkdir &lt;data_dir&gt;
+chown -R &lt;hexis_user&gt;:&lt;hexis_user&gt;&lt;data_dir&gt;</codeblock>
+         </li>
+         <li>Restore:<codeblock xml:space="preserve">/opt/hexis/hawkeye-ap/sbin/slapadd -f /opt/hexis/hawkeye-ap/etc/atslapd/\
+slapd.conf -l /opt/data/backups/backup.ldif</codeblock>
+         </li>
+         <li>Start:<codeblock xml:space="preserve">service sensage_atslapd start</codeblock>
+         </li>
+      </ol>
+   </conbody>
+</concept>

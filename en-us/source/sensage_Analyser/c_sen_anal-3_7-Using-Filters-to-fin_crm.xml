@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_7">
+  <title id="title_a8">Using Filters to find a Report</title>
+  <conbody>
+    <p>As the number of reports you create increases, it will be useful to group the reports into
+      different categories. You can create different category tags and apply them to the reports you
+      create. This will help you manage your reports and find them more quickly. If a report falls
+      into multiple categories, you can apply multiple category tags to the same report.</p>
+    <p>You can use any of the following methods described below to narrow down and retrieve a
+      specific report for viewing.</p>
+    <ul id="ul_j43_c2m_zx">
+      <li>
+        <p>You can select a tag by clicking in the <i>-- filter by tags --</i> drop-down list and
+          select a tag (category) under which the report is categorized. For example, in the
+          screenshot below, selecting the tag <uicontrol>Administrative Reports</uicontrol> narrows
+          the list of reports to those categorized as administrative reports.<fig
+            id="fig_qfj_xgt_2y">
+            <title>Figure 2-12-1</title>
+            <image href="media/Image_095.png" placement="break" scale="40" id="image_jqx_ygt_2y"/>
+          </fig></p>
+        <p>
+          <note>You can repeat the process to filter the list by multiple tags.</note>
+        </p>
+      </li>
+      <li>
+        <p>Click in the <uicontrol>Report Name</uicontrol> filter and type part of a name of a
+          report that you want to find. All the reports having the search text as part of their name
+          are listed. For example, typing <uicontrol>schema</uicontrol> in the <b>Report Name</b>
+          filter resulted in three reports in the list having <b>schema</b> in their names.<fig>
+            <title>Figure 2-12-2</title>
+            <image href="media/Image_095_1.png" placement="break" scale="40"/>
+          </fig>Similarly, you can type the username of the owner in the Owner filter and get the
+          list of reports owned by the user. The following filter shows the list of reports owned by
+          the user <codeph>test1</codeph>. <fig>
+            <title>Figure 2-12-3</title>
+            <image href="media/Image_095_2.png" placement="break" scale="40"/>
+          </fig></p>
+        <note>The Report Name is case-sensitive. The list of reports will be filtered by reports
+          with the same string in their name as what you typed.</note>
+      </li>
+      <li>
+        <p>Filter for reports created in a specific date range using the <uicontrol>Last
+            Updated</uicontrol> field. Click in the filter field to get the <uicontrol>Date Range
+            Selection</uicontrol> dialog. Clicking the in the Start Data and End Date of the data
+          range in the date calculator pop up dialog. You can also narrow the Hour, Minute, Second
+          granularity as required. The screeshot below shows the date range selector with the date
+          calculator. <fig>
+            <title>Figure 2-12-4</title>
+            <image href="media/Image_095_4.png" placement="break" scale="45"/>
+          </fig></p>
+      </li>
+    </ul>
+    <p>You can add, remove, or modify the tag (category) list. To add a new tag, perform the
+      following steps: 
+    </p>
+    <ol>
+      <li>Click <image href="media/button_editTags.png" placement="inline" scale="60"/>. The
+          <uicontrol>Edit Tags</uicontrol> dialog displays.<image href="media/Image_095_3.png"
+          placement="break" scale="50"/></li>
+      <li>Enter a new tag name in the <uicontrol>Add a tag</uicontrol> text box.</li>
+      <li>Click <uicontrol>Add</uicontrol>. The new tag appears in the list of tags.</li>
+    </ol>
+    <p>To edit an existing tag name, perform the following:</p><ul>
+      <li>Click <image href="media/button_editTags.png" placement="inline" scale="60"/>. The
+        <uicontrol>Edit Tags</uicontrol> dialog displays.</li>
+      <li>Double click the tag name you want to edit. The tag is highlighted in the text box.<image
+          href="media/Image_095_5.png" placement="break" scale="45"/></li>
+      <li>Edit the tag name and press <uicontrol>Enter</uicontrol>. The tag name gets updated.<note>Any reports tagged with the previous tag name are also updated and tagged with the new name.</note></li>
+    </ul>
+    <p>To delete a tag name, perform the following:</p><ul>
+      <li>Click <image href="media/button_editTags.png" placement="inline" scale="60"/>. The
+        <uicontrol>Edit Tags</uicontrol> dialog displays.</li>
+      <li>Click <image href="media/button_deleteTags.png" placement="inline"/> in the
+          <uicontrol>Delete</uicontrol> column of the tag name you want to delete.<p>If a report is already tagged with the tag you want to
+          delete, the following message pops up: <image placement="break"
+            href="media/button_deleteWarnTags.png" scale="50"/></p><p>If the tag
+          name is not in use, it is deleted from the list.</p></li>
+    </ul>
+  </conbody>
+</concept>

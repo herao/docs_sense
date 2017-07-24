@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_6_1">
+   <title id="title_a11">Creating a Chart</title>
+   <conbody>
+    <p>IMPORTANT: Before you begin creating and configuring a chart:</p>
+    <ul id="ul_g5s_r4q_zx">
+      <li>
+        <p>Be sure you have run its corresponding report. This way the system has already verified
+          the datatypes of each field in the reporting results, giving you the opportunity to review
+          the results and decide which fields are best to use in the chart.</p>
+      </li>
+      <li>
+        <p>Be sure your system meets the requirements noted in Appendix ???? if you are creating a
+          custom chart.</p>
+      </li>
+    </ul>
+    <p>To create a chart for a corresponding report, you can use one of the following two methods
+      listed below.</p>
+   <ol> <li>To run the report and add the chart from the report results view<ol><li>Go to the Analyzer dashboard, select Data Design from the dropdown list and click Reports.<p>The
+              Manage Report screen with the current listing of reports is displayed. </p></li><li>Scroll or find the desired report, check the report, and click Run.</li><li>From the view results screen for the report, click the Gear icon, and choose Add a Chart from
+            the dropdown list.</li><li>Go to Step 3.<p>Figure 5-1: Add a Chart</p><p><image href="./media/Image_210.jpg" height="172"
+                width="390" id="image_npj_s4q_zx"/></p></li></ol></li>
+    <li>Add the chart from Edit Report definition screen:<ol><li>Go to the Analyzer dashboard, select Data Design from the dropdown list and click Reports.<p>The
+              Manage Report screen with the current listing of reports is displayed.</p></li><li>Scroll or find the desired report, check mark the report that requires the chart, and click
+              Edit.<p>Figure 5-2: Select Report for the Chart.</p><p>
+              <image href="./media/Image_211.png" placement="break" scale="50"/>
+            </p><p>The Database Table Report Settings screen to define the report is
+              displayed.</p><p>Figure 5-3: Database Table Report Settings Screen</p><p>
+              <image href="./media/Image_212.jpg" id="image_ppj_s4q_zx" placement="break" scale="50"
+              />
+            </p></li></ol></li>
+    <li>Click the Charting tab and select a chart type from the dropdown list; then click Add to
+        bring up the applicable chart type configuration box to create the chart.<p>Figure 5-4:
+          Charting Tab</p><p><image href="./media/Image_213.jpg" id="image_qpj_s4q_zx" placement="break" scale="70"/></p><p>
+          <note>Chart types include: Area Chart, Bar Chart, Location Map, Heatmap, Pie Chart,
+            and Trending Chart.</note>
+        </p></li>
+      <li>Go to the relevant section of this chapter for details on providing chart information for
+        your specified chart type:<ul id="ul_rpj_s4q_zx">
+          <li>
+            <p><xref href="c_sen_anal-6_3-Creating-or-Modifyin_crm.xml"/></p>
+          </li>
+          <li>
+            <p><xref href="c_sen_anal-6_4-Creating-or-Modifyin_crm.xml"/></p>
+          </li>
+          <li>
+            <p><xref href="c_sen_anal-6_5-Creating-or-Modifyin_crm.xml"/></p>
+          </li>
+          <li>
+            <p><xref href="c_sen_anal-6_6-Creating-or-Modifyin_crm.xml"/></p>
+          </li>
+          <li>
+            <p><xref href="c_sen_anal-6_7-Creating-or-Modifyin_crm.xml"/></p>
+          </li>
+          <li>
+            <p><xref href="c_sen_anal-6_8-Creating-or-Modifyin_crm.xml"/></p>
+          </li>
+        </ul><p>After you have created and saved a chart, you can modify it. See Editing a Chart
+          below.</p></li></ol>
+  </conbody>
+</concept>

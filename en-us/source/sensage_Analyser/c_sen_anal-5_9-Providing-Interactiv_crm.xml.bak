@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_9">
+   <title>Providing Interactive Runtime Parameters for the Report</title>
+   <conbody>
+    <p>You can specify an interactive report in which the Analyzer will filter data based on what
+      parameters the user specifies when running the report.</p>
+    <p>For details on defining complex filters based on report fields or for creating filters on
+      report fields not displayed in the report, see the following section, <xref
+        href="c_sen_anal-5_10-Specifying-Data-Filt_crm.xml"/>.</p>
+    <p>To provide an interactive parameter-based runtime report:</p>
+    <ol id="ol_ipl_jfq_zx">
+      <li>Click the Date Filters tab in the Report Wizard to specify available parameters for the
+        report column.<p>Figure 4-29: Data Filters Tab</p><p><image href="./media/Image_181.jpg"
+            height="295" width="594" id="image_jpl_jfq_zx"/></p></li>
+      <li>Select filters of the type "prompt user" or "choose from..." and note the following rules
+          below:<p>Figure 4-30: "Prompt user" and "choose from" Options</p><p><image
+            href="./media/Image_182.jpg" height="279" width="594" id="image_kpl_jfq_zx"/></p><p>For
+          fields with filter type "prompt user" you have the option of requiring that the user enter
+          a value or letting the user run with no filter:</p><ul id="ul_lpl_jfq_zx">
+          <li>
+            <p>To require that user enter a value, select the checkbox to the left of the label
+              "require a value".</p>
+          </li>
+          <li>
+            <p>To present the user with a default value, enter the value into the "default value"
+              box.</p>
+          </li>
+        </ul></li>
+      <li>If you chose "choose from...." filter type to specify an interactive report that prompts
+        the user with a distinct list of values, click the Add Options button that is displayed to
+        the right.<p>
+          <note>NOTE: If the report has already been defined and you are editing the filters, you
+            will see an Edit Options button instead.</note>
+        </p><p>Figure 4-31: Add Options Button - NEED NEW SCREENSHOT</p><p><image
+            href="./media/Image_183.jpg" height="214" width="521" id="image_mpl_jfq_zx"/></p><p>Add
+          values to the end-user runtime dialog box. Type one value at a time at the bottom of the
+          dialog in the field labeled “Add options”. Click the “Add” button after each entry. Once
+          you have all the options listed click Done.</p><p>Figure 4-32: Adding Options</p><p><image
+            href="./media/Image_184.jpg" height="314" width="183" id="image_npl_jfq_zx"/></p></li>
+      <li>When you are finished, click <b>Save </b>or choose one of the following Save Options: Save
+        and close, Save run and retain (for report history), or Save and run once (no history).</li>
+    </ol>
+  </conbody>
+</concept>

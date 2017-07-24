@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_7">
+   <title>Automatic Expression Macros</title>
+   <conbody>
+      <p>The atload utility provides these expression macros automatically for your use in the PTL
+      SELECT statements in PTL files:</p>
+      <ul>
+         <li><xref href="c_admin_guide-4_1_7_1-_log_filename_snsg.xml"/></li>
+         <li><xref href="c_admin_guide-4_1_7_2-_log_srchost_snsg.xml"/></li>
+      </ul>
+      <p>For an example of their use, see <xref href="c_admin_guide-4_1_8-Loading-Information-_snsg.xml#topic_4_1_8"/>.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9">
+   <title>Using Sort to Find a Specific Report Attribute</title>
+   <conbody>
+    <p>You can specify any of the label icons circled as shown in Figure 2-14 below to sort all
+      reports by a specific report attribute. This allows you to find reports by attributes that
+      cannot be filtered.</p>
+    <fig><title>Figure 2-14: Sorting Report by Attributes</title><image href="./media/Image_099.jpg" height="212" width="533" id="image_jc5_xfm_zx"/></fig>
+    <p>The following is a description (from left to right) of each available sort attribute:</p>
+    <table id="table_mc5_xfm_zx">
+      <tgroup cols="2">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <thead>
+          <row>
+            <entry>Sort Attribute</entry>
+            <entry>Description</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Report Type</entry>
+            <entry>Either Wizard report or SQL Workbench Reports</entry>
+          </row>
+          <row>
+            <entry>Report Name</entry>
+            <entry>Name of the report</entry>
+          </row>
+          <row>
+            <entry>Summary Reports</entry>
+            <entry>Wizard reports that have aggregation are indicated with a checkmark.</entry>
+          </row>
+          <row>
+            <entry>Timestamp Reports</entry>
+            <entry>Wizard reports that have the time range limit set to a field of type datetime.
+              Hover the mouse over the clock icon to see the name of the field that is set in the
+              report definition.</entry>
+          </row>
+          <row>
+            <entry>Field Value Filters</entry>
+            <entry>An integer count of the number of fields used as filters in the report
+              definition. If any of the filters are required for entry at report run time, the color
+              of the integer is teal-green. Hovering the mouse over the clock icon will display the
+              list of filters.</entry>
+          </row>
+          <row>
+            <entry>Analytics Models</entry>
+            <entry>Reports that have models connected to this report that are automatically run
+              after the report runs and which process the report results.</entry>
+          </row>
+          <row>
+            <entry>Chart Types</entry>
+            <entry>Reports that have charts configured for the report. Hover the mouse over this
+              icon to display the chart type.</entry>
+          </row>
+          <row>
+            <entry>Associated Reports</entry>
+            <entry>An integer count of the number of drill-downs configured to associated reports
+              for each report. Hover the mouse over the icon to display the names of the associated
+              reports.</entry>
+          </row>
+          <row>
+            <entry>Last Updated</entry>
+            <entry>The date and time the report was last updated.</entry>
+          </row>
+          <row>
+            <entry>History Count</entry>
+            <entry>The number of report versions within the report’s history retention
+              period.</entry>
+          </row>
+          <row>
+            <entry>Space (MB)</entry>
+            <entry>The size of the report in megabytes.</entry>
+          </row>
+          <row>
+            <entry>Tags</entry>
+            <entry>Report tags (categories) under which the report is categorized.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </conbody>
+</concept>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_11">
+   <title>Errors and Return Values</title>
+   <conbody>
+      <p>The <codeph>atload</codeph> utility returns an exit code of 0 on success, or non-zero exit
+         code and an error condition message upon error. For a full list, see <xref
+            href="c_admin_guide-4_6-Errors-and-Return-Va_snsg.xml#topic_4_6"/>.</p>
+      <p>Parsing errors may occur if records fail to match the regular expression in the PTL file or
+      if a given field cannot be parsed as the requested data type. You can return these match
+      failures to the client by running atload with the <codeph>--matchfailures</codeph> option.</p>
+   </conbody>
+</concept>

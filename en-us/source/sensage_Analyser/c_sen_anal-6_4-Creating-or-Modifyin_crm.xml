@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_6_4">
+   <title>Creating or Modifying a Bar Chart</title>
+   <conbody>
+    <p>A Bar Chart is similar to an area chart and consists of an X-axis and a Y-axis. To create or
+      modify a Bar Chart:</p>
+    <ol id="ol_whl_cxq_zx">
+      <li>Access the area chart settings screen (for instructions see “Creating a Chart”, on page 91
+        or “Editing a Chart - THIS NEEDS VERIFICATION and SCREENSHOTS”, on page 94.</li>
+      <li>If desired, enter (in this optional field) a title for the chart for descriptive purposes
+        only.</li>
+      <li>Specify the datatype for the Y-axis (the vertical dimension) under the dropdown box
+        labelled "Chart values from the field:" shown in Figure 5-11.<p>
+          <note>It is generally good practice to use a field with a numeric dataype for the
+            Y-axis. If you select a string datatype the system will automatically add the count()
+            aggregation function to determine the vertical height of elements in the chart, this can
+            lead to unexpected results.</note>
+        </p><p>Figure 5-11: Bar Chart Settings Screen</p><p><image href="./media/Image_226.jpg"
+            height="309" width="591" id="image_xhl_cxq_zx"/></p></li>
+      <li>Specify the datatype for the X-axis (the horizontal dimension of the chart) under the
+        dropdown box labelled "Use the following field for the X-axis of the graph:" shown in Figure
+        5-11. The values in this field will be listed as labels in the chart itself. You can use
+        fields of either string or number datatypes for the Y-axis.</li>
+      <li>Click Save. DOES CLICKING SAVE DISPLAY THE CHART?<p>Figure 5-12 shows the results of the
+          configuration implemented so far. Note the name of the Y- axis field shows in the "Total
+          Accepts" box on the right and values from the field "Protocol" show as labels for each
+          value across the bottom of the report.</p><p>Figure 5-12: Bar Chart
+            Configuration</p><p><image href="./media/Image_228.jpg" height="323" width="605"
+            id="image_zhl_cxq_zx"/></p></li>
+      <li>Optionally, to display more information than the number in the Y-axis field, you can
+        select another field for break down; to do this, select the second field in the box
+        <codeph>--select the corresponding value label field (if any) --</codeph> as shown in Figure 5-13 in which
+        "Firewall Device" is chosen.<p>Note that the box for the second field is displayed whenever
+          a field of numeric datatype is used.</p><p>Figure 5-13: Display "Firewall Device" in "Y"
+          Axis Field of Bar Chart</p><p><image href="./media/Image_229.jpg" height="279" width="575"
+            id="image_a3l_cxq_zx"/></p></li>
+      <li>Click Save. DOES CLICKING SAVE DISPLAY THE CHART? <p>Figure 5-14 shows the results of the
+          configuration implemented so far, sub-totaled by Firewall Device.</p><p>Figure 5-14: Bar
+          Chart Configuration sub-totaled by Firewall Device</p><p><image
+            href="./media/Image_231.jpg" height="329" width="553" id="image_c3l_cxq_zx"/></p></li>
+      <li>Click the gear icon and select Edit to display the chart settings screen for the
+          chart.<p>Figure 5-15: Bar Chart Settings Screen Additional Viewing Options</p><p><image
+            href="./media/Image_233.jpg" height="284" width="579" id="image_e3l_cxq_zx"/></p><p>Note
+          the following additional viewing options at the bottom of the chart settings
+          screen:</p><ul id="ul_f3l_cxq_zx">
+          <li>
+            <p>Orientation - Displays information charted horizontally instead of vertically. When
+              this options is set to horizontal the X-axis becomes the vertical dimension and the
+              Y-axis becomes the horizontal dimension.</p>
+          </li>
+          <li>
+            <p>Stacking - Displays the different sub-totals stacked on top of each other - either
+              with normal value-based sizing or with %-based sizing.</p>
+            <note>This option is only effect when "<codeph>--select the corresponding value label field
+              (if any)--</codeph>" in Step 7 above is set.</note>
+          </li>
+          <li>
+            <p>Display - Depending on setting, shows or hides the labels on each axis and turns on
+              or off the 3D effect on the graph.</p>
+          </li>
+        </ul></li>
+      <li>Click Save. DOES CLICKING SAVE DISPLAY THE CHART?<p>Figure 5-16 shows the results of the
+          additional viewing options that are implemented. Bars are stacked to display sub-totals by
+          Device Firewall.</p><p>Figure 5-16: Bar Chart Configuration with Additional Viewing
+          Options</p><p><image href="./media/Image_235.jpg" height="372" width="582"
+            id="image_h3l_cxq_zx"/></p></li>
+    </ol>
+
+
+  </conbody>
+</concept>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_7_2">
+   <title>Starting, Stopping, and Restarting SenSage AP Components</title>
+   <conbody>
+      <p>To start, stop and restart SenSage AP components:</p>
+      <ol id="ol_alz_xrh_vx">
+         <li>Log into Deployment Manager.</li>
+         <li>From the Deployment Manager Dashboard, select the Services tab.</li>
+         <li>In the Summary area of the Services tab, start and stop any of the components using the
+        start and stop icons. If any component or service is stopped, the start icon will be
+        displayed. For details on status icons, see <xref href="c_admin_guide-3_3_2-Alerts-and-Health-Ch_snsg.xml#topic_3_3_2"/>.</li>
+      </ol>
+   </conbody>
+</concept>

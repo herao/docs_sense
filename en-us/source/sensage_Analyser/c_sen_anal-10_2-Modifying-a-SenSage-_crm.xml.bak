@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_2">
+   <title id="title_a22">Modifying a SenSage AP User</title>
+   <conbody>
+    <p>If you have Analyzer Administration (Admin) privileges, you can modify SenSage AP user
+      information, reset SenSage AP passwords, and reassign roles and groups.</p>
+    <p>
+      <note>NOTE: When you make modifications to users in Analyzer, you also change the settings or
+        users in Active Directory (AD). However, these changes will be over-written with settings
+        from Active Directory whenever the user database is synchronized with AD. The AD
+        synchronization updates all fields for all users. The only exception is if you have a SAM
+        (Security Account Manager) account and noy corresponding SAM account is found in Active
+        Directory. For details on SAM, see <cite>SenSage AP Administration Guide</cite>.</note>
+    </p>
+    <note>
+      <p>IMPORTANT: If you are deleting a user who is the owner of a specific report, schedule, or
+        dashboard, these objects will continue to remain in the system. However, the ability to
+        view, edit, run, and delete objects will be transferred automatically to the Admin user. To
+        prevent this, the owner must transfer ownership of the report, schedule, or dashboard,
+        before they are deleted. Only the owner, not the Administrator, is able to transfer
+        ownership. The recovery process for the owner to use if the object is already deleted is to
+        change ownership with SQL. For example:</p>
+      <codeblock>sql to set the object owner to 'bob' for report with id
+100150 update acl_object_identity set owner_sid = (select id from acl_sid where
+sid = 'bob') where object_id_identity = 100150</codeblock>
+      <p>To find the report id and the object_id identity value (100150 in the example above), enter
+        the following commands:</p>
+      <codeblock>t1.object_id_identity=t2.id and name='&lt;&lt;REPORT_NAME>>';</codeblock>
+    </note>
+    <p>To modify a SenSage AP user:</p>
+    <ol id="ol_qhx_s2s_zx">
+      <li>Go to the Analyzer, select Administration --> Users from the dropdown submenu. The Manage
+        Users screen is displayed as shown in Figure 9-1 of the previous section.</li>
+      <li>To modify a user, click the checkbox next to the user that you want to modify and click
+        the Edit button.<p>Figure 9-4: Specifying a User for modification</p><p><image
+            href="./media/Image_392.jpg" height="338" width="596" id="image_rhx_s2s_zx"/></p><p>
+          <note>NOTE: If you check more than one box, the Edit button is grayed out and cannot be
+            clicked.</note>
+        </p><p>The pop-up window for modifying a user is displayed as shown in Figure 9-3.</p></li>
+      <li><ph id="a136">In the popup window, make any necessary modifications.</ph></li>
+      <li>Click <b>Save </b>to save the changes.</li>
+    </ol>
+  </conbody>
+</concept>

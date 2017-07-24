@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_6_9">
+   <title>Errors and Return Values</title>
+   <conbody>
+      <p>The atmanage utility prints an exit code of 0 on success, or a non-zero exit code and an
+      error condition message upon error. For a full list, see <xref href="c_admin_guide-4_6-Errors-and-Return-Va_snsg.xml#topic_4_6"/>.</p>
+   </conbody>
+</concept>

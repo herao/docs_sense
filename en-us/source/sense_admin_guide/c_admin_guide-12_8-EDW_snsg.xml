@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_12_8">
+   <title>EDW</title>
+   <conbody>
+      <table id="table_v12_kwq_wx">
+         <tgroup cols="6">
+            <colspec colnum="1" colname="col1" colwidth="6.35*"/>
+            <colspec colnum="2" colname="col2" colwidth="2.47*"/>
+            <colspec colnum="3" colname="col3" colwidth="2.33*"/>
+            <colspec colnum="4" colname="col4" colwidth="1.75*"/>
+            <colspec colnum="5" colname="col5" colwidth="1*"/>
+            <colspec colnum="6" colname="col6" colwidth="7.3*"/>
+            <tbody>
+               <row>
+                  <entry>Log File Name</entry>
+                  <entry>Category</entry>
+                  <entry>Purpose</entry>
+                  <entry>Log Rotate</entry>
+                  <entry>PTL</entry>
+                  <entry>Notes</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>/var/log/messages</codeph>
+                  </entry>
+                  <entry>Debug, Monitoring</entry>
+                  <entry>ERR MON</entry>
+                  <entry>Y</entry>
+                  <entry/>
+                  <entry>
+                     <p>“EDW Errors (default location of RedHat syslog data)</p>
+                     <note>
+                        <ul>
+                           <li>To capture all EDW data (debug and info), change the syslog configuration file
+                    to load all Local 0 facility data to a named file.</li>
+                           <li>Rotated by logrotate; see /etc/logrotate.d/syslog-ng</li>
+                        </ul>
+                     </note>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <filepath> /opt/hexis/hawkeye-ap/ var/log/sls/&lt;instance_name&gt;/ athttpd_log
+              </filepath>
+                  </entry>
+                  <entry>Debug, Monitoring</entry>
+                  <entry>AUDIT</entry>
+                  <entry>N</entry>
+                  <entry/>
+                  <entry>Log of httpd communications. Mostly POST traffic</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>/opt/hexis/hawkeye-ap/ var/log/sls/&lt;instance_name&gt;/
+                stdout_log</codeph>
+                  </entry>
+                  <entry>Debug, Monitoring</entry>
+                  <entry/>
+                  <entry>N</entry>
+                  <entry/>
+                  <entry>stdout statements</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph> /opt/hexis/hawkeye-ap/ var/log/sls/&lt;<i>instance_name</i>&gt;/ error_log
+              </codeph>
+                  </entry>
+                  <entry>Debug, Monitoring</entry>
+                  <entry>ERR MON</entry>
+                  <entry>N</entry>
+                  <entry/>
+                  <entry>errors recorded by the EDW instance</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

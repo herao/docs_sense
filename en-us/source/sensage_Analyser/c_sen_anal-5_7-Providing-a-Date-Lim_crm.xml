@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_7">
+   <title>Providing a Date Limit Prompt in the Report</title>
+   <conbody>
+    <p>In the report, you can specify that users be prompted for a date range that the report will
+      include or specify a date and time range limit for the reporting results.</p>
+    <p>To provide a date limit prompt in the report:</p>
+    <ol id="ol_mxg_v2q_zx">
+      <li>Click the Date Limits tab in the Report Wizard to specify your date limit
+          settings.<p>Figure 4-27: Date Limits Tab</p><p><image href="./media/Image_176.png" placement="break" scale="50"/></p></li>
+      <li>Check the first box on the screen to specify that the system prompt the person running a
+        report too change the time range.<p>
+          <note>A date/time popup will be displayed and populated with the time range used
+            previously, but allow the person running the report to change the value if
+            desired.</note>
+        </p></li>
+      <li>Specify a time range for a report (if working with EDW tables and OAE During); otherwise,
+        if working with Postgres tables, the feature is disabled as the system will automatically
+        provide the time range by working only with the timestamp.<note>When you specify a time
+          range or configure the time zone within your user profile, your own local timezone (the
+          location of the client) in GMT format is assumed as the timezone of that
+        selection.</note></li>
+      <li>When you are finished, click <b>Save </b>or choose one of the following Save Options: Save
+        and close, Save run and retain (for report history), or Save and run once (no history).</li>
+    </ol>
+  </conbody>
+</concept>

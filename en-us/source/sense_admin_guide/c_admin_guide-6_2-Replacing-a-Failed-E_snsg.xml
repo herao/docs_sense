@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_6_2">
+   <title>Replacing a Failed EDW Node</title>
+   <conbody>
+      <p>To configure a SenSage AP instance to operate with a failed EDW node:</p>
+      <ol id="ol_cw2_tnv_vx">
+         <li> Stop the EDW component on all nodes.</li>
+         <li>Get the state of the suspected failed host by running the following
+            command:<codeblock xml:space="preserve">curl -k --user admin:&lt;ambari_admin_password&gt;
+https://&lt;deployment_manager_ip&gt;:8443/api/v1/clusters/&lt;cluster_name&gt;/hosts/
+&lt;bad_host&gt;?fields=Hosts/host_state</codeblock>
+            <note>If
+            state = HEARTBEAT_LOST, skip to Step 4.</note>
+         </li>
+         <li>Stop all components on the failed
+          host.<codeblock xml:space="preserve"># GANGLIA MONITOR
+# GANGLIA_SERVER
+# NAGIOS_SERVER
+# SENSAGE_ANALYTICS
+# SENSAGE_APPSERVER
+# SENSAGE_COLLECTOR
+# SENSAGE_POSTGRES
+# SENSAGE_SLS
+
+curl -k --user admin:&lt;ambari_admin_password&gt; -X 'PUT' -d
+'{"HostRoles":{"state":"INSTALLED"}}'
+https://&lt;deployment_manager_host&gt;:8443/api/v1/clusters/&lt;cluster_name&gt;/hosts/
+&lt;bad_host&gt;/host_components/&lt;component&gt;</codeblock>
+         </li>
+         <li>Delete all components on the failed
+          host.<codeblock xml:space="preserve"># GANGLIA_MONITOR
+# GANGLIA_SERVER
+# NAGIOS_SERVER
+# SENSAGE_ANALYTICS
+# SENSAGE_APPSERVER
+# SENSAGE_COLLECTOR
+# SENSAGE_POSTGRES
+# SENSAGE_SLS
+
+curl -k --user admin:&lt;ambari_admin_password&gt; -X 'DELETE'
+https://&lt;deployment_manager_host&gt;:8443/api/v1/clusters/&lt;cluster_name&gt;/hosts/
+&lt;bad_host&gt;/host_components/&lt;component&gt;</codeblock>
+         </li>
+         <li>If the bad host still shows up in the hosts tab of the Deployment Manager, run the
+          following command to remove
+          it:<codeblock xml:space="preserve">curl -k --user admin:&lt;ambari_admin_password&gt; -X 'DELETE' https://
+&lt;deployment_manager_host&gt;:8443/api/v1/clusters/&lt;cluster_name&gt;/hosts/&lt;bad_host&gt;</codeblock>
+         </li>
+         <li>Update the existing configuration and replace all occurrences of the bad host’s name:
+            <ol id="ol_hct_c4v_vx">
+               <li>Get the list of configurations on the
+              server:<codeblock xml:space="preserve"># Get a list of configurations
+curl -k -H -i -u admin:&lt;ambari_admin_password&gt; https://
+&lt;deployment_manager_host&gt;:8443/api/v1/clusters/&lt;cluster_name&gt;/
+configurations?type=global</codeblock>
+               </li>
+               <li> Use the highest tag number from the output above to retrieve the configuration
+            values from just before adding the new
+              host:<codeblock xml:space="preserve"># Get a list of configurations
+curl -k -H -i -u admin:&lt;ambari_admin_password&gt; https://
+&lt;deployment_manager_host&gt;:8443/api/v1/clusters/&lt;cluster_name&gt;/
+configuations?type=global\&amp;tag=&lt;second_highest_tag&gt;</codeblock>
+                  <note>You
+              only need to copy the configurations for these two parameters:
+                <codeph>sensage_sls_head_node</codeph> and
+                <codeph>sensage_sls_instances_data</codeph>.</note>
+               </li>
+               <li>Create an XML file named <filepath>reconfig_edw.xml</filepath> and add the two
+              parameters pulled from above to it. Replace all occurrences of the old hostname with
+              the new hostname. For
+              example:<codeblock xml:space="preserve">&lt;?xml version="1.0"?&gt;
+&lt;ambari&gt;
+&lt;sensage_sls_instances_data&gt;{\"instance_8072:8072\":{\"cmmdev02.se
+nsage.com\":\"cmmdev02.sensage.com\",\"cmmdev04.sensage.com\":\"cmmdev
+04.sensage.com\"}}&lt;/sensage_sls_instances_data&gt;
+&lt;sensage_sls_head_node&gt;cmmdev02.sensage.com&lt;/sensage_sls_head_node&gt;
+&lt;/ambari&gt;</codeblock>
+               </li>
+               <li>Edit <filepath>/opt/hexis/hawkeye-ap/hawkeye-deploy/componentInstall.py</filepath>
+              and comment out lines 136 and 137 as shown below. If your lines don’t look like this,
+              you have a different version of hawkeye-deploy and it isn’t necessary to comment out
+              these
+              lines.<codeblock xml:space="preserve"># if property == "sensage_sls_instances_data":
+# self.configDict[property] = properties[property].replace('"','\\"')</codeblock>
+               </li>
+               <li>Update the configurations on the server with the new
+                  values:<codeblock xml:space="preserve">hawkeye-deploy -u admin -p &lt;ambari_admin_password&gt; --host
+&lt;deployment_manager_host&gt; --config=reconfig_edw.xml --targetService hawkeyeAP
+--targetComponent=edw --action reconfigure</codeblock>
+               </li>
+            </ol>
+         </li>
+         <li> Stop EDW on all
+            hosts:<codeblock xml:space="preserve">hawkeye-deploy -u admin -p &lt;ambari_admin_password&gt; --host
+&lt;deployment_manager_host&gt; --targetService hawkeyeAP --targetComponent=edw --action=stop</codeblock>
+         </li>
+         <li>Add a new host. and select to install EDW on it. Ignore warnings about data replication
+          and expansion as this is not necessary since the data will be overwritten.<note>This
+            action may fail with an error while installing Analytics. Just leave it as-is and
+            proceed to step 9.<p> If EDW is configured for no data mirroring, skip to step
+            12.</p>
+            </note>
+         </li>
+         <li>For each EDW data instance, determine where to copy the data stores:<ol id="ol_tp4_r4v_vx">
+               <li>Look at the the sensage_sls_instances_data element in the
+              <filepath>reconfig_edw.xml</filepath> file created in step 6c, the hosts are grouped
+            into host sibling pairs.</li>
+               <li>Find the new host (\"&lt;new_host&gt;\":\"&lt;sibling_host&gt;\") and note its sibling
+            host, which will be &lt;sibling_host&gt; in the <codeph>rsync</codeph> command noted in
+            step 11.</li>
+               <li>Find the new host (\"&lt;reverse_sibling_host&gt;\":\"&lt;new_host&gt;\" and note its
+            reverse sibling host, which will be &lt;reverse_sibling_host&gt; from which to copy the
+            primary datastore to the new host’s secondary datastore.</li>
+               <li>On &lt;sibling_host&gt; note the number appended to the Secondary datastore name in the
+              EDW instance data directory:Secondary-#.d.</li>
+               <li>On &lt;reverse_sibling_host&gt; note the number appended to the Primary datastore name
+              in the EDW instance data directory: Primary-#.d.</li>
+            </ol>
+         </li>
+         <li>On the new host, ensure EDW is
+          stopped:<codeblock xml:space="preserve">service sensage_edw stop</codeblock>
+         </li>
+         <li>With the information you have gathered in Step 8, issue the following commands on the
+            new host for each EDW
+            instance:<codeblock xml:space="preserve">rsync -e ssh -rpogv &lt;sibling_host&gt;:&lt;data_dir&gt;/sls/&lt;EDW_instance&gt;/dsroot/
+Secondary-&lt;secondary_number&gt;.d/* &lt;data_dir&gt;/sls/&lt;EDW_instance&gt;/dsroot/Primary-
+&lt;secondary_number&gt;.d
+
+rsync -e ssh -rpogv &lt;reverse_sibling_host&gt;:&lt;data_dir&gt;/sls/&lt;EDW_instance&gt;/
+dsroot/Primary-&lt;primary_number&gt;.d/* &lt;data_dir&gt;/sls/&lt;EDW_instance&gt;/dsroot/
+Secondary-&lt;secondary_number&gt;.d</codeblock>
+         </li>
+         <li>For each EDW instance, update the top level <filepath>NODE.dat</filepath> by issuing
+            the following commands: a <ol id="ol_q3f_grv_vx">
+               <li>
+                  <codeph>cd &lt;data_dir&gt;/sls/&lt;EDW_instance&gt;/dsroot</codeph>
+               </li>
+               <li>
+                  <codeph>zcat NODE.dat &gt; new.dat</codeph>
+               </li>
+               <li>
+                  <codeph>vi new.dat</codeph>
+               </li>
+               <li>Set the <i>&lt;PhysicalPath&gt;</i> element appropriately for the Primary and
+                  Secondary data stores based on the numbers noted in Steps 8d and 8e.</li>
+               <li>
+                  <codeph>gzip -n new.dat</codeph>
+               </li>
+               <li>
+                  <codeph>mv new.dat.gz NODE.dat</codeph>
+               </li>
+               <li>
+                  <codeph>chown &lt;HawkEye-AP_user&gt;:&lt;HawkEye-AP_group&gt; NODE.dat</codeph>
+               </li>
+               <li>
+                  <codeph>chmod 600 NODE.dat</codeph>
+               </li>
+            </ol></li>
+         <li>If you have configured Nearline storage, copy the following NSS ID list file from any
+            other EDW node to the node you are restoring.<note>The path to the NSS ID list file was
+               configured during installation in the ’NSS ID list file’ field in the Advanced EDW
+               section. The default is
+            <codeph>/opt/data/nss/nss_idlistfile.dat</codeph>.</note></li>
+         <li> Restart ambari-server on the Deployment Manager</li>
+         <li>Start the EDW component.</li>
+         <li>Restart Nagios Server.</li>
+      </ol>
+   </conbody>
+</concept>

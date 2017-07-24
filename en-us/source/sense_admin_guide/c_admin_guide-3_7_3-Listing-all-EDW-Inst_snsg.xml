@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_7_3">
+   <title>Listing all EDW Instances</title>
+   <conbody>
+      <p>To display configuration details about the EDW and its instances:</p>
+      <ol id="ol_wc5_1sh_vx">
+         <li>Log into Deployment Manager.</li>
+         <li>From the Deployment Manager Dashboard, select the Services tab.</li>
+         <li>On the Services screen, find EDW in the Summary section and click the nodes link. The
+        system displays configuration details the EDW and each of its instances.</li>
+      </ol>
+   </conbody>
+</concept>

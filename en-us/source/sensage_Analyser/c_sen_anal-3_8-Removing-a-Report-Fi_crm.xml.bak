@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_8">
+   <title>Removing a Report Filter</title>
+   <conbody>
+    <p>You can find the reports you need by using the filters available at the top of each column.
+      In the screenshot below, the reports are filtered by the <uicontrol>Owner</uicontrol> column,
+      to get the list of all reports owned by the <uicontrol>admin</uicontrol>. To remove the filter
+      condition, click the <uicontrol>x</uicontrol> to the right of the filter label (circled in red
+      in the figure below).</p>
+    <fig>
+      <title>Figure 2-13: Removing a Filter Condition</title>
+      <image href="./media/Image_097.png" id="image_tdf_q2m_zx" placement="break" scale="50"/>
+    </fig>
+   
+  </conbody>
+</concept>

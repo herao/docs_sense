@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_3_2">
+   <title>Alerts and Health Checks</title>
+   <conbody>
+      <p>The Alerts and Health Checks display the status of your deployment. All green checks beside
+      each component indicate a healthy run state; otherwise:</p>
+      <ul id="ul_mfn_gfh_vx">
+         <li>If a red "X" appears beside any component, this indicates a component that is stopped
+            or failed (in which case your attention is required).<note>The green check and red "X"
+               does not apply to the Analytics component since it does not have its own
+               process.</note></li>
+         <li>If a yellow triangle appears beside the component, this indicates that a more up-to-date
+        release of the component is available on the support site. You will need to stop the
+        deployment; once you have updated the component, then you can start the deployment.</li>
+      </ul>
+      <p>Be sure to also choose "Nagios" and "Ganglia" on the menu bar to check if your monitoring
+      system is functioning. Again, you will see a red "X" if any component for these services are
+      not running.</p>
+      <p>Above the Alerts and Health Checks, you can start and stop the entire deployment using the
+      Start and Stop button. </p>
+      <p>
+         <note>If the deployment is running, you will see both the <uicontrol>Restart</uicontrol>
+            button (green top and bottom curved lines) with the red circular
+               <uicontrol>Stop</uicontrol> button; however, if any components in the deployment are
+            stopped, you will see the triangular <uicontrol>Start</uicontrol> button instead of the
+            red circular <uicontrol>Stop</uicontrol> button.<p>
+               <image href="./media/Image_026.jpg" placement="break"/>
+            </p>
+         </note>
+      </p>
+   </conbody>
+</concept>

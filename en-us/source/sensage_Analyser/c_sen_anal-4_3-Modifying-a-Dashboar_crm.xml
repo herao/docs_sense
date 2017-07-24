@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3">
+   <title>Modifying a Dashboard</title>
+   <conbody>
+    <p>If you want to rename the dashboard or change the auto-refresh setting, click the "gear" icon
+      to display the Dashboard settings menu and select "Settings...".</p>
+    <p>Figure 3-4: Modifying Dashboard Settings</p>
+    <p><image href="./media/Image_122.jpg" height="164" width="157" id="image_yvj_whm_zx"/></p>
+    <p>A Dashboard Settings box is displayed as shown in <xref
+        href="c_sen_anal-4_1-Setting-Up-the-Initi_crm.xml"/>.</p>
+    <p>To make modifications, see steps 1-5 of <xref
+        href="c_sen_anal-4_1-Setting-Up-the-Initi_crm.xml"/>. Note that in addition to making
+      changes to the dashboard settings, you can also change the dashboard name.</p>
+  </conbody>
+</concept>

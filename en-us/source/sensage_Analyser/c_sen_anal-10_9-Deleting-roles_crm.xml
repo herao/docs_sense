@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_9">
+   <title>Deleting roles</title>
+   <conbody>
+    <p>To delete a SenSage AP role:</p>
+    <ol id="ol_vlg_p3s_zx">
+      <li>Go to the Analyzer and select <menucascade><uicontrol>Administration</uicontrol><uicontrol>Roles</uicontrol></menucascade> from the dropdown submenu.</li>
+      <li>Select the group for deletion in the Select a Group dropdown and click the trash icon as
+        shown in Figure 9-9 below. Note that if the group has existing members, you will not be able
+        to delete it and will get an error message. <p>Figure 9-16: Deleting a Role</p><p><image href="./media/Image_410.png" placement="break" scale="50"/></p><p>A
+          confirmation box is displayed asking you to confirm your deletion(s).</p><p>Figure 9-17:
+          Deleting Role Confirmation</p><p><image href="./media/Image_411.jpg" height="90"
+            width="528" id="image_xlg_p3s_zx"/></p>
+      </li>
+    </ol>
+
+  </conbody>
+</concept>

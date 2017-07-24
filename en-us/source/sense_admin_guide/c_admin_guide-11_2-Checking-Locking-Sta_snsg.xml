@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11_2">
+   <title>Checking Locking Status and IPC State Information</title>
+   <conbody>
+      <p>Run the showlocks command to display a list of all ACTIVE and PENDING locks plus additional
+      IPC-related state information associated with the indicated data store.</p>
+      <p>
+         <codeblock xml:space="preserve">showlocks { --delete-ipc-data } [dsroot]</codeblock>
+      </p>
+      <p>Use the <codeph>--delete-ipc-data</codeph> switch only if it is determined that a process has
+      crashed and left the IPC-state information in a corrupted state. This switch is meant for use
+      as a last-resort solution.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_4_3_4">
+   <title>Processes Usage</title>
+   <conbody>
+      <fig>
+         <title> Processes Sample Graph</title>
+         <image href="./media/Image_049.jpg" placement="break"/>
+      </fig>
+      <p>This metric is used to represent the different processes and their usage at the point in time
+      </p>
+      <p>Note the following:</p>
+      <ul>
+         <li>Blue—Represents the current number of processes occurring at this point in time.</li>
+         <li>Green—Represents the total number of processes available in the system.</li>
+      </ul>
+      <p>When you click zoom a more detailed view of this graph is displayed as shown below: </p>
+      <fig>
+         <title>Figure
+       2-21: Processes Detail Sample Graph</title>
+         <image href="./media/Image_050.jpg" placement="break"/>
+      </fig>
+   </conbody>
+</concept>

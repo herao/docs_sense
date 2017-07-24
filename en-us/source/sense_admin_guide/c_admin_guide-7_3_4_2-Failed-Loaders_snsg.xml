@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_4_2">
+   <title>Failed Loaders</title>
+   <conbody>
+      <p>Restart the Collector if a loader goes down (time out if <codeph>atload</codeph> fails). Some
+      other issues you may see include:</p>
+      <ul>
+         <li>Zero-byte log files.</li>
+         <li>Incorrect permissions on directories and files—generates critical error.</li>
+         <li>Low or no free space on disk—causes Log Queues to become disabled (restart to fix).</li>
+         <li>Unmounted file systems—do not use NFS; it will throw error on Retrievers.</li>
+         <li>Files being unlinked during processing—might not throw error if no metafile gets created.
+         Clean out the queues and start over. Delete plugin files. Remove MD5 lines for those files
+         (still could get duplicate loads).</li>
+      </ul>
+   </conbody>
+</concept>

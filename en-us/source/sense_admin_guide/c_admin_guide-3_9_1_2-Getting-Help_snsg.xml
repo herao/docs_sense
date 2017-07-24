@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9_1_2">
+   <title>Getting Help</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--help</codeph>
+            </pt>
+            <pd>Displays usage information.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--longhelp</codeph>
+            </pt>
+            <pd>Displays detailed usage information. When you use the ATLOAD command, you can specify
+          this option together with the <codeph>--[no]diskusage</codeph> flag to specify the
+          computation of the disk used by the load (which can be slow for large installations). When
+          no is specified with this flag, it means do not perform computation of the disk used by
+          the load.</pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

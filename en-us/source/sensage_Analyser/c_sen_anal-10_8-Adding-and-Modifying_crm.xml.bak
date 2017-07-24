@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_8">
+   <title>Adding and Modifying Roles</title>
+   <conbody>
+    <p>Roles are a way to define task actions limited to a job responsibility. Roles have a list of
+      privileges that dictate what actions a user may perform. See Appendix B: SenSage AP Permission
+      Requirements which lists supported permissions required to perform actions for specific
+      SenSage AP applications such as scheduling, reporting, etc. Together with groups, roles
+      control what services a user may view and what actions users and groups can perform on
+      services and their objects. For conceptual details on defining roles, refer to the
+      Administrative Guide.</p>
+    <p>To add/modify a SenSage AP AP role:</p>
+    <ol id="ol_db3_h3s_zx">
+      <li>Go to the Analyzer, select <menucascade>
+          <uicontrol>Administration</uicontrol>
+          <uicontrol>Roles</uicontrol>
+        </menucascade> from the dropdown submenu. The Assign Roles screen is displayed as shown in
+        Figure 9-11. See step 2 or 3 depending on whether you are adding or modifying a
+          group.<p>Figure 9-11: Assign Roles Screen</p><p><image href="./media/Image_404.jpg"
+            height="284" width="612" id="image_eb3_h3s_zx"/></p></li>
+      <li>If adding a new role, click the Add a Role button and enter a name for the role as shown
+        in Figure 9-13 and click Save. In the sample screen note the name New Role is
+          entered.<p>Figure 9-12: Adding a Role</p><p><image href="./media/Image_405.jpg"
+            height="308" width="595" id="image_fb3_h3s_zx"/></p><p>After you click Save the role is
+          created and is displayed in the Select a Role box. Select the role and go to Step 4 to
+          assign users to the role or step and to step 5 to assign privileges.</p></li>
+      <li>If modifying a role, select the role that you want to change from the Select a Role
+        dropdown list. The ReportCreatorRole is selected as shown in Figure 9-13.<p>Figure 9-13
+          Selecting a Role for Modification</p><p><image href="./media/Image_406.jpg" height="290"
+            width="627" id="image_gb3_h3s_zx"/></p><p>
+          <note>NOTE: Information for this role is displayed, including the Role Privileges and
+            Assign this Role to Users and Groups area of the screen. Go to Step 5.</note>
+        </p></li>
+      <li>Check Users or Groups from the Not Assigned this Role that you want to be in the role.
+        Click the right arrow to move them into the Assigned this Role column. For example. in
+        Figure 9-14, two groups are selected and will be assigned from this role by clicking on the
+        right arrow, which will move them to Assigned this Role.<p>
+          <note><ph id="a145">NOTE: </ph>Use the arrows to move users back and forth between these
+            columns.</note>
+        </p><p>Figure 9-14: Assigning Privileges to a Role</p><p><image href="./media/Image_407.jpg"
+            height="381" width="541" id="image_hb3_h3s_zx"/></p><p>Complete adding or removing the
+          Users and Groups for your selected or new role.</p></li>
+      <li>Select what the privileges will be for the new/modified role. In the sample screen below
+        (Figure 9-15), the Analytics User role privilege will be checked and assigned to the
+          ReportCreatorRole.<p>Figure 9-15: Assigning Privileges to a Role</p><p><image
+            href="./media/Image_408.jpg" height="402" width="628" id="image_ib3_h3s_zx"/></p></li>
+      <li>Click <b>Save </b>to save the new/modifed role.</li>
+    </ol>
+  </conbody>
+</concept>

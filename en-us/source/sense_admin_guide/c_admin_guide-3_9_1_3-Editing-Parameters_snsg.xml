@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9_1_3">
+   <title>Editing Parameters</title>
+   <conbody>
+      <parml><plentry><pt><codeph>--[no]edit</codeph></pt><pd>Invokes editor to enter missing or incorrect parameters; default is --edit. If you specify
+               --noedit, the editor is not opened when parameters are missing or are
+               incorrect.</pd></plentry></parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--editor [&lt;editor&gt;]</codeph>
+            </pt>
+            <pd>Uses specified editor to edit missing or erroneous parameter; defaults to vi.
+          Alternatively, you can specify the value in the EDITOR or VISUAL environment
+          variable.</pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

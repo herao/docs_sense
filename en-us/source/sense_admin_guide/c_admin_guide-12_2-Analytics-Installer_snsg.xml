@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_12_2">
+   <title>Analytics Installer</title>
+   <conbody>
+      <table id="table_ttz_k5q_wx">
+         <tgroup cols="6">
+            <colspec colnum="1" colname="col1" colwidth="3.2*"/>
+            <colspec colnum="2" colname="col2" colwidth="1.44*"/>
+            <colspec colnum="3" colname="col3" colwidth="1*"/>
+            <colspec colnum="4" colname="col4" colwidth="1.44*"/>
+            <colspec colnum="5" colname="col5" colwidth="1.02*"/>
+            <colspec colnum="6" colname="col6" colwidth="1.08*"/>
+            <thead>
+               <row>
+                  <entry>Log File Name</entry>
+                  <entry>Category</entry>
+                  <entry>Purpose</entry>
+                  <entry>Log Rotate</entry>
+                  <entry>PTL</entry>
+                  <entry>Notes</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <filepath>/opt/hexis/hawkeye_ap/ var/log/analytics/
+                analytics_installer.log</filepath>
+                  </entry>
+                  <entry>Debug, Monitoring</entry>
+                  <entry>ERR MON</entry>
+                  <entry>N</entry>
+                  <entry>N</entry>
+                  <entry>log file for the Analytics installer</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

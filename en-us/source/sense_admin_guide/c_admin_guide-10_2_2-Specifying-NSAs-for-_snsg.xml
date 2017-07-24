@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_2_2">
+   <title>Specifying NSAs for Centera Systems</title>
+   <conbody>
+      <p>When specifying the NSA for a Centera unit, precede the network storage address with the
+      string:</p>
+      <p>
+         <codeph>centera://</codeph>
+      </p>
+      <p>The high-level NSA syntax for a Centera unit
+      is:<codeblock xml:space="preserve">centera://&lt;connection_specification&gt;[|&lt;retention_specification&gt;]</codeblock>
+      </p>
+      <p>
+         <note>In the syntax above, the pipe symbol (|) is a character in the syntax; it is not the
+        meta- syntax character that separates mutually exclusive options.</note>
+      </p>
+      <p>The network storage address for a Centera unit has two parts:</p>
+      <ul>
+         <li>
+            <codeph>&lt;<i>connection_specification</i>&gt;</codeph>—includes parameters legal in Centera
+      for FPPool_Open. For more information, see <xref href="c_admin_guide-10_2_2_1-Specifying-the-Conne_snsg.xml#topic_10_2_2_1"/>, next</li>
+         <li>
+            <codeph>&lt;<i>retention_specification</i>&gt;</codeph>—specifies how long the data should be
+      retained. For more information, see <xref href="c_admin_guide-10_2_2_2-Specifying-Data-Rete_snsg.xml#topic_10_2_2_2"/>.</li>
+      </ul>
+   </conbody>
+</concept>

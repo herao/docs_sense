@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_10">
+   <title>Reprioritizing Log Files</title>
+   <conbody>
+      <p>You can prioritize log files within <filepath>config.xml</filepath>. Assign the
+        <codeph>id</codeph> attribute to an integer, where “1” processes first, “2” next, and so on.
+      The id attribute appears in the <codeph>&lt;PTL&gt;</codeph>, <codeph>&lt;Preprocessor&gt;</codeph>,
+      and <codeph>&lt;Plugin&gt;</codeph> elements.</p>
+   </conbody>
+</concept>

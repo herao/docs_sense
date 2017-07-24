@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_3_3">
+   <title>Metrics</title>
+   <conbody>
+      <p>The Metrics area on the Service page displays usage graphs for SenSage AP Postgres and Tomcat
+      services described below. When you click Analyzer link in the Summary page, you will more
+      metrics that includes host usage for CPU, Disk, Memory, Network and Processes.</p>
+   </conbody>
+</concept>

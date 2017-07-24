@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11_5_3">
+   <title>Using Best Practices when Writing AP SQL Queries</title>
+   <conbody>
+      <p>Follow these guidelines for enhanced query performance when writing AP SQL queries and
+      subqueries:</p>
+      <ul>
+         <li>In a target list when returning columns, select a subset of columns rather than all
+      columns. Selecting fewer columns increases performance.</li>
+         <li>In data processing expressions, instead of the LIKE operator use the _strstr() function
+        as in, _strstr(&lt;COL&gt;,&lt;VAL&gt;) instead of &lt;COL&gt; like %&lt;VAL&gt;%, when
+        specifying values.<p>The following WHERE clause example, uses the _strstr() function instead
+          of the LIKE operator to maximize
+          performance:</p><codeblock xml:space="preserve">WHERE
+_strstr(log_type,$EVENT_SOURCE) &gt;-1
+and
+event_description = $EVENT_DESCRIP</codeblock><p>For
+          more information, see the section on <b>_strstr()</b> in the <cite>Event Data Warehouse
+            Guide</cite>. </p></li>
+         <li>For performance and memory usage reasons, don't use the ORDER BY clause in the first
+      subquery when writing queries that include more than one subquery. Also, use ORDER BY in a
+      separate subquery after any UNION ALL queries or subqueries.</li>
+      </ul>
+   </conbody>
+</concept>

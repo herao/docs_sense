@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_6">
+   <title>FAQs</title>
+   <conbody>
+      <p>
+         <b>What if I want to use the AD Administrator account to log in to AP Analyzer? Do I need to
+        have the AD Administrator added to the Hexis OU?</b>
+      </p>
+      <p>No, any user is supported on any Domains and OUs and is not required to be part of the same
+      pattern. However, if the account is not part of the pattern it will not be synchronized
+      whenever the synchronization process is run; if it is part of the pattern, it will be
+      synchronized. To use the AD</p>
+      <p>Administrator account to log into AP Analyzer, if the SAM account name of the AD
+      Administrator matches with the default SAM account of Analyzer Admin, upon sync, the account
+      is updated and you can log in using the AD Administrator account. In case of a different SAM
+      account (other than Admin), you need to only assign admin roles to this account (using Edit
+      User screen).</p>
+      <p>
+         <b>Can I selectively change the settings of a user from the Analyzer GUI?</b>
+      </p>
+      <p>Yes, you can, but these changes will be over-written with settings from AD whenever the user
+      database is synchronized with AD. The AD synchronization updates all fields of all users,
+      whose name matches the SAM account field in AD, and if the account was originally created from
+      synchronizing with the same AD. An Analyzer user account that has no corresponding SAM account
+      in the AD is not updated. An Analyzer user account that is synchronized with one AD server
+      already will not be updated by synchronizing any other AD servers.</p>
+      <p>
+         <b>How do I delete a user?</b>
+      </p>
+      <p>To delete a user, you must first remove the user account in AD. Then, remove the user account
+      in Analyzer. This is because the AD synchronization will not cause any user to be deleted in
+      the Analyzer.</p>
+      <p>
+         <b>If I delete a user in the Analyzer, will the user re-appear whenever AD synchronization
+        happens next?</b>
+      </p>
+      <p>Yes, it will appear as long as the user is not deleted from AD. </p>
+      <p>
+         <b>How does AD synchronization work in a multi-realm environment?</b>
+      </p>
+      <p>If there are multiple accounts with the same SAM account field, then all of them except for
+      the first one should be given a unique name in the Analyzer and separately synced to the
+      respective AD servers. For example, if there are two accounts with <b>Bob</b> in the SAM
+      account field in two different AD servers, then the first one is synced and an Analyzer
+      account named <b>Bob</b> will be mapped to it. None of the other accounts with the SAM name
+        <b>Bob</b> will be mapped to the Analyzer when it is synchronized with them. The Analyzer
+      administrator must create <b>Bob2</b> in the Analyzer and manually map that user to the second
+      AD server.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_6_1">
+   <title>createtbl</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>createtbl &lt;table_name&gt; &lt;column1&gt;:&lt;type&gt; [&lt;column2&gt;:&lt;type&gt; [...]]</codeph>
+            </pt>
+            <pd>The <codeph>atload</codeph> utility automatically creates a table at load time if the specified
+          table does not exist. However, there are times you want to create an empty table in a
+          given namespace, with a given name and set of columns. The <codeph>atmanage</codeph>
+          utility provides the <codeph>createtbl</codeph> action for this purpose. For example, the
+          following command creates a table named quotes in the external namespace and defines six
+          columns: <codeblock xml:space="preserve">atmanage --namespace=external slshost:8072 createtbl quotes \
+         ts:TIMESTAMP col1:VARCHAR col2:INT32 col3:INT64 col4:TIMESTAMP col5:FLOAT</codeblock>
+               <note>When you create a table, keep the following in mind:<ul id="ul_mcw_tvt_vx">
+                     <li>You must always define a column named <b>ts</b>, with SQL data type
+                  <b>TIMESTAMP</b>.</li>
+                     <li>The EDW creates automatically an extra column named _uploadid, with SQL data type
+                varchar. The column holds the ID of the upload operation that inserted each row into
+                the table.</li>
+                     <li>You can define other columns.</li>
+                  </ul>
+               </note>
+            </pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

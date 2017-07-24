@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_3_4">
+   <title>Debugging</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--[no]dbgprint-request</codeph>
+            </pt>
+            <pd>Dumps client-server request, and then exits. The default is <codeph>--nodbgprint-request</codeph>.</pd>
+            <pd>This option forces atmanage to print the execution requests that it would have sent to the
+       EDW, and then stops execution rather than proceeding with the action. This is useful for
+       debugging situations and for understanding the EDW API.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--[no]raw</codeph>
+            </pt>
+            <pd>This options forces atmanage to print the raw XML results that the EDW returns, instead of the
+          interpreted results atmanage usually shows.</pd>
+            <pd>The default is <codeph>--noraw</codeph>.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--[no]show-responses</codeph>
+            </pt>
+            <pd>When reading the response from the EDW server, <codeph>atmanage</codeph> filters out certain
+          messages, reformats others, and attempts to present a simpler response suitable for most
+          cases. The <codeph>--show-responses</codeph> flag forces <codeph>atmanageto</codeph> show
+          the uninterpreted responses from the EDW in addition to normal output. The default is
+            <codeph>--noshow-responses</codeph>.</pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_1">
+   <title id="title_a26">Preparing Log Data for Loading</title>
+   <conbody>
+      <p>The Collector does not rotate logs. Therefore, you need to provide your own means for
+      rotating logs on your log hosts in a way that is compatible with the Collector.
+      Specifically:</p>
+      <ul>
+         <li>provide a log file that is not actively being written to</li>
+         <li>ensure that the logs maintain unique names</li>
+         <li>include an archive sub-directory for SFTP, FTP, and HTTP</li>
+      </ul>
+      <p>The Collector package includes a script called <filepath>log-rotate.exe</filepath> (for
+      Windows) or<filepath> log-rotate</filepath> (for Linux) that provides an example of how you
+      can write a script to achieve this task. Run the script with no options to see its usage.</p>
+      <p>To use the script, you must specify:</p>
+      <ul>
+         <li>a sourceFile</li>
+         <li>a targetDir</li>
+         <li>whether you want hourly or daily naming</li>
+      </ul>
+      <p>The script creates an <filepath>archive/</filepath> directory (under the targetDir), then compresses and renames
+      the files.</p>
+      <p>The script also has an option that enables you to specify a hierarchy of directories for
+      archived sub-directories. Because the Collector typically does not use this option, you should
+      turn it off.</p>
+   </conbody>
+</concept>

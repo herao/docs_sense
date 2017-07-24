@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_4_2">
+   <title>Deleting Tables</title>
+   <conbody>
+      <p>To delete tables, use</p>
+      <p>
+         <codeph>atmanage &lt;<i>cluster_list</i>&gt; droptbl &lt;<i>tablename</i>&gt;</codeph>
+      </p>
+      <p>Once deleted, a table's data is permanently removed.</p>
+      <p>Also see “Defining Views with SenSage AP SQL” in the <cite>Event Data Warehouse
+      Guide</cite>.</p>
+   </conbody>
+</concept>

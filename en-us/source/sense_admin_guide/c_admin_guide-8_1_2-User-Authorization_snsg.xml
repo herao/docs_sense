@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_1_2">
+   <title>User Authorization</title>
+   <conbody>
+      <p>User Authorization locates and verifies the user's roles and permissions from the
+      authentication authority.</p>
+      <p>There are four types of security enforced through User Authorization:</p>
+      <ul>
+         <li>
+            <b>Resource Service Security</b> with the ability (through the use of user roles) to
+        restrict access to a resource service and restrict the creation of a new resource such as a
+        table, file, etc., Note that each resource has an owner and a type; the type defines the
+        resource’s properties and available actions.</li>
+         <li>
+            <b>Resource Security</b> with the ability to restrict actions (such as Read, Write,
+        Delete, etc.) on a resource instance. For details on Resource Instance, see. “User
+        Authorization”, on page 154. Included in Resource Security is the ability to support
+        resource security maintenance, by providing actions the current user can perform on a
+        secured resource. Resource Security is cot rolled through the object owner and each object’s
+        definition provides details on what users and groups are allowed to perform specific
+        action(s).</li>
+         <li>
+            <b>Data Security</b> with the ability to restrict a user to schema(s) and table(s).
+        Currently, the schema(s) and table(s) a user can view are maintained by Postgres Security
+        (outside the SenSage AP system) through the user’s postgresUser attribute and using a tool
+        such as pgadmin. For more details, read “SenSage AP Security Model and Postgres”, on page
+        156.</li>
+         <li>
+            <b>Security Inheritance</b> with the ability for users to inherit security from their
+        groups and their groups sub-groups. For example, Specific resources can inherit security
+        from a pre-defined resource hierarchy and can disable portions of the user interface. Other
+        examples of inheritance is when a saved result can inherit its security from the report that
+        created it or when a dashboard pod can inherit its security from the dashboard where it
+        resides.</li>
+      </ul>
+   </conbody>
+</concept>

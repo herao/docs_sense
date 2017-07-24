@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_13">
+   <title>Error Codes</title>
+   <conbody>
+      <p>This appendix documents error messages raised when you use SenSage AP. The messages are
+      grouped by component and, within each component, by category and code number. This chapter
+      documents error messages for the following components:<ul id="ul_h5f_gxq_wx">
+            <li>
+               <xref href="c_admin_guide-13_1-Collector_snsg.xml#topic_13_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-13_2-EDW_snsg.xml#topic_13_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-13_3-SenSage-AP-Retriever_snsg.xml#topic_13_3"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_6_3">
+   <title>Recovering from multiple failed EDW Nodes</title>
+   <conbody>
+      <p>The procedure for recovering from multiple failed EDW nodes is exactly the same as
+    replacing a single node; the only exception is that you can expect data loss when you are
+    recovering multiple failed nodes that constitute the primary and secondary data stores of
+    EDW.</p>
+   </conbody>
+</concept>

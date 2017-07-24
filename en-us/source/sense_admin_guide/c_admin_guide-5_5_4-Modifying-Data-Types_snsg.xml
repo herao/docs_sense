@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_5_4">
+   <title>Modifying Data Types of Existing Columns</title>
+   <conbody>
+      <p>Use the following SQL statement to modify the data type of an existing column in a
+      table:<codeblock xml:space="preserve">ALTER TABLE &lt;schema qualified table name&gt; MODIFY [COLUMN] &lt;existing column name&gt;
+&lt;new data type&gt;;</codeblock>
+      </p>
+      <p>To modify data types of multiple columns in a single statement, use the following
+      syntax:<codeblock xml:space="preserve">ALTER TABLE &lt;schema qualified table name&gt; MODIFY [COLUMN] (
+&lt;existing column name&gt; &lt;new data type&gt;,
+.............. &lt;existing column name&gt; &lt;new data type&gt;
+);</codeblock>
+      </p>
+      <p>The following diagram represents the syntax diagram for the ALTER TABLE MODIFY statement:
+      <fig id="fig_kyn_4gv_vx">
+            <title>Syntax diagram for modifying data type of existing columns</title>
+            <image href="./media/Image_168.jpg" placement="break" id="image_vfx_kgv_vx"/>
+         </fig>
+      </p>
+      <ul>
+         <li>Consider the following when using the MODIFY statement:</li>
+         <li>The current and the targeted data types must be different.</li>
+         <li>A column of data type VARCHAR is convertible to any type and vice versa,</li>
+         <li>A column of arithmetic type is convertible to a higher arithmetic type or a timestamp
+       type.</li>
+         <li>A column of bool type is convertible to an arithmetic type. <p>The following table depicts
+          the valid conversions:</p>
+            <fig>
+               <title>Valid conversions of data types</title>
+               <image href="./media/Image_169.jpg" placement="break" id="image_wfx_kgv_vx"/>
+            </fig>
+         </li>
+      </ul>
+      <section>
+         <title>Examples</title>
+         <codeblock xml:space="preserve">SQL&gt; alter table default.cdr modify called_number int64;
+SQL&gt; alter table default.cdr modify column calling_imei int64;
+SQL&gt; alter table default.cdr modify ( called_number int64, calling_imei int64);</codeblock>
+         <note>Any bloom filters associated with the column are dropped.</note>
+      </section>
+   </conbody>
+</concept>

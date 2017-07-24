@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_4">
+   <title id="title_a40">Maintaining Active Directory Integration</title>
+   <conbody>
+      <p>After integrating Active Directory into a SenSage AP deployment, you use Active Directory
+      tools for all management of users and groups. You use Active Directory to enter new users and
+      to assign new and existing users to the appropriate Active Directory groups that authorize the
+      user to access SenSage AP.</p>
+      <p>For more information on using SenSage AP roles to authorize users, see the <i>SenSage AP
+        Analyzer Guide</i>.</p>
+   </conbody>
+</concept>

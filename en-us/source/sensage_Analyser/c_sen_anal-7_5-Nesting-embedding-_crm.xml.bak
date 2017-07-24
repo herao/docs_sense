@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_5">
+   <title>Nesting (embedding) a Model into an Existing Model</title>
+   <conbody>
+    <p>Models can be simple or arbitrarily complex. Models can also be saved as components for
+      nesting (re-use) in other models; the number of nesting level is unlimited. Components saved
+      as models are typically used to process data.</p>
+    <p>Model components can exist without any input and output parameters unless they are created
+      inside the model. For details on setting up default parameters inside a model component, see
+      Step 2 in the procedure "To modify either an input or output parameter:" on page 117.</p>
+     <note>NOTE: Inputs and outputs from a model that is nested becomes part of the newly-formed
+      model.</note>
+    <ol id="ol_aly_jlr_zx">
+      <li>Go to the Analyzer dashboard, select Data Design from the dropdown list and click
+        Analytics Workbench.<p>The model canvas is displayed and when the Libraries Menus is
+          expanded, you can display a listing of all models in the system to which you have
+          access.</p></li>
+      <li>Click and drag the model you want to display on the canvas; then click and drag the model
+        or component you want to embed in the model you have first displayed. As shown in the
+        example in Figure 6-12, the count of created input parameters is equal to the count of input
+        parameters at the model component. The same is true for the output parameters.<p>Figure
+          6-12: Model Component Input and Output Parameters</p><p><image href="./media/Image_277.jpg"
+            height="176" width="493" id="image_cly_jlr_zx"/></p><p>
+          <note>The parameter datatypes defined inside model components are the same as the
+            outside (resulting) parameters.</note>
+        </p></li>
+      <li>If necessary, you may have to re-add the nested model to the existing one. The need for
+        this occurs when the alteration is ?????NEED MORE INFORMATION.</li>
+    </ol>
+  </conbody>
+</concept>

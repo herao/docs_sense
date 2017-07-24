@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_4">
+   <title>Creating a Schedule for Distribution</title>
+   <conbody>
+    <p>You can schedule a report that you created for email distribution in PDF, CSV, or Hyperlink
+      format. To do this:</p>
+    <ol id="ol_p5l_51s_zx">
+      <li>
+        <p>Navigate to the "Distribution" tab in the Schedule Settings screen. Select an attachment
+          format (PDF, CSV, or Hyperlink).</p>
+        <p>Figure 8-8: Schedule Settings Screen</p>
+        <p><image href="./media/Image_374.jpg" height="169" width="594" id="image_q5l_51s_zx"/></p>
+      </li>
+      <li>
+        <p>Add a user using one of two options: Select a system user from the dropdown menu
+          provided, and click the "+" button or type in a valid email address, and the "+"
+          button.</p>
+        <p>Figure 8-9: Adding a User</p>
+        <p><image href="./media/Image_375.jpg" height="164" width="607" id="image_r5l_51s_zx"/></p>
+      </li>
+      <li>
+        <p><ph id="a124">To remove a user from the distribution, click the trash can icon to the
+            right of their name.</ph></p>
+      </li>
+    </ol>
+    <p>Figure 8-10: Removing a User</p>
+    <p><image href="./media/Image_376.jpg" height="168" width="622" id="image_s5l_51s_zx"
+        /><note>NOTE: For reports that are scheduled for email distribution, the system displays the
+        time zone of the user who created the schedule.</note></p>
+  </conbody>
+</concept>

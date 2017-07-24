@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_4_5">
+   <title>Hiding the Menus</title>
+   <conbody>
+    <p>By clicking the icon in the upper-left corner the menu can be hidden and un-hidden. NEW
+      SCREENSHOT NEEDED</p>
+    <p>Figure 1-17: Hiding and Unhiding Menus</p>
+    <p><image href="./media/Image_054.png" placement="break" scale="45"/></p>
+  </conbody>
+</concept>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_1_1">
+   <title>Adding a SenSage AP User in a Single/Multiple-AD Server Environment</title>
+   <conbody>
+    <p>This section describes how to manually create a user using Analyzer and how to map that user
+      to a single LDAP/AD server or to multiple LDAP/AD servers.</p>
+    <p>To add a SenSage AP user</p>
+    
+    <ol id="ol_mrk_hds_zx">
+      <li>Go to Analyzer, select Administration --> Users from the dropdown submenu. The Manage
+        Users screen is displayed as shown in Figure 9-1.<p>Figure 9-1: Manage Users
+            Screen</p><p><image href="./media/Image_385.jpg" height="254" width="509"
+            id="image_lrk_hds_zx"/></p></li>
+      <li>To add a user, click the <b>Add a User </b>button as shown in Figure 9-2 below:<p>Figure
+          9-2: Add a User Button</p><p>
+          <image href="./media/Image_386.jpg" height="320" width="589" id="image_nrk_hds_zx"
+            placement="break"/>
+        </p><p>The pop-up window for adding a user displays. </p><p>Figure 9-3: Account Settings for
+          Adding a New User</p><p>
+          <image href="./media/Image_387.jpg" height="353" width="385" id="image_ork_hds_zx"
+            placement="break"/>
+        </p></li>
+      <li>In the popup window, enter the Username for the SenSage AP user, the user’s email, the
+        name of the user, the Postgres User.</li>
+      <li>Specify the LDAP/DN details for the user.</li>
+      <li>From the AD/LDAP Location dropdown list, select the AD server for this user.<p>
+          <note>NOTE: The dropdown list contains AD servers which were configured in Deployment
+            Manager along with AD servers which are listed in the ldap.properties file.</note>
+        </p></li>
+      <li>In the lower part of the popup window, check the boxes next to the roles and groups you
+        want to assign to this user.</li>
+      <li>Click <b>Save </b>when you are finished.</li>
+      <li>(Optional) Once the user is added, see “Synchronizing Users from Active Directory/LDAP”,
+        on page 162 to update the user in Analyzer.</li>
+      <li>Select a Postgres account which will be used to map this user. Note that this step is
+        critical as the initial setup of the Analyzer admin account is not useable with this
+        mapping. DO NOT select "sls" or "controller" accounts as these are reserved accounts. <p>If
+          you need to create additional choices in Postgres, create the additional role using the
+          following PSQL
+        commands:</p><codeblock>CREATE ROLE &lt;&lt;ROLE_NAME>> NOSUPERUSER CREATEDB NOCREATEROLE INHERIT LOGIN
+PASSWORD '&lt;&lt;PASSWORD>>';
+ALTER USER &lt;&lt;ROLE_NAME>> SET SEARCH_PATH = siem,saved_result,public';</codeblock>
+      </li>
+    </ol>
+
+  </conbody>
+</concept>

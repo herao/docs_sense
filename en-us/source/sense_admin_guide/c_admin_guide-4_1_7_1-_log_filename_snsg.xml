@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_7_1">
+   <title>$_log_filename</title>
+   <conbody>
+      <p>The automatic expression macro $_log_filename carries the filename of the log file currently
+      being loaded. Files in Collector log queues often carry useful information in their filenames.
+      You should parse and store this information as column values in the row being loaded. For
+      example, you should store the entire filename and parse other useful information from it, such
+      as the time the log file was created.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_3_2">
+   <title>Configuring Objects in Active Directory</title>
+   <conbody>
+      <p>Active Directory arranges objects in a hierarchy that comprises Domains, OUs (organizational
+      units), groups, and users. The Active Directory framework also includes higher-level
+      collections of objects called forests and trees. For integration with SenSage AP, only
+      domains, OUs, and groups are relevant.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_1">
+   <title id="title_a41">Nearline Storage: Overview</title>
+   <conbody>
+      <p>This topic describes:<ul id="ul_mlr_qk4_wx">
+            <li>
+               <xref href="c_admin_guide-10_1_1-Models-for-Managing-_snsg.xml#topic_10_1_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-10_1_2-Types-of-Nearline-St_snsg.xml#topic_10_1_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-10_1_3-How-Nearline-Storage_snsg.xml#topic_10_1_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-10_1_4-Managing-the-Archivi_snsg.xml#topic_10_1_4"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10">
+   <title>Administering Sensage AP Users (Draft)</title>
+   <conbody>
+    <p>This chapter describes how to use SenSage AP Analyzer to administer SenSage AP users,
+      including maintenance of their assigned roles and groups.</p>
+    <p>
+      <note>For details on SenSage AP user management concepts, including authentication mode
+        (native, LDAP, or AD/LDAP) setup, Active Directory synchronization, and authorization
+        through roles and groups, see the SenSage AP Administration Guide.</note>
+    </p>
+    <p>This chapter contains these sections:<ul id="ul_myz_qcs_zx">
+        <li><xref href="c_sen_anal-10_1-Adding-a-SenSage-AP-_crm.xml"/></li>
+        <li><xref href="c_sen_anal-10_2-Modifying-a-SenSage-_crm.xml"/></li>
+        <li><xref href="c_sen_anal-10_5-Adding-and-Modifying_crm.xml"/></li>
+        <li><xref href="c_sen_anal-10_7-Deleting-Groups_crm.xml"/></li>
+        <li><xref href="c_sen_anal-10_8-Adding-and-Modifying_crm.xml"/></li>
+        <li><xref href="c_sen_anal-10_9-Deleting-roles_crm.xml"/></li>
+        <li><xref href="c_sen_anal-10_10-Synchronizing-Users-_crm.xml"/></li>
+      </ul></p>
+  </conbody>
+</concept>

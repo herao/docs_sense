@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_4_3_1">
+   <title>Information About atview</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--version</codeph>
+            </pt>
+            <pd>Displays version of atview.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--help, --longhelp</codeph>
+            </pt>
+            <pd>Displays online help for command in short form (--help), or with additional detail (-- longhelp).</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--timestamps</codeph>
+            </pt>
+            <pd>This parameter specifies that the output includes the minimum and maximum timestamp values of
+           the data in each table. If the table is empty, the display shows "no records". When views are
+           displayed in the output, those rows do not include the minimum and maximum timestamp values.
+           The command executes more quickly when run without this parameter.</pd>
+         </plentry>
+      </parml>
+      <p/>
+   </conbody>
+</concept>

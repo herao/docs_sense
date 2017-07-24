@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_4_1">
+   <title>Synopsis</title>
+   <conbody>
+      <p>
+         <codeph>atview [options] &lt;<i>cluster_list</i>&gt; &lt;<i>item</i>&gt; [&lt;<i>item</i>&gt;
+        […]]</codeph>
+      </p>
+   </conbody>
+</concept>

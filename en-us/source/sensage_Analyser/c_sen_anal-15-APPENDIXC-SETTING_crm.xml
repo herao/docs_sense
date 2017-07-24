@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_15">
+   <title>Appendix C: Setting up Analyzer for Custom Charts</title>
+   <conbody>
+    <p>This appendix contains instructions for setting up Analyzer to accept Custom Charts for
+      reports that you have created using the Add a Chart feature. For details on adding the actual
+      chart to the interface, see <xref href="c_sen_anal-6_7-Creating-or-Modifyin_crm.xml"/>.</p>
+    <p>The Add a Chart feature contains a tab to create custom reports. In order for this feature to
+      work you must be sure that you have configured your system to handle custom reports. To do
+      this, perform the following steps:</p>
+    <note>
+      You may need to consult with your System Administrator to set up custom
+        reports.
+    </note>
+    <ol id="ol_b2z_ttt_zx">
+      <li>In Tomcat, modify the context.xml file in the tomcat conf directory to accept aliases.
+        Include the context attribute of context.xml as shown in the configuration example below:<p>
+          <codeblock>&lt;Context reloadable="true" aliases=" /custom=/opt/hexis/hawkeye-ap/analyzer/ custom">;</codeblock>
+        </p></li>
+      <li>Restart Tomcat for the change to take effect.</li>
+      <li>Open the service directory folder at:
+        <filepath>/opt/hexis/hawkeye-ap/analyzer</filepath>.</li>
+      <li>Within that folder, create the custom folder so the path now is:
+          /<filepath>opt/hexis/hawkeye-ap/ analyzer/custom</filepath>.</li>
+      <li>Place the following in the custom folder:<ul>
+          <li><codeph>&lt;body></codeph> section of the custom HTML page </li>
+          <li>supporting Java script and css files</li>
+          <li>optionally, a custom chart page that includes
+              <codeph>&lt;HAWKEYE_AP_ANALYZER_REPORT_RESULTS/></codeph> to get the report
+            results</li>
+        </ul><note>Results of the executed report will be used to generate the chart.</note></li>
+      <li>After you create a report, from the Add a Chart dialog, select Custom Chart and be sure to
+        enter the same HTML file name that is included in the /opt/hexis/hawkeye-ap/analyzer/ custom
+        folder.</li>
+      <li>When entering the name of the HTML file in the dialog box, be sure to prefix the HTML file
+        name with /analyzer/custom.</li>
+    </ol>
+     <note>For details on using the interface to request the chart, see <xref
+        href="c_sen_anal-6_7-Creating-or-Modifyin_crm.xml"/>.</note>
+  </conbody>
+</concept>

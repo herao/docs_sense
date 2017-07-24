@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_3">
+   <title id="title_a7">Using Other Report Viewing Options</title>
+   <conbody>
+    <p>Viewing options are presented as icon items at the top right corner of the report screen as
+      noted in Figure 2-6. In this figure the icon for toggling the grid on and off to provide a
+      larger view of the chart is selected.</p>
+    <fig><title>Figure 2-6: Grid Toggle for Maximum Viewing</title><image href="./media/Image_069.png" placement="break" id="image_cjz_zbm_zx"/></fig>
+    <p>The following table describes the use Report option icon for viewing:</p>
+    <table id="table_djz_zbm_zx">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1" colwidth="1*"/>
+        <colspec colnum="2" colname="col2" colwidth="1.02*"/>
+        <colspec colnum="3" colname="col3" colwidth="2.32*"/>
+        <tbody>
+          <row>
+            <entry>icon</entry>
+            <entry>Name</entry>
+            <entry>Use to...</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_070.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">Chart Toggle</entry>
+            <entry align="left" valign="middle">Toggle the chart on and off to gain a larger view of
+              the grid.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_071.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">Grid Toggle</entry>
+            <entry align="left" valign="middle">Toggle the grid on and off to gain a larger view of
+              the chart.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_072.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">View raw SQL Code</entry>
+            <entry align="left" valign="middle">View the raw SQL code that was written or generated
+              to produce the data</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_073.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">Share the report</entry>
+            <entry align="left" valign="middle">Share the report by creating a link in an email
+              message on the local client.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_074.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">View the report full-screen</entry>
+            <entry align="left" valign="middle">View the report full screen. (Press ESC to return to
+              regular size viewing.)</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_075.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">Refresh Report</entry>
+            <entry align="left" valign="middle">Refresh the report. This will rerun the
+              reports.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle">
+              <image href="./media/Image_076.jpg" placement="break" scale="60"/>
+            </entry>
+            <entry align="left" valign="middle">Dashboard Options</entry>
+            <entry align="left" valign="middle">Create a new dashboard, delete an existing one, save
+              the dashboard lay, and rename and reset a dashboard’s auto-refresh in minutes.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </conbody>
+</concept>

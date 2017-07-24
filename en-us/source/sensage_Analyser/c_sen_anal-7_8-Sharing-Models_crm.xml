@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_8">
+   <title id="title_a17">Sharing Models</title>
+   <conbody>
+    <p>By default, a model is only accessible to the user who created it. When a user initially
+      creates a model, they are only able to view it. To allow others to view the model, the user
+      who created the model must "share" it.</p>
+    <p>
+      <draft-comment author="Hemraj">DOES THIS RULE ALSO APPLY TO COMPONENTS?</draft-comment>
+    </p>
+    <p>Models are shared through the following methods:</p>
+    <ul id="ul_bjg_fvr_zx">
+      <li>
+        <p>Using the Shared button on the Model Listing or the Models Menu bar</p>
+      </li>
+      <li>
+        
+          <p>Using the Models Export or Import option. For details see</p>
+        
+      </li>
+    </ul>
+  </conbody>
+</concept>

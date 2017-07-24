@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_3">
+   <title>Arguments</title>
+   <conbody>
+      <table id="table_c4b_h4l_vx">
+         <tgroup cols="2">
+            <colspec colnum="1" colname="col1" colwidth="1*"/>
+            <colspec colnum="2" colname="col2" colwidth="2.64*"/>
+            <thead>
+               <row>
+                  <entry>Argument</entry>
+                  <entry>Description</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>&lt;<i>cluster_list</i>&gt;</entry>
+                  <entry>
+                     <p><codeph>&lt;cluster_list&gt;</codeph> represents a comma-separated list of
+                        &lt;host&gt;:&lt;port&gt; pairs. The list must be enclosed in quotation
+                        marks (").</p>
+                     <p>Specifying a list rather than a single host:port pair allows the utility to
+                        run even if the first of the specified EDW nodes is down.</p>
+                     <p>Each host:port pair identifies the EDW instance; for example, sls01:8072.
+                        The command tries each host:port pair in order (left to right) until it
+                        finds one that allows a TCP (Transmission Control Protocol) connection.
+                        Failure to establish a TCP connection indicates that the EDW host is down.
+                        If the</p>
+                     <p>connection succeeds but the command fails, the command does not attempt to
+                        establish additional connections.</p>
+                     <p>Example:</p>
+                     <p><codeph>atload --user=administrator --password=changeme
+                           "sls01:8072,sls02:8072,sls03:8072" mytable src.ptl src</codeph></p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>&lt;<i>table_name</i>&gt;</entry>
+                  <entry>Destination table name (created if it doesn't exist).</entry>
+               </row>
+               <row>
+                  <entry>&lt;<i>ptl_file</i>&gt;</entry>
+                  <entry>The file that describes how to parse the log data.</entry>
+               </row>
+               <row>
+                  <entry>&lt;<i>log_file</i>&gt;</entry>
+                  <entry>One or more data files to load into the table. Use "-" to read log data
+                     from standard input.</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+      <p>Table names can be 1 to 255 characters long and can consist of letters, numbers and
+      underscores (_).</p>
+   </conbody>
+</concept>

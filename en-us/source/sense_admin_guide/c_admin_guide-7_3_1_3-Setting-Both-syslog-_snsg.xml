@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_1_3">
+   <title>Setting Both syslog and File-Base Logging</title>
+   <conbody>
+      <p>Make both changes described above other words, set the logging level for syslog and
+      uncomment the lines for file-based logging. Modify the path if necessary and restart the
+      Collector. For more information, see <xref href="c_admin_guide-7_2-Starting-Stopping-_snsg.xml#topic_7_2"/>.</p>
+   </conbody>
+</concept>

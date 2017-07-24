@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8">
+   <title>Managing Security (Users and Authentication)</title>
+   <conbody>
+      <p>This chapter contains the following sections:<ul id="ul_w4q_zfz_vx">
+            <li>
+               <xref href="c_admin_guide-8_1-Security-Management-_snsg.xml#topic_8_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-8_2-SenSage-AP-Security-_snsg.xml#topic_8_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-8_3-Configuring-Native-A_snsg.xml#topic_8_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-8_4-Configuring-LDAP-Int_snsg.xml#topic_8_4"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-8_5-FAQs_snsg.xml#topic_8_5"/>
+            </li>
+         </ul>
+      </p>
+      <p>
+         <note type="important"> Commands and references in this chapter are for example purposes only.
+        Copying, pasting, and running commands contained in this chapter may not work depending on
+        your installation setup.</note>
+      </p>
+   </conbody>
+</concept>

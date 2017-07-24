@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_4_5_6">
+   <title><i>disk</i>: Showing Disk Capacity, Used Disk Space, and Free Disk Space</title>
+   <conbody>
+      <p>Lists the total disk capacity, amount in use, and the amount of free space across the
+      instance. The amount of free disk is a conservative, weighted estimate, which attempts to
+      account for the uneven filling of disk space as new log records get loaded.</p>
+      <p>Example:<codeblock xml:space="preserve">atview --user=administrator --pass=pass:s0mep@ss lmshost:8072 disk</codeblock>
+      </p>
+   </conbody>
+</concept>

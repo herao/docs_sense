@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11_5_1">
+   <title>Generating a SQL Query Plan for Query Tuning</title>
+   <conbody>
+      <p>A query plan, or query execution plan, describes how the EDW Query Engine plans to run a
+      given query. This information is useful primarily to trouble-shoot a query that is running too
+      slowly. A knowledgeable database administrator can use the plan to tune query performance.</p>
+      <p>
+         <note type="important"> This section describes how to generate a query plan. However, because
+        interpreting a query plan and using it to tune performance requires sophisticated EDW Query
+        Engine knowledge, IgniteTech does not expect its system administrators to interpret these
+        plans directly. The instructions in this section are provided only to make it easier for you
+        to generate a plan that you can deliver to Technical Support when query performance would
+        benefit from improvement.</note>
+      </p>
+      <p>SenSage AP SQL provides the EXPLAIN extension to enable you to create a query plan. The
+      syntax for this extension is:</p>
+      <p>
+         <codeph>EXPLAIN &lt;any_select_statement&gt;</codeph>
+      </p>
+      <p>When you precede the SELECT keyword with the EXPLAIN keyword for any valid query, the EDW
+      Query Engine generates a query plan instead of actually running the query. You can generate
+      the plan for a query that you run on the command line or from a file.</p>
+      <p>The following query example selects four columns from a table named test between May, 2008
+      and June, 2009. It returns only the first 40
+      rows:<codeblock xml:space="preserve">SELECT top 40 Host, ClientIP, Get, Code
+  FROM test
+  WHERE ClientIP = '167.29.33.430'
+  DURING _time('2008-05-01T10:11:00'),_time('2009-06-01T10:11:00');</codeblock>
+      </p>
+      <p>To return the query plan rather than the data for this query, you would modify the query as
+      follows:<codeblock xml:space="preserve">EXPLAIN SELECT top 40 Host, ClientIP, Get, Code
+  FROM test
+  WHERE ClientIP = '167.29.33.430'
+  DURING _time('2008-05-01T10:11:00'),_time('2009-06-01T10:11:00');</codeblock>
+      </p>
+      <p>The query above highlights the single change in <b>boldface</b> type.</p>
+      <p>Assume you run this query directly from the command line with a command like the
+      following:<codeblock xml:space="preserve">atquery --user=administrator --pass=changeme --namespace=default localhost:8072\
+-e "EXPLAIN SELECT top 40 Host, ClientIP, Get, Code FROM test\
+WHERE ClientIP = '167.29.33.430'\
+DURING _time('2008-05-01T10:11:00'),_time('2009-06-01T10:11:00');</codeblock>
+      </p>
+      <p>The EDW engine returns the query plan as a single varchar column. The output includes rows of
+      dashed lines. To return only the query plan without the dashed lines, add the following
+        <codeph>atquery</codeph> flags:</p>
+      <p>
+         <codeph>--format=tsv --verbose=0</codeph>
+      </p>
+      <p>The<codeph> --verbose=0</codeph> option forces the EDWengine to return only the query plan.
+      The <codeph>--format=tsv</codeph> option forces the varchar field to display as tab-separated
+      values. The varchar column contains several new lines, all represented by the
+        <codeph>\n</codeph> character.</p>
+      <p>
+         <note>The tsv format is preferable to the csv (comma-separated value) or psv (pipe-separated
+        value) formats. The varchar output that represents the query plan contains no tabs, but does
+        contain commas and could contain pipes. Therefore, csv-formatted output would include
+        escaped commas and psv-formatted output could include escaped pipes. The most easily
+        readable format is tsv.</note>
+      </p>
+      <p>To make the query plan more readable, you can run the EDW output through the Unix sed (stream
+      editor) utility. This utility reads the text input, applies formatting that you specify, and
+      outputs the formatted text. Add the following formatting to the <codeph>sed</codeph> utility
+      to display the query plan in text appropriately broken into separate lines:</p>
+      <p>
+         <codeph>sed 's/\\n/\n/g'</codeph>
+      </p>
+      <p>As a final step, redirect the query plan into a text file that you can share with Technical
+      Support.</p>
+      <p>In other words, to create a readable query plan in its own text file for the example query
+      above, you could run the
+      following:<codeblock xml:space="preserve">atquery --user=administrator --pass=changeme --namespace=default --format=tsv\
+--verbose=0 localhost:8072 -e "EXPLAIN SELECT top 40 Host, ClientIP, Get, Code\
+FROM test WHERE ClientIP = '167.29.33.430'
+DURING _time('2008-05-01T10:11:00'),_time('2009-06-01T10:11:00');"
+| sed 's/\\n/\n/g' &gt; plan.out</codeblock>
+      </p>
+   </conbody>
+</concept>

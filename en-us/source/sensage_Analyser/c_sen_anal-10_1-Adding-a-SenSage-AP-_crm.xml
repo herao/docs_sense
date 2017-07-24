@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_1">
+   <title id="title_a21">Adding a SenSage AP Users</title>
+   <conbody>
+    <p>If you have Analyzer Administration privileges, you can add SenSage AP users and assign roles
+      and groups for each user according to their level of responsibility. Note that roles determine
+      what functionality a user will have in the SenSage AP application; roles are assigned to one
+      or more users in an organization.</p>
+    <p>
+      <note>For details on roles and types of permissions associated with each in the SenSage AP
+        system, see <xref href="c_sen_anal-14-APPENDIXB-SENSAGE_crm.xml"/>.</note>
+    </p>
+    <p>
+      <note>Initially, when installing SenSage AP Analyzer, an Analyzer admin account is set
+        up which provides the privilege to create SenSage AP user accounts with appropriate group
+        and role permissions that match the user name of an LDAP or AD/LDAP user.</note>
+    </p>
+    <p>Before you proceed with managing SenSage AP users in a single or multi-realm environment,
+      make sure that you have already configured your environment for AD/LDAP integration. For
+      information on how to configure AD/LDAP integration, the see the <cite>SenSage AP
+        Administration Guide</cite>.</p>
+  </conbody>
+</concept>

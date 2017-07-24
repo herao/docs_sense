@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_6_1">
+   <title>The Schedule Element</title>
+   <conbody>
+      <p>The <codeph>&lt;Schedule&gt;</codeph> element has the following syntax:</p>
+      <codeblock xml:space="preserve">&lt;Schedule&gt;<i>minute hour day_of_month month day_of_week</i>&lt;/Schedule&gt;</codeblock>
+      <p>Use the <codeph>&lt;Schedule&gt;</codeph> element to define an event that should occur at a specific time. At the
+      end of every event, the Collector tests the event conditions again to determine whether the
+      event should run again. If a given event runs over the time when the next event of the same
+      type would be scheduled, the second (and subsequent) missed events are not queued, they are
+      ignored.</p>
+      <section>
+         <p>FIELDS IN THE VALUES OF SCHEDULE ELEMENTS</p>
+         <p>The value of a <codeph>&lt;Schedule&gt;</codeph> element has these positional fields.</p>
+         <table id="table_km3_s4y_vx">
+            <tgroup cols="2">
+               <colspec colnum="1" colname="col1"/>
+               <colspec colnum="2" colname="col2"/>
+               <thead>
+                  <row>
+                     <entry>Positional Field</entry>
+                     <entry>Allowed Numeric Values</entry>
+                  </row>
+               </thead>
+               <tbody>
+                  <row>
+                     <entry>
+                        <i>minute</i>
+                     </entry>
+                     <entry>0-59</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <i>hour</i>
+                     </entry>
+                     <entry>0-23</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <i>day_of_month</i>
+                     </entry>
+                     <entry>1-31</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <i>month</i>
+                     </entry>
+                     <entry>1-12</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <i>day_of_week</i>
+                     </entry>
+                     <entry>0-7 (0 and 7 represent Sunday)</entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+         <p>Separate the fields with spaces. You must specify a value for each field. If you are unsure
+        what specify for a positional field, specify an asterisk (*) but<i> do not specify an
+          asterisk for all five fields</i>. If you are unsure of what to specify for all fields, do
+        not specify the <codeph>&lt;Schedule&gt;</codeph> element and SenSage AP will use the default
+        behavior of once every minute.</p>
+      </section>
+      <section>
+         <title>USAGE NOTES</title>
+         <ul>
+            <li>A field can contain an asterisk (*), which functions identically as listing every
+        possible value for that field. For example, an asterisk in the <codeph>day_of_month</codeph>
+        field specifies events occur every day.</li>
+            <li>Ranges of numbers are allowed. Ranges are two numbers separated by a hyphen. The
+        specified range is inclusive. For example, <codeph>8-11</codeph> for in the
+          <codeph>hour</codeph> field specifies execution at hours 8, 9, 10 and 11.</li>
+            <li>Lists are allowed. A list is a set of numbers or number ranges separated by commas. For
+        example, <codeph>1,2,5,9,0-4,8-12</codeph>.</li>
+            <li>Names for the <codeph>month</codeph> and <codeph>day_of_week</codeph> fields are allowed.
+        Use the first three letters of the particular day or month. Case does not matter. Number
+        ranges and lists of names are not allowed.</li>
+            <li>The day of a command's execution can be specified by two fields:
+          <codeph>day_of_month</codeph> and <codeph>day_of_week</codeph>. If both fields have a
+        schedule specification, the command runs when the current time matches the specification in
+        either field matches. For example, the following schedule specification causes a command to
+        be run at 4:30 AM on the 1st and 15th of each month, plus every Friday.<codeblock xml:space="preserve">&lt;Schedule&gt;30 4 1,15 * 5&lt;/Schedule&gt;</codeblock>
+            </li>
+            <li>Do not specify an asterisk for all five fields. If you are unsure of what to specify for
+        all fields, do not specify the <codeph>&lt;Schedule&gt;</codeph> element and SenSage AP will use the default
+        behavior of once every minute.</li>
+         </ul>
+      </section>
+      <section>
+         <title>EXAMPLES SCHEDULE SPECIFICATIONS</title>
+         <p>To run once an hour, on the first minute of the hour. (i.e. 12:00):</p>
+         <codeblock xml:space="preserve">&lt;Schedule&gt;0 * * * *&lt;/Schedule&gt;</codeblock>
+         <p>To run every five minutes of every hour of every day:</p>
+         <codeblock xml:space="preserve">&lt;Schedule&gt;0,5,10,15,20,25,30,35,40,45,50,55 * * * *&lt;/Schedule&gt;</codeblock>
+         <p>To run every second hour, starting at midnight:</p>
+         <codeblock xml:space="preserve">&lt;Schedule&gt;0 0,2,4,6,8,10,12,14,16,18,20,22 * * *&lt;/Schedule&gt;</codeblock>
+         <p>To run once an hour, Monday through Friday.</p>
+         <codeblock xml:space="preserve">&lt;Schedule&gt;0 * * * 1-5&lt;/Schedule&gt;</codeblock>
+      </section>
+   </conbody>
+</concept>

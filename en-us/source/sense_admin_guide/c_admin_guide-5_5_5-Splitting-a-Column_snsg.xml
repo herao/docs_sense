@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_5_5">
+   <title>Splitting a Column</title>
+   <conbody>
+      <p>You can split the contents of an existing column to create new columns. Use the following SQL
+      statement to split a source column in the
+      table:<codeblock xml:space="preserve">ALTER TABLE &lt;schema qualified table name&gt; SPLIT [COLUMN]
+&lt;existing column name&gt; AS (
+&lt;output column name&gt; &lt;data type&gt; ,
+.......
+&lt;output column name&gt; &lt;data type&gt;
+USING &lt;absolute path of the executable in double quotes&gt;;</codeblock>
+      </p>
+      <p>
+         <note>The split operation does not remove the source column; only new columns are created as
+        specified.</note>
+      </p>
+      <p>The following diagram represents the syntax diagram for the ALTER TABLE SPLIT statement: </p>
+      <fig>
+         <title>Syntax diagram for splitting columns</title>
+         <image href="./media/Image_171.jpg" placement="break"/>
+      </fig>
+      <p>Consider the following when using the SPLIT statement:</p>
+      <ul>
+         <li>You must provide the absolute path of the executable (script or binary) program which
+        reads lines from the standard input (stdin) and writes a list of comma-separated values to
+        the standard output (stdout) for each line read.</li>
+         <li>Each output line must contain the same number of values in the comma-separated list. Also,
+        the number of values in each comma-separated list must be same as the number of output
+        columns mentioned in the SPLIT statement.</li>
+         <li>The values from the comma-separated list are assigned to the output columns in the
+        respective order.</li>
+      </ul>
+      <section>
+         <title>Example</title>
+         <codeblock xml:space="preserve">SQL&gt; alter table default.cdr split column exchg_id as ( c1 varchar , c2 int32 )
+using "/tmp/split.sh";</codeblock>
+         <p>and the shell script /tmp/split.sh is created as</p>
+         <codeblock xml:space="preserve">#!/usr/bin/env bash
+  while true
+    do
+    read var
+    [[ ! -z $var ]] || exit 0
+    echo $var | tr '-' ','
+   done</codeblock>
+      </section>
+   </conbody>
+</concept>

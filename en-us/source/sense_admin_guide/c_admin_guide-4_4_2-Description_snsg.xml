@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_4_2">
+   <title>Description</title>
+   <conbody>
+      <p>The atview utility examines the state of an EDW instance, such as its metadata or status. </p>
+      <p>
+         <note>Requests from atview do not alter the state of the EDW. For information on changing an
+        EDW instance, see “<xref href="c_admin_guide-4_3-Managing-an-EDW-Data_snsg.xml#topic_4_3"/>.</note>
+      </p>
+   </conbody>
+</concept>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_2_2">
+   <title>Zooming into a Report Timeframe</title>
+   <conbody>
+    <p>By “painting” a section on the chart, one can easily zoom in on that timeframe. Both the
+      chart and the grid will be updated with the new timeframe. To paint a section of the chart,
+      click and drag the pointer across the section of the chart you want to select. For example,
+      selecting the chart from <uicontrol>2016Feb</uicontrol> to the
+      <uicontrol>2016May</uicontrol>(shown by the double arrow), results in the new new chart
+      display as shown in figure below.</p>
+    <fig><title>Zooming into Report Timeframe</title>
+    <image href="./media/Image_066.png" placement="break" scale="45" id="image_sgr_tbm_zx"/><note>The selected region is also greyed out.</note></fig>
+     <fig><title>Zooming into Report Timeframe</title>
+       <image href="./media/Image_866_1.png" placement="break" scale="45"/>
+      <note>The new filter is added at the bottom of the chart (circled in red).</note></fig>
+    <p>For details on changing timeframe default, see <xref
+        href="c_sen_anal-3_5-Filtering-a-Report-b_crm.xml"/>.</p>
+  </conbody>
+</concept>

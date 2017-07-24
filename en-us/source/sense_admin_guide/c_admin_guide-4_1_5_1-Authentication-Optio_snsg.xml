@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_5_1">
+   <title>Authentication Options</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--user=&lt;<i>user_name</i>&gt;</codeph>
+            </pt>
+            <pt>
+               <codeph>--user=default</codeph>
+            </pt>
+            <pd>Runs the command under the authorization of <i>&lt;user_name&gt;</i>, who must be a user
+          defined in the EDW instance. If you specify default, the atload command runs under the
+          authorization of the user specified by the ADDAMARK_USER environment variable. <note>To
+            log in as the <b>guest</b> user, do not specify the <codeph>--pass</codeph> or
+              <codeph>--shared-secret</codeph> flags. The default is to run the command under the
+            authorization of the currently logged-in user. </note>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--pass=&lt;password&gt;</codeph>
+            </pt>
+            <pt>
+               <codeph>--pass=file:&lt;path_and_filename&gt;</codeph>
+            </pt>
+            <pd>Specifies the password that authenticates the user that you specified with the
+            <codeph>--user</codeph> option. You can specify the password in clear text on the
+          command line. You can place the password in a file and specify its location and file name
+          on the command line. If you omit the <codeph>--pass</codeph> option, the atload command
+          uses the password specified by the ADDAMARK_PASSWORD environment variable.</pd>
+            <pd>For more information, see <xref href="c_admin_guide-4_1_5_2-Setting-the-ADDAMARK_snsg.xml#topic_4_1_5_2"/>.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--shared-secret=default</codeph>
+            </pt>
+            <pd>Specifies the shared secret for the hosts in the EDW instance. You can specify the
+          shared secret in clear text on the command line. You can place the shared secret in a file
+          and specify its location and file name on the command line. If you specify default, the
+          atload command uses the shared secret specified by the ADDAMARK_SHARED_SECRET environment
+          variable.</pd>
+            <pd>The value for <codeph>--pass</codeph> takes precedence over the value for
+            <codeph>--shared-secret</codeph> if both are present.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--skip-queues</codeph>
+            </pt>
+            <pd>Bypasses normal EDW task queueing.</pd>
+            <pd>You must specify the <codeph>--shared-secret</codeph> option when you use the
+            <codeph>--skip-queues</codeph> option.</pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

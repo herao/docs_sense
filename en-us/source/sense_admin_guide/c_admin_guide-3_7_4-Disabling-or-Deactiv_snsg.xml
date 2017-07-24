@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_7_4">
+   <title>Disabling or Deactivating an EDW Instance</title>
+   <conbody>
+      <p>To disable or deactivate an EDW instance:</p>
+      <ol id="ol_cx2_csh_vx">
+         <li>Log into Deployment Manager.</li>
+         <li>Click the Hosts tab and in the summary section of the screen click the Host name link to
+        which the EDW instance belongs.</li>
+         <li>In the Host Summary Display screen, click the Action drop-down and select Stop to disable
+        or deactivate the EDW instance.</li>
+      </ol>
+   </conbody>
+</concept>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_6_1">
+   <title id="title_a25">Overview</title>
+   <conbody>
+      <p>If an EDW node in your SenSage AP instance fails, you can restore functionality using the
+      procedures in this section. When one of the EDW nodes fails, you can configure your SenSage AP
+      instance to operate in a degraded mode, without the failed EDW node this mode of
+      operation, you can continue to load data into the EDW and run queries against the data, but
+      you cannot perform meta-data operations such as adding, or dropping tables or views.</p>
+      <p>After configuring this limited mode, you can then restore the failed EDW node to restore the
+      SenSage AP instance to full functionality. Alternately, if an EDW node fails, you can stop
+      operations on the entire SenSage AP instance and then restore or replace the failed EDW node.
+      Because each EDW node has a duplicate copy of its data store located on another node, no data
+      is lost.</p>
+      <note>
+         <p>A small amount of data may have been loaded to the destination table. If it has, all data
+        uniquely identified by the load’s <codeph>upload_id</codeph> is marked as unsuccessful. Use
+          <codeph>atretire</codeph> to remove this data; for more information, see <xref href="c_admin_guide-4_5-Retiring-Data_snsg.xml#topic_4_5"/>.</p>
+      </note>
+   </conbody>
+</concept>

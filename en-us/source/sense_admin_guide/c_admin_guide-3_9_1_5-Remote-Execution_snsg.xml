@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9_1_5">
+   <title>Remote Execution</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--prompt-password</codeph>
+            </pt>
+            <pd>Always prompt for passwords; does not cache or reuse passwords from other hosts</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--serialize</codeph>
+            </pt>
+            <pd>Executes tasks on one host at a time; does not run in parallel</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--timeout=&lt;tseconds&gt;</codeph>
+            </pt>
+            <pd>Expiration time in seconds if a task cannot successfully execute.</pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

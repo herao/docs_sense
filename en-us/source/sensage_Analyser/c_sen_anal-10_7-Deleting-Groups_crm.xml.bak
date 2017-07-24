@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_7">
+   <title>Deleting Groups</title>
+   <conbody>
+    <note>NOTE: When performing a group deletion, the group is deleted only in the Analyzer, not in
+      Active Directory. Once the group is deleted from Analyzer, it is no longer possible to
+      synchronize the group from Active Directory.</note>
+    <p>To delete a SenSage AP group:</p>
+    <ol id="ol_arx_13s_zx">
+      <li>Go to the Analyzer, select <menucascade>
+          <uicontrol>Administration</uicontrol>
+          <uicontrol>Groups</uicontrol>
+        </menucascade> from the dropdown submenu and click Groups from the drop-down submenu.</li>
+      <li>Select the group for deletion in the Select a Group dropdown and click the trash icon as
+        shown in Figure 9-9 below. Note that if the group has existing members you will not be able
+        to delete it and will get an error message.<p>Figure 9-9: Deleting a Group</p><p><image
+            href="./media/Image_401.jpg" height="297" width="615" id="image_brx_13s_zx"/></p><p>A
+          confirmation box is displayed asking you to confirm your deletion(s).</p><p>Figure 9-10:
+          Deleting Group Confirmation</p><p><image href="./media/Image_402.jpg" height="92"
+            width="501" id="image_crx_13s_zx"/></p></li>
+    </ol>
+  </conbody>
+</concept>

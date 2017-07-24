@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+         id="topic_4_2_10_4">
+   <title>Query Postprocessor Sample Script</title>
+   <conbody>
+      <p>This topic documents a query postprocessor example script that creates and runs multiple
+       postprocessors against an EDW. This file is not itself the postprocessor script, but rather,
+      it does the following:</p>
+      <ul>
+         <li>loads some data into a table</li>
+         <li>queries the un-postprocessed data to verify the information is in the table</li>
+         <li>creates a simple postprocessor script that does a simple lookup, and runs that script
+        against the original query</li>
+         <li>creates a more complex postprocessor script that does some client-side data aggregation,
+        and runs that script against the original query</li>
+      </ul>
+      <p>For more information, see <xref href="c_admin_guide-4_2_10_3-Query-Postprocessor-_snsg.xml#topic_4_2_10_3"/>. </p>
+      <p>To use the sample query postprocessor script</p>
+      <ol>
+         <li>Copy the script file to an executable file on a machine that supports the
+          <codeph>sh</codeph> or <codeph>bash</codeph> scripting environment (for example, a Unix
+        machine).</li>
+         <li>Ensure the values of the following variables are set appropriately:
+        <ul>
+               <li>
+                  <codeph>_HOST, LMS_PORT</codeph>
+               </li>
+               <li>
+                  <codeph>LMS_CLIENT_TOOL_DIR</codeph>
+               </li>
+            </ul>
+         </li>
+         <li>Execute the file against the live EDW server.</li>
+         <li>Examine the client-side files and output returned; refer to the explanation in <xref href="c_admin_guide-4_2_10_3-Query-Postprocessor-_snsg.xml#topic_4_2_10_3"/>.</li>
+      </ol>
+      <codeblock xml:space="preserve" outputclass="language-bourne">#!/bin/bash
+#---------------------------------------------------------------------
+# pproc_example.bash -- a set of example for Query Postprocessing
+#---------------------------------------------------------------------
+#---------------------------------------------------------------------
+# To run, please set the following values to point to the correct
+# SLS instance, and to the directory containing the
+# tools 'atload', 'atquery', 'atmanage', and 'atview'.
+LMS_HOST=localhost
+LMS_PORT=7010
+LMS_CLIENT_TOOL_DIR=/home/nwatson/mytools_nfw/eng_nfw/mill/bin
+
+#---------------------------------------------------------------------
+# Miscellaneous
+SUFFIX="3"
+VISIBLE="=+=+=+=+=+=+=+=+=+="
+NAMESPACE="myNamespace.pproc_example"
+TNAME=test
+FULLTNAME="${NAMESPACE}.${TNAME}"
+ATVIEW0="${LMS_CLIENT_TOOL_DIR}/atview${SUFFIX}"
+ATVIEW="${ATVIEW0} ${LMS_HOST}:${LMS_PORT} --namespace=${NAMESPACE}"
+ATMANAGE0="${LMS_CLIENT_TOOL_DIR}/atmanage${SUFFIX}"
+ATMANAGE="${ATMANAGE0} ${LMS_HOST}:${LMS_PORT} --namespace=${NAMESPACE}"
+ATLOAD0="${LMS_CLIENT_TOOL_DIR}/atload${SUFFIX}"
+ATLOAD="${ATLOAD0} ${LMS_HOST}:${LMS_PORT} --namespace=${NAMESPACE}"
+ATQUERY0="${LMS_CLIENT_TOOL_DIR}/atquery${SUFFIX}"
+ATQUERY="${ATQUERY0} ${LMS_HOST}:${LMS_PORT} --namespace=${NAMESPACE}"
+
+#---------------------------------------------------------------------
+# Make sure client-side tools exist
+if [ ! -x ${ATVIEW0} -o \
+   ! -x ${ATMANAGE0} -o \
+   ! -x ${ATLOAD0} -o \
+   ! -x ${ATQUERY0} ]; then
+   echo
+   echo "ERROR: Client side tools not found!"
+   echo
+   exit -1
+fi
+
+#---------------------------------------------------------------------
+# Make sure SLS (or at least master node) is running
+echo "SELECT * FROM properties;" | \
+   ${ATQUERY} --namespace=system - > /dev/null 2>/dev/null
+if [ $? != 0 ]; then
+    echo
+    echo "ERROR: Cannot contact SLS!"
+    echo
+    exit -1
+fi
+
+#---------------------------------------------------------------------
+# Create log data file
+echo
+echo ${VISIBLE} "Creating log file './logdata.pproc_in'" ${VISIBLE}
+/bin/rm -f ./logdata.pproc_in 2&gt;/dev/null
+cat &gt; ./logdata.pproc_in &lt;&lt; EOF
+Feb 28 14:23:57 2002,gwashington,http://www.shop.com/home.htm
+Feb 28 14:28:23 2002,ztaylor,http://www.shop.com/home.htm
+Feb 28 14:37:15 2002,gwashington,http://www.shop.com/catalog.htm
+Feb 28 14:29:30 2002,jadams,http://www.shop.com/home.htm
+Feb 28 14:39:23 2002,gwashington,http://www.shop.com/prodinfo/infiniti.htm
+Feb 28 14:41:51 2002,jadams,http://www.shop.com/specials.htm
+Feb 28 14:44:13 2002,ztaylor,http://www.shop.com/catalog.htm
+Feb 28 14:46:22 2002,ztaylor,http://www.shop.com/prodinfo/cadillac.htm
+Feb 28 14:46:25 2002,jadams,http://www.shop.com/specials/audi_europe.htm
+Feb 28 14:46:29 2002,jadams,http://www.shop.com/purchase.htm
+Feb 28 14:47:35 2002,jadams,http://www.shop.com/transaction_complete.htm
+Feb 28 14:48:31 2002,ztaylor,http://www.shop.com/purchase.htm
+Feb 28 14:49:27 2002,gwashington,http://www.shop.com/other_page.htm
+Feb 28 14:50:01 2002,ztaylor,http://www.shop.com/catalog.htm
+EOF
+
+#---------------------------------------------------------------------
+# Create PTL script file
+echo
+echo ${VISIBLE} "Creating PTL file './ptl.pproc_in'" ${VISIBLE}
+/bin/rm -f ./ptl.pproc_in 2>/dev/null
+cat > ./ptl.pproc_in &lt;&lt; EOF
+^([^,]*),([^,]*),\s*http://([^,]*)$
+TimeStr:VARCHAR,UserName:VARCHAR,Url:VARCHAR
+SELECT _timestamp(TimeStr) as ts,
+    UserName as user_name,
+    Url as url
+FROM stdin;
+EOF
+
+#---------------------------------------------------------------------
+# Drop example table if present
+echo
+echo ${VISIBLE} "Dropping table ${FULLTNAME}" ${VISIBLE}
+${ATMANAGE} droptbl ${TNAME} &gt; /dev/null 2&gt;/dev/null
+
+#---------------------------------------------------------------------
+# Load data into table
+echo
+echo ${VISIBLE} "Loading data into table ${FULLTNAME}" ${VISIBLE}
+echo
+${ATLOAD} ${TNAME} ./ptl.pproc_in ./logdata.pproc_in
+
+#---------------------------------------------------------------------
+# Pull all the raw data
+echo
+echo ${VISIBLE} "Querying raw data in table ${FULLTNAME}" ${VISIBLE}
+echo
+echo "SELECT ts, user_name, url FROM ${TNAME} ORDER BY 2, 1 DURING ALL;" |
+${ATQUERY} -
+
+#---------------------------------------------------------------------
+# Use a simple postproc to replace URL values with more "user-friendly" values
+cat > 01_lookup.pproc_in &lt;&lt; EOF
+
+# ---------- FILE: 01_lookup.pproc_in
+my %easyUrlMap = (
+   "home", "Home Page",
+   "catalog", "Product Catalog",
+   "prodinfo/infiniti", "Car Info Page -- INFINITI",
+   "prodinfo/cadillac", "Car Info Page -- CADILLAC",
+   "prodinfo/audi", "Car Info Page -- AUDI",
+   "prodinfo/saturn", "Car Info Page -- SATURN",
+   "specials", "Special Offers Central",
+   "specials/audi_europe", "Special Offer -- Purchase AUDI in Europe",
+   "purchase", "CASH REGISTER",
+   "transaction_complete", "-SALE-"
+);
+sub postprocRow
+my (\$response, \$inputRow) = @_;
+# Create a copy of the input row, for output
+my \$outputRow = {};
+\$response->copyValuesForOutputSchema(\$inputRow, \$outputRow);
+# Get the URL, prepare default friendly URL (which isn't very friendly)
+my \$rawUrl = \$inputRow->getColumnValue("url");
+my \$resultUrl = "... \$rawUrl ...";
+# Try to find a more friendly URL
+my \$url2;
+if ((\$url2) = \$rawUrl =~ /^www.shop.com\\/(.*)\\.htm$/) {
+my \$url3 = \$easyUrlMap{\$url2};
+if (defined(\$url3)) {
+\$resultUrl = \$url3;
+}
+}
+# Replace the URL in the output row
+\$outputRow->{"url"} = \$resultUrl;
+# Add the modified row to the response
+\$response->addRowData(rowdata => \$outputRow);
+# ---------- END OF FILE: 01_lookup.pproc_in
+EOF
+echo
+echo ${VISIBLE} "Querying data in table ${FULLTNAME}, replacing URLs" ${VISIBLE}
+echo
+echo "SELECT ts, user_name, url FROM ${TNAME} ORDER BY 2, 1 DURING ALL;" | \
+${ATQUERY} --postproc=01_lookup.pproc_in -
+
+#---------------------------------------------------------------------
+# Use a more complex postproc to do client-side aggregation/presentation
+cat > 02_aggregate.pproc_in &lt;&lt; EOF
+
+# ---------- FILE: 02_aggregate.pproc_in
+my %easyUrlMap = (
+    "home",                        "Home Page",
+    "catalog",                     "Product Catalog",
+    "prodinfo/infiniti",           "Car Info Page -- INFINITI",
+    "prodinfo/cadillac",           "Car Info Page -- CADILLAC",
+    "prodinfo/audi",               "Car Info Page -- AUDI",
+    "prodinfo/saturn",             "Car Info Page -- SATURN",
+    "specials",                    "Special Offers Central",
+    "specials/audi_europe",        "Special Offer -- Purchase AUDI in Europe",
+    "purchase",                    "CASH REGISTER",
+    "transaction_complete",        "-SALE-"
+);
+
+
+sub mapUrl
+    my (\$rawUrl) = @_;
+    # Prepare default friendly URL (which isn't very friendly)
+    my \$resultUrl = "... \$rawUrl ...";
+    # Try to find a more friendly URL
+    my \$url2;
+    if ((\$url2) = \$rawUrl =~ /^www.shop.com\\/(.*)\\.htm$/) {
+        my \$url3 = \$easyUrlMap{\$url2};
+        if (defined(\$url3)) {
+            \$resultUrl = \$url3;
+        }
+    }
+    # Return the mapped URL
+    return \$resultUrl;
+
+
+sub pushSchemaInfoIntoTable
+    my (\$response, \$message, \$schema) = @_;
+    # For each element of the schema, push out the column name/value
+    my \$schemaElement;
+    foreach \$schemaElement (@{\$schema}) {
+        # Find this column's name and type
+        my \$columnName;
+        my \$columnType;
+        (\$columnName, \$columnType) = \$schemaElement =~ /^(.*):(.*)$/;
+        # Prepare a row
+            my \$rowData = {
+                "direction" => \$message,
+                "column_name" => \$columnName,
+                "column_type" => \$columnType,
+            };
+        # Push the row
+        \$response->addRowData(rowdata => \$rowData);
+    }
+    my %pageMetrics;
+
+
+sub postprocInit
+    my (\$response) = @_;
+    # Initialize aggregation metrics -- we MUST do this each time
+    # postprocInit is called, because we can have multiple queries
+    # running within one 'atquery' session, and we want fresh results
+    # each time we run a query.
+    %pageMetrics = ();
+    # Set the output schema, which will be different from the input schema
+    my \$outputSchema = [
+        "section:varchar",
+        "direction:varchar",
+        "column_name:varchar",
+        "column_type:varchar",
+        "page:varchar",
+        "page_metric:varchar",
+        "metric_value:int32",
+    ];
+    \$response->setMetadata(schema => \$outputSchema);
+    # To help illustrate input and output schemas, let's print out the
+    # input/output schemas in the result set itself
+    my \$emptyRow = {};
+    \$response->addRowData(rowdata => \$emptyRow);
+    my \$sectionRow = { section => "input/output schema" };
+    \$response->addRowData(rowdata => \$sectionRow);
+    \$response->addRowData(rowdata => \$emptyRow);
+    my @inputSchema = \$response->getIncomingSchema();
+    my @outputSchema2 = \$response->getSchema();
+    pushSchemaInfoIntoTable(\$response, "input", \\@inputSchema);
+    \$response->addRowData(rowdata => \$emptyRow);
+    pushSchemaInfoIntoTable(\$response, "output", \\@outputSchema2);
+    \$response->addRowData(rowdata => \$emptyRow);
+    
+sub postprocRow
+    my (\$response, \$inputRow) = @_;
+    # Get relevant fields out of the row
+    my \$userName = \$inputRow->getColumnValue("user_name");
+    my \$rawUrl = \$inputRow->getColumnValue("url");
+    # Translate URL to a more friendly value -- we assume
+    # the return value is unique
+    my \$page = &amp;mapUrl(\$rawUrl);
+    # We're doing per-page aggregation, make sure we have space
+    # for this page (url)
+    if (!defined(\$pageMetrics{\$page})) {
+        \$pageMetrics{\$page} = {
+            numHits => 0,
+            uniqueUsers => {},
+        };
+    }
+    # Now update the per-page aggregates
+    \$pageMetrics{\$page}->{numHits}++;
+    \$pageMetrics{\$page}->{uniqueUsers}->{\$userName}++;
+    
+
+sub postprocFinal
+    my (\$response) = @_;
+    # Start a new section
+    my \$emptyRow = {};
+    \$response->addRowData(rowdata => \$emptyRow);
+    my \$sectionRow = { section => "page metrics" };
+    \$response->addRowData(rowdata => \$sectionRow);
+    \$response->addRowData(rowdata => \$emptyRow);
+    # Present each page and its metrics
+    my \$page;
+    foreach \$page (sort(keys(%pageMetrics))) {
+        # Add a row for page hits
+        my \$row = {
+            page => \$page,
+            page_metric => "hits",
+            metric_value => \$pageMetrics{\$page}->{numHits}
+        };
+        \$response->addRowData(rowdata => \$row);
+        # Add a row for number of unique users
+        my @uniqueUsers = keys(%{\$pageMetrics{\$page}->{uniqueUsers}});
+        my \$row = {
+            page_metric => "unique users",
+            metric_value => (\$#uniqueUsers + 1)
+        };
+        \$response->addRowData(rowdata => \$row);
+        # Add empty row
+        \$response->addRowData(rowdata => \$emptyRow);
+    }
+
+# ---------- END OF FILE: 02_aggregate.pproc_in
+EOF
+
+echo
+echo ${VISIBLE} "Querying data in table ${FULLTNAME}, aggregating data"
+${VISIBLE}
+echo
+echo "SELECT ts, user_name, url FROM ${TNAME} DURING ALL;" | \
+${ATQUERY} --postproc=02_aggregate.pproc_in -
+
+#---------------------------------------------------------------------
+# Done
+echo
+exit 0
+#----------
+# End of file 'pproc_example.bash'
+#----------
+</codeblock>
+   </conbody>
+</concept>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_4">
+   <title id="title_a35">Configuring LDAP Integration for User Authentication</title>
+   <conbody>
+      <p>LDAP only manages authentication into the system, not authorizations. Users who are
+      authorized to access AP Analyzer will need to be added as an "Analyzer User" before they can
+      authenticate through LDAP.</p>
+      <p>
+         <note>The Analyzer application will either be fully native, fully LDAP, or fully AD/LDAP; no
+        mixed or hybrid mode is allowed. If LDAP authentication is in use and some users in the
+        Analyzer database do not currently exist in LDAP, you cannot log in with those users, nor
+        edit them. Note that the user list provides no indication LDAP versus native users.</note>
+      </p>
+      <p>At installation time, you must select "LDAP" mode in the Deployment Manager console and fill
+      in the LDAP fields.</p>
+   </conbody>
+</concept>

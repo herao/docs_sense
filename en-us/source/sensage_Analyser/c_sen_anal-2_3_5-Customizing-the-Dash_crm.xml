@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_3_5">
+   <title>Customizing the Dashboard Layout</title>
+   <conbody>
+    <p>If you have edit privileges on the default dashboard, you can customize the dashboard to suit
+      your own viewing preferences.</p>
+    <p>To reorganize the pods, manually drag them with the mouse to a desired placement on your
+      screen. To save your layout, click the Gear icon and Save Layout.</p>
+  </conbody>
+</concept>

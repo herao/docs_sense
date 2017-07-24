@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="c_anly_common-copyrightNotice_sen">
+ <title>Copyight Information</title>
+ <conbody>
+  <p>No part of this document may be reproduced, stored in a retrieval system, or transmitted, in
+   any form, or by any means, electronic, mechanical, photocopied, recorded, or otherwise, without
+   the prior written consent of Ignite Technologies, Inc.</p>
+  <p>401 Congress Avenue Suite 2650</p>
+  <p>Austin, TX 78701</p>
+  <p>800-248-0027</p>
+  <p><xref type="external" format="html" href="mailto:info@ignitetech.com">info@ignitetech.com</xref></p>
+  <p>Copyright © 2016 Ignite Technologies, Inc. All Rights Reserved.</p>
+  <p>Published June 21, 2016</p>
+ </conbody>
+</concept>

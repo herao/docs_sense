@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_2_3">
+   <title>Arguments</title>
+   <conbody>
+      <table id="table_jhn_4xr_vx">
+         <tgroup cols="2">
+            <colspec colnum="1" colname="col1" colwidth="1*"/>
+            <colspec colnum="2" colname="col2" colwidth="2.25*"/>
+            <thead>
+               <row>
+                  <entry>Argument</entry>
+                  <entry>Description</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <codeph>&lt;<i>cluster_list</i>&gt;</codeph>
+                  </entry>
+                  <entry>
+                     <p>
+                        <i>&lt;cluster_list&gt;</i> represents a comma- separated list of
+                           <codeph>&lt;host&gt;:&lt;port&gt;</codeph> pairs. The list must be
+                        enclosed in quotation marks ("). Specifying a list rather than a single
+                        host:port pair allows the utility to run even if the first of the specified
+                        EDW nodes is down.</p>
+                     <p>Each <codeph>&lt;host&gt;:&lt;port&gt;</codeph> pair identifies the EDW
+                        instance; for example, <codeph>sls01:8072</codeph>.</p>
+                     <p>The command tries each host:port pair in order (left to right) until it
+                        finds one that allows a TCP (Transmission Control Protocol) connection.
+                        Failure to establish a TCP connection indicates that the EDW host is down.
+                        If the connection succeeds but the command fails, the command does not
+                        attempt to establish additional connections. </p>
+                     <p>Example:<codeblock xml:space="preserve">atquery --user=administrator --password=changeme
+"sls01:8072,sls02:8072,sls03:8072" myfile.sql</codeblock>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <i>
+                        <codeph>{&lt;file_name.sql&gt; [&lt;file_name.sql&gt;[…]]|-}</codeph>
+                     </i>
+                  </entry>
+                  <entry>
+                     <p>Specify either one or more files that contain the SQL statements to run (one
+                        statement in each file) or specify a dash (-) to read from standard
+                        input.</p>
+                     <note>
+                        <p>When you use the second option, you are prompted to enter your SQL query.
+                           You must enter <b>CTRL-D</b> on a separate line after the SQL statement
+                           to actually run the query.</p>
+                     </note>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

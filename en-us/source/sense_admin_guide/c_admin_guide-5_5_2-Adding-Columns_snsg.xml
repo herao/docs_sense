@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_5_2">
+   <title>Adding Columns</title>
+   <conbody>
+      <p>Use the following SQL statement to add multiple columns to a
+      table:<codeblock xml:space="preserve">ALTER TABLE ADD &lt;schema qualified table name&gt; [COLUMN]
+(
+&lt;new column name&gt; &lt;EDW data type&gt; [DEFAULT &lt;text string in double quotes&gt;] ,
+.....
+&lt;new column name&gt; &lt;EDW data type&gt; [DEFAULT &lt;text string in double quotes&gt;]
+);</codeblock>
+      </p>
+      <note>If you omit the DEFAULT clause, new columns will be initialized with the following values: <ul>
+            <li>False for the bool type</li>
+            <li>’0’for arithmetic types</li>
+            <li>’0’seconds-since-epoch for the timestamp type</li>
+            <li>127.0.0.1 for the inet type</li>
+            <li>A single blank space for the varchar type. </li>
+         </ul>
+      </note>
+      <p>The following diagram represents the syntax diagram for the ALTER TABLE ADD statement: </p>
+      <p>
+         <fig>
+            <title>Syntax diagram for adding columns</title>
+            <image href="./media/Image_164.jpg" placement="break" id="image_ikx_rdv_vx"/>
+         </fig>
+      </p>
+      <section><title>Examples</title>
+      
+      <codeblock xml:space="preserve">SQL&gt; alter table default.cdr add column xyz int32 ;
+SQL&gt; alter table default.cdr add column xyz int32 default “12345” ;
+SQL&gt; alter table default.cdr add column ( xyz int32 default “1234” , pqr int64
+default “123456789012345” ) ;
+SQL&gt; alter table default.cdr add pqr varchar ;</codeblock></section>
+   </conbody>
+</concept>

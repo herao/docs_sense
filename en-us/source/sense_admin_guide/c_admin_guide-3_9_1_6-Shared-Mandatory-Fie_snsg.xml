@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9_1_6">
+   <title>Shared Mandatory Fields with Default Values</title>
+   <conbody>
+      <p>The configuration utility provides default values for all of these fields./options. If you do
+      not change the default value, you do not need to specify these fields on the command line.
+      Note that SenSage AP requires that resources are placed in consistent locations across all
+      servers.</p>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--gnu-dir</codeph>
+            </pt>
+            <pd>Specifies the valid path on all machines for the directory containing GNU utilities (including tar and gunzip).</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--java-dir</codeph>
+            </pt>
+            <pd>Specifies the valid path on all machines for the directory that contains a usable Java JDK.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--rsync-dir</codeph>
+            </pt>
+            <pd>Specifies the valid path on all machines for the directory containing the rsync program.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--openssl-dir</codeph>
+            </pt>
+            <pd>Specifies the valid path on all machines for the directory containing the openssl program.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--ssh-dir</codeph>
+            </pt>
+            <pd>Specifies the valid path on all machines for the directory containing the ssh programs.</pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

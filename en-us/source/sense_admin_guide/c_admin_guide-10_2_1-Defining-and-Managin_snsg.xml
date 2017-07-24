@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_2_1">
+   <title>Defining and Managing Nearline Targets: Overview</title>
+   <conbody>
+      <p>A <i>Nearline</i> target is a specific Centera device or remote file system. You define a
+      Nearline target for the EDW component with two pieces of information:</p>
+      <ul>
+         <li>
+            <b>NSI (Nearline Storage Identifier)</b>—a unique text identifier for a Nearline storage
+        target. The format of an NSI is the same regardless of the type of Nearline storage.</li>
+         <li>
+            <b>NSA (Nearline Storage Address)</b>— a connection specifier for a Nearline storage target.
+        The format of an NSA differs according to the type of Nearline storage device.</li>
+      </ul>
+      <p>After you define Nearline targets, people can use them when they manually archive local data
+      from a table or schedule the archiving of local table data.</p>
+      <p>To define a Nearline target, a user with administrator privilege (<codeph>sls.admin</codeph> permission) uses
+      the <codeph>atmanage</codeph> utility to specify the Nearline storage identifier and network storage address
+      for the target. An administrator also uses the <codeph>atmanage</codeph> utility to delete Nearline targets and
+      to list them. The syntax has three forms:</p>
+      <ul id="ul_tjx_vyp_wx">
+         <li>Adding a Nearline target: <p>
+               <b>Syntax</b>
+               <codeblock xml:space="preserve">atmanage &lt;cluster_list&gt; --user=&lt;name&gt; --pass=&lt;pass&gt; setnsi &lt;nsi&gt; &lt;nsa&gt;</codeblock></p><p>
+               <b>Examples</b>
+               <codeblock xml:space="preserve">atmanage "edw01:8072,edw02:8072,edw03:8072" --user=administrator \
+--password=changeme setnsi centera-1 centera://centera1.cascommunity.org</codeblock></p></li>
+         <li>Removing a Nearline target: <p>
+               <b>Syntax</b>
+            </p><codeblock xml:space="preserve">atmanage &lt;cluster_list&gt; --user=&lt;name&gt; --pass=&lt;pass&gt; deletensi &lt;nsi&gt;</codeblock><note
+               type="important"> Running atquery against data archived to a deleted NSI generates
+               errors. </note><p>
+               <b>Examples</b>
+            </p><codeblock xml:space="preserve">atmanage "sls01:8072,edw02:8072,edw03:8072" --user=administrator \
+ --password=changeme deletensi centera-1 </codeblock></li>
+         <li>Listing Nearline targets:
+            <p>
+               <b>Syntax</b>
+            </p>
+            <codeblock xml:space="preserve">atmanage &lt;cluster_list&gt; --user=&lt;name&gt; --pass=&lt;pass&gt; listnsi</codeblock>
+            <p>
+               <b>Example</b>
+               <codeblock xml:space="preserve">atmanage "sls01:8072,sls02:8072,sls03:8072" --user=administrator \
+ --password=changeme listnsi</codeblock>
+            </p>
+         </li>
+      </ul>
+   </conbody>
+</concept>

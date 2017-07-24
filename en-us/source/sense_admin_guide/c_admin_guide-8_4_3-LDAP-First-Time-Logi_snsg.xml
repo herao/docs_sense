@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_4_3">
+   <title>LDAP First Time Login</title>
+   <conbody>
+      <p>After a fresh installation of SenSage AP Analyzer, no users in the database are guaranteed to
+      be present in LDAP. When LDAP authentication is in use and the first user logs into the
+      system, if that user is successfully authenticated against LDAP, the user will become a
+      designated "Admin User" with the ability to create other users. The "Admin" User can designate
+      LDAP user authentication one-time for all users using the procedure as noted in <xref href="c_admin_guide-8_4_1-Designating-LDAP-use_snsg.xml#topic_8_4_1"/>.</p>
+   </conbody>
+</concept>

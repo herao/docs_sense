@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_8_2">
+   <title>Extensions for Log File Names</title>
+   <conbody>
+      <p>The names of event-log files that are processed by the Collector these extensions, which
+      indicate the processing states of log files.</p>
+      <table id="table_mp3_bbz_vx">
+         <tgroup cols="2">
+            <colspec colnum="1" colname="col1" colwidth="1*"/>
+            <colspec colnum="2" colname="col2" colwidth="3.44*"/>
+            <thead>
+               <row>
+                  <entry>Filename Extension</entry>
+                  <entry>Meaning</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <filepath>.out</filepath>
+                  </entry>
+                  <entry>An output file in the process of transfer or preprocessing; All
+                        <filepath>.out</filepath> files with modification dates over one day old are
+                     deleted automatically.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>.in</filepath>
+                  </entry>
+                  <entry>An intermediate file in an ongoing preprocess stage; All
+                        <filepath>.in</filepath> files with modification dates over one day old are
+                     deleted automatically.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>.pmd</filepath>
+                  </entry>
+                  <entry>A file with no MD5 yet computed. At same time, a metadata (
+                        <filepath>.meta</filepath>) file is created.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>.meta</filepath>
+                  </entry>
+                  <entry>An XML file containing meta data regarding a log file with the same
+                     name.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>.org</filepath>
+                  </entry>
+                  <entry>A file needing backup before it can be renamed to
+                     <filepath>.raw</filepath>. Occurs if MD5 doesn't match.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>.noload</filepath>
+                  </entry>
+                  <entry>A file whose preprocessor or loader has crashed. Rename to
+                        <filepath>.raw</filepath> to attempt preprocessing and loading
+                     again.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>.raw</filepath>
+                  </entry>
+                  <entry>A file needing preprocessing. A file may only be preprocessed by the
+                     retriever name which created it.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>.log</filepath>
+                  </entry>
+                  <entry>A file ready for a loader to process.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>.wrk</filepath>
+                  </entry>
+                  <entry>
+                     <p>For daisy-chain configurations, a file created in the process of converting
+                        to a <filepath>.tar</filepath> file.</p>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+      <section>
+         <title>Example Log File Name</title>
+         <p>
+            <filepath>000-20040101t010101-2-ftp1.log</filepath>
+         </p>
+      </section>
+   </conbody>
+</concept>

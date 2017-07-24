@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_6_4">
+   <title>Windows Data</title>
+   <conbody>
+      <p>The example source log file contains events recorded by Windows systems and collected by the
+      SenSage AP Windows Event Retriever. You can find the log and related files in this
+      location:</p>
+      <p>
+         <filepath>/opt/hexis/hawkeye-ap/example_logs/sensage_win_evt</filepath>
+      </p>
+      <table id="table_e2f_fr5_vx">
+         <tgroup cols="2">
+            <colspec colnum="1" colname="col1" colwidth="1*"/>
+            <colspec colnum="2" colname="col2" colwidth="3.17*"/>
+            <tbody>
+               <row>
+                  <entry>records</entry>
+                  <entry>29,940</entry>
+               </row>
+               <row>
+                  <entry>size</entry>
+                  <entry>8,040,491 (uncompressed) / 218,638 (gzip-9 ==&gt; 37:1)</entry>
+               </row>
+               <row>
+                  <entry>start time</entry>
+                  <entry>1161808842 (2006-11-25 20:40:42 GMT)</entry>
+               </row>
+               <row>
+                  <entry>end time</entry>
+                  <entry>1164652992 (2006-11-27 18:43:12 GMT)</entry>
+               </row>
+               <row>
+                  <entry>bytes/record</entry>
+                  <entry>268.56</entry>
+               </row>
+               <row>
+                  <entry>fields</entry>
+                  <entry>15</entry>
+               </row>
+               <row>
+                  <entry>bytes/field</entry>
+                  <entry>17.90</entry>
+               </row>
+               <row>
+                  <entry>SenSage AP size</entry>
+                  <entry>3,036,256 bytes (2.6:1)</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+      <p>SenSage AP compression technology works more efficiently than gzip for very large volumes of
+      data. Due to file-system overhead, benefits are not seen generally below about 10-50MB of log
+      data.</p>
+   </conbody>
+</concept>

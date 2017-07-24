@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_6_1">
+   <title>Monitoring CPU and Memory Usage</title>
+   <conbody>
+      <p>CPU usage on each machine is a good indicator of the health of the cluster. Use
+        <codeph>cltop</codeph> to monitor CPU usage particular:</p>
+      <ul>
+         <li>Check that the average CPU is below 50% during loads or queries. Don’t worry if you see
+         only high CPU usage—this is due to the EDW process of compressing and decompressing the log
+         data.</li>
+         <li>Check for high CPU usage and no running tasks. This is an indication of poor CPU
+        usage.</li>
+      </ul>
+      <p>Memory usage is another excellent indicator on the state of your cluster. However, the
+        <codeph>top</codeph> command will not correctly report the amount of free RAM. Instead, use
+      the <codeph>free</codeph> command to return a more accurate number for available memory. To
+      see if the cluster is running out of memory, examine the progress indicators returned from a
+      query. If a progress indicator is consistently visible, with no more than a one-second pause,
+      this typically means the cluster has sufficient memory.</p>
+      <note>You must examine each host separately to see if any one host is running low on memory
+        and slowing the cluster down.</note>
+      <codeblock xml:space="preserve"># free
+total used free shared buffers cached
+Mem: 2074928 1784060 290868 0 164632 1256520
+-/+ buffers/cache: 362908 1712020
+Swap: 2031608 148 2031460
+cltop Pubs_Instance
+cltop - cltop 4.1, change #42464;
+Initializing (ssh) root@piltdown.hq.myco.com
+Initializing (ssh) root@poweredge04.hq.myco.com
+Initializing (ssh) root@proliant05.hq.myco.com
+* piltdown.hq:-Done- | poweredge04.hq:-Done- | proliant05.hq:-Done-
+All done.
+NODE NODE ..........CPU usage......... .............. RAM usage ............
+NUM ROLES idle busy (user+system) total free used shared cache
+NODE PROCESS VMEM RAM SHMEM PROC CPU INSTALL
+NUM ID (MB) (MB) (MB) STAT used TIME PORT START NAME ACTION OTHER
+04 28154 608.0 605.0 8.3 R N 45.1% 0:28 8072 10:19 1178817571 run 1 /opt/sensage/
+etc/sls/instance/Pubs_Instance/sensage_sls_Pubs_Instance r=ETL%2DEngine
+e=RS%5FRUN t=BA07101495ACF887728D635C89885C69
+05 21401 141.0 141.0 8.3 R N 24.9% 0:29 8072 10:21 1178817711 run 0 /opt/sensage/
+etc/sls/instance/Pubs_Instance/sensage_sls_Pubs_Instance r=ETL%2DEngine
+e=RS%5FRUN t=BA07101495ACF887728D635C89885C69
+04 28150 217.0 216.0 7.0 R N 7.7% 0:08 8072 10:19 1178817571 run 1 /opt/sensage/
+etc/sls/instance/Pubs_Instance/sensage_sls_Pubs_Instance
+r=Addamark%2ELoad%2EFarm t=BA07101495ACF887728D635C89885C69
+04 28143 20.2 14.0 9.2 S 2.4% 0:02 14 Dec31 14 14 0 /opt/sensage/java/bin/java -
+cp /opt/sensage/../3.7/lib/java/cli/cli-3.7.jar com.sensage.cli.Ssiload --
+namespace=blue poweredge04:8072 blue /tmp/blue_websense.ptl /tmp/
+SG_WA_Sensage__100922070000.log
+04 28149 14.1 13.0 6.7 S N 0.9% 0:00 8072 10:19 1178817571 run 0 /opt/sensage/
+etc/sls/instance/Pubs_Instance/sensage_sls_Pubs_Instance r=StdinContent
+t=BA07101495ACF887728D635C89885C69
+04 28148 14.0 12.0 6.7 S N 0.4% 0:00 8072 10:19 1178817571 run 0 /opt/sensage/
+etc/sls/instance/Pubs_Instance/sensage_sls_Pubs_Instance r=StdinTrans
+t=BA07101495ACF887728D635C89885C69
+04 28145 25.6 25.0 4.9 S 0.4% 0:00 8072 May 1178578523 init 1 /opt/sensage/etc/
+sls/instance/Pubs_Instance/sensage_sls_Pubs_Instance
+04 28146 16.6 16.0 8.4 S N 0.4% 0:00 8072 10:19 1178817571execute 1 /opt/sensage/
+etc/sls/instance/Pubs_Instance/sensage_sls_Pubs_Instance r=Addamark%2ELoad
+e=RS%5FRUN t=BA07101495ACF887728D635C89885C69
+04 28144 20.2 14.0 9.2 S 0.4% 0:00 14 Dec31 14 14 0 /opt/sensage/java/bin/java -
+cp /opt/sensage/../3.7/lib/java/cli/cli-3.7.jar com.sensage.cli.Ssiload --
+namespace=blue poweredge04:8072 blue /tmp/blue_websense.ptl /tmp/
+SG_WA_Sensage__100922070000.log
+KEY:
+- PROC STAT:
+D uninterruptible sleep (usually IO)
+R runnable (on run queue)
+S sleeping
+T traced or stopped
+Z a defunct ('zombie') process
+W has no resident pages
+&lt; high-priority process
+N low-priority task
+L has pages locked into memory</codeblock>
+   </conbody>
+</concept>

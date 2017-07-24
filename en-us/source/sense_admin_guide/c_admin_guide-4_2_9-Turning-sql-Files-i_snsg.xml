@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_2_9">
+   <title>Turning .sql Files into Unix Shell Scripts</title>
+   <conbody>
+      <p>For Unix users who would like their SQL files to be runnable, <codeph>atquery</codeph> knows
+      to ignore the first line of SQL files that start with "<codeph>#!</codeph>". To support this
+      capability, you must create a wrapper shell script like the
+      following:<codeblock xml:space="preserve">#!/bin/sh
+# this will launch the real atquery program with the given .sql file
+# note: please adjust INSTALLNAME, HOST and PORT to reflect your installation
+/home/lms/INSTALLNAME/atquery HOST:PORT $*</codeblock>
+      </p>
+      <p>Then, start runnable <filepath>.sql</filepath> files like the
+         following:<codeblock xml:space="preserve">#!/usr/local/bin/runatquery
+select count(*) from mytable during all</codeblock></p>
+      <note>You must <codeph>chmod</codeph> both shell scripts, so they become executable; for
+      example, <codeph>chmod 755</codeph>
+         <codeph>runatquery</codeph>. Also, many shells have a limit on the length of the
+        <codeph>#!</codeph> line; often, it's limited to 32 characters, and fails silently.</note>
+   </conbody>
+</concept>

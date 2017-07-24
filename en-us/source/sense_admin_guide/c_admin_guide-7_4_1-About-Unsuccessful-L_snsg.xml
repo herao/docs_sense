@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_4_1">
+   <title>About Unsuccessful Loads</title>
+   <conbody>
+      <p>Log data does not always load correctly into the EDW instance. Incorrectly loaded data can
+      include loads that partially completed or loads that were aborted and reloaded. The EDW tracks
+      every upload to the system, storing the unique identifier of each load in the
+        <codeph>_uploadid</codeph> column of each table. Loads that fail upload are tagged as
+      inconsistent. By default, the data in an inconsistent load does not display when you query the
+      EDW.</p>
+      <p>
+         <note>A successful load does not necessarily insert every row from the source log file.
+        Typically log files contain data that cannot be parsed and loaded; however, bad data does
+        not prevent these files from loading successfully. A failed load is caused by a protocol
+        error, such as not receiving all the expected data or a load cancellation.</note>
+      </p>
+      <p/>
+   </conbody>
+</concept>

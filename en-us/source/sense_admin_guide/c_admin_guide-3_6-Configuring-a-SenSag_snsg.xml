@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_6">
+   <title id="title_a8">Configuring a SenSage AP Deployment</title>
+   <conbody>
+      <p>This section describes how to configure a SenSage AP deployment: using the Deployment Manager
+      Dashboard:</p>
+      <ul id="ul_nlz_bqh_vx">
+         <li>
+            <xref href="c_admin_guide-3_6_1-Adding-a-New-Host_snsg.xml#topic_3_6_1"/>
+         </li>
+      </ul>
+   </conbody>
+</concept>

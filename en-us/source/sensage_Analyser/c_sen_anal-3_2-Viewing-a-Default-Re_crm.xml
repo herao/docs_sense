@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_2">
+   <title>Viewing a Default Report Display</title>
+   <conbody>
+    <p>The screen below shows a default display of a typical report. The top of the report displays
+      the report name and the timeframe in which the report was run. Some reports are configured
+      with charts that use a specific chart type as shown in the example.</p>
+    <p>For details on how to create charts with reports, see <xref
+        href="c_sen_anal-6-CREATING-ANDMODIFYI_crm.xml"/>.</p>
+    <p>Note also that you can click on a column label of a report which will sort the report by that
+      column. Clicking on the same column again sorts the report in the alternative direction. In
+      the following screenshot the <uicontrol>ts</uicontrol> (time stamp) column is sorted in the
+      descending order.</p>
+    <fig><title>Sorting Report by Column</title><image href="./media/Image_062_1.png" placement="break" scale="40" id="image_nkz_bbm_zx"/></fig>
+  </conbody>
+</concept>

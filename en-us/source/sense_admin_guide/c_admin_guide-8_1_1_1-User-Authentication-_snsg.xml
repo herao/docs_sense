@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_1_1_1">
+   <title>User Authentication Modes</title>
+   <conbody>
+      <p>The SenSage AP Analyzer has three modes of authentication:</p>
+      <ul>
+         <li>
+            <i>Native</i> authentication in which users are created and managed solely in the
+        Analyzer database. Passwords are stored and encrypted in the database.</li>
+         <li>
+            <i>LDAP</i> authentication in which usernames and passwords are stored in LDAP and users
+        are authenticated against LDAP at login time.</li>
+         <li>
+            <i>LDAP/AD</i> authentication in which usernames and passwords are stored in AD/LDAP and
+        SenSage AP Analyzer delegates user authentication to AD at login time.</li>
+      </ul>
+      <p>The Analyzer’s authentication mode is configured during SenSage AP installation through
+      user- selection in the Deployment Manager installation wizard. A property 'auth.method'
+      present in the <codeph>/opt/hexis/hawkeye-ap/analyzer/config/app.install.properties</codeph>
+      file controls which authentication method is used. If the file contains
+        <b>auth.method=ldap</b>, then other properties are read to determine the LDAP or AD/LDAP
+      server location, credentials and search pattern to use.</p>
+      <p>If set to any of the three modes (native, LDAP, or AD/LDAP), a default Analyzer "Admin"
+      account will be created during installation. After the initial Analyzer "Admin" has logged in,
+      additional users may have a role enabled to their account that provides "User Administrator"
+      privilege. Regardless of the authentication mode, AP Analyzer manages a user's authorizations
+      via roles and groups.</p>
+      <p>For details on LDAP set up and configuration through the Deployment Manager, see <xref href="c_admin_guide-8_4-Configuring-LDAP-Int_snsg.xml#topic_8_4"/>. For details on AD/LDAP set up and configuration, see <xref href="c_admin_guide-9_3_3-Configuring-Single-A_snsg.xml#topic_9_3_3"/> and <xref href="c_admin_guide-9_3_4-Configuring-Multiple_snsg.xml#topic_9_3_4"/>.</p>
+   </conbody>
+</concept>

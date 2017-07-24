@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_1">
+   <title id="title_a20">Scheduler Overview</title>
+   <conbody>
+    <p>To access the Scheduler, go to the Analyzer left-hand navigation menu, click the Scheduler
+      menu, and the Schedules sub-menu. To schedule reports, select the Report Schedules tab.
+        <draft-comment author="Hemraj">NEED SCREENSHOT WITH JUST REPORT SCHEDULES SELECTED AND
+        SCHEDULES LISTED.</draft-comment></p>
+    <p>The section on the main menu is used for scheduling both reports and models.</p>
+    <p>
+      <note>NOTE: If a model is associated with a report, the model will run every time the report
+        runs, whether manually or by a schedule.</note>
+    </p>
+    <p>Figure 8-1: Schedules Listing</p>
+    <p><image href="./media/Image_361.jpg" height="320" width="498" id="image_q4v_5yr_zx"/></p>
+    <p><ph id="a122">On this screen (</ph>Figure 8-1), you can see all the schedules currently
+      configured in the system. The controls across the top let you perform basic management tasks,
+      including editing a schedule, viewing the results of a schedule, duplicating schedules, and
+      controlling access to the schedule, and disabling a schedule.</p>
+  </conbody>
+</concept>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_6_2">
+   <title>Verify Hosts Are Up and Running</title>
+   <conbody>
+      <p>To see if all the hosts in your EDW instance are up and running, submit an atquery command to
+      display the <codeph>cluster_properties</codeph> table in the system namespace of your EDW:</p>
+      <codeblock xml:space="preserve">atquery [machine name]:[port] -e "select * from system.cluster_properties"
+        --namespace= | grep NODE_INFO</codeblock>
+      <p>The <codeph>-e</codeph> option tells <codeph>atquery</codeph> to read the SQL statement that
+      follows it.</p>
+      <p>In the results, look for the <codeph>NODE_INFO</codeph> lines. Each host in your EDW instance
+      should have an entry. For example, if you have a 10 hosts in your EDW instance, you should
+      expect 10 records back from this query.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_4_5_3">
+   <title><i>columns</i>: Viewing Columns for All Tables in a Namespace</title>
+   <conbody>
+      <p>Lists the columns for every table in the given namespace, including each column's data type,
+      and the start and end timestamps for the table. Timestamps are stored in the ts column.</p>
+      <p>Example:<codeblock xml:space="preserve">atview --user=administrator --pass=pass:s0mep@ss lmshost:8072 \
+--namespace=external.websvcs columns</codeblock>
+      </p>
+   </conbody>
+</concept>

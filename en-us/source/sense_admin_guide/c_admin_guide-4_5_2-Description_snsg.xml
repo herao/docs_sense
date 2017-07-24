@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_5_2">
+   <title>Description</title>
+   <conbody>
+      <p>The retire command is a SenSage AP SQL extension rather than a command-line tool and,
+      therefore, is unlike the utilities documented in this chapter. You do not run retire from the
+      command line as you do the utilities. Instead, you use the <codeph>atquery</codeph> utility to
+      run it.</p>
+      <p>The retire command replaces the deprecated <codeph>atretire</codeph> utility as the tool for
+      retiring data from an EDW</p>
+      <p>instance. The retire command provides significantly enhanced performance over
+        <codeph>atretire</codeph>.</p>
+      <p>Moreover, the syntax of the <codeph>retire</codeph> command is easier and more comprehensive
+      than that of the <codeph>atretire</codeph> command. While the <codeph>atretire</codeph>
+      command required you to specify the cutoff time in the predefined syntax of a timestamp, the
+      retire command allows you to specify the cutoff time as any SenSage AP SQL expression that
+      evaluates to a timestamp data type.</p>
+      <p>The retire command permanently deletes data from the specified table in the EDW instance. Use
+      this command to:</p>
+      <ul id="ul_wfp_pl5_vx">
+         <li>Reclaim Space<p>Although the combination of EDW compression and ever-increasing disk
+          capacity has reduced the urgency of deleting older data, there are still applications that
+          require this regular maintenance. You can use <codeph>retire</codeph> to delete old data,
+          retiring on a range of upload IDs or timestamps.</p>
+            <note type="important"> Retiring data from an
+          EDW table removes only data that is not stored under retention on a Nearline storage
+          device. The command skips archived data that is under retention and returns a message that
+          provides the date in the future when the Nearline storage device will retire the data.
+          That date is the earliest you can retire the data. The command does remove archived data
+          that is not under retention or its retention period has passed. On some Nearline storage
+          devices, however, in order to ensure retire time specifications are enforced, the command
+          may be required to restore some data not under retention and let it remain online even
+          though it falls outside the retire date. For more information on Nearline storage, see
+            <xref href="c_admin_guide-10-ARCHIVING-TONEARLIN_snsg.xml#topic_10"/>.</note>
+         </li>
+         <li>Undo Duplicate Loads<p>Occasionally, the same log file is accidentally loaded twice. You
+          can use retire to remove one of the copies. You delete based on upload ID.</p>
+         </li>
+         <li>Undo Loads Containing Bad Data <p>Occasionally, the source data itself is incorrect, and
+          you want to fix the data in the long-term archives. If the problem is limited to one log
+          file, IgniteTech recommends backing out this one file, fixing the source data, then
+          reloading. However, if the corruption occurred over the course of weeks, it may be
+          preferable to use retire to delete selected records.</p>
+         </li>
+      </ul>
+   </conbody>
+</concept>

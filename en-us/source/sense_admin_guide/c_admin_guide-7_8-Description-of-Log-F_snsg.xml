@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_8">
+   <title>Description of Log File Names</title>
+   <conbody>
+      <p>Source log files are renamed to have a zero-padded, 3-digit priority number at the beginning
+      of the filename. Non-prioritized files are marked with <codeph>000</codeph>. To prioritize a
+      log, change the number to 1 higher than the highest number in the log queue. Loaders will look
+      for the file with the highest number when considering which file to load.</p>
+      <p>Log files also have an ISO timestamp added to their name showing the time at which they were
+      gathered, a sequence ID in the event that two logs are gathered during the same timestamp, and
+      a string identifying the retriever that retrieved them.</p>
+      <p>The configuration file <filepath>config.xml</filepath> defines the log-queue directories
+      where log files are stored. For more information, see <i>Configuring Log Queues</i> in
+      “SenSage AP Collector Configuration” of the <cite>Collector Guide</cite>.</p>
+   </conbody>
+</concept>

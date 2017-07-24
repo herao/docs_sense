@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_5_1">
+   <title>Accessing the ALTER TABLE Tool</title>
+   <conbody>
+      <p>By default, the ALTER TABLE tool is located in the bin folder of the SenSage AP installation.
+      If the SenSage AP product is installed in the default folder, following is the full path of
+      the tool:</p>
+      <p>
+         <filepath>/opt/hexis/hawkeye-ap/bin/altertbl</filepath>
+      </p>
+      <p>In order to run the tool, you must be an EDW user. Also, you must launch the program from a
+      host that is trusted by the rest of the hosts in the cluster.</p>
+   </conbody>
+</concept>

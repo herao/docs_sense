@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_3_1">
+   <title>Moving and Re-organizing Pods</title>
+   <conbody>
+    <p>When a dashboard first loads in each user-session, it remains unlocked; this allows the pods
+      to arrange themselves on the screen based on the screen size of the device in use. If you want
+      to keep the pods the way they are currently displayed, click the "lock" button (magnet icon);
+      this will also allow the browser to add a scroll bar when resized.</p>
+    <fig><title>Moving and Re-organizing Pods</title><image href="./media/Image_029.png" placement="break" id="image_ydn_ptl_zx" scale="40"/></fig>
+    <p>Now you can manually re-organize the pods by dragging them with the mouse.</p>
+    <p>You can resize any of the pods by holding the mouse over the edge of the pod you want to move
+      and using the mouse to slide the edge larger or smaller. For example:</p>
+    <fig><title>Resizing Pods</title><image href="./media/Image_031.png" placement="break" id="image_a2n_ptl_zx" scale="110"/></fig>
+    <p>If you have edit rights on the dashboard you can save the layout by clicking the gear icon
+      and then Save Layout.</p>
+    <p>For more information on viewing options, refer to Chapter 2: Viewing Reports, Charts, and
+      Models.</p>
+    <fig><title>Saving Dashboard Layout</title><image href="./media/Image_033.png" placement="break" id="image_c2n_ptl_zx" scale="50"/></fig>
+  </conbody>
+</concept>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_3">
+   <title id="title_a34">Configuring Native Authentication</title>
+   <conbody>
+      <p>In <i>Native</i> authentication users are created and managed solely in the Analyzer database
+      in which passwords are stored and encrypted. All information for authorizing access to
+      functionality or data in the application is stored in the Analyzer database. The default
+      "Native" mode is selected in the Deployment Manager console at the time of installation; you
+      can ignore all LDAP/AD fields, which will be displayed as read-only when native mode is
+      select.</p>
+   </conbody>
+</concept>

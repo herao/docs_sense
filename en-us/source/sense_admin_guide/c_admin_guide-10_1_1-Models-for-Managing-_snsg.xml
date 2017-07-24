@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_1_1">
+   <title>Models for Managing Local Storage Space</title>
+   <conbody>
+      <p>The default configuration of an EDW instance uses local disk space for its storage space.
+      With local storage space, an EDW instance stores and retrieves data very quickly. However, as
+      the amount of stored historical data grows, local disk space can run out.</p>
+      <p>
+         <draft-comment author="Hemraj" translate="no">GET MORE DETAILS ON THIS FROM BUG REPORT
+        SS-13516</draft-comment>
+      </p>
+      <p>
+         <note>SenSage AP does not support de-duplicating identical data in a Nearline storage because
+        the files are laid out differently on disk.</note>
+      </p>
+      <p>
+         <draft-comment author="Hemraj" translate="no">Please provide more details, maybe a good example can make it
+        more understandable.</draft-comment>
+      </p>
+      <p>The EDW component supports two methods for expanding EDW (Event Data Warehouse Server)
+      storage capacity:</p>
+      <ul id="ul_cx1_1l4_wx">
+         <li>
+            <b>Archiving data</b>
+            <p>Archiving data requires configuring the EDW component to
+          communicate with Nearline storage devices. The EDW then can move old data from local
+          storage onto Nearline storage. Old data on local storage is replaced with references to
+          its location on Nearline storage. These references let you reclaim local storage space for
+          new data, because references to archived data are much smaller than the data
+          itself.</p>
+            <p>Archiving data allows you to reserve local storage for recent data. Queries
+          of recent data execute quickly because the data is on local storage. Historical data
+          remains accessible on Nearline storage, but queries execute more slowly. When a person
+          queries the EDW for archived data, it automatically and transparently retrieves the data
+          regardless of whether it is in local or Nearline storage.</p>
+         </li>
+         <li>
+            <b>Retiring data</b>
+            <p>Retiring data deletes it from the storage space of EDW instances
+          and reclaims the storage space that it consumed. After you retire data, it is completely
+          gone and is not accessible to queries. Retire data instead of archiving it only if you do
+          not need access to the historical data that you retire.</p>
+            <note type="important">
+          Retiring data from an EDW table removes only data that is not stored under retention on a
+          Nearline storage device. The command skips archived data that is under retention and logs
+          a message that provides the date in the future when the Nearline storage device will allow
+          you to retire the data. That date is the earliest you can retire the data. The command
+          does remove archived data that is not under retention or its retention period has passed.
+          On some Nearline storage devices, however, in order to ensure retire time specifications
+          are enforced, the command may be required to restore some data not under retention and let
+          it remain online even though it falls outside the retire date. For more information, see
+            <xref href="c_admin_guide-4_5-Retiring-Data_snsg.xml#topic_4_5"/>.</note>
+         </li>
+      </ul>
+   </conbody>
+</concept>

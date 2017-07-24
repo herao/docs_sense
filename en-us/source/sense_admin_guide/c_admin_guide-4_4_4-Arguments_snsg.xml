@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_4_4">
+   <title>Arguments</title>
+   <conbody>
+      <p>The <codeph>atview</codeph> utility takes as its first argument the
+          <i>
+            <codeph>&lt;cluster_list&gt;</codeph>
+         </i> for the EDW that is to be examined. The
+          <codeph>
+            <i>&lt;cluster_list&gt;</i>
+         </codeph> represents a comma-separated list of
+          <codeph>
+            <i>&lt;host&gt;:&lt;port&gt;</i>
+         </codeph> pairs. The list must be enclosed in quotation
+      marks (").</p>
+      <p>Specifying a list rather than a single <codeph>host:port</codeph> pair allows the utility to
+      run even if the first of the specified EDW nodes is down. Each <codeph>host:port</codeph> pair
+      identifies the EDW instance; for example, <b>sls01:8072</b>.</p>
+      <p>The command tries each host:port pair in order (left to right) until it finds one that allows
+      a TCP (Transmission Control Protocol) connection. Failure to establish a TCP connection
+      indicates that the EDW host is down. If the connection succeeds but the command fails, the
+      command does not attempt to establish additional connections.</p>
+      <p>Example:</p>
+      <codeblock xml:space="preserve">atview --user=administrator --password=changeme
+"sls01:8072,sls02:8072,sls03:8072" --namespace=s0meNS tables</codeblock>
+      <p>The command then expects an <i>&lt;item&gt;</i> argument, which indicates the EDW object, state,
+      or task to examine. Depending on the <i>&lt;item&gt;</i>, there are a number of additional
+      arguments, as indicated in the table below.</p>
+      <table id="table_upn_r35_vx">
+         <tgroup cols="3">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <colspec colnum="3" colname="col3"/>
+            <thead>
+               <row>
+                  <entry>Item</entry>
+                  <entry>Additional Arguments</entry>
+                  <entry>Description</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>tables</entry>
+                  <entry/>
+                  <entry>view tables and views in a namespace</entry>
+               </row>
+               <row>
+                  <entry>namespaces</entry>
+                  <entry/>
+                  <entry>view namespaces (within a namespace)</entry>
+               </row>
+               <row>
+                  <entry>columns</entry>
+                  <entry/>
+                  <entry>view columns for all tables in a namespace</entry>
+               </row>
+               <row>
+                  <entry>columns</entry>
+                  <entry>
+                     <i>&lt;table_name&gt;</i>
+                  </entry>
+                  <entry>view columns for one table</entry>
+               </row>
+               <row>
+                  <entry>tasks</entry>
+                  <entry/>
+                  <entry>show tasks currently running across the instance</entry>
+               </row>
+               <row>
+                  <entry>disk</entry>
+                  <entry/>
+                  <entry>show disk capacity, use, and free space</entry>
+               </row>
+               <row>
+                  <entry>tabledisk</entry>
+                  <entry>
+                     <i>&lt;table_name&gt;</i>
+                  </entry>
+                  <entry>show disk use for the specified table, not including disk used for
+              directories</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

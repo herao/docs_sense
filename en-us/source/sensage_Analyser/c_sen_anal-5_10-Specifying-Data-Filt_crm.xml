@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_10">
+   <title>Specifying Data Filters for the Report</title>
+   <conbody>
+    
+      <p>The data filter features provided for your report let you:</p>
+      <ul id="ul_hfb_tgq_zx">
+          <li>
+            <p>Define complex data filters for any given field; these filters include the following:
+              =, !=, &lt;, &lt;=,</p>
+            <p>> >=, is between, is not between, contains, does not contain, empty, is not empty,
+              starts with and ends with.</p>
+            <p>Depending on the datatype for a column in your report, applicable filter options are
+              presented for your selection. Boxes to enter your filter values also inform you
+              whether an entry is required or optional.</p>
+          </li>
+          <li>
+            <p>Create filters in the report for fields not displayed in the report.</p>
+          </li>
+          <li>
+            <p>Set options to limit rows returned in a result set and retention period for your
+              report’s history. </p>
+          </li>
+        </ul>
+    
+    <p>To specify data filters for your report:</p>
+    <ol id="ol_ifb_tgq_zx">
+      <li>Click the Data Filters tab in the Report Wizard.</li>
+      <li>If desired, provide entries for the following options:<ol><li>To set a limit for the number of rows returned in the result set, check the box: "Limit the
+            number of results returned to":, which enables your configurable parameter to the number specified.<p>
+              <note>By default, the limit is 2500, however, you can change this limit to any
+                positive integer. Generally, this setting is used for the "Top 100" type reports
+                noted in the Analytics Guide.</note>
+            </p></li><li>Change the retention period for retaining the report’s history. The default is seven
+              days.<p>Figure 4-33: Limiting Number of Results</p><p><image href="./media/Image_187.png" placement="break" scale="50"/></p></li></ol></li>
+      <li>If desired, to filter the report by fields not displayed in the report (without
+        corresponding rows on the Report Fields tab), click the Add a column button in the upper
+        right corner.<p>A dialog box similar to the initial field selector dialog box (when you
+          first defined the report) is displayed listing additional fields from the same source
+          table.</p><p>Figure 4-34: Filtering Report with Undisplayed Fields</p><p><image href="./media/Image_188.png" placement="break" scale="50"/></p></li>
+      <li>To set the filter for any given field, click the dropdown arrow on the row corresponding
+        to the field you want to filter by. The options for filtering type for that field are
+          displayed.<p>Figure 4-35: Filtering Type Options</p><p><image href="./media/Image_189.jpg" placement="break" scale="70"/></p><p>After you select the filter type,
+          entry boxes appropriate for that type of filter are displayed on the right. For details on
+          "prompt user" and "choose from..." filter types, see <xref
+            href="c_sen_anal-5_9-Providing-Interactiv_crm.xml"/>.</p><p><image
+            href="./media/Image_190.jpg" placement="break" scale="70"/></p></li>
+      <li>Enter valid report values in these filter type entry boxes. Figure 4-36: Entering Values
+        for Filter Type Options</li>
+      <li>When you are finished, click <b>Save </b>or choose one of the following Save Options: Save
+        and close, Save run and retain (for report history), or Save and run once (no history).</li>
+    </ol>
+  </conbody>
+</concept>

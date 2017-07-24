@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_3">
+   <title id="title_a39">Setting up Active Directory Integration</title>
+   <conbody>
+      <p>
+         <note>Before you begin this procedure, be sure you have SenSage AP cluster(s) installed that
+        are currently operable.</note>
+      </p>
+      <p>To integrate your deployment with Active Directory, follow each section of this procedure in
+      the order presented.</p>
+   </conbody>
+</concept>

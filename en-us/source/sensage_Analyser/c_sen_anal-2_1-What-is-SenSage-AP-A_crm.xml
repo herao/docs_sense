@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_1">
+   <title id="title_a2">What is SenSage AP Analyzer?</title>
+   <conbody>
+    <p>The SenSage AP Analyzer is comprehensive client tool for performing SenSage AP reporting,
+      data modeling, and AP user administration. AP administrators assign privileges to Analyzer
+      users to perform specific tasks:</p>
+    <ul id="ul_k1d_cpl_zx">
+      <li>
+        <p>Users can view, create, run, schedule and edit their own reports, as well as set up and
+          manage dashboards to display critical reporting data when and where it is needed. An
+          import and export feature allows for reports and dashboards to be copied and shared among
+          AP deployments.</p>
+      </li>
+      <li>
+        <p>With the easy-to-use Report Wizard, users can configure both standard and
+          Analyzer-featured reports for effective data presentation and create corresponding charts
+          with a number of chart type options (such as area, bar, pie, etc.),</p>
+      </li>
+      <li>
+        <p>For more complex reporting, users can conveniently run and alter data models included in
+          a SenSage AP installation using the Analyzer’s Analytics Workbench, an interactive and
+          visual Data Modeling tool. The workbench includes a feature to manage models. For details
+          on available sample models, including Insider Threat Detection, see the Analytics
+          Guide.</p>
+      </li>
+      <li>
+        <p>With the SQL Workbench, AP Analyzer provides users with a a SQL authoring tool to develop
+          ad-hoc SQL queries and write SQL code using data from the EDW and other sources. Included
+          in Workbench is the capability to bring in columns from tables, additional parameters, and
+          edit a query as a report.</p>
+      </li>
+      <li>
+        <p>Users can view event data from information systems in AP Analyzer with ready-to-run AP
+          Analytics reports and dashboards included in a SenSage AP installation. For details on
+          available SenSage AP Analytics reports, see the Analytics Guide.</p>
+      </li>
+    </ul>
+  </conbody>
+</concept>

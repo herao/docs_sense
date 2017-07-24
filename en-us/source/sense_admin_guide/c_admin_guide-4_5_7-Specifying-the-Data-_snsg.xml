@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_5_7">
+   <title>Specifying the Data for Deletion</title>
+   <conbody>
+      <p>There are two ways to specify which data to delete.<ul id="ul_kbw_cn5_vx">
+            <li>
+               <xref href="c_admin_guide-4_5_7_1-Using-the-UPLOADS-Co_snsg.xml#topic_4_5_7_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_5_7_2-Using-the-BEFORE-t_snsg.xml#topic_4_5_7_2"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

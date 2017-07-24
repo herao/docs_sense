@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_6_5">
+   <title>Creating or Modifying a Pie Chartt</title>
+   <conbody>
+    <p>A Pie Chart has one required field that requires configuration: your chosen field to display
+      chart values.</p>
+    <p>If a field with a string datatype is selected for the chart values from the field, the system
+      will automatically aggregate that field with the count() function and display areas of the
+      chart proportional to the number of occurrences of each value in that field. However, if a
+      field with a numeric datatype is selected the system will use the values in that field to
+      proportionally size the areas of the chart.</p>
+    <p>To create or modify a Pie Chart:</p>
+    <ol id="ol_yj1_wxq_zx">
+      <li>Access the area chart settings screen (for instructions see “Creating a Chart”, on page 91
+        or “Editing a Chart - THIS NEEDS VERIFICATION and SCREENSHOTS”, on page 94.</li>
+      <li>If desired, enter (in this optional field) a title for the chart for descriptive purposes
+        only.</li>
+      <li>Specify your chosen field for the chart from the dropdown box labelled "Chart values from
+        the field:" :<ul id="ul_zj1_wxq_zx">
+          <li>
+            <p>See Step 4 if you are selecting a field with a string datatype.</p>
+          </li>
+          <li>
+            <p>See Step 5 if you are selecting a field with a numeric datatype.</p>
+          </li>
+        </ul></li>
+      <li>In the Figure 5-17 example below, the field "Protocol" is chosen, which has a string
+          datatype.<p>Figure 5-17: Pie Chart Settings</p><p><image href="./media/Image_237.jpg"
+            height="338" width="594" id="image_ak1_wxq_zx"/></p><ol id="ol_xdg_2yq_zx">
+          <li>Click Save to apply your own setting. DOES CLICKING SAVE DISPLAY THE CHART?<p>Figure
+              5-18 shows the results of the configuration implemented with chart values from the
+              field "Protocol", which will look similar to your own setting.</p></li>
+          <li>Hover the mouse over each section of the chart to see the actual percentages for your
+            chosen field.<p>Figure 5-18: Pie Chart Configuration</p><p>
+              <image href="./media/Image_239.jpg" id="image_ck1_wxq_zx" placement="break" scale="70"
+              />
+            </p></li>
+        </ol></li>
+      <li>In Figure 5-19 below, the field "Total Accepts" is chosen, which has a numeric datatype.
+          <note>The box for the second field is displayed whenever a field of numeric datatype
+          is used.</note><p>Figure 5-19: Pie Chart Settings with "Total Accepts"
+            Selected</p><p><image href="./media/Image_240.jpg" height="254" width="584"
+            id="image_dk1_wxq_zx"/></p><p>The following additional viewing options are listed at the
+          bottom of the chart settings screen:</p><ul id="ul_ek1_wxq_zx">
+          <li>
+            <p>Graph Style - Allows you to WHAT DOES THIS DO?</p>
+          </li>
+          <li>
+            <p>Display - Turns on or off the 3D effect on the graph.</p>
+          </li>
+        </ul></li>
+      <li>Click Save. DOES CLICKING SAVE DISPLAY THE CHART?</li>
+    </ol>
+  </conbody>
+</concept>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_14_1">
+   <title id="title_a47">Time-Zone Conversion</title>
+   <conbody>
+      <p>SenSage AP SQL provides functions that recognize specific time-zone shortenings and maps them
+      to standard time-zone strings, as shown in the table below.</p>
+      <table id="table_vvx_ryq_wx">
+         <tgroup cols="3">
+            <colspec colnum="1" colname="col1" colwidth="1.1*"/>
+            <colspec colnum="2" colname="col2" colwidth="1*"/>
+            <colspec colnum="3" colname="col3" colwidth="2.76*"/>
+            <thead>
+               <row>
+                  <entry>Shortened Time Zone</entry>
+                  <entry>Standard Time Zone</entry>
+                  <entry>Description</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <codeph>PST</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>PST8PDT</codeph>
+                  </entry>
+                  <entry morerows="1">Pacific Standard Time and Pacific Daylight Time are interpreted as
+              either standard time or daylight savings depending on the time of year of the actual
+              date.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>PDT</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>PST8PDT</codeph>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>MDT</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>MST7MDT</codeph>
+                  </entry>
+                  <entry>Mountain Daylight Time is interpreted as either standard time or daylight savings
+              depending on the time of year of the actual date.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>CST</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>CST6CDT</codeph>
+                  </entry>
+                  <entry morerows="1">Central Standard Time and Central Daylight Time are interpreted as
+              either standard time or daylight savings depending on the time of year of the actual
+              date.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>CDT</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>CST6CDT</codeph>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>EDT</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>EST5EDT</codeph>
+                  </entry>
+                  <entry>Eastern Daylight Time is interpreted as either standard time or daylight savings
+              depending on the time of year of the actual date.</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+      <note>
+         <ul>
+            <li>Because Arizona does not support MDT, Mountain Standard Time is NOT converted to Mountain
+      Daylight Time.</li>
+            <li>Because Indiana does not consistently support EDT, Eastern Standard Time is NOT converted
+      to Eastern Daylight Time.</li>
+         </ul>
+      </note>
+   </conbody>
+</concept>

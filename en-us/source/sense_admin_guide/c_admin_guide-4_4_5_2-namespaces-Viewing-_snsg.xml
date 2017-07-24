@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_4_5_2">
+   <title><i>namespaces</i>: Viewing Namespaces Within a Namespace</title>
+   <conbody>
+      <p>Lists the namespaces within a given namespace. The output includes each namespace, the number
+      of tables within it, and the cumulative number of tables for all namespaces within the
+      namespace.</p>
+      <p>Example:<codeblock xml:space="preserve">atview --user=administrator --pass=pass:s0mep@ss lmshost:8072 \
+--namespace=external.websvcs namespaces</codeblock>
+      </p>
+   </conbody>
+</concept>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_8_1">
+   <title>Syntax for Log File Names</title>
+   <conbody>
+      <p>The names of event-log files that are processed by the Collector have this syntax:</p>
+      <codeblock xml:space="preserve">PPP-YYYYMMDDtHHMMSS-SEQ-RETR.EXT</codeblock>
+      <table id="table_p34_f1z_vx">
+         <tgroup cols="2">
+            <colspec colnum="1" colname="col1" colwidth="1*"/>
+            <colspec colnum="2" colname="col2" colwidth="2.79*"/>
+            <thead>
+               <row>
+                  <entry>Filename Field</entry>
+                  <entry>Meaning</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <codeph>
+                        <i>PPP</i>
+                     </codeph>
+                  </entry>
+                  <entry>Three-digit priority</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>
+                        <i>YYYMMDDtHHMMSS</i>
+                     </codeph>
+                  </entry>
+                  <entry>Date and time</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>
+                        <i>SEQ</i>
+                     </codeph>
+                  </entry>
+                  <entry>Numeric sequence number, normally 0 unless more than one file is generated
+                     per second</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>
+                        <i>RETR</i>
+                     </codeph>
+                  </entry>
+                  <entry>Retriever class name that generated this file</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>
+                        <i>
+                           <codeph>EXT</codeph>
+                        </i>
+                     </codeph>
+                  </entry>
+                  <entry>File extension</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

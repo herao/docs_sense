@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_5_3">
+   <title>Renaming Existing Columns</title>
+   <conbody>
+      <p>Use the following SQL statement to rename an existing column in a
+      table:<codeblock xml:space="preserve">ALTER TABLE &lt;schema qualified table name&gt; RENAME [COLUMN] &lt;existing column name&gt;
+TO &lt;new name of the column&gt;;</codeblock>
+      </p>
+      <p>
+         <note>You can rename only one column in a given RENAME statement. To rename multiple columns,
+        write each rename operation in a separate SQL statement.</note>
+      </p>
+      <p>The following diagram represents the syntax diagram for the ALTER TABLE MODIFY statement:
+        <fig id="fig_yqc_zfv_vx">
+            <title>Syntax diagram for renaming existing columns</title>
+            <image href="./media/Image_166.jpg" placement="break" id="image_xtk_5fv_vx" scale="90"/>
+         </fig>
+      </p>
+      <note>Any bloom filters associated with the column are dropped.</note>
+      <section>
+         <title>Examples</title>
+         <codeblock xml:space="preserve">SQL&gt; alter table default.cdr rename column exchg_id to exchange_id ;
+SQL&gt; alter table default.cdr rename call_ref to call_reference ;</codeblock>
+         
+      </section>
+   </conbody>
+</concept>

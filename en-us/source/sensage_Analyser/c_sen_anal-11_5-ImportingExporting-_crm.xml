@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11_5">
+   <title>Importing/Exporting Models</title>
+   <conbody>
+    <note>If you are importing a model, follow these guidelines:<ul id="ul_oyr_3ks_zx">
+        <li>
+          Only an "Admin User" can import models.
+        </li>
+        <li>
+          Import model files must already reside on the desktop.
+        </li>
+        <li>
+          The imported model file will include the "imported" tags.
+        </li>
+      </ul></note>
+          
+        
+      
+    
+    <p>To import or export models for use in another SenSage AP 6.1.x deployment:</p>
+    <ol id="ol_qyr_3ks_zx">
+      <li>Select or display the model (For details on accessing a model, see <xref
+          href="c_sen_anal-3-VIEWINGREPORTS-CHA_crm.xml"/>).</li>
+      <li>On the Model Menu bar (when the Model Tab is selected), select the import/export menu
+          icon:<image href="./media/Image_432.jpg" id="image_ryr_3ks_zx" scale="70"/></li>
+    </ol>
+    <p>The import model(s) popup displays. Dag and drop the model container (ZIP file) you want to
+      import.</p>
+     <p>Figure 10-9: shows an import pop-up.</p>
+    <p><image href="./media/Image_433.png" placement="break" scale="60"/></p>
+    <p>If there are existing files on your desktop with the same name/ID, import will overwrite this
+      file. Each ZIP file contains a JSON file for every model. You can convert the ZIP file into
+      formats such as GIT, SVN, etc.</p>
+    <note>Do not alter the <filepath>ZIP</filepath> file as it may corrupt the model file.</note>
+  </conbody>
+</concept>

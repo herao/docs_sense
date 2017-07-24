@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1">
+   <title id="title_a9">Setting Up the Initial Analyzer Dashboard</title>
+   <conbody>
+    <p>If you have Analyzer "Administrator" privileges and you are setting up Analyzer for the first
+      time, you will need to create an initial dashboard. After logging into Analyzer, you will be
+      prompted to "Create a Dashboard" through a large icon in the center of the page as shown in
+      Figure 3-1 below. Click this icon.</p>
+    
+      
+    
+    <p>Figure 3-1: Create a Dashboard prompt</p>
+    <p><image href="./media/Image_117.png" id="image_nld_lhm_zx" placement="break" scale="40"/></p>
+    <p><image href="./media/Image_118.jpg" height="170" width="462" id="image_old_lhm_zx" placement="break"/></p>
+    <p>A dashboard settings box is displayed to define your new dashboard. Figure 3-2 Dashboard
+      Settings</p>
+    <p>To set your dashboard:</p>
+    <ol id="ol_pld_lhm_zx">
+      <li>Provide a name for the dashboard. Note that if you leave the name field blank, you will
+        not be able to save the dashboard.</li>
+      <li>If desired (optional), select to have your dashboard automatically refresh on a periodic
+        basis. This is appropriate if you have low-impact reports (over short timeframes) that are
+        scheduled to run on a regular basis.<p>
+          <note>If this option is selected, then whenever a user has the dashboard displayed
+            in a browser, all reports on the dashboard will run at the specified interval.</note>
+        </p></li>
+      <li>If desired (optional), to set the dashboard to automatically refresh, click the checkbox
+        to the left of "Auto-refresh every" and provide an integer for the number of minutes between refreshes.<p>
+          <note>It is recommended to set this lower than every 60 minutes.</note>
+        </p></li>
+      <li>To save the dashboard, click <uicontrol>Save Dashboard</uicontrol>.</li>
+      <li>To add reports to the dashboard, see <xref
+          href="c_sen_anal-4_4-Adding-Reports-to-a-_crm.xml"/>.</li>
+    </ol>
+  </conbody>
+</concept>

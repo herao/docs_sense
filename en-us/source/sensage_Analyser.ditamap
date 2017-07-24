@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap
+  PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap xml:lang="en-US">
+   <booktitle>
+      <booklibrary>SenSage AP Analyzer Guide</booklibrary>
+      <mainbooktitle>SenSage Standard January,2017</mainbooktitle>
+   </booktitle>
+
+   <chapter href="sensage_Analyser/c_sen_anal-2-GETTINGSTARTED_crm.xml">
+      <topicref href="sensage_Analyser/c_sen_anal-2_1-What-is-SenSage-AP-A_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-2_2-Logging-Into-the-Ana_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-2_2_1-Viewing-the-Default-_crm.xml"/>
+      </topicref>
+      <topicref href="sensage_Analyser/c_sen_anal-2_3-Using-Dashboard-Feat_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-2_3_1-Moving-and-Re-organi_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-2_3_2-Maximizing-Pod-for-F_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-2_3_3-Pod-Options_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-2_3_4-Report-Viewing-Featu_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-2_3_5-Customizing-the-Dash_crm.xml"/>
+      </topicref>
+      <topicref href="sensage_Analyser/c_sen_anal-2_4-Using-Analyzer-Menus_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-2_4_1-Dashboard_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-2_4_2-Data-Design_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-2_4_3-Scheduler_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-2_4_4-Administration_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-2_4_5-Hiding-the-Menus_crm.xml"/>
+      </topicref>
+      <topicref href="sensage_Analyser/c_sen_anal-2_5-Limiting-Namespace-A_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-2_6-Configuring-Time-Zon_crm.xml"/>
+   </chapter>
+   <chapter href="sensage_Analyser/c_sen_anal-3-VIEWINGREPORTS-CHA_crm.xml">
+      <topicref href="sensage_Analyser/c_sen_anal-3_1-Viewing-Reports_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-3_2-Viewing-a-Default-Re_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-3_2_1-Specifying-Filter-Va_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-3_2_2-Zooming-into-a-Repor_crm.xml"/>
+      </topicref>
+      <topicref href="sensage_Analyser/c_sen_anal-3_3-Using-Other-Report-V_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-3_4-Changing-the-Default_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-3_5-Filtering-a-Report-b_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-3_6-Using-Quick-Filters-_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-3_6_1-Removing-Filters-fro_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-3_6_2-Removing-and-Choosin_crm.xml"/>
+      </topicref>
+      <topicref href="sensage_Analyser/c_sen_anal-3_7-Using-Filters-to-fin_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-3_8-Removing-a-Report-Fi_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-3_9-Using-Sort-to-Find-a_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-3_10-Using-Viewing-Featur_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-3_11-Viewing-Models_crm.xml"/>
+   </chapter>
+   <chapter href="sensage_Analyser/c_sen_anal-4-CREATING-ANDMODIFYI_crm.xml">
+      <topicref href="sensage_Analyser/c_sen_anal-4_1-Setting-Up-the-Initi_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-4_2-Adding-Dashboards_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-4_3-Modifying-a-Dashboar_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-4_4-Adding-Reports-to-a-_crm.xml"/>
+   </chapter>
+   <chapter href="sensage_Analyser/c_sen_anal-5-CREATING-MODIFYING_crm.xml">
+      <topicref href="sensage_Analyser/c_sen_anal-5_1-Creating-a-Report_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-5_2-Running-a-Report_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-5_3-Viewing-Report-Run-S_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-5_4-Modifying-a-Report_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-5_5-Joining-Multiple-Tab_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-5_6-Specifying-a-Summary_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-5_7-Providing-a-Date-Lim_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-5_8-Setting-Report-Reten_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-5_9-Providing-Interactiv_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-5_10-Specifying-Data-Filt_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-5_11-Integrating-Data-Mod_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-5_12-Associating-the-Repo_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-5_13-Copying-Renaming-a_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-5_13_1-Copying-Reports_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-5_13_2-Renaming-Reports_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-5_13_3-Deleting-Reports_crm.xml"/>
+      </topicref>
+   </chapter>
+   <chapter href="sensage_Analyser/c_sen_anal-6-CREATING-ANDMODIFYI_crm.xml">
+      <topicref href="sensage_Analyser/c_sen_anal-6_1-Creating-a-Chart_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-6_2-Editing-a-Chart---TH_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-6_3-Creating-or-Modifyin_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-6_4-Creating-or-Modifyin_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-6_5-Creating-or-Modifyin_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-6_6-Creating-or-Modifyin_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-6_7-Creating-or-Modifyin_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-6_8-Creating-or-Modifyin_crm.xml"/>
+   </chapter>
+   <chapter href="sensage_Analyser/c_sen_anal-7-USINGANALYTICSWORK_crm.xml">
+      <topicref href="sensage_Analyser/c_sen_anal-7_1-What-is-a-Data-Model_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-7_1_1-Analytics-Workbench_crm.xml"/>
+      </topicref>
+      <topicref href="sensage_Analyser/c_sen_anal-7_2-Defining-a-Model_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-7_2_1-Parts-of-a-Model-Com_crm.xml"/>
+      </topicref>
+      <topicref href="sensage_Analyser/c_sen_anal-7_3-Creating-and-Editing_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-7_3_1-Adding-and-Modifying_crm.xml"/>
+      </topicref>
+      <topicref href="sensage_Analyser/c_sen_anal-7_4-Creating-a-New-Model_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-7_5-Nesting-embedding-_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-7_6-Adding-and-Modifying_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-7_6_1-Connecting-Component_crm.xml">
+            <topicref href="sensage_Analyser/c_sen_anal-7_6_1_1-Providing-a-Singular_crm.xml"/>
+            <topicref href="sensage_Analyser/c_sen_anal-7_6_1_2-Providing-Multiple-I_crm.xml"/>
+         </topicref>
+         <topicref href="sensage_Analyser/c_sen_anal-7_6_2-Converting-Data-with_crm.xml">
+            <topicref href="sensage_Analyser/c_sen_anal-7_6_2_1-Datatype-Conversion-_crm.xml"/>
+         </topicref>
+         <topicref href="sensage_Analyser/c_sen_anal-7_6_3-Analytics-Component-_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-7_6_4-Filtering-Components_crm.xml"/>
+         <topicref href="sensage_Analyser/c_sen_anal-7_6_5-Using-Model-Canvas-M_crm.xml">
+            <topicref href="sensage_Analyser/c_sen_anal-7_6_5_1-Adding-an-Iterator-t_crm.xml"/>
+         </topicref>
+      </topicref>
+      <topicref href="sensage_Analyser/c_sen_anal-7_7-Using-Model-Menu-Ite_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-7_7_1-Filtering-Model-Disp_crm.xml"/>
+      </topicref>
+      <topicref href="sensage_Analyser/c_sen_anal-7_8-Sharing-Models_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-7_8_1-Using-the-Shared-But_crm.xml"/>
+      </topicref>
+      <topicref href="sensage_Analyser/c_sen_anal-7_9-Creating-a-Report-wi_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-7_10-Creating-a-Schedule-_crm.xml"/>
+   </chapter>
+   <chapter href="sensage_Analyser/c_sen_anal-8-USINGSQL-WORKBENCH-_crm.xml">
+      <topicref href="sensage_Analyser/c_sen_anal-8_1-Creating-an-SQL-Quer_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-8_2-Saving-an-SQL-Query-_crm.xml"/>
+   </chapter>
+   <chapter href="sensage_Analyser/c_sen_anal-9-MANAGINGREPORT-AND_crm.xml">
+      <topicref href="sensage_Analyser/c_sen_anal-9_1-Scheduler-Overview_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-9_2-Creating-a-Report-Sc_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-9_3-Creating-a-Schedule-_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-9_4-Creating-a-Schedule-_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-9_5-Viewing-Scheduler-Re_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-9_6-Viewing-Analytics-Re_crm.xml"/>
+   </chapter>
+   <chapter href="sensage_Analyser/c_sen_anal-10-ADMINISTERINGSENSAG_crm.xml">
+      <topicref href="sensage_Analyser/c_sen_anal-10_1-Adding-a-SenSage-AP-_crm.xml">
+         <topicref href="sensage_Analyser/c_sen_anal-10_1_1-Adding-a-SenSage-AP-_crm.xml"/>
+      </topicref>
+      <topicref href="sensage_Analyser/c_sen_anal-10_2-Modifying-a-SenSage-_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-10_4-Deleting-a-SenSage-A_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-10_5-Adding-and-Modifying_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-10_6-AddingModifying-Gro_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-10_7-Deleting-Groups_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-10_8-Adding-and-Modifying_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-10_9-Deleting-roles_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-10_10-Synchronizing-Users-_crm.xml"/>
+   </chapter>
+   <chapter href="sensage_Analyser/c_sen_anal-11-USINGIMPORT-EXPORT_crm.xml">
+      <topicref href="sensage_Analyser/c_sen_anal-11_1-ImportingExporting-_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-11_2-ImportingExporting-_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-11_3-Exporting-Charts_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-11_4-Downloading-a-Grid-i_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-11_5-ImportingExporting-_crm.xml"/>
+   </chapter>
+   <chapter href="sensage_Analyser/c_sen_anal-12-ADMINISTERINGDATAM_crm.xml">
+      <topicref href="sensage_Analyser/c_sen_anal-12_1-AddingDeleting-a-Da_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-12_2-Displaying-Model-Exe_crm.xml"/>
+   </chapter>
+   <chapter href="sensage_Analyser/c_sen_anal-13-APPENDIXA-NAMESPAC_crm.xml">
+      <topicref href="sensage_Analyser/c_sen_anal-13_1-6xx-Procedure-to-L_crm.xml"/>
+      <topicref href="sensage_Analyser/c_sen_anal-13_2-5xx-Procedure-to-L_crm.xml"/>
+   </chapter>
+   <chapter href="sensage_Analyser/c_sen_anal-14-APPENDIXB-SENSAGE_crm.xml"/>
+   <chapter href="sensage_Analyser/c_sen_anal-15-APPENDIXC-SETTING_crm.xml"/>
+</bookmap>

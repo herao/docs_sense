@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- (c) Copyright 2006-2007 VR Communications, Inc. All rights reserved. -->
+
+
+<!--TO RUN THIS SCRIPT
+	
+ To run the ant script, you must first setup your environment variables in a very specific manner.  
+ Read the instructions located in the DITA Authoring Guide located on this WIKI page: 
+ https://wiki.progress.com/display/KS/Documentation+Tools+Consolidation+-+One+Progress+Initiative
+ -->
+	
+	
+
+
+
+<!-- Depending on the argument passed to the script at runtime, 
+this script processed to one (example: dita2xhtml), multiple, or all output targets. -->
+<!-- This is a "user script," meant to be modified.
+However, be cautious in modifying the environment initialization section. -->
+<!-- -->
+<!-- ENVIRONMENT INITIALIZATION SECTION -->
+<!-- -->
+<!-- The project name is DXSI. The default output is PDF -->
+
+<project name="DXSI" default="dita2pdf2">
+	<!-- This message is echoed to the screen at the beginning of the build process -->
+	<!-- -->
+	<!-- To process using a different map, you need to change the following statement -->
+	<!-- -->
+	<echo> </echo>
+	<echo>Building DXSI documents.</echo>
+	<echo> </echo>
+	<!-- Allow the build process access to environment variables -->
+	<property environment="env"/>
+	<!-- Set toolkit directory from environment variable -->
+	<property name="toolkit_dir" value="${env.DITA_DIR}"/>
+	<!-- Note: basedir may be set in a higher-level script that invokes this one.
+  Some plug-ins depend on its pointing to the Toolkit directory.  
+  In particular, the Idiom plug-in, which is required for PDF2 processing, requires it. -->
+	<property name="basedir" value="${env.DITA_DIR}"/>
+	<!-- Define the location of the project (source file) directory.
+  In this case, the project directory is up two directory levels from the location of this file. -->
+	<property name="projdir" value="${ant.file}/../.."/>
+	<!-- Define the location of the output directory.
+  In this case, it is a directory directly above the project (source file) directory. -->
+	<property name="outdir" value="${projdir}/../OUTPUT"/>
+	<property name="PHPexe" value="${toolkit_dir}/PHP/php.exe"/>
+	<property name="args.logdir" value="${outdir}"/>
+	<!-- Set the name of the (master) ditamap -->
+	<!-- -->
+	<!-- To process using a different map, you need to change the following value -->
+	<!-- -->
+	<property name="MAP_file" value="sensage_Analyser_book.ditamap"/>
+	<!-- Set the extension string for the dita files (files can also be .xml) -->
+	<property name="EXTNAME" value=".xml"/>
+	
+	<!-- Define the path to the Java code -->
+	<path id="dost.class.path">
+		<pathelement location="${toolkit_dir}${file.separator}lib${file.separator}dost.jar"/>
+	</path>
+	<!-- Define the Ant targets and initialize the DITA processing environment -->
+	<taskdef name="integrate" classname="org.dita.dost.platform.IntegratorTask">
+		<classpath refid="dost.class.path"/>
+	</taskdef>
+	<!-- Create the default XHTML output and debug cross-reference -->
+	<!--<target name="xhtml" depends="integrate, dita2xhtml">
+  </target>-->
+	<!--<target name="integrate">
+		<integrate ditadir="${toolkit_dir}"/>
+	</target>-->
+	<!-- -->
+	<!-- BEGIN INSTANCE PROCESSING SECTION -->
+	<!-- -->
+	<!-- Names of the output types this script is capable of producing -->
+	<!-- The target names are somewhat arbitrary. The following are traditional,
+  and they allude to the source and target (for example, dita2pdf2). -->
+  <!-- dita2filtered -->
+	<!-- Create idiom fo pdf2 output -->
+	<target name="dita2pdf2">		    
+		<ant antfile="${toolkit_dir}${file.separator}build.xml" target="init">
+			<property name="args.input" value="${projdir}/sensage_Analyser_book.ditamap"/>
+			<property name="output.dir" value="${outdir}"/>
+			<property name="pdfcopydir" value="C:/output"/>
+			<!-- The temp directory is shared by all targets -->
+			<property name="dita.temp.dir" value="${outdir}/temp"/>
+			<property name="transtype" value="pdf2"/>
+			<property name="args.chapter.layout" value="BASIC"/>
+			<property name="args.draft" value="yes"/>			
+	<!-- Set args.draft to "yes" to show draft_comments -->
+			<property name="args.draft" value="no"/>
+			<property name="args.indexshow" value="yes"/>
+			<property name="dita.extname" value="${EXTNAME}"/>
+			<property name="dita.input.valfile" value="${projdir}/exclude_fsi_usermanual_links.ditaval"/>
+		    <property name="customization.dir" value="${toolkit_dir}/demo/fo/Custom_sense"/>
+		</ant>
+		<move file="${outdir}/sensage_Analyser_book.pdf"  tofile="${pdfcopydir}/crm/sensage_Analyser.pdf" overwrite="true" />
+	</target>
+	
+</project>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_14">
+   <title>Appendix B: Sensage AP Permission Requirements</title>
+   <conbody>
+    <p>This appendix lists role privileges and permissions that are required to perform specific
+      actions (such as view, edit, run, delete, etc.) in each feature of the SenSage AP application
+      (reporting, scheduling, etc). It is intended to be a guide in setting up roles and groups and
+      providing SenSage AP users with the appropriate permissions to perform their tasks and
+      responsibilities.</p>
+    <p>For more details on User Management, see the SenSage AP Administration Guide. For details on
+      using the "Manage Users" interface in the SenSage AP application see “SenSage AP Permission
+      Requirements”, on page 177.</p>
+     <table id="table_cfl_gdt_zx">
+       <title>Table 1: Permisson Requirements for AP Features</title>
+      <tgroup cols="5">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <colspec colnum="4" colname="col4"/>
+        <colspec colnum="5" colname="col5"/>
+        <thead>
+          <row>
+            <entry>Feature</entry>
+            <entry>Action Sup- ported in Feature</entry>
+            <entry>Role Privilege (service that is accessible)</entry>
+            <entry>Access Permis- sions on that Service</entry>
+            <entry>Uses Equivalent Feature and Ac- tion</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry namest="col1" nameend="col3">REPORT</entry>
+            <entry/>
+            <entry/>
+          </row>
+        <row>
+          <entry/>
+          <entry>View</entry>
+          <entry>Report Service Access</entry>
+          <entry>View</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry></entry>
+          <entry>Edit</entry>
+          <entry>Report Service Access</entry>
+          <entry>View, Edit</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Run</entry>
+          <entry>Report Service Access</entry>
+          <entry>View</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Delete</entry>
+          <entry>Report Service Access</entry>
+          <entry>View, Delete</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Create</entry>
+          <entry>Report Service Access, Report Create</entry>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Set Security</entry>
+          <entry>Report Service Access</entry>
+          <entry>Owner</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Export Reports</entry>
+          <entry/>
+          <entry/>
+          <entry>Export Reports same as Report - View</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>Import Reports</entry>
+          <entry/>
+          <entry/>
+          <entry>Import Reports same as Report - Create</entry>
+        </row>
+        <row>
+          <entry namest="col1" nameend="col5">REPORT RESULT</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>View</entry>
+          <entry/>
+          <entry/>
+          <entry>Report Result View same as Report - View</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>Export to CSV</entry>
+          <entry/>
+          <entry>Report Export to CSV</entry>
+          <entry>
+            <p>Report Export to CSV same as Report</p>
+            <p>- View</p>
+          </entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>Export to PDF</entry>
+          <entry></entry>
+          <entry>Report Export to CSV</entry>
+          <entry>
+            <p>Report Export to PDF same as Report</p>
+            <p>- View</p>
+          </entry>
+        </row>
+        <row>
+          <entry namest="col1" nameend="col5">DASHBOARD</entry>
+        </row>
+        <row>
+          <entry></entry>
+          <entry>View</entry>
+          <entry>Dashboard Service</entry>
+          <entry>View</entry>
+          <entry></entry>
+        </row>
+        <row>
+          <entry></entry>
+          <entry>Edit</entry>
+          <entry>Dashboard Service Access</entry>
+          <entry>View, Edit</entry>
+          <entry></entry>
+        </row>
+        <row>
+          <entry></entry>
+          <entry>Refresh Report Results</entry>
+          <entry>Dashboard Service Access</entry>
+          <entry>View</entry>
+          <entry>Refresh Report Results same as Report - Run</entry>
+        </row>
+        <row>
+          <entry></entry>
+          <entry>Delete</entry>
+          <entry>Dashboard Service Access</entry>
+          <entry>View, Delete</entry>
+          <entry></entry>
+        </row>
+        <row>
+          <entry></entry>
+          <entry>Create</entry>
+          <entry>Dashboard Service Access, Dashboard Create</entry>
+          <entry></entry>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Set Security</entry>
+          <entry>Dashboard Service Access</entry>
+          <entry>Owner</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry namest="col1" nameend="col5">DASHBOARD POD</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>View</entry>
+          <entry/>
+          <entry/>
+          <entry>Dashboard Pod View same as Dashboard - View and Report - View</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>Edit</entry>
+          <entry/>
+          <entry/>
+          <entry>
+            <p>Dashboard Pod Edit same as Dashboard</p>
+            <p>- Edit</p>
+          </entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>Refresh Report Result</entry>
+          <entry/>
+          <entry/>
+          <entry>Dashboard Pod Refresh Report Result same as Report - Run</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>Delete</entry>
+          <entry/>
+          <entry/>
+          <entry>Dashboard Pod Refresh Report Result same as Report - Edit</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>Create</entry>
+          <entry/>
+          <entry/>
+          <entry>Dashboard Pod Create same as Dashboard - Edit and Report - View</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>Export to CSV</entry>
+          <entry/>
+          <entry/>
+          <entry>Dashboard Pod Export to CSV same as Report - Export to CSV</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>Export to PDF</entry>
+          <entry/>
+          <entry/>
+          <entry>Dashborad Pod Export to CSV same as Report - Export to PDF</entry>
+        </row>
+        <row>
+          <entry namest="col1" nameend="col5">SCHEDULE</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>View</entry>
+          <entry>Schedule Service Access</entry>
+          <entry>View</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Edit</entry>
+          <entry>Schedule Service Access</entry>
+          <entry>View, Edit</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Execute</entry>
+          <entry>Schedule Service Access</entry>
+          <entry>View, Execute</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Delete</entry>
+          <entry>Schedule Service Access</entry>
+          <entry>View, Delete</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Create</entry>
+          <entry>Schedule Service Access, ScheduleCreate</entry>
+          <entry/>
+          <entry>Schedule Create same as Report - Run</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>Set Security</entry>
+          <entry>Schedule Service Access</entry>
+          <entry>Owner</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry namest="col1" nameend="col5">SCHEDULE RESULTS</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>View</entry>
+          <entry/>
+          <entry/>
+          <entry>
+            <p>Schedule Results View same as Report</p>
+            <p>- View (which is same as Schedule - View OR same as Dashboard - View)</p>
+          </entry>
+        </row>
+        <row>
+          <entry namest="col1" nameend="col5">QUERIES</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>View</entry>
+          <entry>Query Service Access</entry>
+          <entry>View</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Edit</entry>
+          <entry>Query Service Access</entry>
+          <entry>View, Edit</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Execute</entry>
+          <entry>Query Service Access</entry>
+          <entry>View, Execute</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Delete</entry>
+          <entry>Query Service Access</entry>
+          <entry>View, Delete</entry>
+          <entry/>
+        </row>
+        <row>
+          <entry namest="col1" nameend="col5">USERS</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>View</entry>
+          <entry/>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Edit</entry>
+          <entry>User Administrator</entry>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Delete</entry>
+          <entry>User Administrator</entry>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Create</entry>
+          <entry>User Administrator</entry>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry namest="col1" nameend="col5">ROLES</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>View</entry>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Edit</entry>
+          <entry>User Administrator</entry>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Delete</entry>
+          <entry>User Administrator</entry>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Create</entry>
+          <entry>User Administrator</entry>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry namest="col1" nameend="col5">GROUPS</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>View</entry>
+          <entry/>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Edit</entry>
+          <entry>User Administrator</entry>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Delete</entry>
+          <entry>User Administrator</entry>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Create</entry>
+          <entry>User Administrator</entry>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry namest="col1" nameend="col5">TAGS (Note there are no Permissions with Tag
+            feature.)</entry>
+        </row>
+        <row>
+          <entry/>
+          <entry>View</entry>
+          <entry/>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Edit</entry>
+          <entry/>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Delete</entry>
+          <entry/>
+          <entry/>
+          <entry/>
+        </row>
+        <row>
+          <entry/>
+          <entry>Create</entry>
+          <entry/>
+          <entry/>
+          <entry/>
+        </row>
+      </tbody>
+    </tgroup>
+  </table>
+   </conbody>
+</concept>

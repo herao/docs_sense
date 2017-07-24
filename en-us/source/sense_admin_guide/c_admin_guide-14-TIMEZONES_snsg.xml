@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_14">
+   <title>Time Zones</title>
+   <conbody>
+      <p>This appendix lists every time zone supported by the EDW and the SenSage AP Analyzer. When
+      you enter a time value in SenSage AP Analyzer, use one of the time-zone formats listed below
+      in <xref href="c_admin_guide-14_2-Supported-Time-Zones_snsg.xml#topic_14_2"/>.</p>
+      <p>Because the EDW handles raw data from logs, which does not always use the supported time
+      zones, it must accommodate some shortenings of time zone indicators found in that data (such
+      as PDT for Pacific Daylight Time and CST for Central Standard Time). For more information, see
+        <xref href="c_admin_guide-14_1-Time-Zone-Conversion_snsg.xml#topic_14_1"/>, next.</p>
+   </conbody>
+</concept>

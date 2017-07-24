@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_4_4">
+   <title>Parse Failures</title>
+   <conbody>
+      <p>Parse failures mean that there is a problem in the PTL file. These failures may also occur if
+      the log format changes, or if log files become corrupt.</p>
+      <p>Also see the ParseFailure setting described in <i>Defining Loaders</i> in “SenSage AP
+      Collector Configuration” of the <cite>Collector Guide</cite>. You can have multiple Loaders
+      mapped to the same parse failure location.</p>
+   </conbody>
+</concept>

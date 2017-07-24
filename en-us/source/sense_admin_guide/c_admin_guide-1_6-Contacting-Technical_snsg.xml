@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1_6">
+   <title>Contacting Technical Support</title>
+   <conbody>
+      <p>For additional help, call +1 650 631-2810. Also you can log into the IgniteTech Support web page under Services at  for SenSage AP documentation, product downloads, and additional information on contacting support to escalate help on issues that impact your production environment.</p>
+   </conbody>
+</concept>

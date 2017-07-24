@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_5_9">
+   <title>NearLine Storage: Considerations</title>
+   <conbody>
+      <p>When adding empty columns to a table archived in NearLine Storage, consider the
+      following:</p>
+      <ul>
+         <li>Empty columns you add are stored locally, regardless of where the original leaf node is
+         archived. Because columns are empty, their footprint on disk is not large.</li>
+         <li>Columns added using the INPUT or OUTPUT tags, the new, populated columns, are stored
+         locally. They cannot be archived because the leaf node is already archived.</li>
+         <li>If you delete columns, the <codeph>altertbl</codeph> command still retains those columns
+        in NearLine storage, although the data store no longer references the columns. You won’t be
+        able to query the data, but it is stored in that location until the leaf node is
+        retired.</li>
+      </ul>
+   </conbody>
+</concept>

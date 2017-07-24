@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_6_2">
+   <title>Removing and Choosing Columns for Report Display</title>
+   <conbody>
+    <p>To choose or to remove columns a report displays, hover the mouse over the upper-right corner
+      of the report grid to display the <image href="media/button_dropDown.png" placement="inline"
+        id="image_m32_3ts_2y" scale="50"/> icon. Click this icon to display the <uicontrol>Choose
+        Columns</uicontrol> pop-up menu. You can remove a column or add back a removed column by
+      selecting the checkbox next to each column item.</p>
+    <fig><title>Specifying Columns for Report Display</title><image href="./media/Image_093.png" placement="break" id="image_qx4_3dm_zx" scale="40"/></fig>
+  </conbody>
+</concept>

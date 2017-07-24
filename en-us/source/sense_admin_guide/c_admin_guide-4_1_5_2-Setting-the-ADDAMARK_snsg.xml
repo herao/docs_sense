@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_5_2">
+   <title>Setting the ADDAMARK_PASSWORD Environment Variable</title>
+   <conbody>
+      <p>To set the ADDAMARK_PASSWORD environment variable (for example, in the Bourne shell), submit
+      one of the following commands.</p>
+      <ul id="ul_aqy_cqr_vx">
+         <li>To set a clear-text password in the environment variable:
+            <p>
+               <b>Syntax</b>
+            </p>
+            <p>
+               <codeph>bash$ export
+            ADDAMARK_PASSWORD=&lt;<i>password</i>&gt;</codeph>
+            </p>
+            <p>
+               <b>Example</b>
+            </p>
+            <p>
+               <codeph>bash$
+            export ADDAMARK_PASSWORD=s0mep@ss</codeph>
+            </p>
+         </li>
+         <li>To store the location and name of the file that contains a list of valid passwords:
+            <p>
+               <b>Syntax</b>
+            </p>
+            <p>
+               <codeph>bash$ export
+              ADDAMARK_PASSWORD=file:&lt;<i>path_and_filename</i>&gt;</codeph>
+            </p>
+            <p>
+               <b>Example</b>
+            </p>
+            <p>
+               <codeph>bash$
+            export ADDAMARK_PASSWORD=file:/local/home/sls/passwords</codeph>
+            </p>
+         </li>
+      </ul>
+      <p>IgniteTech recommends that you use SSH or a similar protocol over a secure session to submit
+      all authentication commands.</p>
+   </conbody>
+</concept>

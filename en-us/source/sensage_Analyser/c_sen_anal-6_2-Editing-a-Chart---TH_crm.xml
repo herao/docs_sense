@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_6_2">
+   <title>Editing a Chart</title>
+   <conbody>
+    <p>To edit a chart for a corresponding report:, you can use one of the following two methods
+      listed below:</p>
+    <ol id="ol_og1_bvq_zx">
+      <li>To edit the chart from the report results view (if desired, after running the report):
+        <ol
+          id="ol_vhv_dvq_zx">
+          <li>Go to the Analyzer dashboard, select Data Design from the dropdown list and click
+              Reports.<p>The Manage Report screen with the current listing of reports is
+              displayed.</p></li>
+          <li>Scroll or find the desired report, check the report, and click Run. (if desired) or
+            click Edit. </li>
+          <li>From the view results screen for the report, click the Gear icon, and choose Edit a
+            Chart from the dropdown list.</li>
+        <li>Go to Step 3.</li>
+        </ol></li>
+      <li>To edit an existing chart from the Edit Report definition screen:<ol><li>Go to the Analyzer dashboard, select Data Design from the dropdown list and click Reports.<p>The
+              Manage Report screen with the current listing of reports is displayed.</p></li><li>Scroll or find the desired report, check the report, and click Edit. Go to Step 3.</li></ol></li>
+      <li>Click the Charting tab.<note>If a red triangle is displayed next to the Charting tab
+          as shown in Figure 5-5, this indicates the chart has not been completely configured or has
+          an error in the configuration. As long as the chart is not configured completely and
+          correctly, you will be unable to save the chart. When working within the Edit Report
+          Definition screen, you can switch to alternate tabs; however, the red triangle indicates
+          why you cannot save the report, since the chart is not configured
+          correctly.</note><p>Figure 5-5: Chart Settings Screen</p><p><image
+            href="./media/Image_215.jpg" height="342" width="569" id="image_pg1_bvq_zx"/></p></li>
+      <li>Go to the relevant section of this chapter for details on entering chart information for
+        your specified chart type</li>
+    </ol>
+  </conbody>
+</concept>

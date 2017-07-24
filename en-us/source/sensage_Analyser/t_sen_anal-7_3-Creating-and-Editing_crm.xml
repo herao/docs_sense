@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_sen_anal-7_3-Creating-and-Editing_crm">
+    <title></title>
+    <taskbody>
+        <context>
+            <p></p>
+            <p>To create or edit a data model, perform the following tasks:</p>
+            <p>1 Access the Analytics Model Information screen. See step a or b depending on whether
+                you are creating a model or editing one.</p>
+            <p>a If creating a new model, go to the Analyzer dashboard, select Data Design from the
+                dropdown list and click Analytics Workbench, and Analytics. Go to step 2.</p>
+            <p>b If editing a model, go to the Analyzer dashboard, select Data Design from the
+                dropdown list and click Analytics Workbench, and Models. Find the model you want to
+                edit. See Viewing a Model for methods to access a model and then click the
+                Information icon next to the Save button.</p>
+            <p><image href="Image_260.png" height="32" width="3" id="image_q12_tcr_zx"/></p>
+            <p>A sample model canvas is displayed. Note that the libraries menus is collapsed, so
+                only the canvas is displayed without the libraries palette.</p>
+            <p>Figure 6-5: Sample Model Canvas</p>
+            <p><image href="Image_261.jpg" height="529" width="601" id="image_r12_tcr_zx"/></p>
+            <p><image href="Image_262.png" height="48" width="3" id="image_s12_tcr_zx"/></p>
+            <p>2 When you see the Analytics Model information screen, as shown below, define or edit
+                existing model information (Name, Category, Description, Tags, and Input/Output)
+                parameters by filling or revising the information screen as shown Figure 6-6
+                below.</p>
+            <p>NOTE: Category is required for selection whether creating a new model or editing an
+                existing one.</p>
+            <p>Figure 6-6: Analytics Model Information Screen</p>
+            <p><image href="Image_263.jpg" height="524" width="581" id="image_t12_tcr_zx"/></p>
+            <ol id="ol_u12_tcr_zx">
+                <li>
+                    <p>Click Save when you have finished.</p>
+                    <p>If the current model wasn’t previously saved, the system saves it as a new
+                        model and displays the model canvas.</p>
+                </li>
+                <li>
+                    <p>Create the model on the canvas or edit a model’s canvas:</p>
+                    <p>a If creating a new model or editing an existing one, use the model library
+                        to create the new/ revised components for the model on the model canvas. For
+                        details on using the "model library" and adding/revising model components,
+                        see “Adding and Modifying Model Components to a New or Existing Model”, on
+                        page 119. See the icons used to draw models on the canvas on page 125.</p>
+                    <p>b If adding a model component to a new or existing model, see page 119 for
+                        details. To edit model components, see step d.</p>
+                    <p>c If adding a model to embed in your existing model, access the model library
+                        to add the embedded model. For details, see “Nesting (embedding) a Model
+                        into an Existing Model”, on page 118.</p>
+                    <p><image href="Image_264.png" height="32" width="3" id="image_v12_tcr_zx"/></p>
+                    <p>d If editing a model component input or output parameter, see “Adding and
+                        Modifying Model Input and Output Parameters”, next.</p>
+                </li>
+            </ol>
+        </context>
+        <steps>
+            <step>
+                <cmd></cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

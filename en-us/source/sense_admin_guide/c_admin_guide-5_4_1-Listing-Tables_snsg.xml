@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_4_1">
+   <title>Listing Tables</title>
+   <conbody>
+      <p>To list the tables in a given installation,
+      use<codeblock xml:space="preserve">atview &lt;cluster_list&gt; tables --namespace= --user=administrator --pass=&lt;password&gt;</codeblock>The
+        <codeph>--namespace= argument</codeph> tells <codeph>atview</codeph> to list all tables in
+      all namespaces, including the default namespace, <codeph>default</codeph>.</p>
+      <p>Also see <xref href="c_admin_guide-4_4-Examining-the-State-_snsg.xml#topic_4_4"/>.</p>
+   </conbody>
+</concept>

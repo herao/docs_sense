@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_12">
+   <title>Associating the Report with a Related Report for Drill-down</title>
+   <conbody>
+    <p>Associated reports are two reports that are related by one more columns that each have the
+      same meaning in the two different reports. The association enables users to quickly drill down
+      from the source report to a target report automatically filtered to the specific set of rows
+      that the user selects in the source report.</p>
+    <p>The report you are currently working on will be the source report. You need to specify the
+      target report and which field(s) in the source report relate to which field(s) in the target
+      report. You may have any number of target reports.</p>
+    <ol id="ol_ikg_ykq_zx">
+      <li>In the Report Wizard, click the Associations tab and then click the Add an Association
+        button as shown in Figure 4-39 below.<p>Figure 4-39: Add an Associated Report</p><p><image href="./media/Image_195.png" placement="break" scale="50"/></p></li>
+      <li>Click the dropdown arrow under the label "Select the associated report".<p>A list of all
+          other reports that you have read access to in the system is displayed, except the report
+          that is currently in progress.</p><p><image href="./media/Image_196.png" placement="break" scale="50"/></p></li>
+      <li>Select the specific report that you want to associate with the current report. Figure
+        4-40: Specify Report for Association - NEED NEW SCREENSHOT</li>
+      <li>Click the dropdown arrow next to the field with the text “fields from the report data
+        source" and then click on the specific field you want to be the related field in the source
+          report.<p>Figure 4-41: Specify Related Field in the Source Report</p><p><image
+            href="./media/Image_197.jpg" height="345" width="586" id="image_lkg_ykq_zx"/></p></li>
+      <li>Click the dropdown arrow next to the field with the text “fields from the associated
+        report" and<p>then click on the field you want as the related field in the source
+          report.</p><p>Figure 4-42: Specify Related Field in the Source Report</p><p><image
+            href="./media/Image_198.jpg" height="357" width="560" id="image_mkg_ykq_zx"/></p></li>
+      <li>Click the Add Fields button.<p>You may repeat Steps 5-6 to add additional relations
+          between the reports.</p><p>Figure 4-43: Add Additional Relations between
+            Reports</p><p><image href="./media/Image_199.jpg" height="340" width="547"
+            id="image_nkg_ykq_zx"/></p><p>
+          <note>To remove incorrect associations, select fields in the report that you want to
+            remove and click the Remove Fields button.</note>
+        </p><p>Figure 4-44: Add Association to Report</p><p><image href="./media/Image_200.jpg"
+            height="417" width="591" id="image_okg_ykq_zx"/></p></li>
+      <li>When you are finished, click <b>Save </b>or choose one of the following Save Options: Save
+        and close, Save run and retain (for report history), or Save and run once (no history).</li>
+    </ol>
+  </conbody>
+</concept>

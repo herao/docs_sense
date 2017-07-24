@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_2_2">
+   <title>Software for the EDW</title>
+   <conbody>
+      <p>The EDW software is typically installed across five or more hosts, which make up an EDW
+      instance. All log data is loaded, in parallel, across each host. This ensures that data loads
+      at the fastest possible rate (given the number of hosts in your EDW instance) and provides for
+      high availability and data redundancy.</p>
+      <p>The EDW instance is known as an <i>application-level cluster</i>; that is, any work unit
+      received by one host must be executed across all hosts.</p>
+      <p>In essence, the EDW is deployed so you can:</p>
+      <ol id="ol_d1h_31h_vx">
+         <li>Load log data into it.</li>
+         <li>Query log data out of it.</li>
+      </ol>
+      <p>The EDW command <codeph>atload</codeph> performs the loading process in a batch mode from log
+      data that is collected from some other source. To load the data, you need a PTL file that will
+      draw out and reorganize the information from your log files into a format that the EDW is able
+      to understand and load. IgniteTech can make a large number of log adapters available. Please
+      contact your sales representative for details.</p>
+      <p>For redundancy, two copies of every piece of data is included across the file system—for
+      example, in a five-host EDW instance, data from a single load may appear distributed in the
+      following way:</p>
+      <table id="table_x4x_11h_vx">
+         <tgroup cols="6" align="center">
+            <colspec colnum="1" colname="col1" colwidth="1.01*"/>
+            <colspec colnum="2" colname="col2" colwidth="1.76*"/>
+            <colspec colnum="3" colname="col3" colwidth="1.24*"/>
+            <colspec colnum="4" colname="col4" colwidth="1.3*"/>
+            <colspec colnum="5" colname="col5" colwidth="1.28*"/>
+            <colspec colnum="6" colname="col6" colwidth="1.29*"/>
+            <colspec colnum="7" colname="c7" colwidth="1*"/>
+            <tbody>
+               <row>
+                  <entry morerows="1" align="left" valign="middle">
+                     <p>Load01 ➔</p>
+                  </entry>
+                  <entry valign="bottom" align="left">
+                     <p/>Primary ➔</entry>
+                  <entry valign="bottom" align="left">Load01a </entry>
+                  <entry valign="bottom" align="left">Load01b</entry>
+                  <entry valign="bottom" align="left">Load01c </entry>
+                  <entry valign="bottom" align="left">Load01d</entry>
+                  <entry valign="bottom" align="left">Load01e</entry>
+               </row>
+               <row>
+                  <entry valign="middle" align="left">
+                     <p>Secondary ➔</p>
+                     <p/>
+                  </entry>
+                  <entry align="left" valign="top">Load01e</entry>
+                  <entry align="left" valign="top">Load01a</entry>
+                  <entry align="left" valign="top">Load01b</entry>
+                  <entry align="left" valign="top">Load01c</entry>
+                  <entry align="left" valign="top">Load01d</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+      <p>After you use <codeph>atload</codeph> to load data into the EDW, you can use the
+        <codeph>atquery</codeph> command to retrieve data from this distributed system.</p>
+   </conbody>
+</concept>

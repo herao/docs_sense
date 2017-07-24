@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+         id="topic_10_2_2_1_1">
+   <title>Specifying Host Identifiers in Centera NSAs</title>
+   <conbody>
+      <p>The simplest host identifier is an IP address or host name.</p>
+      <p>Syntax for specifying the host identifier of a Centera
+   unit:<codeblock xml:space="preserve">&lt;IP_Address&gt;[:&lt;port&gt;]|&lt;Host_Name&gt;[:&lt;port&gt;]</codeblock>
+      </p>
+      <p>
+         <note>In the syntax above, the pipe symbol (|) is the meta-syntax character that separates
+    mutually exclusive options.</note>
+      </p>
+      <p>
+         <b>Examples</b>
+         <codeblock xml:space="preserve">centera://centera1.cascommunity.org
+centera://10.2.3.4</codeblock>
+      </p>
+      <p>You can specify multiple Centera host identifiers in a single NSA. Specifying multiple host
+   identifiers allows use, even when one or more Centera systems are unavailable. </p>
+      <p>Minimal syntax for a Centera
+   NSA:<codeblock xml:space="preserve">centera://&lt;Host_Identifier&gt;[,&lt;Host_Identifier&gt;[,&lt;Host_Identifier&gt;[...]]]</codeblock>
+      </p>
+      <p>
+         <b>Example</b>
+      </p>
+      <codeblock xml:space="preserve">centera://<b>10.2.3.4,10.1.7.6</b></codeblock>
+   </conbody>
+</concept>

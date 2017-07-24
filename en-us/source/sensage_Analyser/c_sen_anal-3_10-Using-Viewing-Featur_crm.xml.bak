@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_10">
+   <title>Using Viewing Features for Charts and Graphs</title>
+   <conbody>
+    <p>On a chart screen, viewing options are presented as icon items that are displayed when you
+      hover the mouse over the upper-right portion of a graph as shown in Figure 2-15 below:</p>
+    <fig>
+      <title>Figure 2-15: Chart Viewing Options</title>
+      <image href="./media/Image_103.png" id="image_s1g_dgm_zx" placement="break" scale="60"/>
+    </fig>
+    <p>The following table describes the use of each chart option icon for viewing:</p>
+    <table id="table_t1g_dgm_zx">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1" colwidth="1*"/>
+        <colspec colnum="2" colname="col2" colwidth="1.4*"/>
+        <colspec colnum="3" colname="col3" colwidth="2.86*"/>
+        <thead>
+          <row>
+            <entry>icon</entry>
+            <entry>Name</entry>
+            <entry>Use to...</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>
+              <image href="./media/Image_104.jpg" scale="60"
+              />
+            </entry>
+            <entry>Axis Labels Toggle</entry>
+            <entry>Toggle the axis labels on and off.</entry>
+          </row>
+          <row>
+            <entry>
+              <image href="./media/Image_105.jpg" scale="60"
+              />
+            </entry>
+            <entry>Data Labels Toggle</entry>
+            <entry>Toggle the data labels on and off.</entry>
+          </row>
+          <row>
+            <entry>
+              <image href="./media/Image_106.jpg" scale="60"
+              />
+            </entry>
+            <entry>3D View Toggle</entry>
+            <entry>Toggle the 3D view of the chart.</entry>
+          </row>
+          <row>
+            <entry>
+              <image href="./media/Image_107.jpg" scale="60"
+              />
+            </entry>
+            <entry>Browse Print</entry>
+            <entry>Print the report using browser printing to sent the chart to a local
+              printer.</entry>
+          </row>
+          <row>
+            <entry>
+              <image href="./media/Image_108.jpg" scale="60"
+              />
+            </entry>
+            <entry>Export Chart</entry>
+            <entry>Export the chart in one of 3 file types. For details, see <xref
+                href="c_sen_anal-11_3-Exporting-Charts_crm.xml"/>.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </conbody>
+</concept>

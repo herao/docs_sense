@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11_4">
+   <title>Downloading a Grid in a Chart</title>
+   <conbody>
+    <p>To download a grid in a chart</p>
+    <ol id="ol_dwj_2ks_zx">
+      <li>Select or display the report containing the chart with the grid you want to export OR
+        access or display the chart from a pod on the dashboard. (For details on accessing a report,
+        see “Viewing Reports”, on page 31.)</li>
+      <li>On the chart screen, hover the mouse over the bottom-left corner of the grid to display a
+        pop- up with two file types for selection: CSV and PDF as shown in Figure 10-8
+          below.<p>Figure 10-8: File Type Options for Downloading Charts</p><p><image
+            href="./media/Image_429.png" placement="break" scale="60"/></p><p>
+        </p></li>
+    </ol>
+  </conbody>
+</concept>

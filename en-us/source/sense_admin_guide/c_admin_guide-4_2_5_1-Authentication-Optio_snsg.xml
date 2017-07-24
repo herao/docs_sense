@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_2_5_1">
+   <title>Authentication Options</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--user=&lt;username&gt;</codeph>
+            </pt>
+            <pd>This parameter authenticates the specified name as an EDW user. If no user is specified, atquery
+          reads the environment variable ADDAMARK_USER. If it cannot find this environment variable,
+          it uses the operating system to get the name of the user who is logged in.<note>To log in
+            as the guest user, do not specify the <codeph>--pass</codeph> or
+              <codeph>--shared-secret</codeph> flags.</note>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--pass=&lt;pwmethod&gt;</codeph>
+            </pt>
+            <pd>
+               <p>This parameter provides several methods to specify the password. You can specify the
+            password in clear text, place the password in a file and specify the location of the
+            file, or set it in the ADDAMARK_PASSWORD environment variable.</p>
+               <p>The syntax is:</p>
+               <p>
+                  <codeph>--pass=&lt;<i>password</i>&gt;</codeph>
+               </p>
+               <p>
+                  <codeph>--pass=pass:&lt;<i>password</i>&gt;</codeph>
+               </p>
+               <p>
+                  <codeph>--pass=file:&lt;<i>filename</i>&gt;</codeph>
+               </p>
+               <p>
+                  <codeph>--pass=default</codeph>
+               </p>
+               <p>When you specify default as the password, atload looks in the ADDAMARK_PASSWORD
+            environment variable. For more information, see <xref href="c_admin_guide-4_1_5_2-Setting-the-ADDAMARK_snsg.xml#topic_4_1_5_2"/>.</p>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--shared-secret=&lt;secret&gt;</codeph>
+            </pt>
+            <pd>This parameter provides several methods to specify the shared secret. You can specify the secret
+          in clear text, place the secret in a file and specify the location of the file, or set it
+          in the <codeph>ADDAMARK_SHARED_SECRET</codeph> environment variable. This parameter
+          provides two methods to specify the shared secret. You can either specify the secret in
+          clear text or place the secret in a file and specify the location of the file.<p>The
+            syntax
+                is:</p>
+               <p>
+                  <codeph>--shared-secret=&lt;<i>secret</i>&gt;</codeph>
+               </p>
+               <p>
+                  <codeph>--shared-secret=file:&lt;/<i>full_path</i>/<i>filename</i>&gt;</codeph>
+               </p>
+               <p>
+                  <codeph>--shared-secret=default</codeph>
+               </p>
+               <p>When
+            you specify <codeph>default</codeph> as the password, <codeph>atmanage</codeph> looks in
+            the <codeph>ADDAMARK_SHARED_SECRET</codeph>
+               </p>
+               <p>environment variable.</p>
+               <note>The
+            value for <codeph>--pass</codeph> takes precedence over the value for
+              <codeph>--shared-secret</codeph>, if both are present.</note>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--assume-role=role&lt;role_to_be_assumed&gt;</codeph>
+            </pt>
+            <pd>This parameter causes the operation to be run as if the user had assumed the specified EDW role.
+          The assumed role must have <b>admin</b> privileges.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--skip-queues</codeph>
+            </pt>
+            <pd>This parameter bypasses normal EDW task queueing. Shared secret authentication is required when
+          you use this parameter.</pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

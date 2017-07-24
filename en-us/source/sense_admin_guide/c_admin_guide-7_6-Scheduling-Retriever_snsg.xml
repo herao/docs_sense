@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_6">
+   <title>Scheduling Retrievers and Loaders</title>
+   <conbody>
+      <p>When configuring Retrievers and Loaders, you define when retrieving and loading occurs using
+      one of two methods:</p>
+      <ul>
+         <li>
+            <b>The PollInterval and Period Elements</b>—Use the
+        <codeph>&lt;PollInterval&gt;...&lt;/PollInterval&gt;</codeph> element to specify how often loading
+      and retrieving occurs. For example, you can specify that loads happen every hour. This is the
+      most common method of specifying when loading and retrieving occur. You can combine the
+        <codeph>&lt;PollInterval&gt;</codeph> element with the optional
+        <codeph>&lt;Period&gt;...&lt;/Period&gt;</codeph> element to specify when loading or retrieval
+      begins.
+      <p>Use this method when configuring Merge loaders and when configuring Retrievers that log into
+        other systems to see if there are files to be retrieved. These Retrievers include:</p>
+            <ul>
+               <li>FTP Retrievers</li>
+               <li>SFTP Retrievers</li>
+               <li>HTTP Get Retrievers</li>
+               <li>LEA Retrievers</li>
+               <li>Script Retrievers.</li>
+            </ul>
+         </li>
+         <li>
+            <b>The Schedule Element</b>—Use the <codeph>&lt;Schedule&gt; ... &lt;/Schedule&gt;</codeph>
+        element to specify a <i>specific time</i> for Retrievers and Loaders to run. For example,
+        you can specify that loading occurs at 8:00 and 14:00 every day.</li>
+      </ul>
+      <note type="important">Do not combine the above methods. Use only the <codeph>&lt;PollInterval&gt;</codeph>
+      with the optional <codeph>&lt;Period&gt;</codeph> element or the <codeph>&lt;Schedule&gt;</codeph>
+      element.</note>
+      <p>For additional information, see <i>Defining Retrievers</i> and <i>Defining Retrievers</i> in
+      SenSage AP Collector Configuration of the <cite>Collector Guide</cite>.</p>
+   </conbody>
+</concept>

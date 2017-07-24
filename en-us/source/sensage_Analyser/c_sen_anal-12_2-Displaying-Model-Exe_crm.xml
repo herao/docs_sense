@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_12_2">
+   <title>Displaying Model Execution Metrics</title>
+   <conbody>
+     <p>The Analytics Administration window also displays the Model Execution metrics table.<image
+        href="./media/Image_435.png" placement="break" scale="50"/> You can see the following
+        properties:<ul id="ul_wdd_3nn_3y">
+        <li>Model Name—name of the model.</li>
+        <li>Executed—number of times the model was run.</li>
+        <li>Succeeded—number of successful runs.</li>
+        <li>Last success—date and time of the last successful run.</li>
+        <li>Failures—number of failed runs.</li>
+        <li>Last Failure—date and time of the last failed run.</li>
+        <li>Avg.Time—Average run time of the model.</li>
+      </ul></p>
+  </conbody>
+</concept>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+         id="topic_10_2_2_2">
+   <title>Specifying Data Retention in Centera NSAs</title>
+   <conbody>
+      <p>You can configure Centera NSAs with a retention period. Setting a retention period requires
+      SenSage AP to retain references to the archived data in the EDW and the data itself on the
+      Centera unit until the retention period passes and you retire the data from the EDW. Only
+      after the retention period has passed can you retire data from the EDW and the NLS device. You
+      must run atquery with the retire command on the EDW table to remove the archived data from the
+      EDW and the Centera unit. For more information, see <xref href="c_admin_guide-4_5-Retiring-Data_snsg.xml#topic_4_5"/>.</p>
+      <p>
+         <note>When you retire archived data that is not under retention, SenSage AP removes the
+        references to the data from the EDW and removes the data itself from the Centera
+        unit.</note>
+      </p>
+      <p>There are two ways to specify the retention period: retentionPeriod and retentionClass. Each
+      of these is preceded by a pipe symbol (|).</p>
+      <ul id="ul_vgr_43q_wx">
+         <li>retentionPeriod—basic
+          syntax<codeblock xml:space="preserve">|retentionPeriod=&lt;<i>num_seconds</i>&gt;</codeblock>Syntax for specifying
+          the retention period for a Centera
+              unit:<codeblock xml:space="preserve">"centera://&lt;<i>Host_Identifier&gt;</i>|retentionPeriod=&lt;<i>num_seconds</i>&gt;"</codeblock>
+            <p>
+               <b>Examples</b>
+               <codeblock xml:space="preserve">atmanage "edw01:8072,edw02:8072,edw03:8072" --user=administrator \
+--password=changeme \
+setnsi "centera://centera1.cascommunity.org|retentionPeriod=31536000"</codeblock>
+               <codeblock xml:space="preserve">atmanage "edw01:8072,edw02:8072,edw03:8072" --user=administrator \
+--password=changeme \
+setnsi "centera://10.2.3.4,10.006.07.8|retentionPeriod=31536000"</codeblock>
+            </p>
+            <note>
+               <ul id="ul_k14_hjq_wx">
+                  <li>When you specify a retention period of some specific number of seconds, you ensure
+                that data archived with that NSI is under a fixed length of retention. The data will
+                be available for deletion when that number of seconds has passed.</li>
+                  <li>After data has been archived with a retention period of a fixed number of seconds,
+                the retention period cannot be changed on the Centera. You can only change the
+                retention period by deleting and re- defining the target. Use
+                  <codeph>deletensi</codeph> to delete the existing one and <codeph>setnsi</codeph>
+                to define a new one. For more information, see <xref href="c_admin_guide-10_2_1-Defining-and-Managin_snsg.xml#topic_10_2_1"/>.</li>
+                  <li>The number of seconds you specify will be a very large number. For example, 86400
+                seconds represent a single day.</li>
+               </ul>
+            </note>
+         </li>
+         <li>retentionClass—basic
+            syntax<codeblock xml:space="preserve">|retentionClass=&lt;<i>class_name</i>&gt;</codeblock>
+            <p>Syntax for
+            specifying a retention class for a Centera
+            unit:<codeblock xml:space="preserve">"centera://&lt;<i>Host_Identifier&gt;</i>]<b>|retentionClass=&lt;</b><i><b>class_name</b></i><b>&gt;</b>"</codeblock>
+            </p>
+            <p>
+               <b>Examples</b>
+               <codeblock xml:space="preserve">atmanage "edw01:8072,edw02:8072,edw03:8072" --user=administrator \
+--password=changeme \
+setnsi "centera://centera1.cascommunity.org|retentionClass=IgniteTech"</codeblock>
+               <codeblock xml:space="preserve">atmanage "edw01:8072,edw02:8072,edw03:8072" --user=administrator \
+--password=changeme \
+setnsi "centera://10.2.3.4,10.006.07.8|retentionClass=IgniteTech"</codeblock>
+            </p>
+         </li>
+      </ul>
+      <section>
+         <title>Usage</title>
+         <ul>
+            <li>The value you specify for <codeph>&lt;<i>class_name</i>&gt;</codeph> is provided by a Centera
+          administrator. The class name specifies the retention period as defined by the
+          administrator.</li>
+            <li>When you specify a retention class on the Centera, the archived data is associated with a
+    named retention class on the device. Depending on the model of the Centera unit (as
+    illustrated in the table below), a retention class can be modified to represent a longer or
+    shorter period of time. The changes are retroactive, so that a change to a retention class
+    affects not only new data to be archived, but existing data archived with that retention
+    class.<note>You must restart the nss for a change to retention class to become effective.</note>
+            </li>
+            <li>The Event Data Warehouse (EDW) sets the expiration timestamp in the datastore at the time of
+          archive, based upon either the retention class value returned or the retention period
+          specified. The EDW is unaware of any retrospective changes to the underlying Centera
+          retention class. If the retention period in the original class is shortened, then the
+          retire operation will still fail since ithis operation uses the expiration timestamp
+          calculated at archive time. Similarly, if the retention period in the class was extended
+          and the EDW attempts to delete the data from Centera, the delete operation will fail and
+          the data remains in storage.</li>
+            <li>The value you specify for <codeph>
+                  <i>&lt;class_name&gt;</i>
+               </codeph> cannot be changed. The
+          Centera administrator can change the underlying retention period that the class defines.
+          If you need to change the class name instead, delete and re-define the target. Use
+            <codeph>deletensi</codeph> to delete the existing one and <codeph>setnsi</codeph> to
+          define a new one. For more information, see <xref href="c_admin_guide-10_2_1-Defining-and-Managin_snsg.xml#topic_10_2_1"/>.</li>
+            <li>When you specify data retention in a Centera NSA, enclose the entire NSA within quotation
+    marks.</li>
+            <li>The value you specify for a Centera NSA depends on the configuration of your system for
+          failover, replication, and compliance mode, and your profile definitions. To determine how
+          to specify the Centera NSA, consult the EMC Centera documentation that describes the
+          parameters for the <codeph>FPPool_Open</codeph> call used by their API.</li>
+            <li>If you require different retention periods for different data sources, create a separate
+    NSA for each desired retention period.</li>
+         </ul>
+         <note type="important"> Always specify <codeph>retentionPeriod</codeph> or
+          <codeph>retentionClass</codeph> on Centera. Do not specify the default. Doing so, for
+        exmaple, could cause undesired retention of test data. Although certain models of Centera
+        usually or always define a default retention period., if you archive data without specifying
+        a retention class or period, the data may or may not already be under some form of retention
+        when you archive it. Therefore, SenSage AP recommends that you <i>
+               <b>always</b>
+            </i> specify
+        either a retention period or retention class (even if the class specifies no retention
+        period).</note>
+         <p>The table below illustrates the various Centera models and how they interpret retention
+        classes and default retention:</p>
+         <table id="table_lsf_hkq_wx">
+            <tgroup cols="4">
+               <colspec colnum="1" colname="col1"/>
+               <colspec colnum="2" colname="col2"/>
+               <colspec colnum="3" colname="col3"/>
+               <colspec colnum="4" colname="col4"/>
+               <thead>
+                  <row>
+                     <entry>Centera Package Installed</entry>
+                     <entry>Default Retention Period Required?</entry>
+                     <entry>Default Retention Pe- riod</entry>
+                     <entry>Allowed Changes to Retention Class</entry>
+                  </row>
+               </thead>
+               <tbody>
+                  <row>
+                     <entry>Basic</entry>
+                     <entry/>
+                     <entry/>
+                     <entry>Increase or Decrease</entry>
+                  </row>
+                  <row>
+                     <entry>Governance</entry>
+                     <entry/>
+                     <entry/>
+                     <entry>Increase or Decrease</entry>
+                  </row>
+                  <row>
+                     <entry>
+                        <p>Compliance Edition  +</p>
+                     </entry>
+                     <entry/>
+                     <entry/>
+                     <entry>Only Increase</entry>
+                  </row>
+               </tbody>
+            </tgroup>
+         </table>
+      </section>
+   </conbody>
+</concept>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_3">
+   <title id="title_a20">Defining Data Objects</title>
+   <conbody>
+      <p>In addition to using the atquery utility to query the database, you can also use it to
+      create, rename, and drop database tables, column filters, and views. You can either specify
+      these actions in the <codeph>.sql</codeph> files that <codeph>atquery</codeph> processes or
+      you can use the dash option to specify the data manipulation statement directly from the
+      command line.</p>
+      <p>You can use <codeph>atquery</codeph> to create and manipulate the following database objects
+      in an EDW instance:<ul id="ul_ily_yz5_vx">
+            <li>
+               <b>Tables</b>—tabular objects that store loaded log events<p>or more information, see
+            “Defining Tables with SenSage AP SQL (AP SQL)” in the <cite>Event Data Warehouse
+              Guide</cite>.</p>
+            </li>
+            <li>
+               <b>Column Filters</b>—special objects attached to table columns to improve query
+          performance For more information, see “Defining Column Filters with SenSage AP SQL”\ of
+          the <cite>Event Data Warehouse Guide</cite>.</li>
+            <li>
+               <b>Views</b>—tabular objects through which log events in tables can be viewed in
+          different ways.<p>For more information, see “Defining Views with SenSage AP SQL” of the
+              <cite>Event Data Warehouse Guide</cite>.</p>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

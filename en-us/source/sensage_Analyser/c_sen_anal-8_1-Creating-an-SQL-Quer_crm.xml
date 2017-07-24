@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_1">
+   <title id="title_a19">Creating an SQL Query</title>
+   <conbody>
+    <p>There are two ways to create and run SQL queries in the SQL Workbench:</p>
+    <ul id="ul_okl_rvr_zx">
+      <li>
+        <p>Create a query manually as described in the procedure below.</p>
+      </li>
+      <li>
+        <p>Load a saved query to modify (see <xref href="#topic_8_1/section_1"/>).</p>
+      </li>
+    </ul>
+    <p>To create a query manually and run it:</p>
+    <ol id="ol_pkl_rvr_zx">
+      <li>From Data Design, navigate to SQL Workbench.<p>The SQL Workbench is displayed as shown in
+          Figure 7-1.</p><p>Figure 7-1: SQL Workbench:</p><p><image href="./media/Image_349.png" placement="break" scale="50"/></p></li>
+      <li>Type the query manually as shown in Figure 7-1 or click Select Columns which puts columns
+        in your query. Note, by default, there are no pre-set queries provided.<p>If you selected
+          Select Columns, the Select Columns screen appears as shown in Figure 7-2.</p><p>Figure
+          7-2: Select columns for SQL Workbench:</p><p><image href="./media/Image_350.jpg"
+            height="172" width="544" id="image_rkl_rvr_zx"/></p></li>
+      <li>From the left pane, select the table and columns and click Select. The tables you want are
+        included in the query.</li>
+      <li>At any time you can use the following the Reset and Clear buttons at the bottom of the
+          screen:<ul id="ul_skl_rvr_zx">
+          <li>
+            <p>Reset: This option resets the query with the last successfully run query or with the
+              default query.</p>
+          </li>
+          <li>
+            <p>Clear: This option clears the query from the editor. You can still restore the last
+              successfully run query using the Reset option.</p>
+          </li>
+        </ul></li>
+      <li>To run the query, click Run Query. The query data is displayed below the workbench as
+        shown in Figure 7-3. <p>Figure 7-3: Run Query from SQL Workbench:</p><p>
+          <image href="./media/Image_351.jpg" id="image_tkl_rvr_zx" placement="break" scale="70"/>
+        </p></li>
+      <li>If you want to filter the query results without running a new query, click the icon
+        located at the right-hand side of column and toggle the columns to show or hide, as shown in
+        the Figure 7-4.<p>Figure 7-4: Filter the query results:</p><p><image
+            href="./media/Image_352.jpg" height="136" width="463" id="image_ukl_rvr_zx"/></p>
+        </li>
+    </ol>
+    <section id="section_1">
+      <title>Loading a Query</title>
+      <p>To load a saved query to run or modify:</p>
+      <p>You can retrieve every query you save for later use. All queries you have saved are
+        displayed in a dropdown list.</p>
+      <ol id="ol_wkl_rvr_zx">
+        <li>Select a query using the Load a saved query dropdown list as shown in the Figure 7-5.
+            <p>Figure 7-5: Select Saved query on SQL Workbench:<image href="./media/Image_353.png"
+              placement="break" scale="50"/></p></li>
+        <li>Make modifications to the query if desired. You can use the Select Columns button to add
+          more columns to your query.</li>
+        <li>As shown Figure 7-6 in the Save for later use as: field, provide a name for the query
+          and click Save. <p>Figure 7-6: Save the query in SQL Workbench:</p>
+          <p><image href="./media/Image_354.png" placement="break" scale="50"/></p>
+        </li>
+      </ol>
+    </section>
+
+  </conbody>
+</concept>

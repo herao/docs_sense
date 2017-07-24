@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_2_1_4">
+   <title>Backing Up Your PostgreSQL Server</title>
+   <conbody>
+      <p>To back up your PostgreSQL database, login to the Postgres host and run the following
+      command:</p>
+      <codeblock xml:space="preserve">su &lt;hexis_user&gt; -c '&lt;bin_path&gt;/pg_dump -C -f &lt;controller_backup_file&gt; controller'</codeblock>
+      <p>The <codeph>&lt;<i>hexis_user</i>&gt;</codeph> for upgrades from SenSage AP 5.0.1 is usually lms
+      or hexis for fresh SenSage AP 6.x.x installs.</p>
+      <p>The <codeph>&lt;<i>bin_path</i>&gt;</codeph> is<codeph>
+        &lt;<i>install_prefix</i>&gt;/latest/bin</codeph> for upgrades from SenSage AP 5.0.1 or</p>
+      <p>
+         <filepath>/opt/hexis/hawkeye-ap/bin</filepath> for fresh SenSage AP 6.x.x installs. If the
+      new Analyzer is installed, additionally
+      run:<codeblock xml:space="preserve">su &lt;hexis_user&gt; -c '&lt;bin_path&gt;/pg_dump -C -f &lt;analytics_backup_file&gt; analytics'</codeblock>
+      </p>
+   </conbody>
+</concept>

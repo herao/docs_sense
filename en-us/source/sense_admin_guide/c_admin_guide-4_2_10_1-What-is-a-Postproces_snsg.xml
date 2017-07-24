@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+         id="topic_4_2_10_1">
+   <title>What is a Postprocessor?</title>
+   <conbody>
+      <p>A postprocessor:</p>
+      <ul>
+         <li>is a set of functions in Perl.</li>
+         <li>accepts input row/column data returned from the EDW in response to a query.</li>
+         <li>accepts input data that conforms to an "incoming schema" (that is, a set of column names
+        and SQL data types).</li>
+         <li>generates output row/column data, which is the data eventually displayed by the
+          <codeph>atquery</codeph> program.</li>
+         <li>generates that output data that conforms to an "outgoing schema," which may or may not be
+        the same as the "incoming schema."</li>
+      </ul>
+      <p>A postprocessor is typically used for the two following scenarios:</p>
+      <ul>
+         <li>To slightly modify one or more column values before return to the client application
+          <p>The postprocessor takes incoming rows, makes a slight change to each row, and passes on
+          the values as output rows</p>
+         </li>
+         <li>To do specialized aggregation or data formatting<p>The postprocessor takes incoming rows
+          and generates outgoing rows that do not directly correspond one-for-one to input
+        rows.</p>
+         </li>
+      </ul>
+      <p>Postprocessors do not chain or cascade. You cannot feed the output of one postprocessor as
+      input to a second postprocessor.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1_1">
+   <title id="title_a1">Audience for this Book </title>
+   <conbody>
+      <p>This book is directed to system administrators who manage a SenSage AP deployment.
+      Administrators should be familiar with Linux administration including: SSH, managing users and
+      groups, file system permissions and management, network configuration, and using text editors
+      such as VI or emacs.</p>
+   </conbody>
+</concept>

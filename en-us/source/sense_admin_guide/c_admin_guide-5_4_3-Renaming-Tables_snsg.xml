@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_4_3">
+   <title>Renaming Tables</title>
+   <conbody>
+      <p>To rename a table, use</p>
+      <p>
+         <codeph>atmanage &lt;<i>cluster_list</i>&gt; renametbl &lt;<i>old_tablename</i>&gt;
+          &lt;<i>new_tablename</i>&gt;</codeph>
+      </p>
+      <p>Also see “Defining Views with SenSage AP SQL” in the <cite>Event Data Warehouse
+            Guide</cite>.</p>
+      <p>
+         <codeph>&lt;<i>temporary-column</i>&gt;</codeph> ≔ a valid column name that does not exist in
+      the table.</p>
+   </conbody>
+</concept>

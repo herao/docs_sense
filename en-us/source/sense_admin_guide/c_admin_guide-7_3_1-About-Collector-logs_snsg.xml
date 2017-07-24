@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_1">
+   <title>About Collector logs</title>
+   <conbody>
+      <p>You can configure the Collector to log to three log files:</p>
+      <ul>
+         <li>
+            <b>transaction.log</b>—Only the start and end of loads and the retrieval of loads are
+        recorded here. This is a pipe-delineated file used by PTLs.</li>
+         <li>
+            <b>activity.log</b>—All Collector activity logs to this file.</li>
+         <li>
+            <b>error.log</b>—Error messages generated from <filepath>activity.log</filepath> appear
+        in this file. The mapping of error codes to messages is stored in the following file:
+          <codeblock xml:space="preserve">/opt/hexis/hawkeye-ap/share/locale/&lt;<i>locale</i>&gt;/collector/errors.xml</codeblock>
+            <p>The
+          above file is loaded at startup and used whenever an error code is specified. You can also
+          specify how Collector alerts users of errors in this file (using email or pagers, for
+          example).</p>
+         </li>
+      </ul>
+      <p>To specify whether the Collector logs to files, and to specify the logging levels and file
+      location, edit the logging section of the <filepath>config.xml</filepath> file for editing.
+      This file is located in:</p>
+      <p>
+         <filepath>/opt/hexis/hawkeye-ap/etc/collector/</filepath>
+      </p>
+      <p>The logging section
+      is:<codeblock xml:space="preserve">&lt;!-- Log level 3 is most verbose --&gt;
+&lt;Logging level="1" type="syslog"/&gt;
+&lt;!-- Uncomment below for file logging --&gt;
+&lt;!--
+&lt;Logging level="1" type="file" file="/opt/hawkeye ap/var/log/collector/
+error"/&gt;
+&lt;Logging level="2" type="file" file="/opt/hawkeye ap/var/log/collector/
+activity"/&gt;
+&lt;Transaction&gt;/opt/hawkeye ap/var/log/collector/transaction&lt;/Transaction&gt;
+--&gt;</codeblock>
+      </p>
+   </conbody>
+</concept>

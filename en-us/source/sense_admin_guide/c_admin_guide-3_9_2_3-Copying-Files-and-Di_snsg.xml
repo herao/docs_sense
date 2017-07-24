@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9_2_3">
+   <title>Copying Files and Directories to Each Host (clsync)</title>
+   <conbody>
+      <p>This section describes the clsync utility, which synchronizes local files and
+              directories with files and directories on specified remote hosts.</p>
+      <ul id="ul_zz3_tcl_vx">
+         <li>
+            <p>For files, ensures that the file is replicated in the same location on each host.</p>
+         </li>
+         <li>
+            <p>For directories, this utility recursively synchronizes the contents of the directory.
+          This utility uses the <codeph>rsync</codeph> program.</p>
+         </li>
+      </ul>
+      <p>This section contains the following topics:<ul id="ul_npz_xcl_vx">
+            <li><xref href="#topic_3_9_2_3/3923_1"/></li>
+            <li><xref href="#topic_3_9_2_3/3923_2"/></li>
+            <li><xref href="#topic_3_9_2_3/3923_3"/></li>
+            <li><xref href="#topic_3_9_2_3/3923_4"/></li>
+         </ul></p>
+      <section id="3923_1">
+         <title>SYNOPSIS</title>
+         <p>
+            <codeph>clsync [<i>general_options</i>] [<i>specific_options</i>] &lt;<i>source_item</i>&gt;
+            [&lt;<i>source_item</i>&gt; […]]</codeph>
+         </p>
+      </section>
+      <section id="3923_2">
+         <title>ARGUMENTS</title>
+         <p>
+            <codeph>&lt;<i>source_item</i>&gt;</codeph>
+         </p>
+         <p>You must specify at least one source item. Additional source items are optional. Separate
+        multiple items with spaces. You can specify files, directories, or combinations of both, as
+        the following three examples show:</p>
+         <codeblock xml:space="preserve">clsync file1 tmp/file2.txt file3 clsync dir1 dir2
+clsync file1 tmp/file2.txt dir1</codeblock>
+         <p>If you specify a path without a leading slash (/), the utility resolves the path from the
+        current directory. The utility synchronizes the local files and directories with those in
+        the same current directory on the other hosts in the cluster. If the corresponding files are
+        in a different location on the other hosts, use the --target-dir option to specify the
+        alternate, remote location.</p>
+      </section>
+      <section id="3923_3">
+         <title>OPTIONS</title>
+         <p>
+            <codeph>[general_options]</codeph>
+         </p>
+         <p>See <xref href="c_admin_guide-3_9_1-General-Syntax-for-U_snsg.xml#topic_3_9_1"/>.</p>
+         <p>
+            <codeph>[specific_options]</codeph>
+         </p>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--hosts</codeph>
+               </pt>
+               <pd>Executes command on hosts specified in the list; defaults to localhost</pd>
+            </plentry>
+         </parml>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--sls-instance</codeph>
+               </pt>
+               <pd>Executes command on every host on which the specified instance is running; value can also be set
+            through the <codeph>SLS_INSTANCE</codeph> environment variable.</pd>
+            </plentry>
+         </parml>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--target-dir</codeph>
+               </pt>
+               <pd>The target directory on remote hosts where the files and directories to be synchronized are
+            located. Use this option if the location of files to synchronize are in different
+            locations on the remote hosts than on the local host. If the remote locations on remote
+            hosts differ by host, use the <codeph>&lt;host&gt;:&lt;path&gt;</codeph> syntax for specifying
+            hosts with the <codeph>--hosts</codeph> option described above.</pd>
+            </plentry>
+         </parml>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--exclude</codeph>
+               </pt>
+               <pd>When it examines directories for files to synchronize, the clsync utility ignores
+                  files and directories with base names that match the specified pattern. Separate
+                  multiple patterns with spaces or use multiple <codeph>--exclude</codeph> options.
+                  Enclose the patterns within single quotes, for example:
+                  <codeblock>clsync --exclude=’**/dsroot/**’ /opt/sensage/etc</codeblock></pd>
+            </plentry>
+         </parml>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--include</codeph>
+               </pt>
+               <pd>Use the --include option to selectively override excluded items. When it ignores files and
+            directories because of the <codeph>--exclude</codeph> option, the
+              <codeph>clsync</codeph> utility does not ignore files and directories with base names
+            that match the pattern specified for <codeph>--include</codeph>. Separate multiple
+            patterns with spaces or use multiple <codeph>--include</codeph> options. Enclose the
+            patterns within single quotes, for example: clsync --exclude=’**/dsroot/**’
+            --include=’*.xml’ /opt/sensage/etc</pd>
+            </plentry>
+         </parml>
+      </section>
+      <section id="3923_4">
+         <title>RETURNS</title>
+         <p>A report of what <codeph>clsync</codeph> did, organized by host.</p>
+      </section>
+      <section id="3923_5">
+         <title>EXAMPLE</title>
+         <p>Following is an example of the <codeph>clsync</codeph> command executed on a two-node
+            cluster: dev-01,dev-02 in this example, a file is missing on dev-02. The
+               <codeph>clsync</codeph> command identifies the missing file and copies it from dev-01
+            to dev-02, bringing the two nodes back in sync.</p>
+         <p> </p>
+         <codeblock xml:space="preserve">[root@dev-01 latest]# clsync --hosts=dev-01,dev-02 /opt/sensage/sql/
+clsync - clsetup-4.7.0, change #73647;
+
+Initializing (ssh) root@dev-01.sensage.com
+Initializing (ssh) root@dev-02.sensage.com
+Pending: 0 Lagging: - last file copied: .../oae/sls_name.sql
+Done
+
+====[dev-01.sensage.com]====
+/opt/sensage/sql/ -> &lt;same place>: no files copied.
+No files copied.
+
+====[dev-02.sensage.com]====
+/opt/sensage/sql/oae/sls_name.sql -> &lt;same place>
+Total number of files copied: 1
+
+[root@dev-01 latest]#</codeblock>
+      </section>
+   </conbody>
+</concept>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_13">
+   <title>Copying, Renaming, and Deleting Reports</title>
+   <conbody>
+    <p>To maintain your reports, you may be required to copy, rename, or delete them.</p>
+  </conbody>
+</concept>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_3_1">
+   <title>Syntax</title>
+   <conbody>
+      <p>
+         <codeblock xml:space="preserve">atmanage &lt;cluster_list&gt; --user=&lt;name&gt; --password=&lt;pass&gt; \
+--namespace=&lt;namespace&gt; archivetbl &lt;table_name&gt; &lt;NSI&gt; \
+[&lt;max_timestamp&gt; [&lt;min_timestamp&gt;]]</codeblock>where:</p>
+      <ul>
+         <li>No time stamps—specifies archiving the entire table.</li>
+         <li>One time stamp—specifies archiving data that is older than the time stamp.</li>
+         <li>Two time stamps—specifies a time frame; the first time stamp represents the latest or
+         maximum timestamp, followed by the earliest or minimum time stamp.</li>
+         <li>Timestamps should be in ISO8601 date format (YYYY-MM-DDTHH:MM:SS)</li>
+      </ul>
+      <note>Some data older than the cutoff timestamp may not be archived immediately, due to the
+      how the EDW stores data. A record of the archived data displays after the archive command has
+      completed.</note>
+      <note type="tip">To determine the names of tables to archive, run the following command to list
+      tables in the EDW:
+        <codeblock xml:space="preserve">atview &lt;host:port&gt; tables --namespace=&lt;namespace&gt; --user=&lt;user&gt; --
+pass=&lt;password&gt;</codeblock>
+         <p>For
+        more information, see <xref href="c_admin_guide-5_4_1-Listing-Tables_snsg.xml#topic_5_4_1"/> .  </p>
+      </note>
+      <p>
+         <b>Examples</b>
+      </p>
+      <p>The following examples pertain to an EMC Centera device, but apply to all SenSage AP Nearline
+      storage devices.</p>
+      <p>The following command archives the "<codeph>Firewall</codeph>" table to the NSI identified by
+        "<codeph>centera-1</codeph>" up to January 1, 2007,
+      midnight.<codeblock xml:space="preserve">atmanage "edw01:8072,edw02:8072,edw03:8072" --user=administrator \
+--password=changeme --namespace=documentation \
+archivetbl Firewall centera-1 2007-01-01T00:00:00</codeblock>
+      </p>
+      <p>The following command archives the "Firewall" table to the NSI identified by "centera1"
+      between January 1, 2006, midnight and January 1, 2007, midnight.</p>
+      <codeblock xml:space="preserve">atmanage "edw01:8072,edw02:8072,edw03:8072" --user=administrator \
+  --password=changeme --namespace=documentation \
+  archivetbl Firewall centera-1 2007-01-01T00:00:00 2006-01-01T00:00:00</codeblock>
+      <p>It is possible that not all data will be archived immediately. SenSage AP moves data to
+      Nearline storage only when all data in the same directory meets the age requirements.</p>
+   </conbody>
+</concept>

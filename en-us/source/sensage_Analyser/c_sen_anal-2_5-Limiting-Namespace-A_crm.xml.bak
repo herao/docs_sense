@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_5">
+   <title id="title_a5">Limiting Namespace Access</title>
+   <conbody>
+    
+      
+        
+          
+            
+              
+                <p>When administering SenSage AP user roles and privileges in the Analyzer, you can
+                  limit a user's access to a namespace. The following is an overview of this
+                  procedure:</p>
+                <ol id="ol_rvn_lwl_zx">
+                  <li>
+                    Create a Postgres user/role.
+                  </li>
+                  <li> Grant access to the schema/namespace.
+        <codeblock>grant schema usage 
+grant select privilege</codeblock></li>
+                  <li>
+                    Update the Analyzer Application user's postgres user setting.
+                  </li>
+                  <li>
+                    Log on as the user that you edited in Step 3 and verify schema access.
+                  </li>
+                </ol>
+              
+            
+          
+        
+      
+    
+    <p>The easiest way to do this is to create a report and see what schemas are available or run
+      reports that access a schema that the user has and/or does not have permission to access.</p>
+     <note>NOTE: The steps are different for a SenSage AP 6.x.x system and a 5.0.0 system. On a 5.0.0
+      system, after completing the procedure, you must grant users Select privilege to provide them
+      with access to the tables. Refer to <xref href="c_sen_anal-13-APPENDIXA-NAMESPAC_crm.xml"
+      />(steps for 6.x.x or 5.0.0) for specific instructions.</note>
+  </conbody>
+</concept>

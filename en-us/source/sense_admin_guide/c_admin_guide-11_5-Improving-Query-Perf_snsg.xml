@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11_5">
+   <title>Improving Query Performance</title>
+   <conbody>
+      <p>This section documents three options for improving query performance:<ul id="ul_cmk_s4q_wx">
+            <li>
+               <xref href="c_admin_guide-11_5_1-Generating-a-SQL-Que_snsg.xml#topic_11_5_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-11_5_2-Enhancing-Performanc_snsg.xml#topic_11_5_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-11_5_3-Using-Best-Practices_snsg.xml#topic_11_5_3"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

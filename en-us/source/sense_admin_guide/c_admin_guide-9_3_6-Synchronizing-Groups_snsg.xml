@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_3_6">
+   <title>Synchronizing Groups from AD/LDAP</title>
+   <conbody>
+      <p>NOTE: Before you synchronize groups from LDAP, make sure you have updated users from LDAP
+      (step 4 of the section above).</p>
+      <p>To synchronize groups from LDAP:</p>
+      <ol>
+         <li>To synchronize groups, go to <menucascade>
+               <uicontrol>Administration</uicontrol>
+               <uicontrol>Groups</uicontrol>
+            </menucascade>.</li>
+         <li>Add a group.</li>
+         <li>Select <uicontrol>Synchronize this group from LDAP</uicontrol>, provide this group DN
+        information, and click <uicontrol>Save</uicontrol>.<fig>
+               <title> Synchronizing a Group from LDAP NEW SCREENSHOT NEEDED</title>
+               <image href="./media/Image_288.jpg" placement="break"/>
+            </fig>
+         </li>
+      </ol>
+      <p>Once saved the members of the Analyzer group will be modified to reflect the members of the
+      AD group specified by the Group DN, provided the users are already Analyzer users. Management
+      of the group membership should no longer be performed manually in the Analyzer.</p>
+   </conbody>
+</concept>

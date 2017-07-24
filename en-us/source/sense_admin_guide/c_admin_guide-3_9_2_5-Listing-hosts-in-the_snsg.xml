@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9_2_5">
+   <title>Listing hosts in the cluster (clhosts)</title>
+   <conbody>
+      <p>This section describes the <codeph>clhosts</codeph> utility, which lists the hosts in the
+      cluster in a form suitable for use with other programs.</p>
+      <p>This section contains the following topics:<ul id="ul_iqf_jjl_vx">
+         <li><xref href="#topic_3_9_2_5/3925_1"/></li>
+         <li><xref href="#topic_3_9_2_5/3925_2"/></li>
+         <li><xref href="#topic_3_9_2_5/3925_3"/></li>
+         <li><xref href="#topic_3_9_2_5/3925_4"/>
+         </li>
+         </ul>
+      </p>
+      <section id="3925_1">
+         <title>SYNOPSIS</title>
+         <p>
+            <codeph>clhosts [<i>general_options</i>] [<i>specific_options</i>]
+          &lt;<i>instance_name</i>&gt;</codeph>
+         </p>
+      </section>
+      <section id="3925_2">
+         <title>ARGUMENTS</title>
+         <p>
+            <codeph>&lt;<i>instance_name</i>&gt;</codeph>
+         </p>
+         <p>The instance reference is a required argument that provides the name of the EDW (SLS)</p>
+         <p>instance. You can specify the instance reference in any of the following formats:</p>
+         <p>
+            <codeph>&lt;<i>host</i>&gt;:&lt;<i>port</i>&gt;</codeph>
+         </p>
+         <p>For example: <codeph>host1.myco.com:8072</codeph>
+         </p>
+         <p>
+            <codeph>&lt;host&gt;:&lt;instance_name&gt;</codeph>
+         </p>
+         <p>For example:<codeph> host1.myco.com:my_instance</codeph>
+         </p>
+         <p>
+            <codeph>&lt;<i>instance_name</i>&gt;</codeph>
+         </p>
+         <p>For example: <codeph>my_instance</codeph>
+         </p>
+         
+            <note>Use the <codeph>&lt;instance_name&gt;</codeph> argument only for instances that reside on
+          the same host from which you run the command. If you specify only one instance reference,
+          the command includes all hosts that are part of that instance.
+            <p>You can use <codeph>&lt;host&gt;:&lt;port&gt; and &lt;host&gt;:&lt;instance_name&gt;</codeph> for
+          instances that reside on the local host or remote hosts.</p>
+            <p>As a convenience, you can omit this argument if you set the environment variable
+          SLS_INSTANCE. For example: <codeph>SLS_INSTANCE=localhost:8072</codeph>.</p>
+         </note>
+      </section>
+      <section id="3925_3">
+         <title>OPTIONS</title>
+         <p>
+            <codeph>[<i>general_options</i>]</codeph>
+         </p>
+         <p>See <xref href="c_admin_guide-3_9_1-General-Syntax-for-U_snsg.xml#topic_3_9_1"/>.</p>
+         <p>
+            <codeph>[<i>specific_options</i>]</codeph>
+         </p>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--cluster-xml</codeph>
+               </pt>
+               <pd>Displays <filepath>cluster.xml</filepath> file</pd>
+            </plentry>
+         </parml>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--show-datadir</codeph>
+               </pt>
+               <pd>Outputs <codeph>&lt;host&gt;:&lt;datadir&gt;</codeph> for all hosts.</pd>
+            </plentry>
+         </parml>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--show-port</codeph>
+               </pt>
+               <pd>Outputs <codeph>&lt;host&gt;:&lt;port&gt;</codeph> form of the instance reference.</pd>
+            </plentry>
+         </parml>
+         <p>
+            <note>When you execute clhosts <codeph>--show-port &lt;host&gt;:&lt;port&gt;</codeph>, the results
+          display the port of the local machine on which the command executes. You can use this
+          information to convert <codeph>&lt;name&gt;</codeph> or <codeph>&lt;host&gt;:&lt;name&gt;</codeph>
+          to <codeph>&lt;host&gt;:&lt;port&gt;</codeph>, which is the only format that the data-store
+          utilities accept. For more information, see <xref href="c_admin_guide-4-Sensage-Loading-Que_snsg.xml#topic_4"/>.</note>
+         </p>
+      </section>
+      <section id="3925_4">
+         <title>Example</title>
+         <codeblock xml:space="preserve">% clhosts doctests
+Welcome to clhosts version #8245.
+
+lms02.myco.com 
+lms08.myco.com</codeblock>
+      </section>
+   </conbody>
+</concept>

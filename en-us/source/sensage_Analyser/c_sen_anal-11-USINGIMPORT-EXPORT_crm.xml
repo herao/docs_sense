@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11">
+   <title>Using Import, Export, and Download Features</title>
+   <conbody>
+    
+      
+        <p>This chapter describes how to use SenSage AP Analyzer to import and export its data
+          objects such as reports, charts, and dashboards.</p>
+        <p>This chapter contains the following topics:</p>
+        <ul id="ul_tvy_bjs_zx">
+          <li>
+            <p>Importing/Exporting Reports</p>
+          </li>
+          <li>
+            <p>Importing/Exporting Dashboards</p>
+            <p>
+          <note>IMPORTANT: There is no way to import/export both reports and dashboards at the same
+            time in one file. You can manually do this by editing an XML file. When you export the
+            dashboard any underlying reports are also exported.</note>
+        </p>
+          </li>
+          <li>
+            <p>Exporting Charts</p>
+          </li>
+          <li>
+            <p>Downloading Grids in Charts</p>
+          </li>
+          <li>
+            <p>Importing/Exporting Models</p>
+          </li>
+        </ul>
+      
+    
+  </conbody>
+</concept>

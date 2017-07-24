@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_4_3_2">
+   <title>Cluster Load</title>
+   <conbody>
+      <p>Cluster Load</p>
+      <fig>
+         <title> Cluster Load Sample
+       Graph</title>
+         <image href="./media/Image_045.jpg" placement="break"/>
+      </fig>
+      <p>This metric is used to detect the load on the system.</p>
+      <p>When you click zoom, a more detailed view of this graph is displayed as shown below:</p>
+      <fig>
+         <title> Cluster Load Detail Sample Graph</title>
+         <image href="./media/Image_046.jpg" placement="break"/>
+      </fig>
+   </conbody>
+</concept>

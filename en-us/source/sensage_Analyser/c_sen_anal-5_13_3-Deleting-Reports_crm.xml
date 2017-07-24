@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_13_3">
+   <title>Deleting Report(s)</title>
+   <conbody>
+    <p>To delete a report:</p>
+    <ol id="ol_vtd_j4q_zx">
+      <li>Go to the Analyzer dashboard, select Data Design from the dropdown list, click Reports.
+        The Manage Report screen with the current listing of reports is displayed.</li>
+      <li>Check the reports that you want to delete.</li>
+      <li>Click the Delete button on the top menu.</li>
+    </ol>
+    <p>Figure 4-47: Deleting Reports</p>
+    <p><image href="./media/Image_207.png" placement="break" scale="50"/></p>
+  </conbody>
+</concept>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_5">
+   <title id="title_a36">FAQs</title>
+   <conbody>
+      <ol>
+         <li>Assuming there is a report definition foo, who is able to view it?
+        <p>User must be a member of role that has the ReportServiceAccess action. This could be a
+          users role or a user's group's role.</p>
+            <p>You need the VIEW action on the resource, you can
+            get that in one of these ways: <ul>
+                  <li>User is the owner of report foo</li>
+                  <li>User has VIEW action to foo</li>
+                  <li>User is a member of group that has the VIEW action to foo</li>
+               </ul>
+            </p>
+         </li>
+         <li>
+            <b>Who can run Report foo?</b>
+            <p>Same as above except the action checked is the RUN action. To actually get data a user's
+          Postgres user must also have been granted access to the schema/table the report
+          queries</p>
+         </li>
+         <li>
+            <b>Who can view saved results? </b>
+            <p>Saved results are an exception; their security is
+          controlled by the report that created it.</p>
+            <p>You need VIEW action on the report and your Postgres user needs access to the
+          schema/tables used in that report.</p>
+         </li>
+         <li>
+            <b>Who can change a resource's security?</b>
+            <p>EDIT action is required to set security for
+          a resource. EDIT action is achieved in one of these ways:<ul>
+                  <li>The owner can have all permissions on the resource</li>
+                  <li>User has EDIT access to the resource</li>
+                  <li>Any user that is a member of a group that has EDIT action to the resource </li>
+               </ul>
+            </p>
+         </li>
+         <li>
+            <b>What happens to the owner attribute when the user is removed from the system?</b>
+            <p>When deleting a user, one can specify the new owner. If the owner is removed, the report
+          is "orphaned" and you will need to apply a manual fix in the database.</p>
+         </li>
+         <li>
+            <b>When I create a new resource who has access?</b>
+            <p>Only the owner has access.</p>
+         </li>
+      </ol>
+   </conbody>
+</concept>

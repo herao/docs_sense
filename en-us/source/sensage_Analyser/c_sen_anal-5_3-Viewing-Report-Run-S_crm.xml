@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_3">
+   <title>Viewing Report Run Status</title>
+   <conbody>
+    <p>To view the report status of all ad-hoc report runs:</p>
+    <ol id="ol_n5b_zcq_zx">
+      <li>Go to the Analyzer dashboard, select Data Design from the dropdown list and click Report
+          Queue.<p>The Report Queue screen with the current run status of reports is displayed. A
+          report can have one of the following statuses: STARTED, DONE, DONE_EMPTY, ERROR,
+          CANCELLED. The Owner is the creator of the report; Initiated is the date and time the
+          report was requested; Start and End Range is the coverage dates specified in the
+          report.</p><p>Figure 4-14: Report Queue</p><p><image href="./media/Image_156.png" placement="break" scale="50"/></p></li>
+      <li>Use the View button to get the report for a selected run. The report is displayed on your
+        screen. For details on viewing it, see “Viewing Reports”, on page 31.</li>
+      <li>To cancel a report that is currently running, select the desired report and click Cancel
+        Query.</li>
+      <li>To view the list of available reports that you can run, you can click the Manage Reports
+        screen. A listing of all reports is displayed. For details on viewing it, see “Viewing
+        Reports”, on page 31.</li>
+    </ol>
+  </conbody>
+</concept>

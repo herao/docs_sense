@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_2_1">
+   <title>Consideration for Mapping User and Groups</title>
+   <conbody>
+      <p>his section discusses considerations for configuring AD/LDAP users and groups and how these
+      objects map into a SenSage AP deployment.</p>
+      <p>Before beginning Active Directory Integration for a new SenSage AP deployment, be sure to
+      identify all of the users, roles, and permissions that are required. (For more information,
+      see Appendix A, "SenSage AP Permission Requirements” in the <cite>SenSage AP Analyzer
+        Guide</cite>.</p>
+      <p>If you are integrating an existing deployment, note all of the roles and users prior to
+      beginning the integration. When each SenSage AP user is defined, roles and groups are
+      associated with each user. A user’s role are the union of all their direct roles.</p>
+      <p>Consider the following when mapping users and roles:</p>
+      <ul>
+         <li>Roles are local to Analyzer only and are not mapped in AD/LDAP. You configure SenSage AP
+       authorization in the Role tab of SenSage AP Analyzer by granting permissions to roles. These
+       permissions authorize SenSage AP users to access specific features and data in Analyzer.</li>
+         <li>.When you configure AD/LDAP integration, AD groups and users that are members of the
+        specified AD domain are automatically mapped to SenSage AP when users and groups are
+        synchronized in Analyzer.<note>Users are synchronized from configured AD servers to SenSage
+          AP on demand (for a single-server only) or on schedule (all AD-servers). A LDAP scheduling
+          screen is provided in Analyzer to set up a schedule and a button is provided to update
+          users from LDAP on demand. For details on using this feature, see the <cite>SenSage AP
+            Analyzer Guide.</cite>
+            </note>
+         </li>
+         <li>It is possible that users from multiple domains have the same "SAM Account Name". In this
+        case, you should map all of the Active Directory users to different Analyzer users. For
+        example, if there were two users with SAM Account Names of <b>Bob</b> in <b>domain1</b> and
+          <b>Bob</b> in <b>domain2</b>, the duplicate user is skipped. <p>Since a user already gets
+          created with the username <b>bob</b> after synchronization, for the second user, you need
+          to create a user account with the username as <b>Bob1</b> in Analyzer (as shown below) and
+          map the user to the appropriate AD. Users will then be able to log into Analyzer with
+          unique names. Analyzer will map these unique names to the proper user account that is
+          identified with the account’s DN in the specific AD server where that account is defined.
+          The user is then authenticated by the AD server according to the DN selected. </p>
+         </li>
+      </ul>
+      <fig>
+         <title> Mapping SAM Account Names</title>
+         <image href="./media/Image_253.jpg" placement="break"/>
+      </fig>
+   </conbody>
+</concept>

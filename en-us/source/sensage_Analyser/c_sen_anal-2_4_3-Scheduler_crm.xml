@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_4_3">
+   <title>Scheduler</title>
+   <conbody>
+     <p>The Scheduler tab as shown below has two submenus.</p>
+     <p><image href="./media/Image_050.jpg" height="266" width="134" id="image_drm_mvl_zx"/></p>
+     <p>The following is a brief description of each submenu:</p>
+    <ul id="ul_brm_mvl_zx">
+      <li>
+        <p>Schedules—this is where all schedules for reporting are managed</p>
+      </li>
+      <li>
+        <p>Results—this is where the output of scheduled reports is viewed.</p>
+      </li>
+    </ul>
+  </conbody>
+</concept>

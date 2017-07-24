@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9">
+  <title>Managing Report and Analytics Schedules</title>
+  <conbody>
+    <p>The Scheduler feature is accessed through the Scheduler Menu on the Analyzer Dashboard.
+      Through the Scheduler, uses can assign schedules for report execution and view the output of
+      scheduled reports. This chapter describes how to manage report schedules and contains the
+      following topics:<ul id="ul_egb_syr_zx">
+        <li><xref href="c_sen_anal-9_1-Scheduler-Overview_crm.xml"/></li>
+        <li><xref href="c_sen_anal-9_2-Creating-a-Report-Sc_crm.xml"/></li>
+        <li><xref href="c_sen_anal-9_3-Creating-a-Schedule-_crm.xml"/></li>
+        <li><xref href="c_sen_anal-9_4-Creating-a-Schedule-_crm.xml"/></li>
+        <li><xref href="c_sen_anal-9_5-Viewing-Scheduler-Re_crm.xml"/></li>
+        <li><xref href="c_sen_anal-9_6-Viewing-Analytics-Re_crm.xml"/></li>
+      </ul></p>
+  </conbody>
+</concept>

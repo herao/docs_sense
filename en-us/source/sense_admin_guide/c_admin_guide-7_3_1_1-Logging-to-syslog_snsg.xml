@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_1_1">
+   <title>Logging to syslog</title>
+   <conbody>
+      <p>To log to syslog, the only change you should make is to the log level. Then restart the
+      Collector.</p>
+   </conbody>
+</concept>

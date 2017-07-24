@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_5_6">
+   <title>Using the FORCE Keyword</title>
+   <conbody>
+      <p>The FORCE keyword causes the RETIRE command to remove corrupted data. If you run RETIRE
+      without this keyword and the EDW detects any corruption in the data to be retired, it removes
+      only the non-corrupted data specified by the command and returns an error about the corrupted
+      data.</p>
+      <p>Hexis Cyber Solutions recommends that you run RETIRE without the FORCE keyword when you first
+      retire old or bad data. Running without forcing the retirement allows the EDW to inform you of
+      corrupted data and provides the opportunity for you to examine that data. After you have taken
+      the necessary steps to prevent similar corruption in the future, run RETIRE with the FORCE
+      keyword to remove the corrupted data.</p>
+   </conbody>
+</concept>

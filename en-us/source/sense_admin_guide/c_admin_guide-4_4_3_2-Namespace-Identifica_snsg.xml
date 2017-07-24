@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_4_3_2">
+   <title>Namespace Identification</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--namespace=&lt;name&gt;</codeph>
+            </pt>
+            <pd>Identifies the namespace from which to query information. The default is default. To specify
+         the top level, use "" (empty quotation marks).
+         <p>If you run the <codeph>atview</codeph> command without specifying a table name, the output includes all tables
+           in the specified namespace. For example, if you specify <codeph>--namespace=hq.west</codeph>, the command
+           returns the requested information for every table in the hq.west namespace.</p>
+               <p>If you specify a table when you run the atview command, the output includes the requested
+           information only for the specified table. For example, if you specify <codeph>--namespace=hq.west
+           columns mytbl</codeph>, the output is specific to <codeph>hq.west.mytbl</codeph>.</p>
+               <note>When you run atview, you can specify a table name explicitly (for example,
+             ns1.ns2.ns3.mytable) or use the <codeph>--namespace=&lt;namespace&gt;</codeph> flag to specify the namespace.
+             When you use the namespace flag, you can specify the namespace once for an entire command;
+             SenSage AP prepends the specified namespace to each table name used in the rest of the
+             request.</note>
+               <p>The command will display an ’error’ column and include error messages in the column when
+           there are inconsistencies across hosts in the cluster. For example, error type
+           TABLE_OPEN_FAILURE displays in the ’error’ column when the owner of a view is deleted from the
+           system and the view no longer carries the permissions associated with the former owner.</p>
+            </pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

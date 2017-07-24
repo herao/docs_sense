@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_1">
+   <title id="title_a3">Overview of SenSage AP System Administration</title>
+   <conbody>
+      <p>SenSage AP system administrators work mostly in a Linux environment and should be comfortable
+      using Linux in command-line mode. Administrators should also be familiar with SSH, managing
+      users and groups, file system permissions and management, network configuration, logging, and
+      using such text editors as VI or emacs.</p>
+      <p>If your SenSage AP deployment collects log data from Windows machines, firewalls, routers, or
+      applications, familiarity with those systems is also required.</p>
+      <p>SenSage AP system administrators perform the following tasks:</p>
+      <ul>
+         <li>
+            <b>Installation and configuration</b>—Installation and initial configuration of your
+        SenSage AP software is discussed in the <cite>Installation, Configuration, and Upgrade
+          Guide</cite>.</li>
+         <li>
+            <b>Upgrading</b>—Upgrading your SenSage AP deployment to a newer version is discussed in
+          <i>Example Upgrade Path</i> in Chapter 4 of the <cite>Installation, Configuration, and
+          Upgrade Guide</cite>.</li>
+         <li>
+            <b>Administration</b>—Administration tasks discussed in this manual include: <ul>
+               <li> Configuring batch collection of event data—After basic installation, you configure
+            SenSage AP to collect batched event data by installing log adapters and configuring the
+            Collector, Retrievers, and Loaders.</li>
+               <li> Managing the EDW data store—As you configure SenSage AP, you load test data and run
+            test queries against that data. You can also create tables, views, and column filters,
+            manage users and permissions for data access, monitor performance, and archive or retire
+            data.</li>
+               <li> Managing the EDW instance—You configure and manage clustered nodes in an EDW instance
+            and configure Nearline storage devices.</li>
+               <li> Manage Near-line storage—you can archive event data stored in the EDW to a variety of
+            Nearline storage devices such as EMC Centera, and Remote NFS (Network) or CIFS (Common
+            Internet) File System.</li>
+               <li> Backing up and restoring event data and raw log files.</li>
+               <li> Managing users, permissions and authentication—Permissions for your SenSage AP
+            deployment and its users must be managed carefully to limit access to information and
+            ensure a secure environment.</li>
+               <li> Managing the report cache—You manage the retention of cached report data.</li>
+               <li> Network configuration—You configure network connections between SenSage AP components
+            and the machines or devices from which you are collecting event data.</li>
+               <li> Monitoring system performance and source health—Your SenSage AP software provides
+            tools to monitor the performance of the SenSage AP deployment. You configure these
+            components to issue alerts when performance is diminished or event data collection is
+            interrupted.</li>
+            </ul>
+         </li>
+      </ul>
+   </conbody>
+</concept>

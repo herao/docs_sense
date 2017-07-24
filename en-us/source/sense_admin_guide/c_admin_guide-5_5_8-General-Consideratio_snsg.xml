@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_5_8">
+   <title>General Considerations for Using ALTER TABLE Tool</title>
+   <conbody>
+      <p>While executing the ALTER TABLE SQL statements, note the following:</p>
+      <ul>
+         <li>Before executing any ALTER TABLE SQL statements, ensure that the EDW is shut down.</li>
+         <li>The tables must not contain buckets (which results due to trickle loads). If any table has
+         trickle loads, you must compact the table before altering it.</li>
+         <li>Do not run ALTER TABLE SQL statements on archived tables.</li>
+         <li>While an ALTER TABLE SQL statement is running, let the session complete before terminating
+         the statement.</li>
+      </ul>
+   </conbody>
+</concept>

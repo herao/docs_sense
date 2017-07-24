@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11_5_2">
+   <title>Enhancing Performance for Specific TOP Queries on Large Clusters</title>
+   <conbody>
+      <p>When a query that runs on a large cluster includes both the <codeph>TOP</codeph> or
+        <codeph>FIRST</codeph> clause and an <codeph>ORDER BY</codeph>, <codeph>GROUP BY</codeph>,
+      or <codeph>DISTINCT</codeph> clause, the EDW Query Engine must retrieve all relevant records
+      from all hosts in the cluster before it can sort the data and return the specified top
+      records.</p>
+      <p>However, run the same query without an <codeph>ORDER BY</codeph>, <codeph>GROUP BY</codeph>,
+      or <codeph>DISTINCT</codeph> clause and performance improves significantly. Because such a
+      query requires no sorting, the EDW Query Engine stops scanning nodes and terminates the query
+      after it retrieves the number of records specified in the <codeph>TOP</codeph> or FIRST
+      clause.</p>
+      <note type="important">
+         <ul>
+            <li>The value you specify in the <codeph>TOP</codeph> or <codeph>FIRST</codeph> clause should
+         exceed the number of rows returned.
+            <p>In other words, a query that specifies <codeph>TOP 1000</codeph> but returns fewer than 1000
+               rows does not benefit from this performance recommendation.</p></li>
+            <li>Performance benefits are greatest when the query runs on a multi-node cluster. Do not
+         expect performance enhancement if you run the query on a 1-node cluster.</li>
+         </ul>
+      </note>
+   </conbody>
+</concept>

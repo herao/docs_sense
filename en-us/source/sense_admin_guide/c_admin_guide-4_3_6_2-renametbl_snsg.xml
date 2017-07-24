@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_6_2">
+   <title>renametbl</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>renametbl &lt;old_tablename&gt; &lt;new_table_name&gt;</codeph>
+            </pt>
+            <pd>The <codeph>renametbl</codeph> action allows you to:
+       <ul id="ul_o4k_zvt_vx">
+                  <li>correct spelling mistakes</li>
+                  <li>roll out ("swap in") new data sets</li>
+                  <li>establish or change namespaces</li>
+                  <li>establish table-naming conventions.</li>
+               </ul>
+               <p>The following example moves the quotes table from the external namespace to the
+         external.websvcs namespace, and changes the table’s name from quotes to
+         stock_quote_log:<codeblock xml:space="preserve">atmanage slshost:8072 --namespace=external renametbl quotes \
+           websvcs.stock_quote_log</codeblock>
+               </p>
+               <p>The following example illustrates two commands. The first creates a table in the default
+         namespace (default). The second moves the table from the default namespace to a namespace
+         named
+         new_namespace:<codeblock xml:space="preserve">atmanage slshost:8072 createtbl my_table ts:TIMESTAMP val:VARCHAR
+           atmanage slshost:8072 --namespace '' renametbl \
+           myNamespace.my_table new_namespace.my_table</codeblock>
+               </p>
+               <p>Before specifying the old and new table names, the example above uses an empty string to
+         identify the top namespace. If this flag were missing from the command, the EDW would assume
+         the old table was myNamespace.myNamespace.my_table and would rename the table to
+         myNamespace.new_namespace.my_table.</p>
+            </pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

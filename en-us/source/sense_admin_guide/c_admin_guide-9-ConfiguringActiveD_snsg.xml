@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9">
+   <title>Configuring Active Directory/LDAP Integration</title>
+   <conbody>
+      <p>This chapter describes how to integrate Active Directory with a SenSage AP deployment and
+      contains the following sections:</p>
+      <ul id="ul_u5q_5wn_wx">
+         <li>
+            <xref href="c_admin_guide-9_1-Overview_snsg.xml#topic_9_1"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-9_2-What-you-Need-to-Kno_snsg.xml#topic_9_2"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-9_3-Setting-up-Active-Di_snsg.xml#topic_9_3"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-9_4-Maintaining-Active-D_snsg.xml#topic_9_4"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-9_5-Troubleshooting_snsg.xml#topic_9_5"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-9_6-FAQs_snsg.xml#topic_9_6"/>
+         </li>
+      </ul>
+   </conbody>
+</concept>

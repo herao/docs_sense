@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_2">
+   <title>Setting the Logging Level</title>
+   <conbody>
+      <p>Set the logging level in <filepath>config.xml</filepath> with the <codeph>level</codeph>
+      attribute in the <codeph>&lt;Logging&gt;</codeph> element. You can specify multiple
+        <codeph>&lt;Logging&gt;</codeph> tags, which allows you to specify different logging parameters
+      for each level. For example, the following configuration specifies that all logs (level 3) are
+      logged to a file while <i>errors</i> (level 2) are logged to
+      syslog:<codeblock xml:space="preserve">&lt;Logging level=”2”&gt; type=”syslog”/&gt;
+&lt;Logging level="3"&gt; type=”file” file=”tmp/activity”/&gt;</codeblock>
+      </p>
+      <p>Specify one of these logging levels.</p>
+      <table id="table_hbx_m5v_vx">
+         <tgroup cols="2">
+            <colspec colnum="1" colname="col1" colwidth="1*"/>
+            <colspec colnum="2" colname="col2" colwidth="6.41*"/>
+            <thead>
+               <row>
+                  <entry>Level</entry>
+                  <entry>Meaning</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>1</entry>
+                  <entry>Least verbose. Only critical errors or severe warnings are logged.</entry>
+               </row>
+               <row>
+                  <entry>2</entry>
+                  <entry>Moderately verbose. Event history is logged, as well as critical errors and sever
+              warnings. Set logging to level 2 if you intend to tail log files. For more
+              information, see <xref href="c_admin_guide-7_3_3-Tailing-Logs-Files_snsg.xml#topic_7_3_3"/>.</entry>
+               </row>
+               <row>
+                  <entry>3</entry>
+                  <entry>Most verbose. IgniteTech recommends that you set logging to level 3 during
+              installation, initial configuration, and troubleshooting.</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

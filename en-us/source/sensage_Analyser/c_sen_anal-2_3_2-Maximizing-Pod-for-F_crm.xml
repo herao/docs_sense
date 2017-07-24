@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_3_2">
+   <title>Maximizing Pod for Full-Screen Viewing</title>
+   <conbody>
+    <p><ph id="a34">To view a pod full screen:</ph></p>
+    <p>Click the full-screen icon shown below and in the title bar of the pod in Figure 1-10.</p>
+    <fig><title>Full-screen Pod View</title><image href="./media/Image_035.png" placement="break" scale="33"/></fig>
+    <p>Press <b>ESC </b>to exit full-screen view and return to the dashboard view.</p>
+  </conbody>
+</concept>

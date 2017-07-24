@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_6_1">
+   <title>Example Event-Log Data</title>
+   <conbody>
+      <p>Your SenSage AP solution includes example log events from a variety of log-source types. The
+      examples include the source log events, corresponding PTL files for loading the events into
+      the EDW, and corresponding <filepath>.sql</filepath> files with queries that can be run
+      against the loaded events. The event data comes from real production systems; to protect
+      privacy, some values have been substituted in a 1-for-1 mapping to preserve statistical
+      relevance.</p>
+      <p>This section includes these topics:<ul id="ul_epd_wq5_vx">
+            <li>
+               <xref href="c_admin_guide-4_6_2-Tuxedo-Data_snsg.xml#topic_4_6_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_6_3-Websrv-Data_snsg.xml#topic_4_6_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_6_4-Windows-Data_snsg.xml#topic_4_6_4"/>
+            </li>
+         </ul>
+      </p>
+      <p>
+         <note>SenSage AP compression technology works more efficiently than gzip for very large
+        volumes of data. Due to file-system overhead, benefits are not seen generally below about
+        10- 50MB of log data.</note>
+      </p>
+   </conbody>
+</concept>

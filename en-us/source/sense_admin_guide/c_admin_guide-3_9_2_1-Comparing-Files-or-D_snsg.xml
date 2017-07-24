@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9_2_1">
+   <title>Comparing Files or Directory-listings Across the Cluster (cldiff)</title>
+   <conbody>
+      <p>This section describes the <codeph>cldiff</codeph> utility. For each file or directory
+      specified compares the specified file with identically named files on each host in the
+      cluster. For directories, cldiff compares directory listings.</p>
+      <p>This section contains the following topics:<ul id="ul_zkl_3hk_vx">
+            <li><xref href="#topic_3_9_2_1/3921_1"/></li>
+            <li><xref href="#topic_3_9_2_1/3921_2"/></li>
+            <li><xref href="#topic_3_9_2_1/3921_3"/></li>
+            <li><xref href="#topic_3_9_2_1/3921_4"/></li>
+         </ul></p>
+      <section id="3921_1">
+         <title>SYNOPSIS</title>
+         <codeblock xml:space="preserve">cldiff [<i>general_options</i>] [<i>specific_options</i>] &lt;<i>source_item</i>&gt; [&lt;<i>source_item</i>&gt; […]]</codeblock>
+      </section>
+      <section id="3921_2">
+         <title>ARGUMENTS</title>
+         <p>
+            <codeblock xml:space="preserve">&lt;<i>source_item</i>&gt;</codeblock>
+         </p>
+         <p>You must specify at least one source item. Additional source items are optional. Separate
+        multiple items with spaces. You can specify files, directories, or combinations of both, as
+        the following three examples show:</p>
+         <codeblock xml:space="preserve">cldiff file1 tmp/file2.txt file3 
+cldiff dir1 dir2
+cldiff file1 tmp/file2.txt dir1</codeblock>
+         <p>If you specify a path without a leading slash (/), the utility resolves the path from the
+        current directory. The utility expects to find the files and directories in the same current
+        directory on the other hosts in the cluster. If the corresponding files are in a different
+        location on the other hosts, use the <codeph>--target-dir</codeph> option to specify the
+        alternate, remote location.</p>
+      </section>
+      <section id="3921_3">
+         <title>OPTIONS</title>
+         <p>[<i>general_options</i>]</p>
+         <p>See <xref href="c_admin_guide-3_9_1-General-Syntax-for-U_snsg.xml#topic_3_9_1"/>.</p>
+         <p>
+            <codeph>[<i>specific_options</i>]</codeph>
+         </p>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--hosts</codeph>
+               </pt>
+               <pd>Executes command on hosts specified in the list; defaults to localhost</pd>
+            </plentry>
+         </parml>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--sls-instance</codeph>
+               </pt>
+               <pd>Executes command on every host on which the specified instance is running; value can
+            also be set through the SLS_INSTANCEenvironment variable</pd>
+            </plentry>
+         </parml>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--target-dir</codeph>
+               </pt>
+               <pd>The target directory on remote hosts where the copies to be compared are located. Use
+            this option if the location of files to compare are in different locations on the remote
+            hosts than on the localhost.If the remote locations on remote hosts differ by host, use
+            the &lt;host&gt;:&lt;path&gt; syntax for specifyinghosts with the --hosts option described
+            above.</pd>
+            </plentry>
+         </parml>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--exclude</codeph>
+               </pt>
+               <pd>When it examines directories for files to compare, the cldiff utility ignores files
+            and directories with base names that match the specified pattern. Separate multiple
+            patterns with spaces or use multiple --exclude options. Enclose the patterns within
+            single quotes, for example: “cldiff -exclude=’**/dsroot/**’/opt /sensage/etc”</pd>
+            </plentry>
+         </parml>
+         <parml>
+            <plentry>
+               <pt>
+                  <codeph>--diff-command</codeph>
+               </pt>
+               <pd>The cldiff utility uses the "rsync -n (preview)" command to discover files that are
+            different. When it discovers files that are different, cldiff uses the "diff -c" command
+            to report the differences.</pd>
+            </plentry>
+         </parml>
+         <p>You can modify the way in which differences are reported by specifying the options you want
+        the diff command to run with; for example:</p>
+         <p>
+            <codeph>--diff-command</codeph> (diff -c, default)</p>
+         <p>
+            <codeph>--diff-command</codeph> (diff -c)</p>
+      </section>
+      <section id="3921_4">
+         <title>EXAMPLE</title>
+         <p>Following is an example of the cldiff command executed using the
+          <codeph>--exclude</codeph> option on a two- node EDW instance named mys ls.</p>
+         <codeblock xml:space="preserve">[dev-01 latest]# cldiff --exclude='*/dsroot/*' --sls-SLSInstance /opt/sensage/
+etc/sls/instance/mys ls
+cldiff - clsetup-4.7.0, change #73647;
+
+Initializing (ssh) rooted-01.sensage.com
+Initializing (ssh) root@dev-02.sensage.com
+dev-01:Done | dev-02:Done
+All done.
+
+====[dev-01.sensage.com]====
+Identical files:
+= /opt/sensage/etc/sls/instance/mysls/PERMISSIONS
+= /opt/sensage/etc/sls/instance/mysls/add.xml
+= /opt/sensage/etc/sls/instance/mysls/athttpd.conf
+= /opt/sensage/etc/sls/instance/mysls/cluster.xml
+= /opt/sensage/etc/sls/instance/mysls/docroot
+= /opt/sensage/etc/sls/instance/mysls/dsroot
+= /opt/sensage/etc/sls/instance/mysls/ldap.conf
+= /opt/sensage/etc/sls/instance/mysls/md5
+= /opt/sensage/etc/sls/instance/mysls/md5.errors
+= /opt/sensage/etc/sls/instance/mysls/sensage_sls_mysls
+= /opt/sensage/etc/sls/instance/mysls/shared_secret.asc
+
+====[dev-02.sensage.com]====
+Only on "dev-02.sensage.com":
+&gt; /opt/sensage/etc/sls/instance/mysls/omnisight.ldif
+
+Identical files:
+= /opt/sensage/etc/sls/instance/mysls/PERMISSIONS
+= /opt/sensage/etc/sls/instance/mysls/add.xml
+= /opt/sensage/etc/sls/instance/mysls/athttpd.conf
+= /opt/sensage/etc/sls/instance/mysls/cluster.xml
+= /opt/sensage/etc/sls/instance/mysls/docroot
+= /opt/sensage/etc/sls/instance/mysls/dsroot
+= /opt/sensage/etc/sls/instance/mysls/ldap.conf
+= /opt/sensage/etc/sls/instance/mysls/md5
+= /opt/sensage/etc/sls/instance/mysls/md5.errors
+= /opt/sensage/etc/sls/instance/mysls/sensage_sls_mysls
+= /opt/sensage/etc/sls/instance/mysls/shared_secret.asc
+
+====[Summary]====
+Identical on all hosts:
+= /opt/sensage/etc/sls/instance/mysls/PERMISSIONS
+= /opt/sensage/etc/sls/instance/mysls/add.xml
+= /opt/sensage/etc/sls/instance/mysls/athttpd.conf
+= /opt/sensage/etc/sls/instance/mysls/cluster.xml
+= /opt/sensage/etc/sls/instance/mysls/docroot
+= /opt/sensage/etc/sls/instance/mysls/dsroot
+= /opt/sensage/etc/sls/instance/mysls/ldap.conf
+= /opt/sensage/etc/sls/instance/mysls/md5
+= /opt/sensage/etc/sls/instance/mysls/md5.errors
+= /opt/sensage/etc/sls/instance/mysls/sensage_sls_mysls
+= /opt/sensage/etc/sls/instance/mysls/shared_secret.asc
+
+None of the specified files are different.
+
+None of the specified files exist only on localhost.
+
+Exist only on remote hosts:
+&gt; /opt/sensage/etc/sls/instance/mysls/omnisight.ldif dev-02.sensage.com
+
+[root@dev-01 latest]#</codeblock>
+      </section>
+   </conbody>
+</concept>

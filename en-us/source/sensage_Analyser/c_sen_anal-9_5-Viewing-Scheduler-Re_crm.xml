@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_5">
+   <title>Viewing Results of Scheduled Reports</title>
+   <conbody>
+    <p>The Report Scheduler option provides a screen for you to view report results from the
+      scheduled report run. This options lets you use all the same viewing features for viewing a
+      report, except no features are available to edit report definitions.</p>
+    <p>To view results from the scheduled report run:</p>
+    <ol><li>After you have accessed the Scheduler in the Analyzer menu, click the Results sub-menu, the
+        Report Schedules tab, and then the View button as shown below. <p>Figure 8-11: Viewing
+          Schedules</p><p>
+          <image href="./media/Image_378.jpg" placement="break" scale="45"/>
+        </p><p>The report results are listed from the scheduled report run. You can click the
+          desired report to view the scheduled runs for the report. An example of the report results
+          is shown below. To return to the grid of scheduled results, click the blue
+          heading.</p><p>Figure 8-12: Viewing Results from a Scheduled Run</p><p>
+          <image href="./media/Image_379.jpg" id="image_jnx_1cs_zx" placement="break" scale="60"/>
+        </p></li></ol>
+  </conbody>
+</concept>

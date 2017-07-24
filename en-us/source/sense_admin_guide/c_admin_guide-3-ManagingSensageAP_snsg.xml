@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3">
+   <title>Managing Sensage AP</title>
+   <conbody>
+      <p>This chapter provides information on how to use the Deployment Manager to monitor, configure,
+      and manage SenSage AP. Also included are utility tools for general tasks that support
+      configuration and management.</p>
+      <ul id="ul_r1s_5ch_vx">
+         <li>
+            <xref href="c_admin_guide-3_1-Logging-into-SenSage_snsg.xml#topic_3_1"/>, next—Describes how to log into SenSage AP.</li>
+         <li>
+            <xref href="c_admin_guide-3_2-Monitoring-SenSage-A_snsg.xml#topic_3_2"/>—Describes Deployment Manager Dashboard options that allow you
+        to monitor your SenSage AP system.</li>
+         <li>
+            <xref href="c_admin_guide-3_5-Modifying-Installati_snsg.xml#topic_3_5"/>—Describes how to modify current installation settings.</li>
+         <li>
+            <xref href="c_admin_guide-3_6-Configuring-a-SenSag_snsg.xml#topic_3_6"/>—Describes how to configure a SenSage AP deployment using the
+        Deployment Manager.</li>
+         <li>
+            <xref href="c_admin_guide-3_7-Managing-SenSage-AP-_snsg.xml#topic_3_7"/>—Describes how to perform basic SenSage AP operations such as
+        start up and shut down.</li>
+         <li>
+            <xref href="c_admin_guide-3_8-Administering-Deploy_snsg.xml#topic_3_8"/>—Describes how to administer users of the Deployment Manager,
+        including adding and deleting existing users and resetting passwords.</li>
+         <li>
+            <xref href="c_admin_guide-3_9-Using-Utility-Tools_snsg.xml#topic_3_9"/>—Describes
+            command-line options common to utility tools and how to use specific tools such as:
+               <codeph>cldiff</codeph>, <codeph>clssh</codeph>, <codeph>clsync</codeph>,
+               <codeph>cltop</codeph>, and <codeph>clhosts</codeph>.</li>
+      </ul>
+   </conbody>
+</concept>

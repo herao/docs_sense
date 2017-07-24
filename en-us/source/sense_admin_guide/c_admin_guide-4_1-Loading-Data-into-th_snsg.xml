@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1">
+   <title id="title_a12">Loading Data into the EDW</title>
+   <conbody>
+      <p>This chapter contains the following sections:<ul id="ul_h21_kml_vx">
+            <li>
+               <xref href="c_admin_guide-4_1_1-Synopsis_snsg.xml#topic_4_1_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_1_2-Description_snsg.xml#topic_4_1_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_1_3-Arguments_snsg.xml#topic_4_1_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_1_4-Options_snsg.xml#topic_4_1_4"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_1_5-Parameters_snsg.xml#topic_4_1_5"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_1_6-Loading-Archive-File_snsg.xml#topic_4_1_6"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_1_7-Automatic-Expression_snsg.xml#topic_4_1_7"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_1_8-Loading-Information-_snsg.xml#topic_4_1_8"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_1_9-Reading-Log-Data-fro_snsg.xml#topic_4_1_9"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_1_10-Tracking-Uploads-in-_snsg.xml#topic_4_1_10"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_1_11-Errors-and-Return-Va_snsg.xml#topic_4_1_11"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

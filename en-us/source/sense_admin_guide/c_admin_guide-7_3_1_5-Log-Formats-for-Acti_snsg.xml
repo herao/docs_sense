@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_1_5">
+   <title>Log Formats for Activity and Error logs</title>
+   <conbody>
+      <p>The following fields appear in <filepath>activity.log</filepath>,
+        <filepath>error.log</filepath>, and associated
+      alerts:<codeblock xml:space="preserve">Timestamp (in ISO time format: YYYY-MM-DDTHH:mm:ss)
+Process ID
+Log level of message (1 for major activity, 2 for notices, 3 for verbose)
+Error code, if any (defaults to 0 for no error)
+Class Name
+Line number
+Message</codeblock>
+      </p>
+   </conbody>
+</concept>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_4">
+   <title>Deleting a SenSage AP User</title>
+   <conbody>
+    <note>
+      <p>IMPORTANT: To first delete a SenSage AP user that is also in Active Directory, be sure to
+        remove the user account in Active Directory first before removing the account in Analyzer.
+        The AD synchronization will not delete any user in Analyzer. If you delete a user only in
+        Analyzer without first deleting the user in AD, the user will re-appear whenever LDAP/AD
+        synchronization is executed.</p>
+    </note>
+    <p>To delete a SenSage AP user:</p>
+    <ol id="ol_vkb_cfs_zx">
+      <li>Go to the Analyzer and click <menucascade><uicontrol>Administration</uicontrol><uicontrol>Users</uicontrol></menucascade> from the dropdown submenu. The
+        Manage Users screen is displayed.</li>
+      <li>To delete a user, check the user you want to delete in Figure 6 below and click the Trash
+        icon. <fig><title>Deleting a User</title><image href="./media/Image_394.png" placement="break" scale="50"/></fig><p>A confirmation box is displayed asking you to
+          confirm your deletion(s).</p></li>
+    </ol>
+  </conbody>
+</concept>

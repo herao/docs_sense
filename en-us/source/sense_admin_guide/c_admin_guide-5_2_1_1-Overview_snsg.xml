@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_2_1_1">
+   <title>Overview</title>
+   <conbody>
+      <p>Backup and restore operations occur at the table level and are performed using the
+        <codeph>atmanage</codeph> and <codeph>atquery</codeph> commands. The two sections below
+      document the operations these commands perform on a table in the datastore.</p>
+      <section>
+         <title>BACKUP OVERVIEW</title>
+         <ul id="ul_rwk_vv5_vx">
+            <li>User submits the following command, which sets the table to read-only (quiesce) and
+          verifies the table's integrity; if the table is already read-only, saves the
+          state:<codeblock xml:space="preserve">atmanage --user=administrator --pass=&lt;password&gt; \
+--namespace=&lt;namespace&gt; &lt;cluster_list&gt; backuptbl start &lt;tablename&gt;</codeblock>
+            </li>
+            <li>User submits atquery against virtual table
+            (<codeph>&lt;<i>tablename</i>&gt;.storage.dsminfo</codeph>)</li>
+            <li>EDW uses returned data from <codeph>dsminfo</codeph> to pass to file-system backup
+          tool</li>
+            <li>User submits the following command, which returns the table to its original read-only /
+          read- write state before the "<codeph>atmanage backuptbl start</codeph>" command was
+          submitted; if the table was already in a read-only state, the following command retains
+          that read-only
+          setting:<codeblock xml:space="preserve">atmanage --user=administrator --pass=&lt;password&gt; \
+--namespace=&lt;namespace&gt; &lt;cluster_list&gt; backuptbl commit &lt;tablename&gt;"</codeblock>
+            </li>
+            <li>User submits the following command, which returns the read-only / read-write state to
+          previous setting; there is nothing to roll back because your backup tool performs the
+          actual
+          backup:<codeblock xml:space="preserve">atmanage --user=administrator --pass=&lt;password&gt; \
+--namespace=&lt;namespace&gt; &lt;cluster_list&gt; backuptbl rollback &lt;tablename&gt;"</codeblock>
+            </li>
+         </ul>
+         <note>In addition to backing up your tables, you should backup your LDAP server. For more
+        information, see “Backing Up Your LDAP Server”, on page 122.</note>
+      </section>
+      <section>
+         <p>RESTORE OVERVIEW</p>
+         <ul id="ul_v1n_rw5_vx">
+            <li>User submits the following command, which returns a sandbox (directory) on each host of
+          the EDW instance to which a dsroot tree is to be
+          restored:<codeblock xml:space="preserve">atmanage --user=administrator --pass=&lt;password&gt; \
+--namespace=&lt;namespace&gt; &lt;cluster_list&gt; restoretbl start &lt;tablename&gt;"</codeblock>
+            </li>
+            <li>User submits the following command, which verifies the sandbox on each host, places the
+          sandbox into the tree on each host, and returns the read-only / read-write state to
+          previous
+          setting:<codeblock xml:space="preserve">atmanage --user=administrator --pass=&lt;password&gt; --namespace=&lt;namespace&gt; \
+&lt;cluster_list&gt; restoretbl commit &lt;tablename&gt;</codeblock>
+            </li>
+            <li>User submits the following command, which removes the sandbox and returns the read-only
+          / read-write state to previous setting:<codeblock xml:space="preserve">atmanage --user=administrator --pass=&lt;password&gt; \
+--namespace=&lt;namespace&gt; &lt;cluster_list&gt; restoretbl rollback &lt;tablename&gt;"</codeblock>
+            </li>
+         </ul>
+         <note>
+            <ul id="ul_fnx_nx5_vx">
+               <li>Incremental backups are by date and may encompass more than you would expect due
+            to tree reorganization.</li>
+               <li>In addition to restoring your tables, you must restore your LDAP server. For more
+            information, see <xref href="c_admin_guide-5_2_1_3-Restoring-Your-LDAP-_snsg.xml#topic_5_2_1_3"/>.</li>
+            </ul>
+         </note>
+      </section>
+   </conbody>
+</concept>

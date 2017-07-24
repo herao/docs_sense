@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_4_2">
+   <title>Viewing Data from Unsuccessful Loads</title>
+   <conbody>
+      <p>Each row in EDW tables tracks the ID of the upload operation inserted the row. Rows inserted
+      by an unsuccessful load are excluded from queries by default.</p>
+      <p>If you want to view all data in a table, including data from unsuccessful loads or data
+      currently being loaded, you must specify the <codeph>{INCLUDE_BAD_UPLOADS}</codeph> modifier
+      on the table in the <codeph>FROM</codeph> clause. Include the curly braces as part of the
+      modifier.</p>
+      <p>
+         <note>If a query and a load occur simultaneously and the query continues after the load
+        completes, you may see all, none, or part of the data from the new load.</note>
+      </p>
+   </conbody>
+</concept>

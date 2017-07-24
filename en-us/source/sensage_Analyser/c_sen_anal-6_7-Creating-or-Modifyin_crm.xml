@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_6_7">
+   <title>Creating or Modifying a Custom Chart </title>
+   <conbody>
+    <p>A heat map is a two dimensional plot with color showing the value of a third field. The third
+      field must be a number datatype.</p>
+    <p>To create or modify a heat map:</p>
+    <ol id="ol_oz1_q1r_zx">
+      <li>Access the area chart settings screen (for instructions see <xref
+          href="c_sen_anal-6_1-Creating-a-Chart_crm.xml"/> or <xref
+          href="c_sen_anal-6_2-Editing-a-Chart---TH_crm.xml"/>.</li>
+      <li>If desired, enter (in this optional field) a title for the chart for descriptive purposes
+        only.</li>
+      <li>Specify the value for the Y-axis (the vertical dimension) under the dropdown box labelled
+        "Select a field for the vertical axis of the map grid:". In Figure 5-20"Firewall Device" is
+        selected as the value for the Y-axis.</li>
+      <li>Specify the value for the X-axis (the horizontal dimension) under the dropdown box
+        labelled "Select a field for the horizontal axis of the map grid:". In Figure 5-20"Number of
+        Sources" is selected as the value for the Y-axis.<p>
+          <note>The box for the second field is displayed whenever a field of numeric datatype
+            is used. In tFigure 5-20 "Protocol" is selected as the value for the second
+            field.</note>
+        </p></li>
+      <li>Specify the field that you want for determining the color of each point on the map under
+        the dropdown box labelled "Use the values from this field for the grid values:" In Figure
+        5-20 "Total Accepts" is selected as the value for the field.<p>Figure 5-22: Heat Map Chart
+          Settings</p><p><image href="./media/Image_248.jpg" height="351" width="584"
+            id="image_pz1_q1r_zx"/></p><p>Note the following additional viewing options at the
+          bottom of the chart settings screen:</p><ul id="ul_qz1_q1r_zx">
+          <li>
+            <p>Display - Turns on or off the 3D effect on the graph.</p>
+          </li>
+        </ul></li>
+      <li>Click Save.<p>Figure 5-21 shows the results with heat map. Note the values of the color
+          are shown in the key to the right of the map.</p><p>Figure 5-23: Heat Map Configuration
+          Results</p><p><image href="./media/Image_250.jpg" height="344" width="609"
+            id="image_sz1_q1r_zx"/></p></li>
+    </ol>
+
+  </conbody>
+</concept>

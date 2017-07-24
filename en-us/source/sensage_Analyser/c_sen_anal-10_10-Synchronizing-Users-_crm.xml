@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_10">
+   <title>Synchronizing Users from Active Directory/LDAP</title>
+   <conbody>
+    <p>You may need to update LDAP users when adding a new Active Directory Server for integration
+      with SenSage AP or to schedule periodic updates of users from AD/LDAP to ensure you have the
+      most current user information in SenSage AP.</p>
+    <p>There are two ways to specify users for synchronization from AD/LDAP: on-demand and
+      scheduled. When you choose to update on-demand you can selectively choose an individual AD
+      server to synchronize with Analyzer. When you choose to create a schedule, then the user
+      registry of Analyzer is updated with all the AD servers that are configured with the
+      system.</p>
+    <p>To update users from LDAP:</p>
+    <ol id="ol_kgr_t3s_zx">
+      <li>Go to the Analyzer and select <menucascade><uicontrol>Administration</uicontrol><uicontrol>LDAP</uicontrol></menucascade> from the dropdown submenu.</li>
+      <li>For Immediate Update:<ol id="ol_ckl_v3s_zx">
+          <li>Select the Active Directory/LDAP server where the users reside.<p>Figure 9-18:
+              Immediate Update of Users from LDAP</p><p><image href="./media/Image_413.jpg"
+                height="227" width="484" id="image_lgr_t3s_zx"/></p></li>
+          <li>Click Update users from LDAP for immediate update.</li>
+        </ol></li>
+      <li>For Scheduled Update:<ol id="ol_f1b_y3s_zx">
+          <li>Check Schedule updating users from LDAP.<p>Figure 9-19: IScheduled Update of Users
+              from LDAP</p><p><image href="./media/Image_414.jpg" height="242" width="519"
+                id="image_mgr_t3s_zx"/></p></li>
+          <li>Enter Start at: time and date and how often to repeat the updates. c Click Save
+            Schedule.</li>
+        </ol></li>
+    </ol>
+  </conbody>
+</concept>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_1_1">
+   <title>Using Active Directory with LDAP</title>
+   <conbody>
+      <p>The Active Directory authority authenticates each user's name and password at login. After
+      you configure Active Directory integration, SenSage AP Analyzer logs into the Active Directory
+      server for enumeration of groups and users using on-demand and scheduled synchronization.</p>
+      <p>This solution provides the following advantages:</p>
+      <ul>
+         <li>allows enterprise administrators to manage users, groups, and passwords using a familiar
+         mechanism that already provides these services for other systems and applications.</li>
+         <li>delegates authentication from AP Analyzer to an external authority system (such as
+         AD/LDAP)</li>
+         <li>facilitates logging</li>
+         <li>facilitates the management of password rotation, enforces password complexity policies and
+         recovery of users accounts from lockout.</li>
+      </ul>
+   </conbody>
+</concept>

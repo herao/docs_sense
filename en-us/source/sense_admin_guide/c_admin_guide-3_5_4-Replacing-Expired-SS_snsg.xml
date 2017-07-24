@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_5_4">
+   <title>Replacing Expired SSL Certificates for Ambari Agent Hosts</title>
+   <conbody>
+      <ol id="ol_tkr_r4h_vx">
+         <li>On the Deployment Manager host, perform the following steps: <ol>
+               <li>Stop Ambari
+        server:ambari-server stop</li>
+               <li>Go to <filepath>/var/lib/ambari-server/keys</filepath>. <p>You will find a
+                <filepath>.csr</filepath> and a <filepath>.crt </filepath>file for each of the
+              ambari-agent hosts listed.</p>
+               </li>
+               <li>Delete these files for each host.</li>
+               <li>Additionally, delete <filepath>ca.crt</filepath> and<filepath> ca.key</filepath>.<note>DO NOT
+              delete <filepath>ca.config</filepath>.</note>
+               </li>
+               <li>Go to /var/lib/ambari-server/keys/db and issue the following command:<codeblock xml:space="preserve">cat /dev/null/ &gt; index.txt</codeblock>
+               </li>
+            </ol>
+         </li>
+         <li>On each host in the AP cluster (which may include the Deployment Manager host), perform
+        the following steps:<ol id="ol_xbt_4ph_vx">
+               <li>Stop Ambari agent:<codeblock xml:space="preserve">ambari-agent stop</codeblock>
+               </li>
+               <li>Go to <filepath>/var/lib/ambari-agent/keys</filepath> and delete all the files in this
+            folder (except for<p>
+                     <filepath>ca.config</filepath>).</p>
+               </li>
+               <li>Start Ambari agent: <codeblock xml:space="preserve">ambari-agent start</codeblock>
+               </li>
+            </ol>
+         </li>
+         <li>On the Deployment Manager host, start Ambari Server:
+        <codeblock xml:space="preserve">ambari-server start</codeblock>
+         </li>
+      </ol>
+   </conbody>
+</concept>

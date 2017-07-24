@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_4">
+   <title id="title_a6">Hosts Tab</title>
+   <conbody>
+      <p>Click the Hosts tab to view the status of components in your cluster on a host-by-host basis.
+      Note that the Host screen is displayed depicting either a single host or a multi-host
+      environment. The screenshot below illustrates a multi-host environment.</p>
+      <fig>
+         <title>Hosts Screen</title>
+         <image href="./media/Image_037.jpg" placement="break" scale="85"/>
+      </fig>
+      <p>On the Host screen the top row displays the number of hosts in the cluster, indicating
+      whether the hosts are healthy, what masters/slaves, if any, are down, if no heartbeat was
+      detected, and if any of the hosts have an alert (meaning that one or more components are not
+      in service.)</p>
+      <p>Beneath the Components drop-down button, you can mouse over an applicable row that represents
+      the components of the host that you want to display. This is shown in the screenshot
+      below.</p>
+      <p>When you click the components drop-down button itself, you will see a list of all possible
+      master and slave components in the deployment as shown in the screenshot below. You can place
+      a check beside the component to which you want to add to a specific host and click
+        <uicontrol>Apply</uicontrol>.</p>
+      <fig>
+         <title> Components Drop-down on Hosts</title>
+         <image href="./media/Image_038.jpg" placement="break"/>
+      </fig>
+   </conbody>
+</concept>
