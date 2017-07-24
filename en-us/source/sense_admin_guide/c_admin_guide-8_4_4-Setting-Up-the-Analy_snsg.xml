@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_4_4">
+   <title>Setting Up the Analyzer Administration Account</title>
+   <conbody>
+      <p>The following are set up instructions for setting LDAP for SenSage AP Analyzer:</p>
+      <ol>
+         <li>Install Analyzer with LDAP authentication via the Deployment Manager.</li>
+         <li>Configure the following settings, as shown in .<draft-comment author="Hemraj" translate="no">ARE THESE
+          INSTRUCTIONS BASICALLY THE SAME AS AD/LDAP. CAN I REFER READER TO AD/LDAP Instructions in
+          Chapter 8</draft-comment>
+            <ol>
+               <li>LDAP/AD Manager DN: The distinguished name for the account used to control the LDAP
+            instance, or an account with search access.</li>
+               <li>LDAP/AD Password: The password for the Manager DN used to connect to the LDAP
+            instance.</li>
+               <li>LDAP/AD User Pattern: The pattern representing the query to find a user by user
+            identifier.The pattern should include the distinguished name of the entity containing
+            users and the attribute where the user ID is stored.</li>
+            </ol>
+            <fig>
+               <title> Configuring the LDAP Server</title>
+               <image href="./media/Image_240.jpg" placement="break" id="image_qwc_kln_wx"/>
+            </fig>
+         </li>
+         <li>The Analyzer "Admin" logs in.</li>
+         <li>The Analyzer "Admin" creates user accounts with appropriate group and role permissions that
+        match the username of LDAP user.</li>
+         <li>The LDAP user can then login using their LDAP password to Analyzer.</li>
+      </ol>
+   </conbody>
+</concept>

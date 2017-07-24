@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_1_2">
+   <title>Monitoring Task Priority</title>
+   <conbody>
+      <p>The EDW returns progress indicators for requests waiting in the queue. Use the "atview tasks"
+      command to see task priority. For example:</p>
+      <p>
+         <codeph>atview --user=administrator --pass=pass:s0mep@ss lmshost:8072 tasks</codeph>
+      </p>
+      <p>To view more specific information about task priority, query the system.task_list table with
+      the <codeph>--skip-queues</codeph> flag to push your query to the top of the tasks. For
+      example:<codeblock xml:space="preserve">atquery --skip-queues --user=administrator \
+--shared-secret=file:shared_secret.asc "sls01:8072,sls02:8072,sls03:8072"\
+--namespace='system' -expression='SELECT * FROM task_list;'</codeblock>
+      </p>
+      <p>
+         <note type="important">The <codeph>--skip-queues</codeph> flag works only with a
+            shared-secret, not a password. See <xref
+               href="c_admin_guide-4_2_5_1-Authentication-Optio_snsg.xml#topic_4_2_5_1"/>.</note>
+      </p>
+      <p>The <codeph>system.task_list</codeph> table contains the following information about running
+      tasks:</p>
+      <table id="table_ikt_4t5_vx">
+         <tgroup cols="3">
+            <colspec colnum="1" colname="col1" colwidth="1*"/>
+            <colspec colnum="2" colname="col2" colwidth="1.13*"/>
+            <colspec colnum="3" colname="col3" colwidth="3.87*"/>
+            <thead>
+               <row>
+                  <entry>Column Name</entry>
+                  <entry>Data Type</entry>
+                  <entry>Description</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <codeph>
+                        <codeph>row_type</codeph>
+                     </codeph>
+                  </entry>
+                  <entry>
+                     <codeph>varchar</codeph>
+                  </entry>
+                  <entry>Type of information being returned: <codeph>NODE</codeph> or
+                <codeph>TASK</codeph>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>node</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>varchar</codeph>
+                  </entry>
+                  <entry>The host that is being returned</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>port</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>int32</codeph>
+                  </entry>
+                  <entry>The port number (installation)</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>_systaskid</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>varchar</codeph>
+                  </entry>
+                  <entry>A 32-character hex string denoting the internal task ID</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>method_name</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>varchar</codeph>
+                  </entry>
+                  <entry>The name of the internal method being run</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>_extid</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>varchar</codeph>
+                  </entry>
+                  <entry>The "external" ID to which the client program given this task</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>at_top</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>bool</codeph>
+                  </entry>
+                  <entry>If true, the process running as the "master" for this operation</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>start_time</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>varchar</codeph>
+                  </entry>
+                  <entry>The start time of this task</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>finish_time</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>timestamp</codeph>
+                  </entry>
+                  <entry>The end time of this task (flushes every few minutes)</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>state</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>timestamp</codeph>
+                  </entry>
+                  <entry>The state of the task, such as <codeph>RUNNING</codeph>. The wait/blocked state
+              for task priority queuing is displayed as <codeph>EVENT_WAIT</codeph>.</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

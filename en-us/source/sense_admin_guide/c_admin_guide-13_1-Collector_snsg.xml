@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_13_1">
+   <title id="title_a46">Collector</title>
+   <conbody>
+      <table id="table_x2b_kxq_wx">
+         <tgroup cols="2">
+            <colspec colnum="1" colname="col1" colwidth="1*"/>
+            <colspec colnum="2" colname="col2" colwidth="6.09*"/>
+            <thead>
+               <row>
+                  <entry>Error Code</entry>
+                  <entry>Message</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>B1000</entry>
+                  <entry>Unable to find configuration file %s (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1001</entry>
+                  <entry>Unable to read configuration file %s (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1002</entry>
+                  <entry>Unable to create file '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1003</entry>
+                  <entry>Unable to delete file '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1004</entry>
+                  <entry>Unable to rename file '%s' to '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1005</entry>
+                  <entry>Unable to read file '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1006</entry>
+                  <entry>Unable to append to file '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1007</entry>
+                  <entry>Unable to link '%s' to '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1008</entry>
+                  <entry>Unable to read directory '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1009</entry>
+                  <entry>Unable to fork child process (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1010</entry>
+                  <entry>Exec of '%s' failed (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1011</entry>
+                  <entry>Unable to create directory '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1012</entry>
+                  <entry>Error writing stream '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1013</entry>
+                  <entry>Error reading stream '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1014</entry>
+                  <entry>Socketpair failed (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1015</entry>
+                  <entry>Program exiting due to thrown exception</entry>
+               </row>
+               <row>
+                  <entry>B1016</entry>
+                  <entry>Can't create socket '%s'-&gt;'%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1017</entry>
+                  <entry>Can't open SMTP server '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1018</entry>
+                  <entry>SMTP server fail on '%s'</entry>
+               </row>
+               <row>
+                  <entry>B1019</entry>
+                  <entry>Unable to find configuration DTD file in directory %s</entry>
+               </row>
+               <row>
+                  <entry>B1200</entry>
+                  <entry>Found %s nodes matching xpath='%s' expected exactly 1</entry>
+               </row>
+               <row>
+                  <entry>B1201</entry>
+                  <entry>DTD parse failed file='%s' error=[%s]</entry>
+               </row>
+               <row>
+                  <entry>B1202</entry>
+                  <entry>XML parse failed file='%s' error=[%s], backup config file may be available in
+              '%s'</entry>
+               </row>
+               <row>
+                  <entry>B1203</entry>
+                  <entry>DTD validation failed during load xml='%s' dtd='%s' error=[%s], backup config
+              file may be available in '%s'</entry>
+               </row>
+               <row>
+                  <entry>B1204</entry>
+                  <entry>DTD validation failed during save xml='%s' dtd='%s' error=[%s]</entry>
+               </row>
+               <row>
+                  <entry>B1205</entry>
+                  <entry>XML Node not found xpath='%s'</entry>
+               </row>
+               <row>
+                  <entry>B1206</entry>
+                  <entry>XML string parse failed error=[%s] string=[%s]</entry>
+               </row>
+               <row>
+                  <entry>B1207</entry>
+                  <entry>XML empty element '%s', backup config file may be available in '%s'</entry>
+               </row>
+               <row>
+                  <entry>B1208</entry>
+                  <entry>Expected DTD validation to fail on save, it didn't</entry>
+               </row>
+               <row>
+                  <entry>B1209</entry>
+                  <entry>Expected DTD validation to fail on load, it didn't</entry>
+               </row>
+               <row>
+                  <entry>B1300</entry>
+                  <entry>Time range Bad value '%s'</entry>
+               </row>
+               <row>
+                  <entry>B1301</entry>
+                  <entry>Time range expected 0-%s but got %s</entry>
+               </row>
+               <row>
+                  <entry>B1501</entry>
+                  <entry>Bad token '%s' as array delimiter</entry>
+               </row>
+               <row>
+                  <entry>B1502</entry>
+                  <entry>Bad hash name/value seperator expected ':' got '%s'</entry>
+               </row>
+               <row>
+                  <entry>B1503</entry>
+                  <entry>Bad token '%s' as hash delimiter</entry>
+               </row>
+               <row>
+                  <entry>B1504</entry>
+                  <entry>Unexpected token '%s'</entry>
+               </row>
+               <row>
+                  <entry>B1505</entry>
+                  <entry>Residuals tokens %s != %s</entry>
+               </row>
+               <row>
+                  <entry>B1506</entry>
+                  <entry>Test failed, unexpected result</entry>
+               </row>
+               <row>
+                  <entry>B1507</entry>
+                  <entry>Can't set more binary '%s'</entry>
+               </row>
+               <row>
+                  <entry>B1601</entry>
+                  <entry>Test of '%s' failed, expected throw of error code '%s' got no error</entry>
+               </row>
+               <row>
+                  <entry>B1700</entry>
+                  <entry>Failed to create SSL_CTX (%s) [%s]</entry>
+               </row>
+               <row>
+                  <entry>B1701</entry>
+                  <entry>Failed to set CTX options [%s]</entry>
+               </row>
+               <row>
+                  <entry>B1702</entry>
+                  <entry>Failed to create SSL (%s) [%s]</entry>
+               </row>
+               <row>
+                  <entry>B1703</entry>
+                  <entry>Failed to connect SSL [%s]</entry>
+               </row>
+               <row>
+                  <entry>B1704</entry>
+                  <entry>Failed to read private key from '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1705</entry>
+                  <entry>Failed to read certificate from '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1706</entry>
+                  <entry>Failed to accept SSL [%s]</entry>
+               </row>
+               <row>
+                  <entry>B1800</entry>
+                  <entry>Unmapped log field name(s) '%s'</entry>
+               </row>
+               <row>
+                  <entry>B1900</entry>
+                  <entry>Months and/or years not supported in interval (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1901</entry>
+                  <entry>Interval %s seconds is less than %s in (%s)</entry>
+               </row>
+               <row>
+                  <entry>B1902</entry>
+                  <entry>Interval %s seconds is greater than %s in (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1</entry>
+                  <entry>Unexpected Exception (%s) in file %s at line %s</entry>
+               </row>
+               <row>
+                  <entry>C1020</entry>
+                  <entry>Unable to create PID file %s</entry>
+               </row>
+               <row>
+                  <entry>C1021</entry>
+                  <entry>Unable to delete PID file %s</entry>
+               </row>
+               <row>
+                  <entry>C1022</entry>
+                  <entry>Unable to daemonize Collector. Exiting.</entry>
+               </row>
+               <row>
+                  <entry>C1023</entry>
+                  <entry>I/O Error during Controller startup (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1024</entry>
+                  <entry>Could not stop running Collector (PID %s) during startup</entry>
+               </row>
+               <row>
+                  <entry>C1025</entry>
+                  <entry>Collector did not remove PID file %s upon exit</entry>
+               </row>
+               <row>
+                  <entry>C1026</entry>
+                  <entry>Could not find PID file %s</entry>
+               </row>
+               <row>
+                  <entry>C1027</entry>
+                  <entry>Could not reap PID %s after trying for %s seconds</entry>
+               </row>
+               <row>
+                  <entry>C1100</entry>
+                  <entry>Failed to backout load from SLS instance='%s' uploadId='%s' exitCode='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1101</entry>
+                  <entry>Preprocess failure prog='%s' file='%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1102</entry>
+                  <entry>Load failed prior to uploadId instance='%s' file='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1103</entry>
+                  <entry>Load failed after uploadId instance='%s' file='%s' exitValue='%s'
+              uploadId='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1104</entry>
+                  <entry>Parse Failure instance='%s' file='%s' uploadId='%s' line=[%s]</entry>
+               </row>
+               <row>
+                  <entry>C1105</entry>
+                  <entry>Unable to parse time range '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1106</entry>
+                  <entry>Loader stopped due to fatal error text=%s</entry>
+               </row>
+               <row>
+                  <entry>C1107</entry>
+                  <entry>Timeout waiting for sub-process, terminating</entry>
+               </row>
+               <row>
+                  <entry>C1108</entry>
+                  <entry>No PTL found which matchs file name '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1109</entry>
+                  <entry>Load failed before 'final status' instance='%s' file='%s' uploadId='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1110</entry>
+                  <entry>Load failed instance='%s' file='%s' uploadId='%s' with 'final status...
+              %s'</entry>
+               </row>
+               <row>
+                  <entry>C1111</entry>
+                  <entry>Load failed broken pipe instance='%s' file='%s' uploadId='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1112</entry>
+                  <entry>Load failed bad exit status instance='%s' file='%s' uploadId='%s'
+              status='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1113</entry>
+                  <entry>Load failed exit status 10 (double TERM or INT) instance='%s' file='%s'
+              uploadId='%s' status='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1114</entry>
+                  <entry>Load failed exit status 15 (insufficient space on server) instance='%s' file='%s'
+              uploadId='%s' status='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1115</entry>
+                  <entry>Load failed exit status 20 (bad command line) instance='%s' file='%s'
+              uploadId='%s' status='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1116</entry>
+                  <entry>Load failed exit status 98 (failed to contact SLS) instance='%s' file='%s'
+              uploadId='%s' status='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1117</entry>
+                  <entry>Load failed exit status 99 (internal error) instance='%s' file='%s' uploadId='%s'
+              status='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1118</entry>
+                  <entry>Tar for daisy chain returned bad exit value '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1119</entry>
+                  <entry>Webui instance '%s' has no config.dat file</entry>
+               </row>
+               <row>
+                  <entry>C1120</entry>
+                  <entry>Bad or missing meta data file '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1121</entry>
+                  <entry>Loader '%s' already running ($!)</entry>
+               </row>
+               <row>
+                  <entry>C1400</entry>
+                  <entry>Retriever stopped due to fatal error name=%s text=%s</entry>
+               </row>
+               <row>
+                  <entry>C1401</entry>
+                  <entry>Preprocessor exited with bad status on preprocessor='%s' file='%s'
+              status='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1402</entry>
+                  <entry>No retriever type named '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1403</entry>
+                  <entry>Backup to '%s' failed status (%s), will retry in '%s' seconds.</entry>
+               </row>
+               <row>
+                  <entry>C1404</entry>
+                  <entry>Bad backup url '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1405</entry>
+                  <entry>Can't load .meta file '%s' (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1406</entry>
+                  <entry>Retriever name must contain alpha numeric and '_' '-' characters only
+              '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1407</entry>
+                  <entry>Bad exit status for md5sum command (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1408</entry>
+                  <entry>No output from md5sum command</entry>
+               </row>
+               <row>
+                  <entry>C1409</entry>
+                  <entry>Bad output from md5sum command (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1410</entry>
+                  <entry>Interval '%s' is less than 1 second</entry>
+               </row>
+               <row>
+                  <entry>C1411</entry>
+                  <entry>Months and years not supported in interval '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1412</entry>
+                  <entry>FTP connection to host '%s' failed to put file '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1413</entry>
+                  <entry>Size mismatch after download of '%s', %s != %s</entry>
+               </row>
+               <row>
+                  <entry>C1414</entry>
+                  <entry>No LogQueue specified for retriever '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1415</entry>
+                  <entry>Retriever '%s' already running ($!)</entry>
+               </row>
+               <row>
+                  <entry>C1416</entry>
+                  <entry>Preprocessor failed to generate output file preprocessor='%s' file='%s'</entry>
+               </row>
+               <row>
+                  <entry>C1417</entry>
+                  <entry>Gap in queue probability coverage at '%s' in retriever '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1418</entry>
+                  <entry>Unexpected failure to place file '%s' in queue</entry>
+               </row>
+               <row>
+                  <entry>C1419</entry>
+                  <entry>Low and high attribute on LogQueue must be from 0-99 in retriever '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1420</entry>
+                  <entry>Illegal retriever name '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1500</entry>
+                  <entry>FTP connection to host '%s' failed with message '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1501</entry>
+                  <entry>FTP connection to host '%s' failed on login to '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1502</entry>
+                  <entry>FTP connection to host '%s' failed on cwd to '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1503</entry>
+                  <entry>FTP connection to host '%s' failed on data transfer</entry>
+               </row>
+               <row>
+                  <entry>C1504</entry>
+                  <entry>FTP connection to host '%s' failed to delete file '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1505</entry>
+                  <entry>FTP connection to host '%s' failed to create file '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1506</entry>
+                  <entry>FTP connection to host '%s' failed on nlist</entry>
+               </row>
+               <row>
+                  <entry>C1507</entry>
+                  <entry>FTP connection to host '%s' failed on pwd</entry>
+               </row>
+               <row>
+                  <entry>C1508</entry>
+                  <entry>FTP connection to host '%s' failed on get '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1509</entry>
+                  <entry>FTP connection to host '%s' failed to set mode binary</entry>
+               </row>
+               <row>
+                  <entry>C1600</entry>
+                  <entry>SFTP connection to '%s' failed (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1601</entry>
+                  <entry>SFTP ls of '%s' failed (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1602</entry>
+                  <entry>SFTP get of '%s' failed (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1603</entry>
+                  <entry>SFTP rm of '%s' failed (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1604</entry>
+                  <entry>SFTP create of '%s' failed (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1605</entry>
+                  <entry>SFTP connection lost (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1606</entry>
+                  <entry>SFTP bad server version (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1607</entry>
+                  <entry>SFTP sftp client exit pid: %s, exit code: %s</entry>
+               </row>
+               <row>
+                  <entry>C1608</entry>
+                  <entry>SFTP put of '%s' failed (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1609</entry>
+                  <entry>SFTP unparseable line from ls '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1610</entry>
+                  <entry>SFTP unable to find ssh in path</entry>
+               </row>
+               <row>
+                  <entry>C1611</entry>
+                  <entry>SFTP unable to cd to '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1612</entry>
+                  <entry>SFTP unable to parse directory line '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1700</entry>
+                  <entry>Bad request '%s' only PUT supported</entry>
+               </row>
+               <row>
+                  <entry>C1701</entry>
+                  <entry>Bad request '%s' expect HTTP/1.x</entry>
+               </row>
+               <row>
+                  <entry>C1702</entry>
+                  <entry>Can't parse request '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1703</entry>
+                  <entry>Can't listen on '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1704</entry>
+                  <entry>Missing Content-Length: header on '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1705</entry>
+                  <entry>Oversized body %s &gt; %s</entry>
+               </row>
+               <row>
+                  <entry>C1706</entry>
+                  <entry>Premature socket EOF or error '%s' in %s</entry>
+               </row>
+               <row>
+                  <entry>C1707</entry>
+                  <entry>Can't parse file record '%s', on '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1708</entry>
+                  <entry>User/passwd required and not provided</entry>
+               </row>
+               <row>
+                  <entry>C1801</entry>
+                  <entry>Can't parse server status line '%s'</entry>
+               </row>
+               <row>
+                  <entry>C1802</entry>
+                  <entry>Unexpected EOF in server data</entry>
+               </row>
+               <row>
+                  <entry>C1803</entry>
+                  <entry>Server reports error (%s %s %s)</entry>
+               </row>
+               <row>
+                  <entry>C1804</entry>
+                  <entry>Unable to parse XML reply from server (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1805</entry>
+                  <entry>Server reports error detail (%s)</entry>
+               </row>
+               <row>
+                  <entry>C1806</entry>
+                  <entry>Failed to load SSL libraries (%s)</entry>
+               </row>
+               <row>
+                  <entry>C2000</entry>
+                  <entry>Could not start Controller</entry>
+               </row>
+               <row>
+                  <entry>C2001</entry>
+                  <entry>Could not create Log Queue at %s</entry>
+               </row>
+               <row>
+                  <entry>C2002</entry>
+                  <entry>Could not read Log Queue %s. Removing from rotation.</entry>
+               </row>
+               <row>
+                  <entry>C2003</entry>
+                  <entry>Could not write Log Queue %s. Removing from rotation.</entry>
+               </row>
+               <row>
+                  <entry>C2004</entry>
+                  <entry>Could not execute Log Queue %s. Removing from rotation.</entry>
+               </row>
+               <row>
+                  <entry>C2005</entry>
+                  <entry>%s MB free space on %s Log Queue is below minimum %s MB. Disabling %s.</entry>
+               </row>
+               <row>
+                  <entry>C2006</entry>
+                  <entry>Could not disable Log Queue %s.</entry>
+               </row>
+               <row>
+                  <entry>C2007</entry>
+                  <entry>Could not enable Log Queue %s</entry>
+               </row>
+               <row>
+                  <entry>C2008</entry>
+                  <entry>Could not find PID of group %s in state. Could not stop it.</entry>
+               </row>
+               <row>
+                  <entry>C2009</entry>
+                  <entry>Could not start Loader %s because it is using the same Log Queue %s as Loader
+              %s</entry>
+               </row>
+               <row>
+                  <entry>C2010</entry>
+                  <entry>User %s does not exist. Exiting.</entry>
+               </row>
+               <row>
+                  <entry>C2011</entry>
+                  <entry>No group id for user %s. Exiting.</entry>
+               </row>
+               <row>
+                  <entry>C2012</entry>
+                  <entry>Failed to change UID to %s (now: %s, %s)</entry>
+               </row>
+               <row>
+                  <entry>C2013</entry>
+                  <entry>Failed to change GID to %s (now: %s, %s)</entry>
+               </row>
+               <row>
+                  <entry>C2014</entry>
+                  <entry>Log Queue Root dir %s does not exist</entry>
+               </row>
+               <row>
+                  <entry>C2015</entry>
+                  <entry>Collector/FileRoot is not defined</entry>
+               </row>
+               <row>
+                  <entry>C2016</entry>
+                  <entry>FileRoot is not configured correctly. %s does not exist.</entry>
+               </row>
+               <row>
+                  <entry>C2017</entry>
+                  <entry>Collector/StateRoot is not defined</entry>
+               </row>
+               <row>
+                  <entry>C2018</entry>
+                  <entry>StateRoot is not configured correctly. %s does not exist.</entry>
+               </row>
+               <row>
+                  <entry>C2019</entry>
+                  <entry>A Shepherd has disappeared and will not be respawned. May have exited on error or
+              been killed. (name: %s)</entry>
+               </row>
+               <row>
+                  <entry>C2020</entry>
+                  <entry>A Loader has disappeared and will not be respawned. May have exited on error or
+              been killed. (name: %s)</entry>
+               </row>
+               <row>
+                  <entry>C2100</entry>
+                  <entry>Could not open dashboard file %s (%s)</entry>
+               </row>
+               <row>
+                  <entry>C2200</entry>
+                  <entry>Could not create state directory %s</entry>
+               </row>
+               <row>
+                  <entry>C2201</entry>
+                  <entry>General error when creating state dir (%s)</entry>
+               </row>
+               <row>
+                  <entry>C2202</entry>
+                  <entry>Could not instantiate DB File %s</entry>
+               </row>
+               <row>
+                  <entry>C2203</entry>
+                  <entry>Could not optimize statefile %s</entry>
+               </row>
+               <row>
+                  <entry>C2301</entry>
+                  <entry>SCP No SourceFile entries specified for '%s'</entry>
+               </row>
+               <row>
+                  <entry>C2302</entry>
+                  <entry>SCP non zero exit value from scp downloading '%s'</entry>
+               </row>
+               <row>
+                  <entry>C2303</entry>
+                  <entry>SCP no files retrieved '%s'</entry>
+               </row>
+               <row>
+                  <entry>C2304</entry>
+                  <entry>SCP STDERR: %s</entry>
+               </row>
+               <row>
+                  <entry>C2400</entry>
+                  <entry>WWW IP for host '%s' not found</entry>
+               </row>
+               <row>
+                  <entry>C2401</entry>
+                  <entry>WWW Failed to retrieve '%s'</entry>
+               </row>
+               <row>
+                  <entry>C2402</entry>
+                  <entry>WWW Body size mismatch Content-Length: %s != downloaded: %s</entry>
+               </row>
+               <row>
+                  <entry>C2403</entry>
+                  <entry>WWW No content length in headers</entry>
+               </row>
+               <row>
+                  <entry>C2404</entry>
+                  <entry>WWW Can't load SSLStream, open SSL possibly not installed? (%s)</entry>
+               </row>
+               <row>
+                  <entry>C2405</entry>
+                  <entry>WWW Unparseable status line from server (%s)</entry>
+               </row>
+               <row>
+                  <entry>C2406</entry>
+                  <entry>WWW bad status from server (%s)</entry>
+               </row>
+               <row>
+                  <entry>C2501</entry>
+                  <entry>Can't use Schedule and Period at the same time in '%s'</entry>
+               </row>
+               <row>
+                  <entry>C2601</entry>
+                  <entry>Host Glob of SourceHost '%s' results in 0 results</entry>
+               </row>
+               <row>
+                  <entry>C2701</entry>
+                  <entry>Daisy Chain untar of '%s' to '%s' failed exit code '%s'</entry>
+               </row>
+               <row>
+                  <entry>C2702</entry>
+                  <entry>Daisy Chain meta and logfile pair are bad, log: '%s' meta: '%s'</entry>
+               </row>
+               <row>
+                  <entry>C2703</entry>
+                  <entry>Daisy Chain Got '%s' files in tar file, expected 2</entry>
+               </row>
+               <row>
+                  <entry>C2801</entry>
+                  <entry>LEA Can't parse log line (%s) from '%s'</entry>
+               </row>
+               <row>
+                  <entry>C2802</entry>
+                  <entry>LEA return code: %s</entry>
+               </row>
+               <row>
+                  <entry>C2803</entry>
+                  <entry>LEA debug output: %s</entry>
+               </row>
+               <row>
+                  <entry>C2804</entry>
+                  <entry>LEA unsafe cma name '%s'</entry>
+               </row>
+               <row>
+                  <entry>C2805</entry>
+                  <entry>LEA Can't parse log line (%s)</entry>
+               </row>
+               <row>
+                  <entry>C2806</entry>
+                  <entry>LEA bad mode (%s)</entry>
+               </row>
+               <row>
+                  <entry>C2900</entry>
+                  <entry>Unable to find template variable '%s' in replacement hash</entry>
+               </row>
+               <row>
+                  <entry>C2901</entry>
+                  <entry>No such test '%s'</entry>
+               </row>
+               <row>
+                  <entry>C3000</entry>
+                  <entry>Unable to connect to '%s' ('%s')</entry>
+               </row>
+               <row>
+                  <entry>C3001</entry>
+                  <entry>Query failed: %s (SQL: %s)</entry>
+               </row>
+               <row>
+                  <entry>C3002</entry>
+                  <entry>Database fetch failed: %s</entry>
+               </row>
+               <row>
+                  <entry>C3003</entry>
+                  <entry>No state value for column '%s', and no default exists</entry>
+               </row>
+               <row>
+                  <entry>C3004</entry>
+                  <entry>No StateCol definition for parameter '%s'</entry>
+               </row>
+               <row>
+                  <entry>C3005</entry>
+                  <entry>No SQL query defined</entry>
+               </row>
+               <row>
+                  <entry>C3006</entry>
+                  <entry>State Column '%s' is missing from the SQL query</entry>
+               </row>
+               <row>
+                  <entry>C3007</entry>
+                  <entry>Received result type '%d', expected 4040</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

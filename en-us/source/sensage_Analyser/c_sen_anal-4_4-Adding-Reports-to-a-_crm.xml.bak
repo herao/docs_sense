@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_4">
+   <title>Adding Reports to a Dashboard</title>
+   <conbody>
+    <p>After you have saved the dashboard, you will see the name of the dashboard that you provided
+      in the upper left corner of the screen. The new dashboard will be empty with only one large
+      "Add a Report" icon.</p>
+    <p>Figure 3-5: Adding a Report to a Dashboard</p>
+    <p><image href="./media/Image_125.jpg" height="151" width="457" id="image_qgd_43m_zx"/></p>
+    <p>To add reports to the dashboard:</p>
+    <ol id="ol_rgd_43m_zx">
+      <li>Either click the large "Add a Report" or click the "Gear" icon for the dashboard settings
+        menu and select "New Report Pod."<p>
+          <note>Each report pod contains one report.<p>Figure 3-6: Naming the Dashboard
+            Pod</p></note>
+        </p><p><image href="./media/Image_126.jpg" height="222" width="612" id="image_sgd_43m_zx"
+          /></p></li>
+      <li>If desired, enter an optional name for the dashboard pod. Refer to Figure 3-6 for an
+        example: </li>
+      <li>To select the run configuration for the dashboard pod report, click the dropdown triangle
+        to the right of the box below and select one of the followng:<ol id="ol_sbj_kkm_zx">
+          <li><b>Most Recent AdHoc</b> retrieves report data from the user’s latest run of the
+            specified report. </li>
+          <li><b>Most Recent Scheduled</b> retrieves report data from the latest scheduled results
+            of the specified report.</li>
+          <li>
+            <b>Always Re-Run</b> always re-runs report data to show current results and saves it to
+              history.<p>Figure 3-7: Naming the Dashboard Pod</p><p><image
+                href="./media/Image_128.jpg" height="272" width="610" id="image_ugd_43m_zx"
+            /></p></li>
+        </ol></li>
+      <li> To select the report, click the dropdown triangle on the right of the box below the label
+        "Select the report to display in this dashboard pod. To find the report you want to add,
+        scroll through the dropdown list to find the report or type part of the report name in the
+        search box.<p>Figure 3-8: Finding and Selecting a Report for a Dashboard</p><p>
+          <image href="./media/Image_129.jpg" id="image_vgd_43m_zx" placement="break" scale="50"/>
+        </p><p>
+          <note>By default the pod will be named the same as the report you select. The pod
+            name is displayed as the title in the green heading on each report pod. You can change
+            this from the report name by editing the box “Dashboard pod name."</note>
+        </p></li>
+      <li>If the report you are adding has parameterized filters, you will see a grid with the list
+        of filters. You can specify the Operator and Parameter value for each parameter. If the
+        parameters are required, you must provide these values in order to save the report.<p>Figure
+          3-9: List of Parameterized Filters for Dashboard Pod</p><p>
+          <image href="./media/Image_130.jpg" id="image_wgd_43m_zx" placement="break" scale="55"/>
+        </p></li>
+      <li>If a chart has been configured for the report, the area of the screen below your parameter
+        settings will have options to display either the chart, the grid, or both. To do this, click
+        the checkboxes corresponding to the "Show Charts" and "Show Grid" labels.<p>Figure 3-10:
+          Show Charts or Grids for Report on Dashboard Pod</p><p><image href="./media/Image_131.jpg"
+            height="99" width="514" id="image_xgd_43m_zx"/></p></li>
+      <li>If a field has been selected as the limit for the date and time range of the report, you
+        have the option of changing the date and time range limit on the "Date and Time Range"
+        tab.<note>NOTE: Click Now for current date and time, or click applicable dates in the
+          calendar choosing the month and the year through the dropdown and choosing the date for
+          the desired month and dragging the slider for desired hour, minute, and second. C</note></li>
+      <li>Click Done.<p>The date and time are automatically populated in the Date and Time Range
+          box. NEW SCREENSHOT NEEDED</p><p>Figure 3-11: Date and Time Range for Dashboard Pod</p><p>
+          <image href="./media/Image_132.jpg" id="image_ygd_43m_zx" placement="break" scale="55"/>
+        </p></li>
+      <li>Click Save Pod.<p>You will see the dashboard now displayed with your specified report as
+          shown in the sample below.</p><p>Figure 3-12: Dashboard with Report Display</p><p><image
+            href="./media/Image_133.jpg" height="316" width="599" id="image_zgd_43m_zx"/></p><p>
+          <note>If necessary, you can return to the previous screens to modify the settings of
+            the pod. To do this, hover the mouse over the upper right corner of a pod until the pod
+            settings icon is displayed; click this icon to view the pod settings menu and select
+            Settings…</note>
+        </p><p> Figure 3-13: Dashboard Pod Display</p><p><image href="./media/Image_134.jpg"
+            height="347" width="616" id="image_ahd_43m_zx"/></p></li>
+      <li>You can repeat steps 1-7 up to twenty times to add other reports to the dashboard.</li>
+    </ol>
+  </conbody>
+</concept>

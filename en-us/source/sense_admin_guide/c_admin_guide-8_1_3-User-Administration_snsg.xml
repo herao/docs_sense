@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_1_3">
+   <title>User Administration</title>
+   <conbody>
+      <p>Through SenSage AP Analyzer, support for user, role, and group maintenance is provided. For
+      information on using the Analyzer to manage users, roles and permissions, see the
+        <cite>SenSage AP Analyzer Guide</cite>.</p>
+   </conbody>
+</concept>

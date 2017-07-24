@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_4_4">
+   <title>Administration</title>
+   <conbody>
+    <p>Figure 1-16: Administration Tab</p>
+     <p>
+      <image href="./media/Image_052.jpg" id="image_aw2_xvl_zx" placement="break" scale="60"/>
+    </p>
+     <p>The Administration tab as shown in Figure 1-16 has five submenus:: </p>
+    <ul id="ul_yv2_xvl_zx">
+      <li>
+        <p>User—allows administrators to create and manage individual user accounts</p>
+      </li>
+      <li>
+        <p>Groups—allows administrators to create and manage groups of users.</p>
+      </li>
+      <li>
+        <p>Roles—allows administrators to set up global permissions based on user roles (type of
+          user or group)</p>
+      </li>
+      <li>
+        <p>Analytics—allows analysts to manage tags, categories, and other analytics features.</p>
+      </li>
+      <li>
+        <p>Export and Import—allows analysts to manage tags, categories, and other analytics
+          features. <note>An LDAP sub-menu is displayed on this menu pane if LDAP integration is
+            configured.</note></p>
+      </li>
+    </ul>
+  </conbody>
+</concept>

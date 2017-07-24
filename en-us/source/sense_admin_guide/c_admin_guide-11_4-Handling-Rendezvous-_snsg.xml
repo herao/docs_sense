@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11_4">
+   <title>Handling Rendezvous Timeouts</title>
+   <conbody>
+      <p>If you see a “rendezvous timeout” error, contact Technical Support for assistance.</p>
+   </conbody>
+</concept>

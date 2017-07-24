@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_4_5_1">
+  <title><i>tables</i>: Viewing Tables and Views in a Namespace</title>
+   <conbody>
+      <p>Lists the tables and views in a given namespace. If you specify the<codeph>
+        --timestamps</codeph> option, the output includes the start and end timestamps, which are
+      useful to create <codeph>DURING</codeph> clauses.</p>
+      <p>Example:<codeblock xml:space="preserve">atview --user=administrator --pass=s0mep@ss lmshost:8072 \
+--namespace=external.websvcs --timestamps tables</codeblock>
+      </p>
+      <note>
+         <p>Views are listed always with "(no records)" in the columns for minimum and maximum
+        timestamps. The command will display an ’error’ column and include error messages in the
+        column when there are inconsistencies across hosts in the cluster. Otherwise the ’error’
+        column is empty.</p>
+      </note>
+      <codeblock xml:space="preserve">|---------------+---------------+---------------+-------------+-----------|
+|namespace      |table_name     |min_time       |max_time     |error      |
+|---------------+---------------+---------------+-------------+-----------|
+|default        |events         |(no records)   |(no records) |           |
+|default        |sys_alerts     |(no records)   |(no records) |           |
+|---------------+---------------+---------------+------------+------------|
+</codeblock>
+   </conbody>
+</concept>

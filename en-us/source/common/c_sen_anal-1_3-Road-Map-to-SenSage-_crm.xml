@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1_3">
+   <title>Road Map to SenSage AP Documentation </title>
+   <conbody>
+    <p>This document, the <cite>SenSage AP Analyzer Guide</cite>, is part of the larger
+      documentation set of your SenSage AP system. Figure P-1 below, illustrates SenSage AP
+      components and modules in the context of their function within the SenSage AP system.</p>
+    <p>Figure P-1: Road Map to SenSage AP Documentation</p>
+    <p><image href="./media/Image_005.jpg" height="465" width="531" id="image_dkx_gd4_yx"/></p>
+    <p>The table below describes all the manuals in the SenSage AP documentation set and the user
+      roles to which they are directed.</p>
+    <table id="table_ekx_gd4_yx">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <thead>
+          <row>
+            <entry>Role</entry>
+            <entry>Tasks</entry>
+            <entry>Documentation</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Developer, Report Developer</entry>
+            <entry>
+              <ul id="ul_ikx_gd4_yx">
+                <li>
+                  <p>Learn about Analytics</p>
+                </li>
+                <li>
+                  <p>Use IntelliSchema views</p>
+                </li>
+                <li>
+                  <p>Learn about the Foundation and Compliance Analytics packages</p>
+                </li>
+                <li>
+                  <p>Learn about additional Analytics packages</p>
+                </li>
+              </ul>
+            </entry>
+            <entry><cite>Analyzer Guide</cite></entry>
+          </row>
+          <row>
+            <entry>Business Analyst or System Administrator</entry>
+            <entry>
+              <ul id="ul_mbb_f24_yx">
+                <li>
+                  <p>Get an overview of advanced Analytics</p>
+                </li>
+                <li>
+                  <p>View a listing of all sample models available in the Analytics package</p>
+                </li>
+                <li>
+                  <p>Learn how to implement a Data Table in sample models</p>
+                </li>
+                <li>
+                  <p>Find reference details on each Advanced Analytics model and model component</p>
+                </li>
+              </ul>
+            </entry>
+            <entry><cite>Analytics Guide</cite></entry>
+          </row>
+          <row>
+            <entry>Developer, Report Developer or Security Analyst</entry>
+            <entry>
+              <ul id="ul_jkx_gd4_yx">
+                <li>
+                  <p>Use SenSage AP SQL, SenSage AP SQL functions, and libraries to create reports or query
+                    the EDW</p>
+                </li>
+                <li>
+                  <p>Access EDW data using open standards as ANSI SQL, ODBC, and JDBC</p>
+                </li>
+                <li>
+                  <p>Create and use Perl code in SenSage AP SQL statements</p>
+                </li>
+                <li>
+                  <p>Use the DBD Driver to query SenSage AP from other locations</p>
+                </li>
+              </ul>
+            </entry>
+            <entry><cite>Event Data Warehouse Guide</cite></entry>
+          </row>
+          <row>
+            <entry>Security System Administrator</entry>
+            <entry>
+              <ul id="ul_kkx_gd4_yx">
+                <li>
+                  <p>Configure retrievers, receivers, and collectors</p>
+                </li>
+                <li>
+                  <p>Enable/disable log adapters</p>
+                </li>
+                <li>
+                  <p>Configure SenSage APRetriever</p>
+                </li>
+                <li>
+                  <p>Create log adapter PTL files</p>
+                </li>
+              </ul>
+            </entry>
+            <entry><cite>Collector Guide</cite></entry>
+          </row>
+          <row>
+            <entry>System Administrator</entry>
+            <entry>
+              <ul id="ul_lkx_gd4_yx">
+                <li>
+                  <p>Install SenSage AP</p>
+                </li>
+                <li>
+                  <p>Configure SenSage AP and its components</p>
+                </li>
+                <li>
+                  <p>Configure Vmware</p>
+                </li>
+              </ul>
+            </entry>
+            <entry><cite>Installation, Configuration, and Upgrade Guide</cite></entry>
+          </row>
+          <row>
+            <entry>System Administrator</entry>
+            <entry>
+              <ul id="ul_mkx_gd4_yx">
+                <li>
+                  <p>Manage the SenSage AP Event Data Warehouse (EDW)</p>
+                </li>
+                <li>
+                  <p>Manage the Collector</p>
+                </li>
+                <li>
+                  <p>Manage users, groups, and permissions</p>
+                </li>
+                <li>
+                  <p>Archive to nearline storage</p>
+                </li>
+                <li>
+                  <p>Manage assets &amp; monitor security alerts</p>
+                </li>
+                <li>
+                  <p>Monitor log source health</p>
+                </li>
+                <li>
+                  <p>Monitor system health</p>
+                </li>
+                <li>
+                  <p>Troubleshoot</p>
+                </li>
+                <li>
+                  <p>Error Messages</p>
+                </li>
+              </ul>
+            </entry>
+            <entry><cite>Administration Guide</cite></entry>
+          </row>
+          <row>
+            <entry>Legal</entry>
+            <entry>Monitor third-party licenses</entry>
+            <entry><cite>Third-Party Open Source Licensing</cite></entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+
+     
+
+
+
+
+
+    <note>TIP: You can access the manuals listed above from:
+      <ul id="ul_nkx_gd4_yx">
+        <li>
+          <p>SenSage AP Welcome page</p>
+          <p>Click the <b>Documentation</b> hyperlink.</p>
+        </li>
+      </ul>
+    </note>
+
+  </conbody>
+</concept>

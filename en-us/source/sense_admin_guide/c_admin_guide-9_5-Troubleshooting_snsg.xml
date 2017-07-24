@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_5">
+   <title>Troubleshooting</title>
+   <conbody>
+      <p>
+         <b>I am not able to synchronize the AD users with the Analyzer Host?</b>
+      </p>
+      <p>You can verify the connectivity from the Analyzer to the AD server using the telnet command.
+      For example:</p>
+      <codeblock xml:space="preserve">telnet ad_server 389</codeblock>
+      <p>
+         <b>How do I make sure that enumerator credentials are correct to get all users and groups in
+        the hexis OU returned?</b>
+      </p>
+      <p>Run the <b>ldapsearch</b> command in the host terminal as shown in the syntax below; in the
+      command specify the LDAP container that you want to verify.</p>
+      <p>
+         <b>Syntax</b>:</p>
+      <codeblock xml:space="preserve">/opt/hexis/hawkeye-ap/bin/ldapsearch -D "&lt;bind DN&gt;" -w enum -p &lt;port on LDAP
+server&gt; -h &lt;LDAP server address&gt; -b "&lt;base dn for search&gt;" -s sub "&lt;search
+scope&gt;"
+/opt/hexis/hawkeye-ap/bin/ldapsearch -D CN=enum, CN=Users, DC=qaad,
+DC=sensage, DC=com" -w enum -p 389 -h 10.0.1.181 -b "OU=sensage, DC=qaad,
+DC=sensage, DC=com" -s sub "(objectclass=*)"</codeblock>
+      <p>
+         <b>Example</b>:</p>
+      <codeblock xml:space="preserve">/opt/hexis/hawkeye-ap/bin/ldapsearch -D
+"CN=enum,CN=Users,DC=qaad,DC=sensage,DC=com" -w enum -p 389 -h 10.0.1.181 -b
+"OU=sensage,DC=qaad,DC=sensage,DC=com" -s sub"(objectclass=*)"</codeblock>
+      <p>
+         <b>Where can I look for error logs in case any problems with AD/LDAP configuration occurs?
+      </b>
+      </p>
+      <p>You can refer to the error messages in the <b>Analyzer.log</b> located in the following
+      location:</p>
+      <p>
+         <filepath>/opt/tomcat/logs</filepath>
+      </p>
+      <p>The following log is one of the example error messages:</p>
+      <codeblock xml:space="preserve">[Thu Aug 20 18:57:35 UTC 2015] SEVERE:
+com.hexiscyber.analyzer.web.security.SiemUsernamePasswordAuthenticationFilter
+doFilter - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceExcep
+tion: [LDAP: error code 49 - 80090308: LdapErr: DSID-0C090334, comment:
+AcceptSecurityContext error, data 525, vece]; nested exception is
+javax.naming.AuthenticationException: [LDAP: error code 49 - 80090308:LdapErr:
+DSID-0C090334, comment: AcceptSecurityContext error, data 525, vece]</codeblock>
+   </conbody>
+</concept>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_3_3">
+   <title>Pod Options</title>
+   <conbody>
+    <p>Whenever you hover the mouse over each pod a pop-up menu is displayed that allows you to
+      perform the following actions on the specific pod, as shown in the figure.</p>
+    <ul id="ul_il1_wtl_zx">
+      <li>Toggle Axis Labels—Allows you to toggle the items displayed on the X and Y axis.</li>
+      <li>Toggle Data Labels—Allows you to display values on the Y axis on the pie chart. </li>
+      <li>
+        <p>Toggle 3D View of the chart—Allows you to switch between the three dimensional and two
+          dimensional views of the charts.</p>
+      </li>
+      <li>
+        <p>Print pod using browser printing to a local printer</p>
+      </li>
+      <li>
+        <p>Export pod to JPEG, PNG, or PDF formats</p>
+      </li>
+      <li>
+        <p>View original report</p>
+      </li>
+      <li>
+        <p>Toggle the grid on and off to gain a larger view of the chart</p>
+      </li>
+      <li>
+        <p>Toggle the chart on and off to gain a larger view of the grid.</p>
+        <fig><title>Figure 1-11: Export Pod</title><image href="./media/Image_037.png" placement="break" scale="50" id="image_kl1_wtl_zx"/></fig>
+      </li>
+    </ul>
+  </conbody>
+</concept>

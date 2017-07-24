@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_6_1">
+   <title>Removing Filters from a Report Display</title>
+  <conbody><p>To remove filters from the report display, click the x icon (<image placement="inline" href="media/button_removeFilter.png"></image>) available on the filter label, as
+      shown in the screenshot below.</p>
+    
+      <fig id="fig_ftm_dfs_2y">
+        <title>Figure 2-11-1: Applied filters</title>
+        <image href="media/Image_886.png" placement="break" scale="35"/>
+      </fig>
+    <p>In the screenshot above, to remove the applied filter to the charts (<image
+        href="media/Image_887.png" placement="inline" id="image_n4l_zgs_2y" scale="80"/>)and the
+      quick filter applied to the <uicontrol>hyperlink</uicontrol> column (<image
+        href="media/Image_888.png" placement="inline" scale="60" id="image_irh_dhs_2y"/>), click
+        <image placement="inline" href="media/button_removeFilter.png" id="image_ig5_4qs_2y"/> on
+      the labels. The resulting chart and the report are shown in the figure below.<fig
+        id="fig_nk4_pqs_2y">
+        <title>Figure 2-11-2</title>
+        <image href="media/Image_889.png" placement="break" scale="35"/>
+      </fig></p>
+    </conbody>
+</concept>

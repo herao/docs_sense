@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_2">
+   <title>Running a Report</title>
+   <conbody>
+    <p>To run a report:</p>
+    <ol id="ol_n31_hpm_zx">
+      <li>Go to the Analyzer dashboard, select Data Design from the dropdown list and click Reports.
+        The Manage Report screen with the current listing of reports is displayed.</li>
+      <li>First scroll or use filters to find the desired report. For details on finding reports,
+        see Chapter 2: Viewing Reports. Then select the report:<p>a If you want to view a report’s
+          last run, check the desired report, click the Run button, and from the dropdown list,
+          select View Last Run. Otherwise, see Step 3.</p><note>NOTE: The View Last Run option will
+          access which ever is the latest report from the report’s history; the last report run can
+          be either an ad hoc or scheduled report.</note><p>NEED NEW SCREENSHOT</p><p>Figure 4-10:
+          Selecting Report to Run</p><p><image href="./media/Image_149.jpg" height="314" width="556"
+            id="image_o31_hpm_zx"/></p></li>
+      <li>If selecting a report to run instead of viewing a last run of a report, choose one of the
+        desired Run options described below:
+        <p>
+          <note>You may check only one report to run at one time; however, you can select other
+            reports without waiting for the previous report to complete. If you have logged out of a
+            session in which reports are running, they will continue to run, but will not be available
+            for viewing in the Report Queue.</note>
+        </p>
+        <p>NEED NEW SCREENSHOT</p>
+        <p>Figure 4-11: Selecting Run Option</p>
+        <p><image href="./media/Image_150.jpg" height="282" width="538" id="image_p31_hpm_zx"/></p>
+        <ol><li>To run the report and retain a copy of the report for historical purposes, select Run and
+          Retain. The report’s run history is retained up to a specified retention period that is set
+          for the report (see “Setting Report Retention for Report History”, on page 74).</li>
+        <li>To run the report once and save it only for the duration of the session, select Run Once.
+          After you end your session and log out, the report no longer exists in the system and no
+          history of the run is recorded.
+          <p><image href="./media/Image_151.jpg" height="250" width="619" id="image_q31_hpm_zx"/></p>
+          <p>A sample report is displayed as shown in Figure 4-12. NEED NEW SCREENSHOT Figure 4-12: Report
+            Display</p>
+          <note>If your report does not display immediately, you can go to the Report Queue to see the
+            status of your report run. For details see, “Viewing Report Run Status”, on page 65.</note>
+        </li>
+       
+        <li>To review the report history for the report you have just run, click the last icon on
+            the toolbar as shown in the red-circle above to display the report with history as shown
+            in Figure 4-13. <p>NEED NEW SCREENSHOT</p><p>Figure 4-13: Report Display with
+              History</p><p><image href="./media/Image_152.jpg" height="252" width="621"
+                id="image_r31_hpm_zx"/></p><p>
+              <note>TIP: You can select the Information icon (in upper right of the screen, third
+                icon from the right) to view the SQL code for the current result set which can
+                provide you with information such as parameters used in the report.</note>
+            </p>
+          </li>
+        </ol>
+      </li>
+    </ol>
+    
+  </conbody>
+</concept>

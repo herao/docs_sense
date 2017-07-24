@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_4_1">
+   <title>Dashboard</title>
+   <conbody>
+    <p>When you click Dashboard a dropdown list is displayed that lists all dashboards in the system
+      to which you have access. To access a desired dashboard, select it from the list. You can
+      create dashboards to add to your system. For details, <xref
+        href="c_sen_anal-4-CREATING-ANDMODIFYI_crm.xml"/>.</p>
+  </conbody>
+</concept>

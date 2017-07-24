@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_5">
+   <title id="title_a16">Retiring Data</title>
+   <conbody>
+      <p>This section contains the following topics:<ul id="ul_ikd_lk5_vx">
+            <li>
+               <xref href="c_admin_guide-4_5_1-Synopsis_snsg.xml#topic_4_5_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_5_2-Description_snsg.xml#topic_4_5_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_5_3-Options_snsg.xml#topic_4_5_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_5_4-Parameters_snsg.xml#topic_4_5_4"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_5_5-Arguments_snsg.xml#topic_4_5_5"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_5_6-Using-the-FORCE-Keyw_snsg.xml#topic_4_5_6"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_5_7-Specifying-the-Data-_snsg.xml#topic_4_5_7"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_5_8-Permissions-Required_snsg.xml#topic_4_5_8"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_5_9-Interrupting-Deletio_snsg.xml#topic_4_5_9"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4">
+   <title>Creating and Modifying a Dashboard</title>
+   <conbody>
+    <p>If you have "Editor" rights to create dashboards, you can create a dashboard from scratch and
+      set up a default dashboard for users to view and rearrange.</p>
+    <p>This chapter contains these sections:<ul id="ul_egg_jhm_zx">
+        <li><xref href="c_sen_anal-4_1-Setting-Up-the-Initi_crm.xml"/></li>
+        <li><xref href="c_sen_anal-4_2-Adding-Dashboards_crm.xml"/></li>
+        <li><xref href="c_sen_anal-4_3-Modifying-a-Dashboar_crm.xml"/></li>
+        <li><xref href="c_sen_anal-4_4-Adding-Reports-to-a-_crm.xml"/></li>
+      </ul></p>
+  </conbody>
+</concept>

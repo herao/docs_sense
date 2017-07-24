@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_3">
+   <title id="title_a43">Archiving of Local Data to Nearline Storage</title>
+   <conbody>
+      <p>You can archive the local data in a table to Nearline storage with the
+        <codeph>archivetbl</codeph> subcommand of the <codeph>atmanage</codeph> utility. You can
+      archive the entire table, or you can limit the archiving to a specific time frame. You will
+      need to run this command every time you want to archive data. You may want to write a script
+      that calculates the maximum and minimum timestamp parameters required by the command, and then
+      schedule that script to run on a regular schedule using a scheduling utility such as the Linux
+        <codeph>cron</codeph> utility.</p>
+   </conbody>
+</concept>

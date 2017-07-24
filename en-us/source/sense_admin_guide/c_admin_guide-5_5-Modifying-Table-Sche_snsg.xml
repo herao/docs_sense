@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_5">
+   <title id="title_a21">Modifying Table Schema Using the ALTER TABLE Tool</title>
+   <conbody>
+      <p>The ALTER TABLE tool provides the following SQL statements that you can execute to modify the
+      schema of an EDW database table.</p>
+      <ul id="ul_wpq_kdv_vx">
+         <li>ADD: To add columns</li>
+         <li>RENAME: To rename existing columns</li>
+         <li>MODIFY: To modify the data type of an existing column in a table</li>
+         <li>SPLIT: To split and create multiple columns</li>
+      </ul>
+      <p>When you change the schema of a table using the ALTER TABLE tool, the table is changed across
+      the cluster. The ALTER TABLE tool can be used directly or invoked on the terminal to start a
+      console session the session you can start one or more ALTER TABLE SQL statements.</p>
+      <p>Alternatively, the ALTER TABLE can also be used as an interpreter where you can write the
+      required ALTER TABLE SQL statements in an executable script file and run it.</p>
+      <p>
+         <note>The time taken to alter a table schema depends on various parameters such as number of
+        EDW nodes, volume of data in the table, network latencies etc.</note>
+      </p>
+   </conbody>
+</concept>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5">
+   <title>Creating, Modifying, and Running a Report</title>
+   <conbody>
+    <p>This chapter describes how to use the Analyzer Report Creation Wizard to create a basic
+      report along with optional configuration features such as runtime parameters, complex data
+      filters, and integration with data models.</p>
+    <p>
+      <note>Because it is best to run your report before configuring a chart, details on
+        creating and configuring charts for your report is presented as a separate chapter. If you
+        choose to configure a chart for your report, see Chapter 5: Creating and Modifying Charts
+        for a Report after you have run the report.</note>
+    </p>
+    <p>After you create a report, you can edit the report at any time and use the Report Creation
+      Wizard features to make your changes.</p>
+    <p>This chapter contains the following topics:<ul id="ul_mcv_qlm_zx">
+        <li><xref href="c_sen_anal-5_1-Creating-a-Report_crm.xml"/></li>
+        <li><xref href="c_sen_anal-5_2-Running-a-Report_crm.xml"/></li>
+        <li><xref href="c_sen_anal-5_3-Viewing-Report-Run-S_crm.xml"/></li>
+        <li><xref href="c_sen_anal-5_4-Modifying-a-Report_crm.xml"/></li>
+        <li><xref href="c_sen_anal-5_5-Joining-Multiple-Tab_crm.xml"/></li>
+        <li><xref href="c_sen_anal-5_6-Specifying-a-Summary_crm.xml"/></li>
+        <li><xref href="c_sen_anal-5_7-Providing-a-Date-Lim_crm.xml"/></li>
+        <li><xref href="c_sen_anal-5_8-Setting-Report-Reten_crm.xml"/></li>
+        <li><xref href="c_sen_anal-5_9-Providing-Interactiv_crm.xml"/></li>
+        <li><xref href="c_sen_anal-5_10-Specifying-Data-Filt_crm.xml"/></li>
+        <li><xref href="c_sen_anal-5_11-Integrating-Data-Mod_crm.xml"/></li>
+        <li><xref href="c_sen_anal-5_12-Associating-the-Repo_crm.xml"/></li>
+        <li><xref href="c_sen_anal-5_13-Copying-Renaming-a_crm.xml"/></li>
+      </ul></p>
+  </conbody>
+</concept>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2">
+   <title>Getting Started</title>
+   <conbody>
+    <p>This chapter introduces you to the SenSage AP Analyzer, the web interface that facilitates
+      reporting and administration tasks. It describes the basics in using Analyzer, which includes
+      logging into the system, using the menus and interface, navigating between subcomponents, and
+      configuring the system.</p>
+    <p>This chapter contains these sections:<ul id="ul_fqh_z4l_zx">
+        <li><xref href="c_sen_anal-2_1-What-is-SenSage-AP-A_crm.xml"/></li>
+        <li><xref href="c_sen_anal-2_2-Logging-Into-the-Ana_crm.xml"/></li>
+        <li><xref href="c_sen_anal-2_3-Using-Dashboard-Feat_crm.xml"/></li>
+        <li><xref href="c_sen_anal-2_4-Using-Analyzer-Menus_crm.xml"/></li>
+        <li><xref href="c_sen_anal-2_5-Limiting-Namespace-A_crm.xml"/></li>
+        <li><xref href="c_sen_anal-2_6-Configuring-Time-Zon_crm.xml"/></li>
+      </ul></p>
+  </conbody>
+</concept>

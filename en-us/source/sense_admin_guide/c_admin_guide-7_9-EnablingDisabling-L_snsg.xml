@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_9">
+   <title id="title_a30">Enabling/Disabling Log Adapters</title>
+   <conbody>
+      <p>To enable or disable log adapters, you can use the CollectorAdmin tool that has the following
+      syntax:</p>
+      <p>
+         <codeblock xml:space="preserve">/opt/hexis/hawkeye-ap/bin/collectorAdmin enable | disable &lt;adapter_name&gt;</codeblock>
+      For example, the following command:</p>
+      <p>
+         <codeblock xml:space="preserve">/opt/hexis/hawkeye-ap/bin/collectorAdmin enable unix_sshd2_syslogng</codeblock>
+      </p>
+   </conbody>
+</concept>

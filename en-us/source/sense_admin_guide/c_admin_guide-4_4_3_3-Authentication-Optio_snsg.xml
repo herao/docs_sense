@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_4_3_3">
+   <title>Authentication Options</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--user=&lt;username&gt;</codeph>
+            </pt>
+            <pd>This parameter authenticates the specified name as an EDW user. If no user is specified, atview
+          reads the environment variable <codeph>ADDAMARK_USER</codeph>. If it cannot find this
+          environment variable, it uses the operating system to get the name of the user who is
+          logged in.<note>To log in as the <b>guest</b> user, do not specify the
+              <codeph>--pass</codeph> or <codeph>--shared-secret</codeph> flags.</note>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--pass=&lt;pwmethod&gt;</codeph>
+            </pt>
+            <pd>
+               <p>This parameter provides several methods to specify the password. You can specify the
+            password in clear text, place the password in a file and specify the location of the
+            file, or set it in the <codeph>ADDAMARK_PASSWORD</codeph> environment variable. The
+            syntax is:<parml>
+                     <plentry>
+                        <pt>
+                           <codeph>--pass=&lt;<i>password</i>&gt;</codeph>
+                        </pt>
+                        <pt>
+                           <codeph>--pass=pass:&lt;<i>password</i>&gt;</codeph>
+                        </pt>
+                        <pt>
+                           <codeph>--pass=file:&lt;<i>filename</i>&gt;</codeph>
+                        </pt>
+                        <pt>
+                           <codeph>--pass=default</codeph>
+                        </pt>
+                        <pd>When you specify default as the password, <codeph>atview</codeph> looks in the ADDAMARK_PASSWORD
+                  environment variable. For more information, see <xref href="c_admin_guide-4_1_5_2-Setting-the-ADDAMARK_snsg.xml#topic_4_1_5_2"/>.</pd>
+                     </plentry>
+                  </parml>
+               </p>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--shared-secret=&lt;secret&gt;</codeph>
+            </pt>
+            <pd>This parameter provides two methods to specify the shared secret. You can either specify the
+          secret in clear text or place the secret in a file and specify the location of the file.
+          The syntax is:<parml>
+                  <plentry>
+                     <pt>
+                        <codeph>--shared-secret=&lt;<i>secret</i>&gt;</codeph>
+                     </pt>
+                     <pt>
+                        <codeph>--shared-secret=file:&lt;/<i>full_path</i>/<i>filename</i>&gt;</codeph>
+                     </pt>
+                     <pt>
+                        <codeph>--shared-secret=default</codeph>
+                     </pt>
+                     <pd> When you specify default as the password, atmanage looks in the
+                  <codeph>ADDAMARK_SHARED_SECRET</codeph> environment variable. <note>The value for
+                    <codeph>--pass</codeph> takes precedence over the value for
+                    <codeph>--shared-secret</codeph>, if both are present. </note>
+                     </pd>
+                  </plentry>
+               </parml>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--assume-role=role&lt;role_to_be_assumed&gt;</codeph>
+            </pt>
+            <pd>This parameter causes the operation to be run as if the user had assumed the specified EDW role. The assumed role must have admin privileges. For more information about managing users and roles, see <xref href="c_admin_guide-4_3_5-Authentication-Manag_snsg.xml#topic_4_3_5"/>.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--timestamps</codeph>
+            </pt>
+            <pd>This parameter specifies that the output includes the minimum and maximum timestamp values of the data in each table. If the table is empty, the display shows "no records". When views are displayed in the output, those rows do not include the minimum and maximum timestamp values.</pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

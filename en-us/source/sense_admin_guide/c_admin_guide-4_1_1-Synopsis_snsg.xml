@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_1">
+   <title>Synopsis</title>
+   <conbody>
+      <codeblock xml:space="preserve">atload [&lt;<i>options</i>&gt;] &lt;<i>cluster_list</i>&gt; &lt;t<i>able_name</i>&gt; &lt;<i>ptl_file</i>&gt;
+      { [&lt;<i>log_file</i>&gt; [&lt;l<i>og_file</i>&gt; [...]] | - }</codeblock>
+   </conbody>
+</concept>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_4">
+   <title id="title_a15">Creating a New Model Based on an Existing One</title>
+   <conbody>
+    <p>To add a new model to the Library based on one already in the Models library:</p>
+    <ol id="ol_vql_glr_zx">
+      <li>Go to the Analyzer dashboard, select Data Design from the dropdown list, click Analytics
+        Workbench, and click the Models tab.<p><ph id="a99">The model canvas is displayed and when
+            the Libraries Menus is expanded, you can display a listing of all models in the system
+            to which you have access. </ph></p></li>
+      <li>Select the existing model and click the Save button and provide a new name for model or
+        make a duplicate copy of the model by clicking the "copy" icon at the menu bar. For icon
+        information, see page 127<p>
+          <note>NOTE: To open a category of models, click the triangle to the left of the category
+            name. If you hold down the shift key when you click, all the categories will be expanded
+            or collapsed at once. To close a category of models, click again, the triangle to the
+            left of the category name.</note>
+        </p></li>
+      <li>Access the Analytics tab to edit the model</li>
+    </ol>
+  </conbody>
+</concept>

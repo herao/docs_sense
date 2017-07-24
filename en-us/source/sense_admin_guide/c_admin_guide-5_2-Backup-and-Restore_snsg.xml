@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_2">
+   <title id="title_a19">Backup and Restore</title>
+   <conbody>
+      <p>This section describes the backup and restore process.</p>
+      <p>For information on recovering failed EDW node, see <xref href="c_admin_guide-6-Replacing-a-Failed-E_snsg.xml#topic_6"/>.</p>
+   </conbody>
+</concept>

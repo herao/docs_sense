@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_3_4">
+   <title>Report Viewing Features</title>
+   <conbody>
+    <p>The dashboard report viewing is nearly the same as the viewing features used to view reports
+      accessed through the Data Design menu. For details on viewing reports, see <xref
+        href="c_sen_anal-3_1-Viewing-Reports_crm.xml"/>. When accessed, the Dashboard always
+      displays the most recent run of the report.</p>
+    <fig><title>Dashboard Report Viewing</title><image href="./media/Image_040.png" placement="break" scale="45"/></fig>
+     <p>Hover over the dashboard pod, you want to display the report chart, the toggle menu <image
+       href="media/toggle_menu_dashboard.png" placement="inline"/> pops up. Choose the middle button <image
+         href="media/toggle_menu_dashboard._middle.png" placement="inline"/>
+       to toggle the grid off and maximize the chart.</p>
+    <fig>
+      <title>Maximizing Chart for Viewing with Toggle Grid Display</title>
+      <image href="./media/Image_041.png" placement="break" scale="60"/>
+    </fig>
+     <p>Choose the bottom button <image
+       href="media/toggle_menu_dashboard._bottom.png" placement="inline"/>
+       to toggle the chart off and maximize the grid.</p>
+     <fig>
+       <title>Maximizing Chart for Viewing with Toggle Grid Display</title>
+       <image href="./media/Image_041_1.png" placement="break" scale="60"/>
+     </fig>
+  </conbody>
+</concept>

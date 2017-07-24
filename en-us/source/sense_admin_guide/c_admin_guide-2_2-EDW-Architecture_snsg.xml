@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_2">
+   <title id="title_a4">EDW Architecture</title>
+   <conbody>
+      <ul id="ul_zm4_vzg_vx">
+         <li>
+            <xref href="c_admin_guide-2_2_1-About-the-Event-Data_snsg.xml#topic_2_2_1"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-2_2_2-Software-for-the-EDW_snsg.xml#topic_2_2_2"/>
+         </li>
+      </ul>
+   </conbody>
+</concept>

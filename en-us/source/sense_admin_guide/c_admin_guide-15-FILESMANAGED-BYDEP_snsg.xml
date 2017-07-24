@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_15">
+   <title id="title__GoBack">Files Managed by Deployment Manager</title>
+   <conbody>
+      <p>This appendix lists SenSage AP files that are managed by Deployment Manager. Any edits to
+      these files are overwritten, usually when Deployment Manager starts the service. One exception
+        is <filepath>/etc/logrotate.d/syslog-ng</filepath>, which is deleted by Deployment Manager
+         rather than overwritten.</p>
+
+   <simpletable relcolwidth="1.0* 6.44*">
+         <sthead>
+            <stentry>Service</stentry>
+            <stentry>File Managed by Deployment Manager</stentry>
+         </sthead>
+      <strow>
+         <stentry>OAE</stentry>
+         <stentry>
+            <pre>&lt;postgres_data_dir>/pg_hba.conf
+&lt;postgres_data_dir>/postgresql.conf
+&lt;postgres_data_dir>/server.key
+&lt;postgres_data_dir>/server.crt
+/etc/init.d/sensage_atpgsql
+/opt/hexis/hawkeye-ap/etc/atpgsql/postgresql.conf
+/opt/hexis/hawkeye-ap/etc/atpgsql/pg_hba.conf
+/opt/hexis/hawkeye-ap/etc/atpgsql/sensage_atpgsql.conf
+/opt/hexis/hawkeye-ap/etc/atpgsql/server.key
+/opt/hexis/hawkeye-ap/etc/atpgsql/server.crt
+/usr/lib/python2.6/site-packages/ambari_agent/hexis-atpgsql- pidpathmap.json
+/etc/ganglia/hdp/HAPPostgres/conf.d/modpythonHAPPostgres.conf
+/etc/ganglia/hdp/HAPPostgres/conf.d/postgresql.pyconf
+/usr/lib64/ganglia/python_modules/postgresql.py
+/opt/hexis/hawkeye-ap/etc/atpgsql/sensage_sls_&lt;sls_instance>/ shared_secret.asc</pre>
+         </stentry>
+      </strow>
+      <strow>
+         <stentry>Analyzer</stentry>
+         <stentry>
+         <pre>&lt;postgres_data_dir>/pg_hba.conf
+&lt;postgres_data_dir>/postgresql.conf
+&lt;postgres_data_dir>/server.key
+&lt;postgres_data_dir>/server.crt
+/etc/init.d/sensage_atpgsql
+/opt/hexis/hawkeye-ap/etc/atpgsql/postgresql.conf
+/opt/hexis/hawkeye-ap/etc/atpgsql/pg_hba.conf
+/opt/hexis/hawkeye-ap/etc/atpgsql/sensage_atpgsql.conf
+/opt/hexis/hawkeye-ap/etc/atpgsql/server.key
+/opt/hexis/hawkeye-ap/etc/atpgsql/server.crt
+/usr/lib/python2.6/site-packages/ambari_agent/hexis-atpgsqlpidpathmap.
+json
+/etc/ganglia/hdp/HAPPostgres/conf.d/modpythonHAPPostgres.conf
+/etc/ganglia/hdp/HAPPostgres/conf.d/postgresql.pyconf
+/usr/lib64/ganglia/python_modules/postgresql.py
+/opt/hexis/hawkeye-ap/etc/atpgsql/sensage_sls_&lt;sls_instance>/
+shared_secret.asc         </pre>
+         </stentry>
+      </strow>
+         <strow>
+            <stentry>atslapd</stentry>
+            <stentry>
+               <pre>/etc/init.d/sensage_atslapd
+/opt/hexis/hawkeye-ap/etc/atslapd/omnisight.schema
+/opt/hexis/hawkeye-ap/etc/atslapd/atslapd.key
+/opt/hexis/hawkeye-ap/etc/atslapd/atslapd.crt
+/opt/hexis/hawkeye-ap/etc/atslapd/ldapadd.conf
+/opt/hexis/hawkeye-ap/etc/atslapd/slapd.conf
+/opt/hexis/hawkeye-ap/etc/atslapd/sensage_atslapd.conf
+/usr/lib/python2.6/site-packages/ambari_agent/hexis-slapdpidpathmap.json
+/opt/hexis/hawkeye-ap/etc/atslapd/ldapsearch.sh           </pre>
+            </stentry>
+         </strow>
+         <strow>
+            <stentry>Collector</stentry>
+            <stentry>
+               <pre>/etc/init.d/sensage_collector
+/opt/hexis/hawkeye-ap/etc/collector/sensage_collector.conf
+/usr/lib/python2.6/site-packages/ambari_agent/hexis-collectorpidpathmap.json</pre>
+            </stentry>
+         </strow>
+         <strow>
+            <stentry>NSS</stentry>
+            <stentry>
+               <pre>/etc/init.d/sensage_nss
+/opt/hexis/hawkeye-ap/etc/nss/nss.conf
+/opt/hexis/hawkeye-ap/etc/nss/sensage_nss.conf              </pre>
+            </stentry>
+         </strow>
+         <strow>
+            <stentry>OpenSSL</stentry>
+            <stentry>
+               <pre>/opt/hexis/hawkeye-ap/etc/keys/openssl.cnf
+/opt/hexis/hawkeye-ap/etc/keys/cert.pem
+/opt/hexis/hawkeye-ap/etc/keys/private.pem</pre>
+            </stentry>
+         </strow>
+         <strow>
+            <stentry>EDW</stentry>
+            <stentry>
+               <pre>/opt/hexis/hawkeye-ap/etc/sls/instance/&lt;instance>/cluster.xml
+/opt/hexis/hawkeye-ap/etc/sls/instance/&lt;instance>/rootdc.ldif
+/opt/hexis/hawkeye-ap/etc/sls/instance/&lt;instance>/onisight.ldif
+/opt/hexis/hawkeye-ap/etc/init.d/sensage_sls_&lt;instance>
+/opt/hexis/hawkeye-ap/etc/sls/instance/&lt;instance>/athttpd.conf
+/opt/hexis/hawkeye-ap/etc/sls/instance/&lt;instance>/ldap.conf
+/opt/hexis/hawkeye-ap/etc/sls/instance/&lt;instance>/ldapadd.conf
+/opt/hexis/hawkeye-ap/etc/sls/instance/&lt;instance>/atslapd.crt
+/etc/security/limits.d/99-hexis.conf
+/opt/hexis/hawkeye-ap/etc/sls/instance/&lt;instance>/LICENSE
+/usr/lib/python2.6/site-packages/ambari_agent/hexis-edwpidmap.
+json
+/usr/lib/python2.6/site-packages/ambari_agent/hexis-edwpidpathmap.
+json
+/op/etc/sls/instance/&lt;instance>/ldapsearch.sh
+/etc/init.d/sensage_sls_&lt;instance>
+/opt/hexis/hawkeye-ap/etc/init.d/sensage_edw
+/etc/init.d/sensage_edw</pre>
+            </stentry>
+         </strow>
+         <strow>
+            <stentry>syslog-ng</stentry>
+            <stentry>
+               <pre>/opt/hexis/hawkeye-ap/etc/roll_logs/roll_logs.conf</pre>
+            </stentry>
+         </strow>
+      </simpletable>
+   </conbody>
+</concept>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_5_1">
+   <title>Synopsis</title>
+   <conbody>
+      <p>
+         <codeph>RETIRE FROM &lt;<i>table_name</i>&gt; &lt;<i>command</i>&gt; [FORCE]</codeph>
+      </p>
+   </conbody>
+</concept>

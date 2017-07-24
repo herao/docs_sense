@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_1_1">
+   <title>How the Event Data Warehouse (EDW) Queues Tasks</title>
+   <conbody>
+      <p>The EDW has three queues: one for Normal Priority processes, one for Critical Priority
+      processes, and one for Urgent Priority processes. The first two of these queues are defined
+      in:</p>
+      <p>
+         <filepath>/opt/hexis/hawkeye-ap/etc/sls/instance/&lt;instance_name&gt;/athttpd.conf</filepath>
+      </p>
+      <p>as:</p>
+      <ul id="ul_uwx_ds5_vx">
+         <li>
+            <codeph>normalrunqueuequota</codeph> (default <codeph>3</codeph>)</li>
+         <li>
+            <codeph>criticalrunqueuequota</codeph> (default <codeph>10</codeph>)</li>
+      </ul>
+      <note>These queues are set in the Deployment Manager’s Advanced EDW section (under the HawEye
+      AP service Configs tab) in the fields "EDW normal run queue quota" and "EDW critical run queue
+      quota".</note>
+      <p>The third process, <codeph>UrgentRunQueueQuota</codeph>, cannot be configured. This process
+      has an infinite depth, which means it can run an infinite number of jobs. The EDW immediately
+      runs everything on this queue)</p>
+      <p>The command "<codeph>atmanage canceltask</codeph>" has urgent priority by default, all other
+      tasks have normal priority. Therefore the <codeph>--skip-queues</codeph> option is not
+      necessary for cancels to work on a loaded system.</p>
+      <p>The Normal and Critical queues independently allow a set number of requests to run
+      simultaneously. (This number can be changed for these queues, see <xref href="c_admin_guide-5_2-Backup-and-Restore_snsg.xml#topic_5_2"/>).</p>
+      <p>If there are more requests of a given priority than can be run simultaneously, the later
+      requests will be blocked until an earlier request completes. Blocked tasks are marked as
+        <codeph>EVENT_WAIT</codeph> in the state column of the <codeph>system.task_list</codeph>
+      table.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_6">
+   <title>Loading Archive Files</title>
+   <conbody>
+      <p>When <codeph>atload</codeph> processes archive files, it uses the appropriate module to read
+      the archive contents and extracts internal files into an individual <filepath>.gzip</filepath>
+      files. It then uses the regular atload mechanism to load the <filepath>.gzip</filepath>
+      files.</p>
+      <p>Large archive files can cause atload to run out of disk space on the client machine. To avoid
+      running out of disk space, use the <codeph>--archive-tempdir</codeph> option to control where temporary files
+      are stored.</p>
+      <p>Because the name of each internal file in an archive is lost after the data is combined, use
+      the</p>
+      <p>
+         <codeph>--archive-add-filename</codeph> option to prefix every newline-separated record with the archive
+      internal file name. If you use <codeph>--archive-add-filename</codeph>, you need to change your PTL file to
+      parse this new field.</p>
+      <p>For example, add ... to the regular expression, and add filename:VARCHAR to the list of parse
+      fields.</p>
+   </conbody>
+</concept>

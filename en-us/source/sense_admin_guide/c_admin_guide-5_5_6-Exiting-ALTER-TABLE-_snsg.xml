@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_5_6">
+   <title>Exiting ALTER TABLE Tool Session</title>
+   <conbody>
+      <p>To quit the ALTER TABLE session, use either of the following exit statements:</p>
+      <ul id="ul_lzh_r3v_vx">
+         <li>EXIT</li>
+         <li>QUIT</li>
+      </ul>
+   </conbody>
+</concept>

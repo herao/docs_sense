@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_4_2">
+   <title>Components</title>
+   <conbody>
+      <p>The components area displays the Components installed on the host. You can click the Action
+      drop-down to start or stop individual components.</p>
+   </conbody>
+</concept>

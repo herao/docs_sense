@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_2">
+   <title>Logging Into the Analyzer</title>
+   <conbody>
+    <p>To log into the Analyzer, open your browser, enter the URL to access Analyzer, and provide
+      your User ID and Password (case-sensitive). Consult with your system administrator to obtain
+      these three pieces of information, which are required to log into Analyzer.</p>
+    <fig><title> Analyzer Login</title><image href="./media/Image_015.png" id="image_i5k_hpl_zx" placement="break" scale="60"/></fig>
+     <note>SenSage AP supports versions of standard HTML browsers released within the last two
+      years; Supported browsers include Internet Explorer, Firefox, and Chrome</note>
+    <p>If this is the first time you have logged into SenSage AP, you will be prompted to specify
+      your time zone.</p>
+    <fig><title> Analyzer Login Time Zone Prompt</title><image href="./media/Image_016.png" placement="break" scale="33" id="image_j5k_hpl_zx"/></fig>
+    <p>If you click Yes, a screen similar to the one below is displayed to specify your time zone
+      from a dropdown list. Note that the default is UTC.</p>
+    <fig><title> Profile Setting for Timezone</title><image href="./media/Image_017.png" id="image_k5k_hpl_zx" placement="break" scale="35"/></fig>
+    <p>After your timezone has been saved, this change now applies to all time zones displayed
+      throughout the SenSage AP UI.</p>
+    <p>After you have logged into Analyzer (and if logging in the first time specified your
+      timezone), the default Dashboard is displayed as shown below. The contents of this screen are
+      customizable.</p>
+    <fig><title> Default Dashboard</title><image href="./media/Image_018.png" id="image_l5k_hpl_zx" placement="break" scale="35"/></fig>
+  </conbody>
+</concept>

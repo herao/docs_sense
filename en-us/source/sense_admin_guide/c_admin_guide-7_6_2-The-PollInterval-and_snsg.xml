@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_6_2">
+   <title>The PollInterval and Period Elements</title>
+   <conbody>
+      <p>The <codeph>&lt;PollInterval&gt;</codeph> and <codeph>&lt;Period&gt;</codeph> elements have the following syntax:</p>
+      <codeblock xml:space="preserve">&lt;PollInterval&gt;<i>Interval</i>&lt;/PollInterval&gt;</codeblock>
+      <codeblock xml:space="preserve">&lt;Period&gt;<i>Minute Hour DayOfMonth Month DayOfWeek</i>&lt;/Period&gt;</codeblock>
+      <p>The <codeph>&lt;PollInterval&gt;</codeph> Interval defines how often, in seconds, the event in
+      question will be attempted during the defined <codeph>&lt;Period&gt;</codeph>. Poll intervals of
+      less than 60 seconds are not recommended. If the event runs longer than the poll interval or
+      runs into the next period, the event is allowed to complete. (You can also specify
+        <codeph>&lt;PollInterval&gt;</codeph> by adding <codeph>hour, hours, minute, minutes,
+        second,</codeph> or <codeph>seconds</codeph>. For example, the following are all
+      equivalent:<codeph> &lt;PollInterval&gt;1 hour&lt;/PollInterval&gt;</codeph>,
+        <codeph>&lt;PollInterval&gt;3600&lt;/PollInterval&gt;</codeph>, <codeph>&lt;PollInterval&gt;3600
+        Seconds&lt;/PollInterval&gt;</codeph>.)</p>
+      <p>The syntax for values in the <codeph>&lt;Period&gt;</codeph> element is the same as for the
+        <codeph>&lt;Schedule&gt;</codeph> element. For a complete explanation of the syntax, see <xref href="c_admin_guide-7_6_1-The-Schedule-Element_snsg.xml#topic_7_6_1"/>.</p>
+      <section>
+         <title>EXAMPLES POLL INTERVAL AND PERIOD SPECIFICATION</title>
+         <p>To specify that an event runs every 5 minutes (300 seconds) from 1:00 AM through 5:59
+        AM:</p>
+         <codeblock xml:space="preserve">&lt;PollInterval&gt;300&lt;/PollInterval&gt;
+&lt;Period&gt;* 1-5 * * *&lt;/Period&gt;</codeblock>
+         <p>The specification above is equivalent to the following <codeph>&lt;Schedule&gt;</codeph> specification:</p>
+         <codeblock xml:space="preserve">&lt;Schedule&gt;0,5,10,15,20,25,30,35,40,45,50,55 1-5 * * *&lt;/Schedule&gt;</codeblock>
+         <p>To specify that an event runs every hour continuously, starting at the half-hour:</p>
+         <codeblock xml:space="preserve">&lt;PollInterval&gt;3600&lt;/PollInterval&gt;
+&lt;Period&gt;30 * * * *&lt;/Period&gt;</codeblock>
+         <p>The specification above is equivalent to the following <codeph>&lt;Schedule&gt;</codeph> specification:</p>
+         <codeblock xml:space="preserve">&lt;Schedule&gt;30 * * * * *&lt;/Schedule&gt;</codeblock>
+      </section>
+   </conbody>
+</concept>

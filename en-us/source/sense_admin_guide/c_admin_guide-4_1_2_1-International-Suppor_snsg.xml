@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_2_1">
+   <title>International Support for Loading Data</title>
+   <conbody>
+      <p>The character encoding of <i>&lt;ptl_file&gt;</i> must be UTF-8. The character encoding of
+        <i>&lt;log_file&gt;</i> can be ISO 8859-1 or one of the character encoding schemes you specify
+      with the <codeph>--data-char-encoding</codeph> option. If not specified, the character
+      encoding of log files processed by the atload command is assumed to be ISO 8859-1.</p>
+      <p>To determine the character encodings available in your environment, run the following
+      command:</p>
+      <p>
+         <codeph>iconv -l</codeph>
+      </p>
+      <p>A list of supported character encodings displays.</p>
+      <p>For more information on character encoding, see <xref href="c_admin_guide-5_7_1-International-Suppor_snsg.xml#topic_5_7_1"/>.</p>
+   </conbody>
+</concept>

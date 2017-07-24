@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_2_1">
+   <title>Backing Up and Restoring an EDW Table</title>
+   <conbody>
+      <p>This topic provides an overview of the backup and restore process for EDW tables. IgniteTech
+      strongly recommends that you perform these processes only in consultation with Technical
+      Support.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_4_1">
+   <title>Host Summary</title>
+   <conbody>
+      <p>To display more details on a specific host, click the host’s link under Name on the Hosts
+      screen. Details on the host are displayed, including a Summary that contains the hostname, IP
+      address, OS, CPU, Disk, Memory, Load Average, Agent, and Heartbeat. The Agent refers to when
+      the host’s metrics was last updated.</p>
+      <fig>
+         <title> Host Summary Display</title>
+         <image href="./media/Image_040.jpg" placement="break"/>
+      </fig>
+   </conbody>
+</concept>

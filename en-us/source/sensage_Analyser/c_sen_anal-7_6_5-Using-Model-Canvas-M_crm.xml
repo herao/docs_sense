@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_6_5">
+   <title>Using Model Canvas Menu Options to perform Model Actions</title>
+   <conbody>
+    <p>The following table describes the use of each Model Canvas Menu Icon when creating or editing
+      a model on the canvas:</p>
+    <table id="table_ect_g5r_zx">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1" colwidth="1*"/>
+        <colspec colnum="2" colname="col2" colwidth="1*"/>
+        <colspec colnum="3" colname="col3" colwidth="1*"/>
+        <thead>
+          <row>
+            <entry>icon</entry>
+            <entry>Name</entry>
+            <entry>Use to...</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_308.jpg" scale="60"/></entry>
+            <entry align="left" valign="middle">
+              <p>After selecting a model Category and one mor more tags, save the model as is
+                (overwriting the previous version) or save the model as another name (preserving the
+                previous version) as shown below:</p>
+              <p><image href="./media/Image_309.jpg" scale="60"
+                /></p>
+              <p>If the model has never been previously saved, a Save As dialog box will be
+                displayed. See Figure???? on page 110.</p>
+            </entry>
+            <entry align="left" valign="middle">
+              <p>Base a new model on an existing one (equivalent to a Save As under a new name) or
+                overwriting an existing model when revisions are made.</p>
+              <p>Save As Tips:</p>
+              <ul id="ul_hct_g5r_zx">
+                <li>
+                  <p>Use to share model not owned by current user to get a copy of the model.</p>
+                </li>
+                <li>
+                  <p>Use to make copies of the model after modifications are made.</p>
+                </li>
+              </ul>
+            </entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_310.jpg" scale="60"/></entry>
+            <entry align="left" valign="middle">Edit model information</entry>
+            <entry align="left" valign="middle">For details, see “Creating and Editing a Data
+              Model”, on page 112.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_311.jpg" scale="60"/></entry>
+            <entry align="left" valign="middle">Reset the execution status and execute the
+              model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_312.jpg" scale="60"/></entry>
+            <entry align="left" valign="middle">Undo and Redo</entry>
+            <entry align="left" valign="middle">Undo the last command or redo the last
+              command.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_313.jpg" scale="60"/></entry>
+            <entry align="left" valign="middle">Cut, Copy, and Paste</entry>
+            <entry align="left" valign="middle">Cut, copy, or paste what is highlighted on the model
+              canvas.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_314.jpg" scale="60"/></entry>
+            <entry align="left" valign="middle">Collapse, Expand Basic, and Expand All</entry>
+            <entry align="left" valign="middle">For details, see ??????</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_315.jpg" scale="60"/></entry>
+            <entry align="left" valign="middle">Add Annotation</entry>
+            <entry align="left" valign="middle">Add notes about the model.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_316.jpg"
+                id="image_oct_g5r_zx" scale="60"/></entry>
+            <entry align="left" valign="middle">Add an Iterator</entry>
+            <entry align="left" valign="middle">Adds looping function to a parameter. For details,
+              see “Adding an Iterator to a Parameter”, on page 128.</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_317.jpg"
+                id="image_qct_g5r_zx" scale="60"/></entry>
+            <entry align="left" valign="middle">Print the model to a local printer</entry>
+            <entry align="left" valign="middle">Prints the model to a local printer.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </conbody>
+</concept>

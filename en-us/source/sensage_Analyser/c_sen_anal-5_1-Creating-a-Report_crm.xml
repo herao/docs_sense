@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_1">
+   <title id="title_a10">Creating a Report</title>
+   <conbody>
+    <p>To create a report in Analyzer, perform the following tasks:</p>
+    <ol id="ol_l4f_bmm_zx">
+      <li>Go to the Analyzer dashboard, select Data Design from the dropdown list, click Reports,
+        and click the Create a Report button.<p>Figure 4-1: Create a Report Button</p><p><image href="./media/Image_136.png" placement="break" scale="45"/></p><p>The
+          first screen that is displayed lets you select the schema in which your data
+        resides.</p></li>
+      <li>Click the triangle to the left of the schema that you want to use as shown in the three
+        sample screens below.<p>
+          <note>Each schema is either a schema local to the PostgreSQL database or represents
+            a Namespace in the Event Data Warehouse. Namespaces can be hierarchical only in the EDW,
+            so when viewed in PostgreSQL the docs (“.”) are replaced with underscores (“_”).</note>
+        </p><p>Figure 4-2: Select Columns to Add to a Report</p><p><image
+            href="./media/Image_137.jpg" height="182" width="479" id="image_n4f_bmm_zx"/></p><p>As
+          shown in Figure 4-3 and Figure 4-4, in a typical default deployment with a default EDW
+          instance name, the Schema “default_analytics” contains tables with the raw data collected
+          from all sources in your environment, and “default_analytics_intellischema” contains
+          event-based normalized views of the same data.</p><p>Figure 4-3: default_analytics
+          Tables</p><p><image href="./media/Image_138.jpg" height="204" width="507"
+            id="image_o4f_bmm_zx"/></p><p>Figure 4-4:default_analytics_intellischema
+            Views</p><p><image href="./media/Image_139.jpg" height="219" width="516"
+            id="image_p4f_bmm_zx"/></p><p>Also the Schema “default_sensage_systemanalytics” contains
+          raw data collected from the SenSage AP installation itself, and the Schema
+          “default_sensage_systemanalytics_intellischema” contains event-based normalized views of
+          that data.</p><p>Schemas ending with the name “ .. .<u>c</u>onnectors” are not normally
+          used for reporting however they may be helpful in debugging IntelliSchema views.</p></li>
+      <li>From the column dropdown list, click a raw data table or normalized view such as the view
+        userlogin below to see the columns in the table.<p>Figure 4-5: userlogin View</p><p><image
+            href="./media/Image_140.jpg" height="244" width="574" id="image_q4f_bmm_zx"/></p></li>
+      <li>Click each column that you want to use in your report. As you click, the column is
+        immediately moved to the right-side pane.<p>
+          <note>Keep in mind few columns will have better performance due to the nature of
+            columnar databases with true column-based storage systems.</note>
+        </p></li>
+      <li>Click the Select button to complete selection of your columns.</li>
+      <li>Click a raw data table or normalized view such as the view "userlogin" above to see the
+        columns in that table.</li>
+      <li>Click each column you want to use in your report. As you click, the columns you select
+        will immediately move to the right pane.<p>
+          <note>TIP: Due to the nature of columnar databases with true column-based storage system,
+            limit the number of columns for better performance.</note>
+        </p><p><image href="./media/Image_141.jpg" height="210" width="545" id="image_r4f_bmm_zx"
+          /></p></li>
+      <li>Click Select when you have completed selecting your columns.<p>The next screen that is
+          displayed allows you to configure your report.</p><p>
+          <note>In the Report Fields screen, the grid has a row that represents each column in
+            the report. The datatype is represented by the second column in the grid and may be
+            string, number, or datetime. Also note that as you set up your report fields, you can
+            save your report with one of the following Save options: Save and close, Save run and
+            retain (for report history), or Save and run once (no history), letting you view the
+            report as you create it.</note>
+        </p><p>Figure 4-6: Database Table Report Settings</p><p><image href="./media/Image_142.jpg"
+            height="298" width="575" id="image_s4f_bmm_zx"/></p></li>
+      <li>If desired, provide a more user-friendly name for the heading of any field in the final
+        report. To do this, double-click the name in the "Report Column Header" column.<p>Figure
+          4-7: Report Column Header Column</p><p><image href="./media/Image_143.jpg" height="217"
+            width="554" id="image_t4f_bmm_zx"/></p></li>
+      <li>If desired, change the sort order of the report. All the options for sorting are on the
+        right of the grid under the "Sort By" heading.<ol id="ol_rbl_mmm_zx">
+          <li>Click the checkbox of the row(s) representing the column(s) you want to sort by.</li>
+          <li>If you want to sort by more than one column you can change which column is the primary
+            sort condition and which is the secondary sort condition. Click the up or down arrow to
+            increase or decrease the sort order of that field.By default sorting is in ascending
+            order. To change it to descending order, click the arrows to the far right. <p>Figure
+              4-8: Sorting by Column</p><p><image href="./media/Image_144.jpg" height="189"
+                width="500" id="image_u4f_bmm_zx"/></p></li>
+        </ol></li>
+      <li>To change the order that columns will appear in the report (left to right), re-order the
+        columns (top to bottom). To do this, drag the rows up and down with the "handles" in the
+        second column.<p>Figure 4-9: Reordering Column Order</p><p><image
+            href="./media/Image_145.jpg" height="195" width="536" id="image_v4f_bmm_zx"/></p></li>
+      <li>If you want to:<ul id="ul_w4f_bmm_zx">
+          <li>
+            <p>Join multiple tables in the report, see <xref
+                href="c_sen_anal-5_5-Joining-Multiple-Tab_crm.xml"/>.</p>
+          </li>
+          <li>
+            <p>Create the report as a report summary, see <xref
+                href="c_sen_anal-5_6-Specifying-a-Summary_crm.xml"/>.</p>
+          </li>
+          <li>
+            <p>Define the report to have a data limits prompt for users to enter date ranges, see
+                <xref href="c_sen_anal-5_7-Providing-a-Date-Lim_crm.xml"/>.</p>
+          </li>
+          <li>
+            <p>Create the report with runtime parameters, see <xref
+                href="c_sen_anal-5_8-Setting-Report-Reten_crm.xml"/>.</p>
+          </li>
+          <li>
+            <p>Specify a retention period for the report’s history, see <xref
+                href="c_sen_anal-5_8-Setting-Report-Reten_crm.xml"/>.<note>Note that if no retention
+                is specified, the default is seven days.</note></p>
+          </li>
+          <li>
+            <p>Create the report with complex data filters, see <xref
+                href="c_sen_anal-5_10-Specifying-Data-Filt_crm.xml"/>.</p>
+          </li>
+          <li>
+            <p>Integrate Data Models for the report, <xref
+                href="c_sen_anal-5_11-Integrating-Data-Mod_crm.xml"/>.</p>
+          </li>
+          <li>
+            <p>Creating the report with a related report that shares the same column for more
+              in-depth drill-down, see <xref href="c_sen_anal-5_12-Associating-the-Repo_crm.xml"
+              />.</p>
+          </li>
+        </ul></li>
+      <li>Run the report to make sure your configuration is accurate. See the next section, <xref
+          href="c_sen_anal-5_2-Running-a-Report_crm.xml"/>.<p>
+          <note>To add a chart to the report, see <xref
+              href="c_sen_anal-6-CREATING-ANDMODIFYI_crm.xml"/>.</note>
+        </p></li>
+      <li>Make any changes by modifying the report and re-running. See <xref
+          href="c_sen_anal-5_4-Modifying-a-Report_crm.xml"/>.</li>
+    </ol>
+  </conbody>
+</concept>

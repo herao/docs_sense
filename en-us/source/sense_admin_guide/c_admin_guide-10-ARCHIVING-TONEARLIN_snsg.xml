@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10">
+   <title>Archiving to Nearline Storage</title>
+   <conbody>
+      <p>This chapter contains the following sections:<ul id="ul_bbq_4k4_wx">
+            <li>
+               <xref href="c_admin_guide-10_1-Nearline-Storage-Ov_snsg.xml#topic_10_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-10_2-Initially-Configurin_snsg.xml#topic_10_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-10_3-Archiving-of-Local-D_snsg.xml#topic_10_3"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_6">
+   <title>Viewing Results of Scheduled Analytics</title>
+   <conbody>
+     <p>To view the results of runs scheduled for Anlytics and models, perform the following:</p><ol
+        id="ol_j1l_2jl_3y">
+        <li>Select <menucascade>
+            <uicontrol>Scheduler</uicontrol>
+            <uicontrol>Results</uicontrol>
+          </menucascade> in the left panel to open the Scheduler window.</li>
+        <li>Select the Analytics Schedules tab.<p>The Models and Anlytics scheduled to run are listed.<image
+              href="media/Image_379_1.png" placement="break" scale="40"/></p></li>
+      <li> Click the checkbox besides the model or analytic of interest and click <image
+            href="media/button_sched_res_anal.png" scale="60"/>. The <uicontrol>Results for the
+            schedule:&lt;Name of Analytic></uicontrol> window displays. The screenshot below shows
+          the list of scheduled runs completed for the analytic "testschedule-analytics3".<image
+            href="media/Image_379_2.png" placement="break" scale="50"/></li>
+      <li>Select a scheduled job from the list and click <image
+            href="media/button_schedule_anal_result_view.png" placement="inline" scale="60"/>. The
+            <uicontrol>Execution result for Model: &lt;Name of Model></uicontrol> displays.<image
+            href="media/Image_379_3.png" placement="break" scale="40"/></li>
+        <li>Click <uicontrol>Close</uicontrol> to close the execution results view.</li>
+      
+      </ol>
+  </conbody>
+</concept>

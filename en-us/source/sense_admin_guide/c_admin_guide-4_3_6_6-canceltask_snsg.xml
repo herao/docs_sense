@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_6_6">
+   <title>canceltask</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>canceltask &lt;request_id&gt;</codeph>
+            </pt>
+            <pd>The <codeph>canceltask</codeph> action allows you to cancel a task currently running
+               on the EDW. <note>
+                  <ul id="ul_c3q_qb5_vx">
+                     <li>Because the "atview tasks" command illustrated above returns the request ID
+                        as well as the task ID, you can use either value to cancel the task.</li>
+                     <li>You can use the "atview tasks" command to obtain the request ID and task ID
+                        of tasks run from the SenSage AP Console. </li>
+                  </ul>
+               </note></pd>
+         </plentry>
+      </parml>
+      <section>
+         <p>
+            <b>REQUEST IDS</b>
+         </p>
+         <p>Client programs such as atview, atmanage, atquery, and atload interact with the EDW to send
+      requests for various actions (for example, requests to load data into tables or query the data
+      in tables), and wait for results. Requests have an associated request ID, which the client
+      program defines and prints. For example, atload might print the following information in
+      response to running a load:</p>
+         <codeblock xml:space="preserve">request id: [app=atload,u=harry,h=perf02.hq.myco.com,id=e4f5e41f]</codeblock>
+         <p>To cancel the request's operation in the EDW, take the value that follows id= above and use
+      it in a command like the one below:</p>
+         <p>
+            <codeph>atmanage slshost:8072 canceltask e4f5e41f"</codeph>
+         </p>
+         <p>Killing a task is generally safe. However, IgniteTech recommends that, if possible, you use
+      the client-side utility that emits the request to perform the kill. For example, press CTRL-C
+      during a load with atload. The atmanage canceltask command was designed for system
+      administrators who detect "runaway" jobs submitted by remote users.</p>
+      </section>
+      <section>
+         <p>
+            <b>TASK IDS</b>
+         </p>
+         <p>A client program may not define an appropriate, unique, and readily usable request ID for the
+      requests it processes. For any request running on the EDW, there is always a unique task ID
+      that the EDW server itself defines. Each request sent to the EDW can involve multiple
+      processes that run on multiple hosts in the instance. The EDW treats all these processes as a
+      single "task".</p>
+         <p>If a client program does not define a usable request ID, an administrator can use the
+      atmanage utility to cancel a task by specifying this task ID. This option ensures that, no
+      matter what shortcomings a client program may have, there is always a way to cancel a running
+      task. To find the internal task IDs, run "atview tasks" to list the tasks. The graphic below
+      illustrates running this command and its output.</p>
+         <p>
+            <image href="./media/Image_115.gif" placement="break" scale="110"/>
+         </p>
+         <p>Locate the internal_task_id for the desired request and specify its value as the
+          <i>
+               <codeph>request_id</codeph>
+            </i> when you run <codeph>canceltask</codeph>.</p>
+         <p>For example:</p>
+         <p>
+            <codeph>atmanage slshost:8072 canceltask CAC6B255FBAF505935DAF3BAC2AD0B5B</codeph>
+         </p>
+         <note><ul>
+            <li>Because the "<codeph>atview tasks</codeph>" command illustrated above returns the request ID as well as the task
+               ID, you can use either value to cancel the task.</li>
+            <li>You can use the "<codeph>atview tasks</codeph>" command to obtain the request ID and task ID of tasks run from
+               the SenSage AP Console.</li>
+         </ul>
+         </note>
+      </section>
+   </conbody>
+</concept>

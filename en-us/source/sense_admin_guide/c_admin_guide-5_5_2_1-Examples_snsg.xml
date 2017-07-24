@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_5_2_1">
+   <title>Examples</title>
+   <conbody>
+      <codeblock xml:space="preserve">SQL&gt; alter table default.cdr add column xyz int32 ;
+SQL&gt; alter table default.cdr add column xyz int32 default “12345” ;
+SQL&gt; alter table default.cdr add column ( xyz int32 default “1234” , pqr int64
+default “123456789012345” ) ;
+SQL&gt; alter table default.cdr add pqr varchar ;</codeblock>
+   </conbody>
+</concept>

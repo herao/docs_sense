@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_4">
+   <title>Listing, Deleting, and Renaming Tables</title>
+   <conbody>
+      <p>In this topic:<ul id="ul_vyh_t1v_vx">
+            <li>
+               <xref href="c_admin_guide-5_4_1-Listing-Tables_snsg.xml#topic_5_4_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-5_4_2-Deleting-Tables_snsg.xml#topic_5_4_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-5_4_3-Renaming-Tables_snsg.xml#topic_5_4_3"/>
+            </li>
+         </ul>
+      </p>
+      <note>Before performing these activities, make sure you back up your data store. See <xref href="c_admin_guide-5_2_1-Backing-Up-and-Resto_snsg.xml#topic_5_2_1"/>.</note>
+   </conbody>
+</concept>

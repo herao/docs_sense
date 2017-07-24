@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_6">
+   <title>Table Management</title>
+   <conbody>
+      <p>This topic describes utilities provided by the EDW that enable administrators to manage
+      tables and other database objects.</p>
+      <note type="important">
+         <ul>
+            <li>These commands must be submitted by a user with administrator permission.</li>
+            <li>These commands affect only the EDW instance in which they are run; in other words, creating
+         a table in one instance does not create the table in other instances.</li>
+         </ul>
+      </note>
+      <p>This topic describes the following utilities:</p>
+      <ul>
+         <li>
+            <xref href="c_admin_guide-4_3_6_1-createtbl_snsg.xml#topic_4_3_6_1"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_3_6_2-renametbl_snsg.xml#topic_4_3_6_2"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_3_6_3-droptbl_snsg.xml#topic_4_3_6_3"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_3_6_4-backuptbl_snsg.xml#topic_4_3_6_4"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_3_6_5-restoretbl_snsg.xml#topic_4_3_6_5"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_3_6_6-canceltask_snsg.xml#topic_4_3_6_6"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_3_6_7-compacttbl_snsg.xml#topic_4_3_6_7"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_3_6_8-force-upgrade_snsg.xml#topic_4_3_6_8"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_3_6_9-Errors-and-Return-Va_snsg.xml#topic_4_3_6_9"/>
+         </li>
+      </ul>
+   </conbody>
+</concept>

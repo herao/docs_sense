@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_2_1">
+   <title>Specifying Filter Values in Columns</title>
+   <conbody>
+     <p>You can type in explicit values to "filter by" at the top of each column of a grid as shown
+      in Figure 2-4 below. The <uicontrol>hyperlink</uicontrol> column is filtered using the value
+        <codeph>=http://www.slashdot.org</codeph>.</p>
+    <fig><title>Filter Report by Column Value</title>
+    <image href="./media/Image_064.png" placement="break" scale="45" id="image_ocf_nbm_zx"/></fig>
+  </conbody>
+</concept>

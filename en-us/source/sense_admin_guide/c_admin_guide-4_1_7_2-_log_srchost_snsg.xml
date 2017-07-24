@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_7_2">
+   <title>$_log_srchost</title>
+   <conbody>
+      <p>The automatic expression macro $_log_srchost carries the name of the machine from which the
+      log file is being loaded. You should capture this information and store it as a column value
+      in the row being loaded. This helps maintain the chain of custody for the log entry.</p>
+   </conbody>
+</concept>

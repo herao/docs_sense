@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_4">
+   <title id="title_a4">Using Analyzer Menus and Navigation</title>
+   <conbody>
+    <p>Analyzer Menus and Navigation provide you with convenient and quick access to reports and
+      data modeling features as well as ability to perform data administration tasks, including
+      report scheduling and user and group account administration. The menu pane to the left of your
+      dashboard screen presents four main task areas: Dashboard, Data Design, Scheduler, and
+      Administration, as shown below in Figure 1-14.</p>
+    <p><image href="./media/Image_044.jpg" height="260" width="128" id="image_qzt_h5l_zx"/></p>
+    <p>
+      <note>Click the icon in the upper-left corner to hide or display the left menu pane.</note>
+    </p>
+    <p>Click the arrow to access submenu items, which are described below for each main task area.
+        <note>The Dashboard tab does not have any submenus.</note></p>
+  </conbody>
+</concept>

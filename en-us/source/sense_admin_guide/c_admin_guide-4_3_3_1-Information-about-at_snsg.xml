@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_3_1">
+   <title>Information about atmanage</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--version</codeph>
+            </pt>
+            <pd>Displays version of atmanage.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--help, --longhelp</codeph>
+            </pt>
+            <pd>Displays online help in short form (<codeph>--help</codeph>), or with additional detail
+            (<codeph>--longhelp</codeph>).</pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

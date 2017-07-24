@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_3_4">
+   <title>PostgreSQL-General</title>
+   <conbody>
+      <fig>
+         <title>PostgreSQL-General Sample Graph</title>
+         <image href="./media/Image_028.jpg" placement="break"/>
+      </fig>
+      <note>Observe the following: <ul>
+            <li>Blue graph—Represents the number of connections to PostgreSQL against time.</li>
+            <li>Green graph—Represents the number of locks held by connections at that point of
+          time.</li>
+         </ul>
+      </note>
+      <p>When you click zoom, a more detailed view of this graph is displayed as shown below: </p>
+      <fig>
+         <title>PostgreSQL-General Detail Sample Graph</title>
+         <image href="./media/Image_029.jpg" placement="break" scalefit="yes"/>
+      </fig>
+   </conbody>
+</concept>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_4">
+   <title>Things to watch out for</title>
+   <conbody>
+      <p>As you monitor logs, watch out for the following:<ul id="ul_ejb_bvv_vx">
+            <li>
+               <xref href="c_admin_guide-7_3_4_1-Failed-Retrievers_snsg.xml#topic_7_3_4_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-7_3_4_2-Failed-Loaders_snsg.xml#topic_7_3_4_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-7_3_4_3-Failed-Loads_snsg.xml#topic_7_3_4_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-7_3_4_4-Parse-Failures_snsg.xml#topic_7_3_4_4"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

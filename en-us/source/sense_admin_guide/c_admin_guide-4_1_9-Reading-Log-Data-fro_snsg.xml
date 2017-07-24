@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_9">
+   <title>Reading Log Data from stdin</title>
+   <conbody>
+      <p>The <codeph>atload</codeph> utility reads the log data from standard input when you specify
+        ’<codeph>-</codeph>’ as the log filename.</p>
+      <p>When you specify the log data in this manner, the data does not have a file name with an
+      extension that identifies its file type. For example, when you load data as
+        <filepath>myload.tgz</filepath>, the EDW recognizes the <filepath>.tgz</filepath> suffix as
+      the tgz file type. IgniteTech recommends that you include the <codeph>--filetype</codeph>
+      option when you specify ’<codeph>-</codeph>’ as a log file name. If you do not specify a file
+      type, <codeph>atload</codeph> attempts to guess the type from the stdin input stream by
+      examining the first few bytes.</p>
+   </conbody>
+</concept>

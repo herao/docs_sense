@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9_1_4">
+   <title>Control of execution</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--debug</codeph>
+            </pt>
+            <pd>Displays debug data while the command is running.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--force</codeph>
+            </pt>
+            <pd>Ignores errors.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--parse-only</codeph>
+            </pt>
+            <pd>Parses and validates the command line options, but does not execute.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--preview</codeph>
+            </pt>
+            <pd>Displays actions that would be executed, but stays on local host.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--[no]progress</codeph>
+            </pt>
+            <pd>Displays progress indicators by default. If you specify <codeph>--noprogress</codeph>,
+          disables display of progress indicators.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--remote-preview</codeph>
+            </pt>
+            <pd>Displays actions that would be executed, including those on remote hosts.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--verbose=&lt;information_level&gt;</codeph>
+            </pt>
+            <pd>Displays increasingly detailed progress information.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--version</codeph>
+            </pt>
+            <pd>Displays version information.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--[no]welcome</codeph>
+            </pt>
+            <pd>Displays welcome banner with change number; defaults to <codeph>--welcome</codeph>.</pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

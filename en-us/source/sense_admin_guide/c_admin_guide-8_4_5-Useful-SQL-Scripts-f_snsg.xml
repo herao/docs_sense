@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_4_5">
+   <title>Useful SQL Scripts for LDAP Integration</title>
+   <conbody>
+      <codeblock xml:space="preserve">-- Backup the user, user_role and user_group tables and then clear them. Used for
+testing a clean install with ldap integration where the first user to log in
+becomes the admin.
+CREATE TABLE siem.user_bkup AS (select * from siem.user);
+CREATE TABLE siem.user_role_bkup AS (select * from siem.user_role);
+CREATE TABLE siem.user_group_bkup AS (select * from siem.user_group);
+DELETE FROM siem.user_role;
+DELETE FROM siem.user_group;
+DELETE FROM siem.user;
+UPDATE system_state SET value = null where key = 'ldapAdmin';
+-- Restore the user, user_role and user_group tables back to what they were
+before running the backup scripts.
+DELETE FROM siem.user_role;
+DELETE FROM siem.user_group;
+DELETE FROM siem.user;
+INSERT INTO siem.user (SELECT * from siem.user_bkup);
+INSERT INTO siem.user_group (SELECT * from siem.user_group_bkup);
+INSERT INTO siem.user_role (SELECT * from siem.user_role_bkup);
+DELETE FROM siem.user_role_bkup;
+DELETE FROM siem.user_group_bkup;
+DELETE FROM siem.user_bkup;</codeblock>
+   </conbody>
+</concept>

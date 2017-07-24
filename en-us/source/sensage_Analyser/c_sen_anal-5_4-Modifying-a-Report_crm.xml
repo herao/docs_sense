@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_4">
+   <title>Modifying a Report</title>
+   <conbody>
+    <p>To modify a report, perform the following tasks:</p>
+    <ol id="ol_cwp_cdq_zx">
+      <li>Go to the Analyzer dashboard, select Data Design from the dropdown list and click Reports.
+        The Manage Report screen with the current listing of reports is displayed.</li>
+      <li>Scroll or find the desired report, check the report that you want to modify, and click
+          Edit.<p>Figure 4-15: Edit a Report</p><p><image href="./media/Image_160.png" placement="break" scale="50"/></p><p>The edit definition screen (Database Table
+          Report Settings) for the report is displayed, as shown below.</p><p>Figure 4-16: Report
+          for Editing</p><p><image href="./media/Image_161.png" placement="break" scale="50"/></p></li>
+      <li>Make any necessary configuration changes. Refer to Steps 9-14 in the previous section,
+        Creating a Report.</li>
+    </ol>
+    <p>
+      <note>After each change, be sure to Save your report or choose one of the Save options: Save
+        and close, Save run and retain (for report history), or Save and run once (no
+        history).</note>
+    </p>
+  </conbody>
+</concept>

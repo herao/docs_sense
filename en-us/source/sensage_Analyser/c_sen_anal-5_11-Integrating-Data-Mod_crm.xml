@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_11">
+   <title>Integrating Data Models with the Report</title>
+   <conbody>
+    <p>Data models are used for processing data with a library of functions for augmentations,
+      annotations, or manipulations. They are an alternative for downloading report results and
+      importing the data into third party tools, such as Microsoft Excel, and processing the data
+      there.</p>
+    <p>In a data model the report data can be combined with any other data including data outside of
+      databases. For instance you may have a report with the geo locations of IP addresses – a model
+      could run through the location results and run a script to look at the historic temperature of
+      each location at the time of the event on wunderground.com.</p>
+    <p>To specify a data model for integration with your report:</p>
+    <ol id="ol_lwd_4jq_zx">
+      <li>In the Report Wizard, click the Analytics tab and then click the dropdown arrow under
+        "Select an Analytics to process the report results" as shown in Figure 4-37.<p>A list of
+          models that have input parameters appropriate for processing the result of your report is
+          displayed. (So not all models in the library are shown on this dropdown.) The models
+          displayed are generally with the input parameter of type "Table".</p><p>Figure 4-37:
+          Specifying a Data Model for Report Integration</p><p><image href="./media/Image_192.png" placement="break" scale="50"/></p></li>
+      <li>Click the specific model you would like to integrate with your report, then click
+          Add.<p>Your report is now integrated with the model you selected. The screen below shows
+          details of the model including the name, category, description, tags, and a complete list
+          of the input and output parameters.</p><p>Figure 4-38: Details of Model for Report
+          Integration</p><p>
+          <image href="./media/Image_193.jpg" id="image_nwd_4jq_zx" placement="break" scale="60"/>
+        </p></li>
+      <li>When you are finished, click <b>Save </b>or choose one of the following Save Options: Save
+        and close, Save run and retain (for report history), or Save and run once (no history).</li>
+    </ol>
+  </conbody>
+</concept>

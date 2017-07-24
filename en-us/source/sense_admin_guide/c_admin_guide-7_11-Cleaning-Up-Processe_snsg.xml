@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_11">
+   <title id="title_a31">Cleaning Up Processed Log Files</title>
+   <conbody>
+      <p>Once a log file has been processed, it is put into the <codeph>&lt;LogQueue&gt;/done</codeph>
+      subdirectory. The system administrator must archive or remove these files from the system.
+      SenSage AP software includes a cleaner script with the Collector as an example of the type of
+      script you should write to schedule the automatic deletion of processed log files. Run the
+      script or program from the command line, and specify the path to your LogRoot as an
+      option.</p>
+      <p>On Linux, run this script:</p>
+      <codeblock xml:space="preserve">/opt/hexis/hawkeye-ap/bin/collector-extras/cleaner.pl</codeblock>
+      <p>To learn more about LogRoot, see <i>Root Directories Used by the SenSage AP Collector</i> in
+      “SenSage AP Collector Configuration” of the<cite> Collector Guide</cite>.</p>
+   </conbody>
+</concept>

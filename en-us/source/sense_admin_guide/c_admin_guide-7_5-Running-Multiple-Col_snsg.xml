@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_5">
+   <title id="title_a28">Running Multiple Collectors</title>
+   <conbody>
+      <p>If a situation requires that you set up multiple Collectors (on different hosts), they should
+      be configured to each manage a subset of log queues, and the subsets should not overlap. You
+      can achieve this setup by using a daisy-chain configuration. For more information, see
+        <i>Creating Daisy Chains</i> in “SenSage AP Collector Configuration” of the <cite>Collector
+        Guide</cite>.</p>
+   </conbody>
+</concept>

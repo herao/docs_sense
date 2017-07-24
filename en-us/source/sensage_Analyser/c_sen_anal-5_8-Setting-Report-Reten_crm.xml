@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_8">
+   <title>Setting Report Retention for Report History</title>
+   <conbody>
+    <p>When you create a report, it is set up by default to record history up to a retention period
+      of seven days.</p>
+    <p>To change the default report history retention period for a given report:</p>
+    <ol id="ol_kyq_cfq_zx">
+      <li>Click the Date Filters tab in the Report Wizard for the report.</li>
+      <li>Specify the retention period in days.<p>Figure 4-28: Data Filters Tab</p><p><image href="./media/Image_179.png" placement="break" scale="45"/></p></li>
+      <li>Click Save or choose one of the following Save Options: Save and close, Save run and
+        retain (for report history), or Save and run once (no history).</li>
+    </ol>
+  </conbody>
+</concept>

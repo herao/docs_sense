@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_6_2_1">
+   <title>Datatype Conversion Example</title>
+   <conbody>
+    <p>Figure 6-19 illustrates how to convert the text datatype to the number datatype. The Column
+      To List component extracts all values from a table column; the extracted values are text
+      values.</p>
+    <p>Because sum component accepts only number values, this is the reason why the Text to Number
+      component is used to convert the text values to numbers.</p>
+    <p>Figure 6-19: Sample Text Datatype to Number Datatype Conversion</p>
+    <p><image href="./media/Image_293.jpg" height="281" width="616" id="image_nmv_ttr_zx"/></p>
+  </conbody>
+</concept>

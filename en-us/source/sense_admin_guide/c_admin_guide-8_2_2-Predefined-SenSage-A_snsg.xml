@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_2_2">
+   <title>Predefined SenSage AP (Postgres) Users</title>
+   <conbody>
+      <p>The SenSage AP system comes predefined with the following users and should not be
+      modified.</p>
+      <ul>
+         <li>Hexis—Identifies the SenSage AP Superuser.</li>
+         <li>Controller—Identifies the Database Owner.</li>
+         <li>EDW—Identifies the OAE System User.</li>
+      </ul>
+   </conbody>
+</concept>

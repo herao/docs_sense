@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap
+  PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap>
+   <booktitle>
+      <booklibrary>SenSage Administrator's Guide</booklibrary>
+      <mainbooktitle>SenSage Standard 2017</mainbooktitle>
+   </booktitle>
+<!--   <bookmeta>
+      <author>Aurea Software GmbH</author>
+      <category>Vertical</category>
+      <prodinfo>
+         <prodname>
+            <keyword
+               conref="common/c_productnames.xml#c_productnames_125613/prodnameattribute_125613"
+            />
+         </prodname>
+         <vrmlist>
+            <vrm version="2013" modification="initial DITA release"/>
+         </vrmlist>
+         <brand/>
+      </prodinfo>
+      <!-\- organization element does 2 things: enables PDF security, and defines the password in the organization element. Comment out entire bookrights container element if you don't want to secure your PDF.   The example below uses a conref to get the password.-\->
+      <bookrights>
+         <bookowner>
+            <organization>
+               <keyword
+                  conref="common/c_productnames.xml#c_productnames_125613/pdfpassword_125613"
+               />
+            </organization>
+         </bookowner>
+      </bookrights>
+   </bookmeta>-->
+   <frontmatter audience="pdf">
+      <notices audience="pdf" format="ditamap" href="snsg_common_notices.ditamap"
+         class="- map/topicref 
+         bookmap/notices "/>
+      <preface audience="pdf" format="ditamap" href="snsg_admin_guide_preface.ditamap"
+         class="- map/topicref 
+            bookmap/preface "/>
+      <booklists>
+         <toc/>
+      </booklists>
+   </frontmatter>
+   <chapter href="sense_admin_guide.ditamap" format="ditamap"/>
+   <appendices>
+      <appendix href="sense_admin_guide/c_admin_guide-12-LOGFILEAPPENDIX_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-12_1-Analyzer_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-12_2-Analytics-Installer_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-12_3-Atpgsql_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-12_4-Atslapd_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-12_5-Collector_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-12_6-Nearline-Storage_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-12_7-SenSage-AP_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-12_8-EDW_snsg.xml"/>
+      </appendix>
+      <appendix href="sense_admin_guide/c_admin_guide-13-ERRORCODES_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-13_1-Collector_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-13_2-EDW_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-13_3-SenSage-AP-Retriever_snsg.xml"/>
+      </appendix>
+      <appendix href="sense_admin_guide/c_admin_guide-14-TIMEZONES_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-14_1-Time-Zone-Conversion_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-14_2-Supported-Time-Zones_snsg.xml"/>
+      </appendix>
+      <appendix href="sense_admin_guide/c_admin_guide-15-FILESMANAGED-BYDEP_snsg.xml"/>
+   </appendices>
+</bookmap>

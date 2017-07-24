@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_7">
+   <title id="title_a9">Managing SenSage AP Operations</title>
+   <conbody>
+      <p>This section describes how to perform specific operation tasks:<ul id="ul_jjn_4rh_vx">
+            <li>
+               <xref href="c_admin_guide-3_7_1-Starting-Stopping-_snsg.xml#topic_3_7_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-3_7_2-Starting-Stopping-_snsg.xml#topic_3_7_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-3_7_3-Listing-all-EDW-Inst_snsg.xml#topic_3_7_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-3_7_4-Disabling-or-Deactiv_snsg.xml#topic_3_7_4"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

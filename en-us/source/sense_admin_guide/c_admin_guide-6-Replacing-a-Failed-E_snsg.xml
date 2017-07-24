@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_6">
+   <title>Replacing a Failed EDW node</title>
+   <conbody>
+      <p>This section describes the process for handling a failed EDW node and includes the following
+        topics:<ul id="ul_vnf_bnv_vx">
+            <li>
+               <xref href="c_admin_guide-6_1-Overview_snsg.xml#topic_6_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-6_2-Replacing-a-Failed-E_snsg.xml#topic_6_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-6_3-Recovering-from-mult_snsg.xml#topic_6_3"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

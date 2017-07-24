@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_1">
+   <title id="title_a12">What is a Data Model?</title>
+   <conbody>
+    <p>A data model is a blueprint for manipulating data with multiple different steps. Each step
+      performs an independent operation on the data, not just a single query against a database
+      returning a single result set. The data may originate from an EDW query; however, it may also
+      originate from a file, from an LDAP directory, from PostgreSQL or other database sources, or
+      from user input. The model is created in a standard HTML web browser and is executed on the
+      Analyzer’s server within a SenSage AP deployment.</p>
+    <p>In Analyzer, models may be created, saved, reused, or even scheduled to execute periodically.
+      A primary goal of SenSage AP’s modeling capability is to avoid the need for exporting data
+      from the Event Data Warehouse (EDW) and manipulating data by scripts or with third-party tools
+      such as Microsoft Excel.</p>
+  </conbody>
+</concept>

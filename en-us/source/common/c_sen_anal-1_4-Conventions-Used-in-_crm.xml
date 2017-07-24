@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1_4">
+   <title>Conventions Used in SenSage AP Documentation</title>
+   <conbody>
+    <table id="table_ojw_bf4_yx">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>This conven- tion...</entry>
+            <entry>Indicates...</entry>
+            <entry>Example</entry>
+          </row>
+          <row>
+            <entry><b>bold text</b></entry>
+            <entry>Names of user interface items, such as field names, buttons, menu choices, and
+              keystrokes</entry>
+            <entry>Click <b>Clear Filter</b>.</entry>
+          </row>
+          <row>
+            <entry><i>italic text</i></entry>
+            <entry>Indicates a variable name or a new term the first time it appears</entry>
+            <entry>
+              <p>http://&lt;<i>host</i>>:&lt;<i>port</i>>/ index.mhtml</p>
+              <p>Use the whammerjammer to adjust the whamming frequency.</p>
+            </entry>
+          </row>
+          <row>
+            <entry><codeph>Courier text</codeph></entry>
+            <entry>Indicates a literal value, such as a command name, file name, information typed
+              by the user, or information displayed by the system</entry>
+            <entry>atquery localhost:8072 myquery.sql</entry>
+          </row>
+          <row>
+            <entry>CAPS</entry>
+            <entry>Indicates a key on the computer keyboard</entry>
+            <entry>Press ENTER.</entry>
+          </row>
+          <row>
+            <entry>{ }</entry>
+            <entry>
+              <p>In a syntax line, curly braces surround a set of options from which you must choose
+                one and only one.</p>
+              <p>NOTE: Syntax specifications for SELECT statements include curly braces as part of
+                the {INCLUDE_BAD_LOADS] keyword.</p>
+            </entry>
+            <entry>{ start | stop | restart }</entry>
+          </row>
+          <row>
+            <entry>[ ]</entry>
+            <entry>In a syntax line, square brackets surround an optional parameter</entry>
+            <entry>
+              <p>atquery [options]</p>
+              <p>&lt;<i>host</i>>:&lt;<i>port</i>> -</p>
+            </entry>
+          </row>
+          <row>
+            <entry>|</entry>
+            <entry>In a syntax line, a pipe within square brackets or curly braces separates a
+              choice between mutually exclusive parameters NOTE: Syntax for defining a Nearline
+              Storage Address (NSA) includes a pipe.</entry>
+            <entry>{ start | stop | restart } [g|m]</entry>
+          </row>
+          <row>
+            <entry>...</entry>
+            <entry>In a syntax line, ellipses indicate a repetition of the previous
+              parameter</entry>
+            <entry>
+              <p>The following example indicates you can enter multiple, comma-separated
+                options:</p>
+              <p>&lt;<i>option</i>>[, &lt;<i>option</i>>[…]]</p>
+            </entry>
+          </row>
+          <row>
+            <entry>backslash (\)</entry>
+            <entry>A backslash in command-line syntax or in a command example behaves as the escape
+              character on Unix. It removes any special meaning from the character immediately
+              following it. In SenSage AP documentation, a backslash nullifies the special meaning
+              of the newline character as a command terminator. Without the backslash, pressing
+              ENTER at the end of the line causes the Unix system to execute the text preceding the
+              ENTER. Without the backslash, you must allow long commands to wrap over multiple lines
+              as a single line.</entry>
+            <entry>
+              <p>atquery --user=administrator \</p>
+              <p>--pass=pass:p@ss localhost:8072\</p>
+              <p>-e='SELECT * FROM</p>
+              <p>system.users;'</p>
+            </entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </conbody>
+</concept>

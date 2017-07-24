@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_13_2">
+   <title>5.x.x Procedure to Limit a User's Access to a Namespace(s)</title>
+   <conbody>
+     <note>The commands below are for Postgres role abc and schema mysls_a nalytics.</note>
+    <ol id="ol_o2f_pls_zx">
+      <li>
+        <p>Create a Postgres
+          user/role:<codeblock>psql -h localhost -p5432 -d controller -U lms -c "CREATE ROLE abc NOSUPERUSER
+NOCREATEDB NOCREATEROLE INHERIT NOLOGIN;"</codeblock></p>
+      </li>
+      <li>
+        <p>Grant
+          Access:<codeblock>psql -h localhost -p5432 -d controller -U hexis -c "GRANT USAGE ON SCHEMA oae
+TO abc;" psql -h localhost -p5432 -d controller -U lms -c "GRANT USAGE ON
+SCHEMA mysls_analytics TO abc;"psql
+-h localhost -p54321 -d controller -U hexis -c "SELECT 'GRANT SELECT ON
+mysls_analytics.' || relname || ' TO abc ' FROM pg_class JOIN pg_namespace ON
+pg_namespace.oid = pg_class.relnamespace WHERE nspname = 'mysls_analytics' AND
+relkind IN ('r', 'v');"</codeblock></p>
+      </li>
+      <li>
+        <p>Save the output and create a file
+          <filepath>mySavedGrants.sql</filepath>.<codeblock>psql -h localhost -p5432 -d controller -U lms -f mySavedGrants.sql</codeblock></p>
+      </li>
+      <li>
+        <p>Update the Analyzer Application user's Postgres user setting. </p>
+        <ol id="ol_tbk_43p_1y">
+          <li>Logon as admin.</li>
+          <li>Go to Administration tab and Manager Users screen.</li>
+          <li>Edit the user whose schema security you want to change.</li>
+          <li>Change the users Postgres User setting to the new Postgres user/role created in Step
+            1.</li>
+        </ol>
+      </li>
+      <li>
+        <p>Verify that only the expected schemas are there</p>
+      </li>
+      <li>
+        <p>Logon to the Analyzer Application as the user you edited in Step 3.</p>
+      </li>
+      <li>
+        <p>Create a new report.</p>
+      </li>
+      <li>
+        <p>Verify that the correct schemas show up in the list of available schemas.</p>
+      </li>
+      <li>
+        <p>Run a report that the user has privilege to access.</p>
+      </li>
+      <li>
+        <p>Run a report that the user has no privilege to access.</p>
+      </li>
+    </ol>
+  </conbody>
+</concept>

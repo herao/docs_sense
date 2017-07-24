@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_6_2">
+   <title>Tuxedo Data</title>
+   <conbody>
+      <p>The example source log file contains Tuxedo “STDERR” log events. You can find the log and
+      related files in this location:</p>
+      <p>
+         <filepath>/opt/hexis/hawkeye-ap/example_logs/tuxedo</filepath>
+      </p>
+      <table id="table_ply_br5_vx">
+         <tgroup cols="2">
+            <colspec colnum="1" colname="col1" colwidth="1*"/>
+            <colspec colnum="2" colname="col2" colwidth="3.26*"/>
+            <tbody>
+               <row>
+                  <entry>records</entry>
+                  <entry>500,000</entry>
+               </row>
+               <row>
+                  <entry>size</entry>
+                  <entry>36,368,971 (uncompressed) / 2,692,070 (gzip -9 ==&gt; 13.5:1)</entry>
+               </row>
+               <row>
+                  <entry>start time</entry>
+                  <entry>997080780 (2001/08/05-11:53:00 PDT 2001/08/06-06:53:00 GMT)</entry>
+               </row>
+               <row>
+                  <entry>end time</entry>
+                  <entry>997085724 (2001/08/06-01:15:24 PDT 2001/08/06-08:15:24 GMT)</entry>
+               </row>
+               <row>
+                  <entry>bytes/record</entry>
+                  <entry>72.74</entry>
+               </row>
+               <row>
+                  <entry>fields</entry>
+                  <entry>6</entry>
+               </row>
+               <row>
+                  <entry>bytes/field</entry>
+                  <entry>12.12</entry>
+               </row>
+               <row>
+                  <entry>SenSage AP size</entry>
+                  <entry>683,264 bytes (53:1)</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

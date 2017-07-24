@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_6">
+   <title>Specifying a Summary Report</title>
+   <conbody>
+    <p>A summary (also known as an aggregation report) displays an aggregated count of fields in the
+      report.</p>
+    <p>To specify the report as a summary report:</p>
+     <ol id="ol_dml_12q_zx">     
+    <li>In the Report Wizard, click the checkbox next to the label "This is a summary report" in the
+        upper right corner.<p>Two additional columns are displayed with the following headings:
+          "Group By" and "Display Value. By default, each column displays an aggregation function,
+          "Count" for string fields and "Sum" for number fields.</p><p>
+          <note>At this point the report is not yet ready to run as at least one field to
+            "group by" is required that will drive the aggregation functions</note>
+        </p><p>Figure 4-23: Specifying Summary Report</p><p><image href="./media/Image_172.png" placement="break" scale="50"/></p></li>
+    <li>To select fields to "group by" click the checkbox in the row(s) that represent the field(s)
+        that you want to drive the aggregation.<p>Each time you check the Group By box that row will
+          be duplicated and the value in the Display Value column of the original row will change to
+          "Field Value". These are the only columns which will show actual data from the source
+          table. The remaining columns show the aggregate function (summary information) of the
+          source raw data in that field.</p><p>Figure 4-24: Specifying Fields to Group By for Report
+          Summary</p><p><image href="./media/Image_171.png" placement="break" scale="50"/></p></li>
+
+      <li>To change the type of aggregate function, click the dropdown arrow to see the options in
+        the Display Value column. The options are different for each datatype.<p>Figure 4-25:
+          Specifying Aggregate Function for Summary Report</p><p><image href="./media/Image_173.jpg"
+            height="281" width="544" id="image_eml_12q_zx"/></p></li>
+      <li>If you are grouping by more than one field, the order in which the aggregation is
+        calculated may impact the results. To change the order of aggregation, hover the mouse over
+        the number in the Group By column. When two arrows are displayed, click the up or down arrow
+        to increase or decrease the order of that field.<p>
+          <note>By default, a sort order is added along with the aggregation order. You can
+            change both the sort and aggregation orders. Refer to the Step 10 on page 61 in Creating
+            a Report and to the aggregation ordering instructions in Steps 3 and 4 above of these
+            instructions.</note>
+        </p><p>Figure 4-26: Specifying Aggregation Order</p><p><image href="./media/Image_174.jpg"
+            height="265" width="521" id="image_fml_12q_zx"/></p></li>
+      <li>When you are finished, click <b>Save </b>or choose one of the following Save Options: Save
+        and close, Save run and retain (for report history), or Save and run once (no history).</li>
+     </ol>
+  </conbody>
+</concept>

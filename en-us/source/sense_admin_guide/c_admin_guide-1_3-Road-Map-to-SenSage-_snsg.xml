@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1_3">
+   <title>Road Map to SenSage AP Documentation</title>
+   <conbody>
+      <p>This document, the Administration Guide, is part of the larger documentation set of your
+      SenSage AP system. Figure P-1 illustrates SenSage AP components and modules in the context of
+      their function within the SenSage AP system.</p>
+      <fig>
+         <title>Figure P-1: Road Map to SenSage AP Documentation</title>
+         <image href="./media/Image_007.jpg" placement="break" id="image_bvn_5vf_vx"/>
+      </fig>
+      <p>The table below describes all the manuals in the SenSage AP documentation set and the user
+      roles to which they are directed.</p>
+      <table id="table_cvn_5vf_vx">
+         <tgroup cols="3">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <colspec colnum="3" colname="col3"/>
+            <thead>
+               <row>
+                  <entry>Role</entry>
+                  <entry>Tasks</entry>
+                  <entry>Documentation</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>Analyst, Report Developer, System Administrator</entry>
+                  <entry>
+                     <p>• Create and edit reports, charts, and models</p>
+                     <p>• Create and edit dashboards</p>
+                     <p>• Manage SenSage AP Users</p>
+                     <p>• Manage SenSage AP Models</p>
+                     <p>• Create and edit data models</p>
+                     <p>• Write SQL code and queries</p>
+                  </entry>
+                  <entry>Analyzer Guide</entry>
+               </row>
+               <row>
+                  <entry>Business Analyst or System Administrator</entry>
+                  <entry>
+                     <p>• Learn about Analytics</p>
+                     <p>• Use IntelliSchema views</p>
+                     <p>• Learn about the Foundation and Compliance Analytics packages</p>
+                     <p>• Learn about additional Analytics packages</p>
+                  </entry>
+                  <entry>Analytics Guide</entry>
+               </row>
+               <row>
+                  <entry>Developer, Report Developer or Security Analyst</entry>
+                  <entry>
+                     <p>• Use SenSage AP SQL, SenSage AP SQL functions, and libraries to create reports or
+                query the EDW</p>
+                     <p>• Access EDW data using open standards as ANSI SQL, ODBC, and JDBC</p>
+                     <p>• Create and use Perl code in SenSage AP SQL statements</p>
+                     <p>• Use the DBD Driver to query SenSage AP from other locations</p>
+                  </entry>
+                  <entry>Event Data Warehouse Guide</entry>
+               </row>
+               <row>
+                  <entry>Security System Administrator</entry>
+                  <entry>
+                     <p>• Configure retrievers, receivers, and collectors</p>
+                     <p>• Enable/disable log adapters</p>
+                     <p>• Configure SenSage Retriever</p>
+                     <p>• Create log adapter PTL files</p>
+                  </entry>
+                  <entry>Collector Guide</entry>
+               </row>
+               <row>
+                  <entry>System Administrator</entry>
+                  <entry>
+                     <p>• Install SenSage AP</p>
+                     <p>• Configure SenSage AP and its components</p>
+                     <p>• Configure Vmware</p>
+                  </entry>
+                  <entry>Installation, Configuration, and Upgrade Guide</entry>
+               </row>
+               <row>
+                  <entry>System Administrator</entry>
+                  <entry>
+                     <p>• Manage the SenSage AP Event Data Warehouse (EDW)</p>
+                     <p>• Manage the Collector</p>
+                     <p>• Manage users, groups, and permissions</p>
+                     <p>• Archive to Nearline storage</p>
+                     <p>• Manage assets &amp; monitor security alerts</p>
+                     <p>• Monitor log source health</p>
+                     <p>• Monitor system health</p>
+                     <p>• Troubleshoot</p>
+                     <p>• Error Messages</p>
+                  </entry>
+                  <entry>Administration Guide</entry>
+               </row>
+               <row>
+                  <entry>Legal</entry>
+                  <entry>Monitor third-party licenses</entry>
+                  <entry>Third-Party Open Source Licensing</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+      <note>You can access the manuals listed above from the SenSage AP Welcome page. Click on the
+        <uicontrol>Documentation</uicontrol> hyperlink.</note>
+   </conbody>
+</concept>

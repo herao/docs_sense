@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_5">
+  <title>Adding and Modifying Groups</title>
+  <conbody>
+    <p>Groups are a way to define task actions limited to an organizational level. By defining a
+      group, you control what data a group can view and what actions the group can perform on an
+      object. In the case of synchronizing groups with one or more AD servers, you need to specify
+      the AD server and the associated group DN so that the users within the group DN are
+      synchronized with the group available in Analyzer.</p>
+  </conbody>
+</concept>

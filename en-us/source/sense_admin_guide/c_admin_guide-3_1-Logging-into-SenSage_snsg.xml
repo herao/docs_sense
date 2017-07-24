@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_1">
+   <title id="title_a5">Logging into SenSage AP</title>
+   <conbody>
+      <p>The Deployment Manager allows you to monitor the state of your SenSage AP deployment clusters
+      and components, view current status, analyze anomalies, and make configuration and deployment
+      changes to the SenSage AP system.</p>
+      <p>To access the Deployment Manager, enter the URL in your browser; when you see the Sign In
+      Screen, enter your username and password.</p>
+      <p>
+         <note>The URL to access the Deployment Manager was noted during the installation of the
+        SenSage AP product in the format
+          <codeph>http://&lt;<i>Server_name_or_IP_address</i>&gt;:8080</codeph>, at the end of the
+          <codeph>install.sh</codeph> instructions.</note>
+      </p>
+      <p>Once your credentials are authenticated, the dashboard is displayed as shown in the figure
+        <xref href="c_admin_guide-3_2-Monitoring-SenSage-A_snsg.xml#topic_3_2/fid_g_2_1"/>.</p>
+   </conbody>
+</concept>

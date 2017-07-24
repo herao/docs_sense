@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_13_3">
+   <title>SenSage AP Retriever</title>
+   <conbody>
+      <p>SenSage AP Retriever displays messages without error codes. The table below lists the full
+      set of messages.</p>
+      <table id="table_g5z_gyq_wx">
+         <tgroup cols="1">
+            <colspec colnum="1" colname="col1"/>
+            <thead>
+               <row>
+                  <entry>Message</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>error: Auto-discovery encountered an exception: {0}</entry>
+               </row>
+               <row>
+                  <entry>fatal: Required config property not set: {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Unable to construct reader: {0}. {1}</entry>
+               </row>
+               <row>
+                  <entry>warn: No logging level specified. Defaulting to: {0}</entry>
+               </row>
+               <row>
+                  <entry>warn: No logging file specified. Defaulting to: {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Unknown log type {0} specified for Windows host: {1}</entry>
+               </row>
+               <row>
+                  <entry>error: Simple config property: {0} requires {1}</entry>
+               </row>
+               <row>
+                  <entry>error: Required config property not set: {0}</entry>
+               </row>
+               <row>
+                  <entry>warn: Optional config property not set: {0}, using default: {1}</entry>
+               </row>
+               <row>
+                  <entry>error: Required config property not set: {0}</entry>
+               </row>
+               <row>
+                  <entry>warn: Auto-discovery of event sources disabled, missing config property:
+              {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Required config property not set: {0} , no event types will be read from
+              discovered sources.</entry>
+               </row>
+               <row>
+                  <entry>warn: Config property not set: {0}</entry>
+               </row>
+               <row>
+                  <entry>info: Auto-discovered host: {0}</entry>
+               </row>
+               <row>
+                  <entry>warn: Config property not set: {0} , using default: {1}</entry>
+               </row>
+               <row>
+                  <entry>warn: Error recovering stale log files in {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Required config property not set: {0}</entry>
+               </row>
+               <row>
+                  <entry>warn: Config property not set: {0} , using default: {1}</entry>
+               </row>
+               <row>
+                  <entry>warn: Config property not set: {0} , using default: {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Unable to open a TCP socket connection to {0}:{1}</entry>
+               </row>
+               <row>
+                  <entry>error: Missing required config property: {0}, no records will be filtered by
+              ID.</entry>
+               </row>
+               <row>
+                  <entry>warn: Config property not set: {0} , using default: {1}</entry>
+               </row>
+               <row>
+                  <entry>error: Unable to initialize StateManager database, no state will be persisted
+              {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Error closing StateManager database. {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Unable to load the state of pipeline[{0}</entry>
+               </row>
+               <row>
+                  <entry>error: Unable to save the state of pipeline[{0}</entry>
+               </row>
+               <row>
+                  <entry>debug: EventPipelineState::writeObject</entry>
+               </row>
+               <row>
+                  <entry>debug: EventPipeline::writeObject pipelineDetails: {0}</entry>
+               </row>
+               <row>
+                  <entry>info: EventPipeline:readObject started, version {0}</entry>
+               </row>
+               <row>
+                  <entry>info: EventPipeline:readObject::Upgrading state for key = {0}</entry>
+               </row>
+               <row>
+                  <entry>info: EventPipeline:readObject::During upgrading state, offset null for {0} using
+              zero.</entry>
+               </row>
+               <row>
+                  <entry>error: EventPipeline:readObject::Unknown version of EventPipelineState:
+              {0}</entry>
+               </row>
+               <row>
+                  <entry>info: EventPipeline:readObject pipelineDetails: {0}</entry>
+               </row>
+               <row>
+                  <entry>info: EventPipeline:readObject this.toString: {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Unknown version of EventPipelineStateDetails: {0}</entry>
+               </row>
+               <row>
+                  <entry>info: SMBEventReader:init:: eventTypeStr = {0}</entry>
+               </row>
+               <row>
+                  <entry>debug: SMBEventReader:isRemoveLogReset:: pipeline = {0}</entry>
+               </row>
+               <row>
+                  <entry>warn: Pipeline {0}</entry>
+               </row>
+               <row>
+                  <entry>trace: SMBEventReader:read:: handleName = {0} , readOffset = {1}</entry>
+               </row>
+               <row>
+                  <entry>info: Using skipAheadMap to populate handle {0} with offset {1}</entry>
+               </row>
+               <row>
+                  <entry>info: SMBEventReader:read:: For pipe = {0}. Using oldest record number =
+              {1}</entry>
+               </row>
+               <row>
+                  <entry>trace: SMBEventReader:read:: records.readOffset = {0}</entry>
+               </row>
+               <row>
+                  <entry>trace: SMBEventReader:read:: {0}</entry>
+               </row>
+               <row>
+                  <entry>trace: SMBEventReader:read:: skipping recordNumber {0}</entry>
+               </row>
+               <row>
+                  <entry>warn: SMBEventReader:read:: record number was -1 for handle = {0}</entry>
+               </row>
+               <row>
+                  <entry>warn: SMBEventReader:prepareForRestart:: skipAheadMap already in use!</entry>
+               </row>
+               <row>
+                  <entry>info: SMBEventReader:prepareForRestart:: handleName = {0} , readOffset =
+              {1}</entry>
+               </row>
+               <row>
+                  <entry>error: SMBEventReader:prepareForRestart:: skipping due to null log
+              handles</entry>
+               </row>
+               <row>
+                  <entry>error: SMBEventReader:close:: null logHandles</entry>
+               </row>
+               <row>
+                  <entry>error: SMBEventReader:close:: null adminSession</entry>
+               </row>
+               <row>
+                  <entry>info: SMBEventReader:setDebug:: adminSession is null. enableDebug = {0}.</entry>
+               </row>
+               <row>
+                  <entry>warn: Config property not set: {0} , using default: {1}</entry>
+               </row>
+               <row>
+                  <entry>warn: Config property not set: {0} , defaulting to:</entry>
+               </row>
+               <row>
+                  <entry>info: Remote shell server listening on port: {0}</entry>
+               </row>
+               <row>
+                  <entry>info: Remote shell accepting localhost connections only: {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Unable to start a remote shell running on port: {0}, e</entry>
+               </row>
+               <row>
+                  <entry>info: Received client connection: {0}</entry>
+               </row>
+               <row>
+                  <entry>info: Refusing non-localhost connection from: {0}</entry>
+               </row>
+               <row>
+                  <entry>info: Verified localhost connection.</entry>
+               </row>
+               <row>
+                  <entry>info: Remote client disconnected: {0}</entry>
+               </row>
+               <row>
+                  <entry>fatal: Uncaught exception in thread ‘ {0}</entry>
+               </row>
+               <row>
+                  <entry>info: RTNet enabled: {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Required config property not set: {0} , using default: {1}</entry>
+               </row>
+               <row>
+                  <entry>debug: Initializing RTNet: {0} = {1} , {2} = {3} ,</entry>
+               </row>
+               <row>
+                  <entry>fatal: Unable to initialize RTNet: {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Unable to create pipeline [ {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Uncaught exception in Remote Shell thread.{0}</entry>
+               </row>
+               <row>
+                  <entry>error: Attempting to restart Remote Shell thread in {0} seconds.</entry>
+               </row>
+               <row>
+                  <entry>error: Uncaught exception in Pipeline Monitor thread.{0}</entry>
+               </row>
+               <row>
+                  <entry>error: Attempting to restart Pipeline Monitor thread in {0} seconds.</entry>
+               </row>
+               <row>
+                  <entry>error: Unable to load config file: {0}</entry>
+               </row>
+               <row>
+                  <entry>trace: getPipelineThread threw = {0}</entry>
+               </row>
+               <row>
+                  <entry>error: Pipeline[ {0} ] has error with reader: {1}</entry>
+               </row>
+               <row>
+                  <entry>error: Unable to establish pipeline[ {0} ] due to bad readers.</entry>
+               </row>
+               <row>
+                  <entry>debug: Pipeline[ {0} ]: assigning filter: {1}</entry>
+               </row>
+               <row>
+                  <entry>error: Pipeline[ {0} ]: Unable to construct filter.{1}</entry>
+               </row>
+               <row>
+                  <entry>warn: Polling interval property not set: {0} , using default: {1}</entry>
+               </row>
+               <row>
+                  <entry>warn: Invalid polling interval: {0} , using default: {1}</entry>
+               </row>
+               <row>
+                  <entry>warn: Invalid block size: {0} , using default: {1}</entry>
+               </row>
+               <row>
+                  <entry>warn: Delete Check property not set: {0} , using default: {1}</entry>
+               </row>
+               <row>
+                  <entry>warn: Invalid delete check: {0} , using default: {1}</entry>
+               </row>
+               <row>
+                  <entry>debug: Unable to write records {0}</entry>
+               </row>
+               <row>
+                  <entry>info: Pipeline Restarter: attempting to start broken pipeline[ {0} ]</entry>
+               </row>
+               <row>
+                  <entry>info: Pipeline Restarter: stopping pipeline thread[ {0} ]</entry>
+               </row>
+               <row>
+                  <entry>info: Pipeline Restarter: waiting for pipeline to stop[ {0} ]</entry>
+               </row>
+               <row>
+                  <entry>info: Pipeline Restarter: pipeline[ {0} ] is not stopped yet</entry>
+               </row>
+               <row>
+                  <entry>warn: Pipeline Restarter: Can’t restart pipeline[ {0} ]. Pipeline would not
+              stop.</entry>
+               </row>
+               <row>
+                  <entry>info: Pipeline Restarter: preparing reader for restart[ {0}</entry>
+               </row>
+               <row>
+                  <entry>info: Pipeline Restarter: resetting state on pipeline[ {0} ]</entry>
+               </row>
+               <row>
+                  <entry>info: Pipeline Restarter: State reset for pipeline[ {0} ]</entry>
+               </row>
+               <row>
+                  <entry>warn: Pipeline Restarter: Pipeline not found: pipeline[ {0} ]</entry>
+               </row>
+               <row>
+                  <entry>info: Pipeline Monitor: checking for broken pipelines every {0} seconds.</entry>
+               </row>
+               <row>
+                  <entry>info: Pipeline Monitor: pipeline[ {0} ] appears to be broken, will attempt
+              restart.</entry>
+               </row>
+               <row>
+                  <entry>info: Pipeline Monitor: all pipelines appear to be working.</entry>
+               </row>
+               <row>
+                  <entry>fatal: RTNet Native Implementation: winretriever stub was not loaded, unknown
+              operating system</entry>
+               </row>
+               <row>
+                  <entry>warn: Missing config property: {0} , using default: {1}</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

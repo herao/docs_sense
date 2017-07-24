@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_7">
+   <title id="title_a16">Using Model Menu Items to Perform Model tasks</title>
+   <conbody>
+    
+      <p>The following table describes the use of each Models Menu icon when the Models tab is
+          selected:</p><table id="table_ezp_l5r_zx">
+          <tgroup cols="3">
+        <colspec colnum="1" colname="col1" colwidth="1*"/>
+        <colspec colnum="2" colname="col2" colwidth="1.61*"/>
+        <colspec colnum="3" colname="col3" colwidth="1.94*"/>
+        <thead>
+          <row>
+            <entry>icon</entry>
+            <entry>Name</entry>
+            <entry>Use to...</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_321.jpg" scale="60"/></entry>
+            <entry>New Model</entry>
+            <entry>Create new model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_322.jpg" scale="60"/></entry>
+            <entry>Open Model</entry>
+            <entry>Open the selected model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_323.jpg" scale="60"/></entry>
+            <entry>Execute Model</entry>
+            <entry>Execute the selected model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_324.jpg" scale="60"/></entry>
+            <entry>Manage Properties</entry>
+            <entry>Manage properties for the selected model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_325.jpg" scale="60"/></entry>
+            <entry>Set Access Control (not currently supported)</entry>
+            <entry>Set access control for the selected model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_326.jpg" scale="60"/></entry>
+            <entry>Duplicate</entry>
+            <entry>Duplicate (copy) the selected model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_327.jpg" scale="60"/></entry>
+            <entry>Delete</entry>
+            <entry>Delete the selected model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_328.jpg" scale="60"/></entry>
+            <entry>Create a Schedule</entry>
+            <entry>Create a schedule with the selected model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_329.jpg" scale="60"/></entry>
+            <entry>Create a Report</entry>
+            <entry>Create a report with the selected model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_330.jpg" scale="60"/></entry>
+            <entry>Create a Request</entry>
+            <entry>Create a request with the selected model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_331.jpg" scale="60"/></entry>
+            <entry>Share or Unshare Model(s)</entry>
+            <entry>Share or Unshare selected model(s)</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_332.jpg" scale="60"/></entry>
+            <entry>Filter by Tag or Parameter</entry>
+            <entry>Display models by specified tag or parameter</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_333.jpg" scale="60"/></entry>
+            <entry>Import Models or Export Models</entry>
+            <entry>Imported (Admin user onlyj) or export selected models (All users)</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_334.jpg" scale="60"/></entry>
+            <entry>Set Model Status</entry>
+            <entry>Set model status to active, hidden, or deprecated (Admin only)</entry>
+          </row>
+        </tbody>
+      </tgroup>
+        </table>
+    
+  </conbody>
+</concept>

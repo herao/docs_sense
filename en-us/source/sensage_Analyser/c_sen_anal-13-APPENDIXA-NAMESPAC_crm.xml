@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_13">
+   <title>Appendix A: Namespace Access Procedures</title>
+   <conbody>
+    <p>This appendix contains both the SenSage AP version 5.x.x and 6.x.x procedure to limit a
+      user’s access to a namespace(s):<ul id="ul_pmf_mls_zx">
+        <li><xref href="c_sen_anal-13_1-6xx-Procedure-to-L_crm.xml"/></li>
+        <li><xref href="c_sen_anal-13_2-5xx-Procedure-to-L_crm.xml"/></li>
+      </ul></p>
+  </conbody>
+</concept>

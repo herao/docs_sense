@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9_1">
+   <title>General Syntax for Utility Tools</title>
+   <conbody>
+      <p>Each utility tool described in this section has arguments and options. The options fall into
+      two categories: those generally available to all utilities, and those available only to
+      specific utilities. As shown below, you specify an option by preceding its name with two
+      dashes, for example: <codeph>--hosts</codeph>. To specify a value for the option, you can
+      precede the value either with a space or an equals sign (=). Therefore, both of the following
+      examples are valid:</p>
+      <codeblock xml:space="preserve">--hosts=my_machine
+--hosts my_machine</codeblock>
+      <p>
+         <note>If you specify the equals sign (=), do not put a space on either side of it.</note>
+      </p>
+      <p>This section describes the general syntax used with utility tools and contains the following
+        sections:<ul id="ul_glw_5th_vx">
+            <li>
+               <xref href="c_admin_guide-3_9_1_1-Options-Default-Valu_snsg.xml#topic_3_9_1_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-3_9_1_2-Getting-Help_snsg.xml#topic_3_9_1_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-3_9_1_3-Editing-Parameters_snsg.xml#topic_3_9_1_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-3_9_1_4-Control-of-execution_snsg.xml#topic_3_9_1_4"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-3_9_1_5-Remote-Execution_snsg.xml#topic_3_9_1_5"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-3_9_1_6-Shared-Mandatory-Fie_snsg.xml#topic_3_9_1_6"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

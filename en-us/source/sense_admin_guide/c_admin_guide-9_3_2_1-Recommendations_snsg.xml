@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_3_2_1">
+   <title>Recommendations</title>
+   <conbody>
+      <ul id="ul_vxs_bb4_wx">
+         <li>Provide at least the “enumerator” user that is mapped by default to the Analyzer “Admin”
+        when setting up AD/LDAP integration.</li>
+         <li>Enter at least the set of required groups that map to required SenSage AP roles.</li>
+         <li>Enter any additional users and groups needed for the deployment.</li>
+         <li>Assign existing users who require access to SenSage AP to the appropriate Active Directory
+        groups.</li>
+      </ul>
+      <p>See your Active Directory administrator for details on configuring objects</p>
+   </conbody>
+</concept>

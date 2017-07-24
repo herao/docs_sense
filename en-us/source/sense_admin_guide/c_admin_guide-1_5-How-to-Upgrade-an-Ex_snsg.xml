@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1_5">
+   <title>How to Upgrade an Existing SenSage AP License</title>
+   <conbody>
+      <ol>
+         <li>Login to the Linux host where the Deployment Manager is installed.</li>
+         <li>Download the correct license to the Deployment Manager host.</li>
+         <li>Reconfigure the license using the hawkeye-deploy script:<p>
+               <codeblock xml:space="preserve">hawkeye-deploy --action=updateLicense --targetService=hawkeyeAP \
+-- licenseFile=&lt;path to license file&gt;</codeblock>
+            </p>
+         </li>
+      </ol>
+   </conbody>
+</concept>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9_1_1">
+   <title>Options Default Values</title>
+   <conbody>
+      <p>Some options have a default value. For example, the value of the --hosts option defaults to
+      localhost. To use the default value, do not specify the flag on the command line. To use a
+      non- default value, include the flag and specify the desired value.</p>
+      <p>If the option is not explicitly specified for a setting, the default value is used most
+      cases, the online help for the tools will show you what the default value is by displaying the
+      default value in parenthesis.</p>
+   </conbody>
+</concept>

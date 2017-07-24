@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_3_5">
+   <title>PostgreSQL-BulkRequests</title>
+   <conbody>
+      <fig>
+         <title>PostgreSQL-BulkRequests Sample Graph</title>
+         <image href="./media/Image_030.jpg" placement="break" scalefit="yes"/>
+      </fig>
+      <note>Observe the following: <ul>
+            <li>Blue graph—represents the number of bulk requests.</li>
+            <li>Green graph—represents the number of bulk requests read.</li>
+         </ul>
+      </note>
+      <p>When you click zoom, a more detailed view of this graph is displayed as shown below: </p>
+      <fig>
+         <title>PostgreSQL-General Detail Sample Graph</title>
+         <image href="./media/Image_031.jpg" placement="break" scalefit="yes"/>
+      </fig>
+   </conbody>
+</concept>

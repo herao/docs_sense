@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_4_5_7">
+   <title><i>tabledisk &lt;table_name&gt;</i>: Showing Disk Use for the Specified Table</title>
+   <conbody>
+      <p>Lists the amount of disk space consumed for the given table, across the EDW instance, not
+      including disk space consumed by directories.</p>
+      <p>Example:<codeblock xml:space="preserve">atview --user=administrator --pass=pass:s0mep@ss lmshost:8072 \
+--namespace=external.websvcs tabledisk stock_quote_log</codeblock>
+      </p>
+   </conbody>
+</concept>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_2_4">
+   <title>Revoking SenSage AP (Postgres) User Permissions</title>
+   <conbody>
+      <p>To revoke a SenSage AP (Postgres) user’s permission, follow the example steps below:</p>
+      <p>Remove the user’s access to the applicable schema. For example, to revoke all privileges on
+         schema default_analytics for user abc, issue the following
+         command:<codeblock xml:space="preserve">psql -h localhost -p54321 -d controller -U hexis -c "REVOKE ALL PRIVILEGES ON SCHEMA default_analytics FROM abc;"</codeblock>
+      </p>
+   </conbody>
+</concept>

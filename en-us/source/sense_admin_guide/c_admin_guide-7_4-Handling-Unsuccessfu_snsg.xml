@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_4">
+   <title id="title_a27">Handling Unsuccessful Loads</title>
+   <conbody>
+      <p>This section describes these topics:<ul id="ul_avs_hyv_vx">
+            <li>
+               <xref href="c_admin_guide-7_4_1-About-Unsuccessful-L_snsg.xml#topic_7_4_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-7_4_2-Viewing-Data-from-Un_snsg.xml#topic_7_4_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-7_4_3-Tracking-Uploads-in-_snsg.xml#topic_7_4_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-7_4_4-Viewing-Transaction-_snsg.xml#topic_7_4_4"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

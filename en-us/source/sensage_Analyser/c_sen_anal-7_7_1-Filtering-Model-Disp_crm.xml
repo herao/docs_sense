@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_7_1">
+   <title>Filtering Model Display</title>
+   <conbody>
+    <p>In Figure 6-20, below the menu options is a gray bar to specify how you want to filter the
+      models list for display.</p>
+    <p>Figure 6-22: Bar to Filter Model List</p>
+    <p>
+      <image href="./media/Image_336.jpg" id="image_nkq_bvr_zx" placement="break" scale="60"/>
+    </p>
+    <p>The following table describes the use of each filter icon when the Models tab is
+      selected.</p>
+    <table id="table_okq_bvr_zx">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1" colwidth="1*"/>
+        <colspec colnum="2" colname="col2" colwidth="1.31*"/>
+        <colspec colnum="3" colname="col3" colwidth="2.44*"/>
+        <thead>
+          <row>
+            <entry>icon</entry>
+            <entry>Name</entry>
+            <entry>Use to...</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_337.jpg" scale="60"
+              /></entry>
+            <entry align="left" valign="middle">Unshare model</entry>
+            <entry align="left" valign="middle">Unshare selected model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_338.jpg" scale="60"
+              /></entry>
+            <entry align="left" valign="middle">Filter on model name</entry>
+            <entry align="left" valign="middle">Display model by name beginning with entry</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_339.jpg" scale="60"
+              /></entry>
+            <entry align="left" valign="middle">Filter by Input/Output Parameters</entry>
+            <entry align="left" valign="middle">Display model by input or output parameter</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_340.jpg" scale="60"
+              /></entry>
+            <entry align="left" valign="middle">Share model</entry>
+            <entry align="left" valign="middle">Unshare selected model</entry>
+          </row>
+          <row>
+            <entry align="center" valign="middle"><image href="./media/Image_341.jpg" scale="60"
+              /></entry>
+            <entry align="left" valign="middle">Filter on model status</entry>
+            <entry align="left" valign="middle">Display model by status beginning with entry
+              (Active, Hidden, Deprecated). For use by Admin only.</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </conbody>
+</concept>

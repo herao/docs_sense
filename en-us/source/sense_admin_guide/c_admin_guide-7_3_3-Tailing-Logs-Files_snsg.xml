@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_3">
+   <title>Tailing Logs Files</title>
+   <conbody>
+      <p>You can view the log files using any text editor, or you can view the most recent entries
+      using the <codeph>tail</codeph> command.</p>
+      <p>To view data logged to a file</p>
+      <p>
+         <codeph>tail -f /opt/hexis/hawkeye-ap/var/log/collector/&lt;<i>logfile</i>&gt;</codeph>
+      </p>
+      <p>where <codeph>&lt;<i>logfile</i>&gt;</codeph> is <filepath>activity</filepath>,
+        <filepath>error</filepath>, or <filepath>transaction</filepath>.</p>
+      <p>To view data logged to syslog</p>
+      <p>
+         <codeph>tail -f /var/log/messages</codeph>
+      </p>
+   </conbody>
+</concept>

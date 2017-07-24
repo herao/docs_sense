@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_10_1">
+   <title>Prioritizing Log Files Manually</title>
+   <conbody>
+      <p>You can prioritize the order of log files in log queues manually. Edit the numerical prefix
+      in a filename to place the log file at the appropriate spot in the log queue. Loaders search
+      for the log file with the highest priority when selecting the next file to load.</p>
+      <note>IgniteTech recommends that you prioritize log files with the <filepath>id</filepath>
+      attribute in the <filepath>config.xml</filepath> file. Only use the manual procedure described
+      below for troubleshooting or similar purposes. </note>
+      <p>To prioritize a log file by changing the priority field in the filename:</p>
+      <ol id="ol_h5q_cfz_vx">
+         <li>Create a hard link to the metadata file (found in
+        <filepath>&lt;LogQueue&gt;/spool</filepath>).<codeblock xml:space="preserve"># ls 000-20040315T101023-000-cpixrt.ext 000-20040315T101023-000-cpixrt.meta
+# ln 000-20040315T101023-000-cpixrt.meta 001-20040315T101023-000-cpixrt.meta</codeblock>
+         </li>
+         <li>Rename the log file, incrementing the priority prefix as you rename it. For
+        example:<codeblock xml:space="preserve"># mv 000-20040315T101023-000-cpixrt.log 001-20040315T101023-000-cpixrt.log</codeblock>
+         </li>
+         <li>Remove the original metadata
+        file.<codeblock xml:space="preserve"># rm 000-20040315T101023-000-cpixrt.meta</codeblock>
+         </li>
+      </ol>
+   </conbody>
+</concept>

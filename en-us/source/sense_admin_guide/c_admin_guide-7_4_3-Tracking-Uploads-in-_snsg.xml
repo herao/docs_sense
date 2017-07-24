@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_4_3">
+   <title>Tracking Uploads in the EDW</title>
+   <conbody>
+      <p>In addition to loading log data into the specified tables, <codeph>atload</codeph> saves
+      information in the EDW</p>
+      <p>about the load. You can view this load information by querying these system tables:</p>
+      <ul id="ul_bh1_tyv_vx">
+         <li>
+            <codeph>system.upload_info</codeph>
+            <p>This table enables administrators to check on upload
+          status in the system. When the system is healthy, this table returns one row for each
+          upload. When the upload data is not consistent across all the nodes in the cluster, this
+          table returns a value of <codeph>false</codeph> in the CONSISTENT column. In this case,
+          the table may return multiple rows with the same value in the UPLOADID column; all of
+          these rows are marked as inconsistent.</p>
+         </li>
+         <li>
+            <codeph>system.raw_upload_info</codeph>
+            <p>This table enables a support person to see the
+          raw data that is distributed across the system in order to troubleshoot an inconsistency
+          problem revealed in the<codeph> system.upload_info</codeph> data.</p>
+         </li>
+      </ul>
+      <p>Both of these system tables contain a unique identifier for the upload: the value of the
+        <codeph>_uploadid</codeph> column. These tables store additional information for each load
+      operation, which includes: the minimum and maximum timestamps, the number of lines in the
+      source log data, the number of lines successfully parsed by the PTL file, the number of rows
+      loaded into the specified EDW table, the PTL file and client signatures, and whether the load
+      was successful.</p>
+      <p>Additionally, the <codeph>system.upload_info</codeph> table returns the consistency data and
+      the <codeph>system.raw_upload_info</codeph> returns the logical name of the source node for
+      the log data.</p>
+      <p>As it begins loading data into the log tables, the EDW inserts a new row in these system
+      tables to track the upload. Initially, the value of the SUCCESSFUL column defaults to
+        <codeph>false</codeph>. When the load completes successfully, this column's value changes to
+      true.</p>
+      <p>IgniteTech recommends that you regularly query the <codeph>system.upload_info</codeph> table
+      for loads with inconsistent data (the value of the CONSISTENT column is
+      <codeph>false</codeph>). Inconsistent data was not correctly replicated across the cluster.
+      Whenever you discover an inconsistent load, query the <codeph>system.raw_upload_info</codeph>
+      table and capture the results in a file, contact IgniteTech Support: send email to
+      info@ignitetech.com or call +1 800-248-0027.</p>
+   </conbody>
+</concept>

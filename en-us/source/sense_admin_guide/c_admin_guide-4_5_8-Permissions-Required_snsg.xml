@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_5_8">
+   <title>Permissions Required to Retire Data</title>
+   <conbody>
+      <p>To run this command, you must have access to the namespace where the table exists and your
+      user role must have sls.retire permission. For more information, see <xref href="c_admin_guide-8_2-SenSage-AP-Security-_snsg.xml#topic_8_2"/>
+      </p>
+      <p>
+         <note type="important"> IgniteTech recommends that you give <codeph>sls.retire</codeph>
+        permission to only a few trusted users.</note>
+      </p>
+   </conbody>
+</concept>

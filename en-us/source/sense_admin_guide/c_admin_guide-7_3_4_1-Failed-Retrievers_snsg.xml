@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_4_1">
+   <title>Failed Retrievers</title>
+   <conbody>
+      <p>A Retriever may go down if any of its processes fail (for example,
+        <filepath>BackupDir</filepath> for backing up raw log data) most cases, you need to restart
+      the Collector after fixing the problem. When a retriever is configured to use a preprocessor
+      and the preprocessor fails to generate an output file, the Collector will rename the files to
+        <filepath>.noload</filepath> in the spool directory.</p>
+      <p>To determine if this is the problem, run the preprocessor (with and files) outside of the
+      Collector. If you do not see your postprocessed data in the file, fix the preprocessor script
+      (rename the <filepath>.noload</filepath> files to <filepath>.raw</filepath>). Then fix the
+      preprocessor in the Collector (rename the <filepath>.noload</filepath> files to
+        <filepath>.raw</filepath> in the spool directory).</p>
+   </conbody>
+</concept>

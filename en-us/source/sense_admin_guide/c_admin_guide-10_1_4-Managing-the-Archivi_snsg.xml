@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_1_4">
+   <title>Managing the Archiving to Nearline Storage</title>
+   <conbody>
+      <p>You can manage the archiving of local data in an EDW instance manually or on a scheduled
+      basis. SenSage AP provides a command-line utility for manually archiving local data on
+      demand.</p>
+      <p>Before people can manage archiving to Nearline storage, a system administrator performs some
+      initial configuration tasks. Thereafter, other people can manage archiving manually or on a
+      schedule.</p>
+      <p>For more information on the command-line utility, see <xref href="c_admin_guide-10_3-Archiving-of-Local-D_snsg.xml#topic_10_3"/>.</p>
+   </conbody>
+</concept>

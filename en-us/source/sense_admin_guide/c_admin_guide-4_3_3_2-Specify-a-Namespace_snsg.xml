@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_3_2">
+   <title>Specify a Namespace</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--namespace=&lt;name&gt;</codeph>
+            </pt>
+            <pd>The table namespace in which to manage items. The default namespace is default. To specify the
+          top level, use "" (empty quotation marks). <note>When you run <codeph>atmanage</codeph>,
+            you can specify a table name explicitly (for example,
+              <codeph>ns1.ns2.ns3.mytable</codeph>) or use the<codeph>
+              --namespace=&lt;namespace&gt;</codeph> flag to specify the namespace. When you use the
+            namespace flag, you can specify the namespace once for an entire command; SenSage AP
+            prepends the specified namespace to each table name used in the rest of the
+            request.</note>
+            </pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

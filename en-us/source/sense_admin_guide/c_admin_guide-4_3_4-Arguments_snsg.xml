@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_4">
+   <title>Arguments</title>
+   <conbody>
+      <p>The <codeph>atmanage</codeph> utility takes as its first argument the
+          <codeph>
+            <i>&lt;cluster_list&gt;</i>
+         </codeph> for the EDW that is to be managed. The
+          <codeph>
+            <i>&lt;cluster_list&gt;</i>
+         </codeph> represents a comma-separated list of
+          <codeph>
+            <i>&lt;host&gt;:&lt;port&gt;</i>
+         </codeph> pairs. The list must be enclosed in quotation
+      marks (").</p>
+      <p>Specifying a list rather than a single host:port pair allows the utility to run even if the
+      first of the specified EDW nodes is down. Each host:port pair identifies the EDW instance; for
+      example, <codeph>sls01:8072</codeph>.</p>
+      <p>The command tries each host:port pair in order (left to right) until it finds one that allows
+      a TCP (Transmission Control Protocol) connection. Failure to establish a TCP connection
+      indicates that the EDW host is down. If the connection succeeds but the command fails, the
+      command does not attempt to establish additional connections.</p>
+      <p>Example:</p>
+      <p>
+         <codeblock xml:space="preserve">atmanage --user=administrator --password=changeme
+  "sls01:8072,sls02:8072,sls03:8072" adduser joe_cool</codeblock>
+      </p>
+      <p>The command then expects an <i>
+            <codeph>&lt;action&gt;</codeph>
+         </i> argument, which indicates how
+      the program should act on the specified EDW. Depending on the
+        <i>
+            <codeph>&lt;action&gt;</codeph>
+         </i>, there are a number of additional arguments, as
+      indicated in the table below.</p>
+      <p>
+         <note type="important">: These commands must be submitted by a user with administrator
+        permission.</note>
+      </p>
+      <table id="table_t3l_21t_vx">
+         <tgroup cols="3">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <colspec colnum="3" colname="col3"/>
+            <thead>
+               <row>
+                  <entry>
+                     Action/Admin Action
+                  </entry>
+                  <entry>Additional Arguments</entry>
+                  <entry>Description</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry namest="col1" nameend="col3">
+                     <b>Authentication Management</b>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>adduser</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;username&gt; &lt;password&gt;</i>
+                  </entry>
+                  <entry>Add a user</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>deleteuser</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;username&gt;</i>
+                  </entry>
+                  <entry>Delete a user</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>changepassword</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;username&gt; &lt;new_password&gt;</i>
+                  </entry>
+                  <entry>Add or change a user password</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>addrole</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;rolename&gt;</i>
+                  </entry>
+                  <entry>Add a role</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>deleterole</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;rolename&gt;</i>
+                  </entry>
+                  <entry>Delete a role</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>addpermission</codeph>
+                  </entry>
+                  <entry>
+                     <p>
+                        <i>&lt;permission_name&gt; &lt;type&gt;</i>
+                     </p>
+                     <p>
+                        <i>&lt;admin_value&gt;</i>
+                     </p>
+                  </entry>
+                  <entry>Create a permission that can later be associated with a role;
+                  <codeph>&lt;<i>type</i>&gt;</codeph> is either 'token' or 'property'</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>deletepermission</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;permission_name&gt;</i>
+                  </entry>
+                  <entry>Delete a permission object</entry>
+               </row>
+               <row>
+                  <entry morerows="1">
+                     <codeph>addrolepermission</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;rolename&gt; &lt;permission_name&gt; &lt;value&gt;</i>
+                  </entry>
+                  <entry>Associate a permission with a role</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>
+                        <i>&lt;rolename&gt; sls.namespace &lt;namespace&gt;</i>
+                     </codeph>
+                  </entry>
+                  <entry>Grant a role permission to access a namespace</entry>
+               </row>
+               <row>
+                  <entry morerows="1">
+                     <codeph>deleterolepermission</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;rolename&gt; &lt;permission_name&gt; &lt;value&gt;</i>
+                  </entry>
+                  <entry>Dissociate a permission from a role</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>
+                        <i>&lt;rolename&gt; sls.namespace &lt;namespace&gt;</i>
+                     </codeph>
+                  </entry>
+                  <entry>Revoke a role's permission to access a namespace</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>adduserrole</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;username&gt; &lt;rolename&gt;</i>
+                  </entry>
+                  <entry>Associate a user with a role</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>deleteuserrole</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;username&gt; &lt;rolename&gt;</i>
+                  </entry>
+                  <entry>Dissociate a user from a role</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>setuserstate</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;username&gt; [enable|disable]</i>
+                  </entry>
+                  <entry>Enable or disable a user</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>setrolestate</codeph>
+                  </entry>
+                  <entry>
+                     <i>
+                        <codeph>&lt;rolename&gt; [enable|disable]</codeph>
+                     </i>
+                  </entry>
+                  <entry>Enable or disable a role</entry>
+               </row>
+               <row>
+                  <entry namest="col1" nameend="col3">
+                     <b>Table management</b>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>createtbl</codeph>
+                  </entry>
+                  <entry>&lt;table_name&gt; &lt;column1&gt;:&lt;type&gt; [&lt;column2&gt;:&lt;type&gt;[...]]</entry>
+                  <entry>
+                     <p>Create a table with the given columns</p>
+                     <p>
+                        <note>This option enables creation of tables but not views.</note>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>renametbl</codeph>
+                  </entry>
+                  <entry>&lt;old_tablename&gt; &lt;new_tablename&gt;</entry>
+                  <entry>
+                     <p>Rename a table and/or move it between namespaces</p>
+                     <p>
+                        <note>This option enables renaming and moving tables but not views.</note>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>droptbl</codeph>
+                  </entry>
+                  <entry>&lt;table_name&gt;</entry>
+                  <entry>
+                     <p>Delete a table</p>
+                     <note>
+                        <p>This option enables deletion of tables but not views.</p>
+                     </note>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>quiesce</codeph>
+                  </entry>
+                  <entry/>
+                  <entry>Set the data store to read-only mode</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>resume</codeph>
+                  </entry>
+                  <entry/>
+                  <entry>Restore the data store to its nominal mode</entry>
+               </row>
+               <row>
+                  <entry morerows="2">
+                     <codeph>backuptbl</codeph>
+                  </entry>
+                  <entry>
+                     <i>
+                        <codeph>start &lt;table_name&gt;</codeph>
+                     </i>
+                  </entry>
+                  <entry>Backup a table</entry>
+               </row>
+               <row>
+                  <entry>
+                     <i>
+                        <codeph>commit &lt;table_name&gt;</codeph>
+                     </i>
+                  </entry>
+                  <entry>Commit the backup</entry>
+               </row>
+               <row>
+                  <entry>
+                     <i>
+                        <codeph>rollback &lt;table_name&gt;</codeph>
+                     </i>
+                  </entry>
+                  <entry>Rollback a table backup to its original state</entry>
+               </row>
+               <row>
+                  <entry morerows="2">
+                     <codeph>restoretbl</codeph>
+                  </entry>
+                  <entry>
+                     <i>
+                        <codeph>start &lt;table_name&gt;</codeph>
+                     </i>
+                  </entry>
+                  <entry>Create a sandbox into which you restore a previously backed up table</entry>
+               </row>
+               <row>
+                  <entry>
+                     <i>
+                        <codeph>commit &lt;table_name&gt;</codeph>
+                     </i>
+                  </entry>
+                  <entry>Commit the sandbox into the data store</entry>
+               </row>
+               <row>
+                  <entry>
+                     <i>
+                        <codeph>rollback &lt;table_name&gt;</codeph>
+                     </i>
+                  </entry>
+                  <entry>Rollback a table restore to its original state</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>archivetbl</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;table_name&gt; &lt;nsi&gt; [end_time] [start_time]</i>
+                  </entry>
+                  <entry>Archive the requested (ISO) time range from the requests table to the specified
+              NSI</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>setnsi</codeph>
+                  </entry>
+                  <entry>
+                     <i>[nsi] [nsa]</i>
+                  </entry>
+                  <entry>Add or change <codeph>NSI/NSA association</codeph>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>deletensi</codeph>
+                  </entry>
+                  <entry>
+                     <i>[nsi]</i>
+                  </entry>
+                  <entry>Delete an <codeph>NSI/NSA association</codeph>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>listnsi</codeph>
+                  </entry>
+                  <entry>
+                     <i/>
+                  </entry>
+                  <entry>List NSI/NSA associations</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>updateuploadinfo</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;table_name&gt; &lt;CSV_file&gt;</i>
+                  </entry>
+                  <entry>Update upload information for the table from CSV file</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>adduploadinfo</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;table_name&gt; &lt;CSV_file&gt;</i>
+                  </entry>
+                  <entry>Add upload information for the table from CSV file</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>deleteuploadinfo</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;table_name&gt; &lt;CSV_file&gt;</i>
+                  </entry>
+                  <entry>Delete upload information for associated IDs</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>canceltask</codeph>
+                  </entry>
+                  <entry>
+                     <i>
+                        <codeph>&lt;request_id&gt;</codeph>
+                     </i>
+                  </entry>
+                  <entry>Kill the given task (auto-detects internal task ID rather than
+              application-defined task ID).</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>compacttbl</codeph>
+                  </entry>
+                  <entry>
+                     <i>&lt;table_name&gt; [&lt;seconds_to_run&gt;]
+                [&lt;enable_compact_archived_data&gt;][&lt;num ber&gt;d/m/h]</i>
+                  </entry>
+                  <entry>
+                     <p>Compact all fragmented portions of a table.</p>
+                     <p>Optionally, can facilitate scheduled compaction in the Loader by specifying:</p>
+                     <ul>
+                        <li>number of seconds to run; compacting stops when the specified number is
+                exceeded.</li>
+                        <li>whether to compact archived data and the recent number_of_days,
+                number_of_minutes, or number_of_hours.</li>
+                     </ul>
+                     <p>For more information, see:<xref href="c_admin_guide-4_3_6_7-compacttbl_snsg.xml#topic_4_3_6_7"/> and <i>Defining
+                  Loaders</i> in Chapter 2, “SenSage AP Collector Configuration” in the
+                  <cite>Collector Guide</cite>
+                     </p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>force-upgrade</codeph>
+                  </entry>
+                  <entry>
+                     <i>
+                        <codeph>&lt;table_name&gt;</codeph>
+                     </i>
+                  </entry>
+                  <entry>
+                     <p>Manually upgrade the data store Upgrades the table's storage format to the latest
+                version.</p>
+                     <note type="important">May be very slow, and may cause the table to be unreadable by previous
+                versions of the software. Consult IgniteTech Support before using.</note>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

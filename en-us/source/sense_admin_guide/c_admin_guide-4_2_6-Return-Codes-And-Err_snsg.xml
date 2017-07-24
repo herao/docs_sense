@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_2_6">
+   <title>Return Codes And Error Messages</title>
+   <conbody>
+      <p>See <xref href="c_admin_guide-4_6-Errors-and-Return-Va_snsg.xml#topic_4_6"/>.</p>
+   </conbody>
+</concept>

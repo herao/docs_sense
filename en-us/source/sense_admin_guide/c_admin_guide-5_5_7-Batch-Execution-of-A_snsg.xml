@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_5_7">
+   <title>Batch Execution of ALTER TABLE Statements</title>
+   <conbody>
+      <p>You execute multiple ALTER TABLE SQL statements in an executable script file. The following
+      example shows two statements which are run in a script file. Note the first line in this
+      example which must precede the two ALTER TABLE
+      statements.<codeblock xml:space="preserve">#!/opt/hexis/hawkeye-ap/bin/altertbl
+alter table tt.table1 add column column1 int64;
+alter table tt.table2 add column column2 int64;</codeblock>
+      </p>
+   </conbody>
+</concept>

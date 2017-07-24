@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_3_1">
+   <title>Native First Time Login</title>
+   <conbody>
+      <p>After a fresh installation of SenSage AP Analyzer, no users in the database are guaranteed to
+      be present. When native authentication is in use and the first user logs into the system, if
+      that user is successfully authenticated in AP Analyzer, the user will become a designated
+      "Admin" user with the ability to create other users.</p>
+   </conbody>
+</concept>

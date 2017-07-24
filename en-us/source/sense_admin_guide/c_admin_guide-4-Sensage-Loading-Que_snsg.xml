@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4">
+   <title>Sensage Loading, Querying, and Managing the EDW</title>
+   <conbody>
+      <p>This chapter contains the following sections:</p>
+      <ul id="ul_umc_1ll_vx">
+         <li>
+            <xref href="c_admin_guide-4_1-Loading-Data-into-th_snsg.xml#topic_4_1"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_2-Querying-Data_snsg.xml#topic_4_2"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_3-Managing-an-EDW-Data_snsg.xml#topic_4_3"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_4-Examining-the-State-_snsg.xml#topic_4_4"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_5-Retiring-Data_snsg.xml#topic_4_5"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-4_6-Errors-and-Return-Va_snsg.xml#topic_4_6"/>
+         </li>
+      </ul>
+   </conbody>
+</concept>

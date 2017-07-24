@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_1_2">
+   <title>To set File-Based Logging</title>
+   <conbody>
+      <p>To use file-based logging, comment out the syslog line and uncomment the remaining lines. If
+      you are not using the default SenSage AP home directory, you must also modify the path.</p>
+   </conbody>
+</concept>

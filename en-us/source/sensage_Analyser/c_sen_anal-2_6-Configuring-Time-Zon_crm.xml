@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_6">
+   <title>Configuring Time Zones</title>
+   <conbody>
+    <p>SenSage AP always converts timestamps in the logs that it receives to GMT (assuming a
+      correctly configured Collector and a properly built Log Adapter). If a time zone has been
+      specified in a log entry, AP will use the time zone value in the log entry as the basis for
+      the conversion. Otherwise, if the log adapters are configured with a time zone, then AP
+      converts those timestamps in the log entries. If the time zone information is not in the log
+      entry nor in the adapter configuration, then timestamps in the logs are considered GMT.</p>
+    <p>In Analyzer, users can customize what time zone is used when requesting reports as well as
+      the time displayed in the reports. Time zone settings are specified in the Analyzer user
+      profile settings screen as shown in Figure 1-3. Users are prompted to set the time zone they
+      want to use on their first login to the Analyzer. By default all data is displayed in the
+      user's local time zone. Users can also change time zone settings at any time later.</p>
+    <p>Note that the time displayed in the reports is the adjusted time based on the time zone
+      setting in the user profile of the user who ran the report; the user’s time zone is not
+      derived from the time zone of the source system where the logs originated. When displaying,
+      scheduling, or running reports, a date range option is available to enter date/time field
+      entries. These fields are always assumed as GMT.</p>
+    <p>
+      <note>The clock on the client where the Analyzer web GUI is run should be synchronized and set
+        to the same time zone as the Analyzer host (server). The Analyzer web GUI uses the client’s
+        clock value in report headers in the GUI (that are not part of the actual report). If this
+        clock is not synchronized with the Analyzer host, the time-range value in the report header
+        in the GUI will not match the actual time-range in the report. Scheduled reports are run in
+        the time zone of the Analyzer host.</note>
+    </p>
+  </conbody>
+</concept>

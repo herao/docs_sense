@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1_1">
+   <title id="title_a1">Audience for this Book</title>
+   <conbody>
+     <p>This book in intended for:</p>
+    <ul id="ul_g2x_1yn_yx">
+      
+
+      
+      <li>
+        <p>system administrators who install and manage software systems.</p>
+      </li>
+      <li>
+        <p>business analysts who views or writes reports and models.</p>
+      </li>
+      <li>
+        <p>report developers who write reports and queries and SQL code</p>
+      </li>
+    </ul>
+  </conbody>
+</concept>

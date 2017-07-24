@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_4_1">
+   <title>Designating LDAP user authentication one-time (for all users)</title>
+   <conbody>
+      <p>To designate LDAP user authentication one-time for all users, your enterprise must have
+      Active Directory (AD), a Windows-based authentication authority that manages users and groups.
+      If both AD and the SenSage AP cluster is installed and operational, to authenticate all users
+      at once, see <xref href="c_admin_guide-9-ConfiguringActiveD_snsg.xml#topic_9"/>.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_6_5">
+   <title>restoretbl</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>restoretbl [start|commit|rollback] &lt;table_name&gt;</codeph>
+            </pt>
+            <pd>The <codeph>restoretbl</codeph> action allows you to restore a table from a backup. You must
+         use this action in conjunction with a standard backup tool. For more information, see <xref href="c_admin_guide-5_2_1-Backing-Up-and-Resto_snsg.xml#topic_5_2_1"/>.
+         <p>This action has three arguments:</p>
+               <ul id="ul_exn_m15_vx">
+                  <li>
+                     <codeph>start</codeph>—creates a sandbox directory to which the table can be restored; you
+             can use the sandbox to double-check the data before you run a restore on your EDW instance's
+             data store</li>
+                  <li>
+                     <codeph>commit</codeph>—commits the sandbox back into the data store</li>
+                  <li>
+                     <codeph>rollback</codeph>—returns the table data to its pre-restored state</li>
+               </ul>
+               <note type="important">You cannot use the <codeph>restoretbl</codeph> option to upgrade a
+           datastore from an older version of SenSage AP to a newer version. You can only use
+           <codeph>restoretbl</codeph> to restore tables created using the same version of SenSage
+           AP.</note>
+               <codeblock xml:space="preserve"><codeph>restoretbl [start|commit|rollback] &lt;<i>table_name</i>&gt;</codeph></codeblock>
+            </pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

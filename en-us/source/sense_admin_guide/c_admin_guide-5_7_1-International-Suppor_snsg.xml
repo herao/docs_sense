@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_7_1">
+   <title>International Support in the EDW</title>
+   <conbody>
+      <p>The EDW supports the storage of<i> international characters</i>, which are characters other
+      than those in the U.S. English alphabet and some of its punctuation marks. For example, the
+      Spanish word</p>
+      <p>“España” contains the international character “ñ”. The EDW stores all text values with UTF-8
+      character encoding to ensure that international characters are stored and queried
+      successfully.</p>
+      <p>For more details on character sets, encoding schemes, and using computer fonts with encoding
+      schemes, see. “SenSageUsing the SenSage Event Data Warehouse (EDW)” in the <cite>Event Data
+        Warehouse Guide</cite>.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/concept.dtd">
+<concept id="c_notices-copyright_dx_10412">
+  <title>Copyright notice</title>
+  <conbody>
+    <p>No part of this document may be reproduced, stored in a retrieval system, or transmitted, in
+      any form, or by any means, electronic, mechanical, photocopied, recorded, or otherwise,
+      without the prior written consent of Ignite Technologies, Inc.</p>
+    <p>401 Congress Avenue Suite 2650</p>
+    <p>Austin, TX 78701</p>
+    <p>800-248-0027</p>
+    <p><xref type="external" format="html" href="mailto:info@ignitetech.com"
+        >info@ignitetech.com</xref></p>
+    <p>Copyright © 2017 Ignite Technologies, Inc. All Rights Reserved.</p>
+  </conbody>
+</concept>

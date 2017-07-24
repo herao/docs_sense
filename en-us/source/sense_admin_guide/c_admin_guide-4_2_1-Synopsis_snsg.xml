@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_2_1">
+   <title>Synopsis</title>
+   <conbody>
+      <codeblock xml:space="preserve">atquery [options] &lt;cluster_list&gt; &lt;file_name&gt;.sql [&lt;file_name&gt;.sql […]]
+atquery [options] &lt;cluster_list&gt; -</codeblock>
+      <note>When you use
+    the second option, in which you enter the query directly from the command line, you must enter
+      CTRL-D on a separate line after the SQL statement to actually run the query.</note>
+   </conbody>
+</concept>

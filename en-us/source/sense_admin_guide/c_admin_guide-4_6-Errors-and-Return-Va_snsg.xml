@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_6">
+   <title id="title_a17">Errors and Return Values for Data-Store Utilities</title>
+   <conbody>
+      <table id="table_e5l_y45_vx">
+         <tgroup cols="3">
+            <colspec colnum="1" colname="col1" colwidth="1*"/>
+            <colspec colnum="2" colname="col2" colwidth="2.21*"/>
+            <colspec colnum="3" colname="col3" colwidth="3.57*"/>
+            <thead>
+               <row>
+                  <entry>Error Code or Return Value</entry>
+                  <entry>Command</entry>
+                  <entry>Description</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>0</entry>
+                  <entry>
+                     <codeph>all</codeph>
+                  </entry>
+                  <entry>Success. Command completed successfully or
+                        <codeph>--dbgprint-request</codeph> or <codeph>--version</codeph> or
+                        <codeph>--raw</codeph> was also specified. For "atview tasks", at least one
+                     task was found running.</entry>
+               </row>
+               <row>
+                  <entry morerows="3">2</entry>
+                  <entry>
+                     <codeph>atmanage</codeph>
+                     <codeph>droptbl</codeph>
+                  </entry>
+                  <entry>The table did not exist.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>atview tasks</codeph>
+                  </entry>
+                  <entry>No relevant tasks found.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>atview [namespaces,tables,columns]</codeph>
+                  </entry>
+                  <entry>No namespaces, tables, or columns/types found.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>atview tabledisk</codeph>
+                  </entry>
+                  <entry>Specified table does not exist.</entry>
+               </row>
+               <row>
+                  <entry morerows="1">3</entry>
+                  <entry>
+                     <codeph>atmanage</codeph>
+                  </entry>
+                  <entry>Could not fulfill command against the table.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>atview</codeph>
+                  </entry>
+                  <entry>Some problem retrieving the specified information (tasks, disk space
+                     information, meta-data).</entry>
+               </row>
+               <row>
+                  <entry>10</entry>
+                  <entry>all except <codeph>atload</codeph>
+                  </entry>
+                  <entry>Interrupt (for example, SIGTERM, SIGINT) caught once, and then caught again
+                     before the program finishes recognizing the first interrupt.</entry>
+               </row>
+               <row>
+                  <entry>11</entry>
+                  <entry>
+                     <codeph>all</codeph>
+                  </entry>
+                  <entry>The <codeph>--help</codeph> or <codeph>--longhelp</codeph> options are
+                     specified, or there are command-line parsing problems, or any other condition
+                     that leads to the program displaying its usage information.</entry>
+               </row>
+               <row>
+                  <entry>12</entry>
+                  <entry>
+                     <codeph>atload</codeph>
+                  </entry>
+                  <entry>Load failure due to interrupt or failed load.</entry>
+               </row>
+               <row>
+                  <entry/>
+                  <entry>
+                     <codeph>atquery</codeph>
+                  </entry>
+                  <entry>Errors happen during the query, and no interrupts happen; or
+                        <codeph>--raw</codeph> is specified and the program was not able to connect
+                     to the specified port on the specified host.</entry>
+               </row>
+               <row>
+                  <entry/>
+                  <entry>
+                     <codeph>atmanage</codeph>
+                  </entry>
+                  <entry>The upgrade process was interrupted (twice), not giving full opportunity
+                     for this utility to clean up any ongoing upgrade it had started.</entry>
+               </row>
+               <row>
+                  <entry morerows="1">13</entry>
+                  <entry>
+                     <codeph>atmanage</codeph>, <codeph>atview</codeph>
+                  </entry>
+                  <entry>
+                     <codeph>--raw</codeph> is specified.</entry>
+               </row>
+               <row>
+                  <entry>
+                     <codeph>atquery</codeph>
+                  </entry>
+                  <entry>Query interrupted (and cancellation ran to completion).</entry>
+               </row>
+               <row>
+                  <entry>14</entry>
+                  <entry>
+                     <codeph>atquery</codeph>
+                  </entry>
+                  <entry>Problems with <codeph>--postproc</codeph>.</entry>
+               </row>
+               <row>
+                  <entry>15</entry>
+                  <entry>
+                     <codeph>atquery</codeph>
+                  </entry>
+                  <entry>Interrupt happens while query is not running.</entry>
+               </row>
+               <row>
+                  <entry>20</entry>
+                  <entry>
+                     <codeph>all</codeph>
+                  </entry>
+                  <entry>There are problems with the supplied command line, consistency and
+                     compatibility in the command line arguments, or problems with the specified
+                     files (for atload, PTL files; for atquery, SQL or Perl file).</entry>
+               </row>
+               <row>
+                  <entry>21</entry>
+                  <entry>
+                     <codeph>atmanage force-upgrade</codeph>
+                  </entry>
+                  <entry>The upgrade was cancelled before any effects took place on the
+                     table.</entry>
+               </row>
+               <row>
+                  <entry>22</entry>
+                  <entry>
+                     <codeph>atmanage force-upgrade</codeph>
+                  </entry>
+                  <entry>The upgrade was cancelled, but only after some effect took place on the
+                     table.</entry>
+               </row>
+               <row>
+                  <entry>23</entry>
+                  <entry>
+                     <codeph>atmanage force-upgrade</codeph>
+                  </entry>
+                  <entry>The upgrade failed before any effects took place on the table.</entry>
+               </row>
+               <row>
+                  <entry>24</entry>
+                  <entry>
+                     <codeph>atmanage force-upgrade</codeph>
+                  </entry>
+                  <entry>The upgrade failed, but only after some effects possibly took place on the
+                     table.</entry>
+               </row>
+               <row>
+                  <entry>98</entry>
+                  <entry>
+                     <codeph>all</codeph>
+                  </entry>
+                  <entry>Problems connecting to the EDW server.</entry>
+               </row>
+               <row>
+                  <entry>99</entry>
+                  <entry>
+                     <codeph>all</codeph>
+                  </entry>
+                  <entry>Unhandled internal errors.</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

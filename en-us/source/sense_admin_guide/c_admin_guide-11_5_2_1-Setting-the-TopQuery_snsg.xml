@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+         id="topic_11_5_2_1">
+   <title>Setting the TopQueryFastExit Flag</title>
+   <conbody>
+      <p>Above and beyond the performance improvement gained by running a <codeph>TOP</codeph> query without sorting
+      the data, you may also be able to improve query performance by enabling the "EDW top query
+      fast exist" field in the Advanced EDW section of the SenSage AP Service Configs tab of
+      Deployment Manager.</p>
+      <p>Although the EDW Query Engine automatically stops processing an unordered <codeph>TOP</codeph> query as soon
+      as it retrieves the number of rows specified in the <codeph>TOP</codeph> clause; enabling the <codeph>TopQueryFastExit</codeph>
+      may further improve performance.</p>
+      <p>Set <codeph>TopQueryFastExit</codeph> to 1 to cause an unordered <codeph>TOP</codeph> query to stop processing as soon as the
+      EDW retrieves the number of rows specified in the <codeph>TOP</codeph> clause. You must set this field in the
+      <filepath>athttpd.conf</filepath> file on every node in the cluster and restart the EDW for the change to take
+      effect.</p>
+      <p>By default the flag is set to 0 and the feature is not enabled.</p>
+      <note>Although the EDW log file contains broken pipe error messages when you enable
+      <codeph>TopQueryFastExit</codeph>, these messages indicate no actual problem. The only issue is that they
+      clutter the log file. If running the query without enabling this flag performs sufficiently,
+      there is no need to enable this flag as well.</note>
+   </conbody>
+</concept>

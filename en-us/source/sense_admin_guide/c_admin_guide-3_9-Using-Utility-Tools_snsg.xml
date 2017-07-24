@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9">
+   <title id="title_a11">Using Utility Tools</title>
+   <conbody>
+      <p>This section provides details on using utility tools, providing general usage rules and
+      details on specific tools to perform common tasks. It includes the following sections:<ul id="ul_cry_rth_vx">
+            <li>
+               <xref href="c_admin_guide-3_9_1-General-Syntax-for-U_snsg.xml#topic_3_9_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-3_9_2-Utility-Tool-Descrip_snsg.xml#topic_3_9_2"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

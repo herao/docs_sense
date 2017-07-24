@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_12_1">
+   <title id="title_a45">Analyzer</title>
+   <conbody>
+      <table id="table_ztc_5tq_wx">
+         <tgroup cols="6">
+            <colspec colnum="1" colname="col1" colwidth="6.41*"/>
+            <colspec colnum="2" colname="col2" colwidth="2.81*"/>
+            <colspec colnum="3" colname="col3" colwidth="1.64*"/>
+            <colspec colnum="4" colname="col4" colwidth="1.85*"/>
+            <colspec colnum="5" colname="col5" colwidth="1.06*"/>
+            <colspec colnum="6" colname="col6" colwidth="1*"/>
+            <thead>
+               <row>
+                  <entry>Log File Name</entry>
+                  <entry>Category</entry>
+                  <entry>Purpose</entry>
+                  <entry>Log Rotate</entry>
+                  <entry>PTL</entry>
+                  <entry>Notes</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <filepath>/var/log/tomcat/analyzer.log</filepath>
+                  </entry>
+                  <entry>Debug, Monitoring</entry>
+                  <entry>ERR MON</entry>
+                  <entry>N</entry>
+                  <entry/>
+                  <entry/>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>/var/log/tomcat/audit.log</filepath>
+                  </entry>
+                  <entry>Debug, Monitoring</entry>
+                  <entry>AUDIT</entry>
+                  <entry>N</entry>
+                  <entry/>
+                  <entry/>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>/var/log/tomcat/catalina.out</filepath>
+                  </entry>
+                  <entry>Debug, Monitoring</entry>
+                  <entry>ERR MON</entry>
+                  <entry>N</entry>
+                  <entry/>
+                  <entry/>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>/opt/hexis/tomcat/host- manager.log</filepath>
+                  </entry>
+                  <entry>Debug, Monitoring</entry>
+                  <entry>ERR MON</entry>
+                  <entry>N</entry>
+                  <entry/>
+                  <entry/>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>/opt/hexis/tomcat/localhost.log</filepath>
+                  </entry>
+                  <entry/>
+                  <entry/>
+                  <entry/>
+                  <entry/>
+                  <entry/>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>/opt/hexis/tomcat/ localhost_access.log</filepath>
+                  </entry>
+                  <entry/>
+                  <entry/>
+                  <entry/>
+                  <entry/>
+                  <entry/>
+               </row>
+               <row>
+                  <entry>
+                     <filepath>/opt/hexis/tomcat/manager.log</filepath>
+                  </entry>
+                  <entry/>
+                  <entry/>
+                  <entry/>
+                  <entry/>
+                  <entry/>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

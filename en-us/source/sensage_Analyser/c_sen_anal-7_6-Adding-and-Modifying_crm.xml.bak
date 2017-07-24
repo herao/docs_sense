@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_6">
+   <title>Adding and Modifying Model Components to a New or Existing Model</title>
+   <conbody>
+    <ol id="ol_iym_vlr_zx">
+      <li>Go to the Analyzer dashboard, select Data Design from the dropdown list, click Analytics
+        Workbench, and click the Analytics tab.<p>The expands the Component listing showing all
+          components in the system which you have permission to access. Component menu options are
+          displayed across the top of the model listing. For details on these menu items, see
+          Component Menu Options.</p><p><ph id="a102">THIS MAY NEED NEW SCREENSHOT. TRAINING DOCS DO
+            NOT SHOW DELETE (trash) AS AN OPTION</ph></p><p>Figure 6-13: Components
+            Listing</p><p><image href="./media/Image_280.jpg" height="522" width="599"
+            id="image_wwf_slr_zx"/></p></li>
+      <li>You can select a component for viewing in the following ways:<ol id="ol_bhy_ynr_zx">
+          <li>To select a component, check the box to the left of the component name. To de-select,
+            click the box again.</li>
+          <li>To select all components, check the box at the top of all the checkboxes. To
+            de-select, click the box again.</li>
+          <li>To search for a component by name, type in the text box just below the component
+              menu.<p>When you type the list of components will be filtered by the string that you
+              type.</p></li>
+          <li>To open and close each category of components, the triangle to the left of the
+            category name. If you hold down the shift key and click, all the categories will be
+            expanded or collapsed at once.</li>
+        </ol><p>Figure 6-14: Component Listing with Model Canvas</p><p><image
+            href="./media/Image_281.jpg" height="504" width="602" id="image_xwf_slr_zx"/></p><p>
+          <note>NOTE: When scrolling over components in categories, additional information will pop
+            up.</note>
+        </p><p>Figure 6-15: Information Popup on List Operations</p><p><image
+            href="./media/Image_282.jpg" height="236" width="614" id="image_ywf_slr_zx"/></p></li>
+      <li>To place components on the canvas, use your mouse to drag components from the mouse onto
+        the canvas:<p>Figure 6-16: Dragging Component to Canvas</p><p><image
+            href="./media/Image_283.jpg" height="211" width="594" id="image_axf_slr_zx"/></p><p>
+          <note>NOTE: After you have selected, a component, you will see the model canvas menu,
+            allowing you to perform actions on the model currently on your canvas. For details on
+            each option represented by an icon on the menu, see “Using Model Canvas Menu Options to
+            perform Model Actions”, on page 127.</note>
+        </p></li>
+      <li>To connect components on the canvas, see “Connecting Components”, next</li>
+    </ol>
+  </conbody>
+</concept>

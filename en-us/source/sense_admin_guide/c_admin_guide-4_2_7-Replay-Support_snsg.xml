@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_2_7">
+   <title>Replay Support</title>
+   <conbody>
+      <p>When diagnosing performance issues, it is often helpful to save the output from the EDW
+      particular, <codeph>atquery</codeph> supports a command (replay) that lets you simulate
+      re-running the query that was previously run.</p>
+      <p>To save the exact bytes sent over the network from the EDW host, run atquery
+        <codeph>--raw</codeph> and save the results to a file. To replay the results, run
+        <codeph>atquery replay <i>&lt;filename&gt;</i>
+         </codeph>. Specifying "-" (dash) instead of the
+      filename causes the replay to get data from standard input.</p>
+      <p>The following example connects the live query to
+      replay:<codeblock xml:space="preserve"># runs myfile.sql and saves the raw XML messages to savefile.rwt
+# and simultaneously visualizes them using "replay"
+atquery host:port myfile.sql --raw | tee savefile.rwt | atquery replay -
+# replay them (doesn't re-run the query)
+atquery replay savefile.rwt</codeblock>
+      </p>
+      <note>You will need to <codeph>grep</codeph> out the "delay" lines to clean up the
+      output.</note>
+   </conbody>
+</concept>

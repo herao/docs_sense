@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_6_4">
+   <title>backuptbl</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>backuptbl [start|commit|rollback] &lt;table_name&gt;</codeph>
+            </pt>
+            <pd>The backuptbl action allows you to back up a table. You must use this action in
+          conjunction with a standard backup tool and the atquery utility. For more information, see
+            <xref href="c_admin_guide-5_2_1-Backing-Up-and-Resto_snsg.xml#topic_5_2_1"/>.
+            <codeblock xml:space="preserve"><codeph>backuptbl [start|commit|rollback] &lt;<i>table_name</i>&gt;</codeph></codeblock>
+               <p>This
+            action has three arguments:</p>
+               <ul id="ul_j3p_b15_vx">
+                  <li>
+                     <codeph>start</codeph>—begins the backup session</li>
+                  <li>
+                     <codeph>commit</codeph>—commits the changes</li>
+                  <li>
+                     <codeph>rollback</codeph>—returns the table data to its pre-backup state</li>
+               </ul>
+            </pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

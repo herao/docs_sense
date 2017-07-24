@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_2_8">
+   <title>Scripting Support And Exit Codes</title>
+   <conbody>
+      <p>The <codeph>atquery</codeph> utility returns an exit code of <codeph>0</codeph> on success,
+      or a non-zero exit code upon error. Use these exit codes to control branching logic in
+      scripts. For example, the following code example controls sending email under various
+      conditions.<codeblock xml:space="preserve"># these code snippets have been tested with bourne shell (sh), bash,
+# tcsh and ksh. They assume that there's an SLS running on port
+# 8072 on the local host, and that there's a table named "syslog"
+# that has been loaded.
+echo 'select count(*) from syslog during all' > myquery.sql
+echo 'select * from nosuchtable during all' > badquery.sql
+
+# send an email if the EDW is unavailable, e.g. not running
+atquery nosuchlms:8072 myquery.sql || \
+(mail -s "myquery.sql failed" root &lt; myquery.sql)
+	
+# send an email if there's a syntax error
+atquery localhost:8072 badquery.sql || \
+(mail -s "myquery.sql failed" root &lt; badquery.sql)
+	
+# send an email if/when the query succeeds
+atquery localhost:8072 myquery.sql &amp;&amp; \
+(mail -s "myquery.sql succeeded" root &lt; myquery.sql)
+	
+# send an email either way -- sh/bash version
+if ( ./atquery3 localhost:8072 myquery.sql ); then
+mail -s "sql succeeded" asah &lt; /etc/hosts
+else
+mail -s "sql failed" asah &lt; /etc/hosts
+fi</codeblock>
+    </p>
+      <p>For a full list of errors, see <xref href="c_admin_guide-4_6-Errors-and-Return-Va_snsg.xml#topic_4_6"/>.</p>
+      <p>In addition to exit codes, the <codeph>atquery</codeph> utility prints the query result,
+      progress information, and error messages to stdout. You control the verbosity of progress
+      information and error messages with the <codeph>--verbose</codeph> option. The
+        <codeph>atquery</codeph> utility always prints the result set to <codeph>stdout</codeph>,
+      regardless of the <codeph>--verbose</codeph> option.</p>
+      <p>The results are set off from other text with the following separation
+      lines:<codeblock xml:space="preserve">==== BEGIN: Results for SQL file
+&lt;result_set&gt;
+==== END_DATA ====</codeblock>
+      </p>
+      <p>If you specify <codeph>--verbose=0</codeph>, all messages and separation lines are
+      suppressed, and only the result set is printed. Use the <codeph>--format</codeph> option to
+      specify the text format of the result set. When <codeph>--verbose=0</codeph>, valid values for
+        <codeph>--format</codeph> are <codeph>tsv</codeph> (tab-separated values),
+        <codeph>csv</codeph> (comma-separated values), and <codeph>psv</codeph> (pipe-separated
+      values).</p>
+   </conbody>
+</concept>

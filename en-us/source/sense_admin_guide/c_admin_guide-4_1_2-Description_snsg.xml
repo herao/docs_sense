@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_2">
+   <title>Description</title>
+   <conbody>
+      <p>The <codeph>atload</codeph> utility loads source log events from the specified log file(s)
+      into the specified table on an EDW instance. If the specified table does not exist, it creates
+      the table. The <codeph>&lt;ptl_file&gt;</codeph> argument specifies a file that describes how the
+      log events are transformed and loaded into an EDW instance.</p>
+      <p>The <codeph>atload</codeph> utility supports loading multiple log files with one invocation
+      of the command. If you specify the names of multiple log files on the command line, they are
+      loaded in the order specified. When specifying multiple log files, separate each name with a
+      space addition, you can specify archive files that contain multiple log files.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_7_1">
+   <title>Starting, Stopping, and Restarting Your SenSage AP Deployment</title>
+   <conbody>
+      <p>This procedure stops, starts, or restarts the EDW and the other SenSage AP components on the
+      host from which you are running Deployment Manager.</p>
+      <p>
+         <note>Deployment Manager manages specific SenSage AP files, which means any edits to these
+        managed files are overwritten (usually when the service is started through Deployment
+        Manager). For a list of files managed by Deployment Manager, see Appendix D.</note> To start
+      and stop your entire SenSage AP deployment:</p>
+      <ol id="ol_r5w_qrh_vx">
+         <li>Log into Deployment Manager.</li>
+         <li>. From the Deployment Manager Dashboard, select the Services tab.</li>
+         <li>Above the Alerts and Health Checks, start or stop the entire deployment by selecting the
+          <uicontrol>Start</uicontrol> or <uicontrol>Stop</uicontrol> button.<note>If the Deployment
+          Manager is running, you will see both the Restart button (green top and bottom curved
+          lines) with the red circular Stop button; however, if any components in the deployment are
+          stopped, you will see the triangular Start button instead of the red circular Stop
+          button.</note>
+         </li>
+      </ol>
+   </conbody>
+</concept>

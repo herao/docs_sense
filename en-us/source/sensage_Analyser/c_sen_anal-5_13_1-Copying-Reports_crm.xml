@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_13_1">
+   <title>Copying Reports</title>
+   <conbody>
+    <p>To copy report(s):</p>
+    <ol id="ol_yfz_jnq_zx">
+      <li>Go to the Analyzer dashboard, select Data Design from the dropdown list, click Reports.
+        The Manage Report screen with the current listing of reports is displayed.</li>
+      <li>Check the reports that you want to duplicate.</li>
+      <li>Click the Duplicate button on the top menu.</li>
+    </ol>
+    <p>Figure 4-45: Duplicating Reports</p>
+    <p><image href="./media/Image_203.png" placement="break" scale="50"/></p>
+    <p>The report is now duplicated and appears after the original report in the Report Listing. It
+      is identifed by its version number. For example, if this is the only duplicate, it is
+      identified with a (2) after the report name.</p>
+  </conbody>
+</concept>

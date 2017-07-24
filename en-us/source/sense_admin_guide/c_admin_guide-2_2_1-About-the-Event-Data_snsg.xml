@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_2_1">
+   <title>About the Event Data Warehouse</title>
+   <conbody>
+      <p>The Event Data Warehouse (EDW) is a database built for and dedicated to loading, storing, and
+      analyzing log data. The software uses sophisticated, application-level clustering to perform
+      all load and query tasks fully in parallel across an arbitrary number of hosts. This
+      architecture allows users to load and query massive data volumes in a single, logical database
+      instance without partitioning. The EDW uses a proprietary data model that achieves high levels
+      of compression, while still making all data fully available to query.</p>
+   </conbody>
+</concept>

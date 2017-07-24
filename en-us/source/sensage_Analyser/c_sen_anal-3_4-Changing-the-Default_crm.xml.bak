@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_4">
+   <title>Changing the Default Timeframe</title>
+   <conbody>
+    <p>On the default report, you can select specify a different timeframe to be reported on by
+      clicking the <uicontrol>Data and time range(<image href="media/button_dateTimeRange.png"
+          placement="inline" id="image_hr4_tnr_2y" scale="60"/>)</uicontrol> button at the top right
+      of the screen. This opens a pop-up dialog that allows you to specify the date and time range
+      to further drill down into the report.</p>
+    
+
+    
+    <fig><title>Figure 2-7: Timeframe Indicator</title><image href="./media/Image_078.png" placement="break" id="image_mjv_2cm_zx" scale="40"/></fig>
+  </conbody>
+</concept>

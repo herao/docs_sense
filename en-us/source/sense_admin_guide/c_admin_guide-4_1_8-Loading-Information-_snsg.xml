@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_8">
+   <title>Loading Information about the Log File</title>
+   <conbody>
+      <p>The atload utility allows you to store information about the log files from which rows were
+      loaded in a column of the data. Use the $_log_filename and $log_srchost expression macros in
+      your PTL SELECT statements. The atloadcommand declares the expression macros
+      automatically.</p>
+      <p>For example, you have log entries from multiple log sources in a large file named:</p>
+      <codeblock xml:space="preserve">snmp-2002-01-09_04:00:00.gz</codeblock>
+      <p>The filename carries the timestamp when the log file was created—its so-called roll time. The
+      log file is being loaded from a host named h03. The following PTL SELECT statement uses
+      $_log_filename and $log_srchost to store the roll time and host name as column values in the
+      row being loaded.</p>
+      <codeblock xml:space="preserve">SELECT _strptime(_strmatch($_log_filename, "(\d+-\d+-\d+_\d+:\d+:\d+)\.gz$"),
+"%Y-%m-%d_%H:%M:%S") AS _rolltime, $_log_srchost AS _srchost FROM stdin;</codeblock>
+      <note>Follow the convention of using an underscore (_) to begin the names of columns with
+        metadata about the log entry to distinguish them from columns with data parsed from the log
+        entry itself.</note>
+   </conbody>
+</concept>

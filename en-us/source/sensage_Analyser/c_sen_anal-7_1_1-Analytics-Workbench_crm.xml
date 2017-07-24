@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_1_1">
+   <title>Analytics Workbench</title>
+   <conbody>
+    <p>The Analytics Workbench is a tool in the SenSage AP Analyzer that allows users to execute
+      advanced analytics data processing on the log event data stored in the Event Data Warehouse or
+      other databases. In Analyzer, a set of analytics processing components put together in the
+      Analytics Workbench is known as a data model. The Analytics workbench has a drag and drop
+      graphical programming functionality to provide advanced analytic processing capability.</p>
+    <p>Models created in the Analytics workbench can be simple as shown in Figure 6-1 with a few
+      components as an input to another component.</p>
+    <p>Figure 6-1: Example of a Simple Model</p>
+    <p><image href="./media/Image_253.jpg" height="201" width="422" id="image_hjz_jbr_zx"/></p>
+    <p>The Analytics workbench is also capable of creating arbitrarily complex model as shown in
+      Figure 6-2. Models can be saved as components to be nested (re-used) in other models with
+      unlimited levels of nesting.</p>
+    <p>Figure 6-2: Example of a Complex Model</p>
+    <p><image href="./media/Image_254.jpg" height="289" width="606" id="image_ijz_jbr_zx"/></p>
+  </conbody>
+</concept>

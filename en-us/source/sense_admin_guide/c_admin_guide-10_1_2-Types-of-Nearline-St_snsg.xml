@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_1_2">
+   <title>Types of Nearline Storage Space</title>
+   <conbody>
+      <p>You can use the SenSage AP Nearline Storage Server (NSS) to archive data to the following
+      Nearline storage devices:</p>
+      <ul>
+         <li>
+            <b>EMC® Centera™ Nearline Storage Driver</b>
+            <p>This module allows your organization to take advantage of the unique compliance features that
+       Centera provides. The EDW uses the proprietary Centera API to move data to and from the
+       Centera device.</p>
+         </li>
+         <li>
+            <b>Remote NFS (Network) or CIFS (Common Internet) File System</b>
+            <p>Remote file systems allow your organization to archive historical data to regular storage
+       devices on remote hosts. The remote file systems are mounted locally on the hosts where the
+       EDW instance runs. The local mount points on all EDW hosts must be the same, but each mount
+       point can reference a different remote file system.</p>
+         </li>
+      </ul>
+      <p>In summary, Nearline storage provides:</p>
+      <ul>
+         <li>Easier management of storage space. Scheduling the archiving of data to Nearline storage
+         helps you maintain sufficient local storage space for EDW instances.</li>
+         <li>Easier expansion of storage space. If you require more space, add more storage to your
+         SenSage AP-supported Nearline storage device.</li>
+         <li>More evenly balanced data loads on EDW hosts. When you add hosts to an EDW instance, the
+         newer hosts initially have less data on them than the older, existing hosts. Because older
+         data is archived before newer data, older hosts in the EDW instance are generally the first to
+         reclaim local storage space.</li>
+         <li>Automatic retrieval of archived data. When people run queries, they do not need to know
+         whether the are retrieved from local or Nearline storage.</li>
+      </ul>
+   </conbody>
+</concept>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_1_1">
+   <title>User Authentication</title>
+   <conbody>
+      <p>The user authentication process identifies and validates users through their user name and
+      password.</p>
+      <ul>
+         <li>SenSage AP supports the following user authentication features:</li>
+         <li>Local authentication and single sign-on.</li>
+         <li>Disable and enable users.</li>
+         <li>Track failed log-on attempts and disable users when attempts exceed limits.</li>
+         <li>Handle forgotten passwords, as well as support password strength requirements.</li>
+         <li>LDAP authentication with the ability to synchronize users from LDAP.</li>
+         <li>AD/LDAP authentication with the ability to synchronize users from AD/LDAP.</li>
+      </ul>
+   </conbody>
+</concept>

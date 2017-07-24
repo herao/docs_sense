@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_4_2">
+   <title>Data Design</title>
+   <conbody>
+     <p>The Data Design tab show below has three submenus.Figure 1-15: Data Design Tab</p>
+     <p><image href="./media/Image_047.jpg" placement="break"/></p>
+     <p>The following is a brief description of each submenu:</p>
+    <ul id="ul_n3f_r5l_zx">
+      <li>
+        <p>Reports—allows analysts to manage all reports in the system.</p>
+      </li>
+      <li>
+        <p>Reports Queue—allows analysts to view the status of their report runs.</p>
+      </li>
+      <li>
+        <p>Analytics Workbench Data Flow Models—allows analysts to manage advanced analytics data
+          models.</p>
+      </li>
+      <li>
+        <p>SQL Workbench—allows developers to create custom reports and execute ad-hoc queries
+          using SQL code.</p>
+      </li>
+    </ul>
+  </conbody>
+</concept>

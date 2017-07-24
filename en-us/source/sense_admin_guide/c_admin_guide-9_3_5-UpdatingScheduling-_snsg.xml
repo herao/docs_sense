@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_3_5">
+   <title>Updating/Scheduling an AD/LDAP synchronization</title>
+   <conbody>
+      <p>To schedule an AD/LDAP synchronization for an AD server(s):</p>
+      <ol>
+         <li>To log into Analyzer, provide <b>admin</b> as the username and provide the enumerator password
+        for the first server that was created while setting up AD integration.</li>
+         <li>To set up scheduled sync (which syncs all AD servers) in Analyzer, go to <menucascade>
+               <uicontrol>Administration</uicontrol>
+               <uicontrol>LDAP</uicontrol>
+            </menucascade>, set a synchronization interval (15 minutes is sufficient), and click <b>Save
+          Schedule</b>.<fig>
+               <title> Configuring LDAP Synchronization</title>
+               <image href="./media/Image_286.jpg" placement="break" id="image_bvm_ff4_wx"/>
+            </fig>
+         </li>
+         <li>To synchronize users on demand, select the AD server to be synced from and then click
+          <b>Update users from LDAP</b>.<p>This is mandatory step because unless the users are
+          synchronized, they cannot login using their LDAP credentials.</p>
+         </li>
+         <li>To verify the updated users, go to the <menucascade>
+               <uicontrol>Administration</uicontrol>
+               <uicontrol>Users</uicontrol>
+            </menucascade> container and look for the users added from AD.</li>
+         <li>Click the <b>Update users from LDAP</b> button. The users are synchronized from the selected
+        LDAP server immediately. This is a mandatory step because unless the users are synced, they
+        cannot login using their LDAP credentials.</li>
+         <li>To verify the updated users, go to <menucascade>
+               <uicontrol>Administration</uicontrol>
+               <uicontrol>Users</uicontrol>
+            </menucascade> and look for the users added from AD/LDAP.</li>
+      </ol>
+   </conbody>
+</concept>

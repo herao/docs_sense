@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_2">
+   <title id="title_a42">Initially Configuring Nearline Storage</title>
+   <conbody>
+      <p>Before people can manage the archiving of local data to Nearline storage, a system
+      administrator performs these initial configuration tasks described in the following
+        sections:<ul id="ul_tst_tm4_wx">
+            <li>
+               <xref href="c_admin_guide-10_2_1-Defining-and-Managin_snsg.xml#topic_10_2_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-10_2_2-Specifying-NSAs-for-_snsg.xml#topic_10_2_2"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

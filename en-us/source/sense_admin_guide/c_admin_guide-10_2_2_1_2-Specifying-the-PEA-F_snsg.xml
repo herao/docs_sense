@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+         id="topic_10_2_2_1_2">
+   <title>Specifying the PEA File in Centera NSAs</title>
+   <conbody>
+      <p>In addition to specifying the host identifier, you can specify the location of the Centera Pool
+   Entry Authorization (PEA) file on your EDW hosts. If using authorized access (application
+   profiles) on the Centera unit, you must:</p>
+      <ul>
+         <li>Copy the PEA file to all hosts of your EDW instance; use the same path structure on each
+     host.</li>
+         <li>Specify the path to the PEA file in your NSA definition; precede the path with a question
+     mark (?).</li>
+         <li>Enclose the entire NSA specification within quotation marks. <p>Syntax for specifying
+                    the location of the Centera PEA
+                File:</p><codeblock xml:space="preserve">"centera://&lt;<i>Host_Identifier&gt;</i>?&lt;<i>path_to_PEA_file_on_EDW_hosts</i>&gt;"</codeblock></li>
+      </ul>
+      <p>
+            <b>Examples</b>
+            <codeblock xml:space="preserve">atmanage "edw01:8072,edw02:8072,edw03:8072" --user=administrator \
+--password=changeme setnsi \
+"centera://10.2.3.4,10.006.07.8?/opt/sensage/etc/nss/myProfile.pea"
+
+atmanage "edw01:8072,edw02:8072,edw03:8072" --user=administrator \
+--password=changeme setnsi\
+"centera://centera1.cascommunity.org?/opt/sensage/etc/nss/myProfile.pea"</codeblock>
+        </p>
+   </conbody>
+</concept>

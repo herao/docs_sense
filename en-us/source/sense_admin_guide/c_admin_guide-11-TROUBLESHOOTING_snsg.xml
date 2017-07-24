@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11">
+   <title>Troubleshooting</title>
+   <conbody>
+      <p>This chapter includes these sections:<ul id="ul_b2b_qnq_wx">
+            <li>
+               <xref href="c_admin_guide-11_1-Checking-Space-for-t_snsg.xml#topic_11_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-11_2-Checking-Locking-Sta_snsg.xml#topic_11_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-11_3-Monitoring-for-Incon_snsg.xml#topic_11_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-11_4-Handling-Rendezvous-_snsg.xml#topic_11_4"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-11_5-Improving-Query-Perf_snsg.xml#topic_11_5"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

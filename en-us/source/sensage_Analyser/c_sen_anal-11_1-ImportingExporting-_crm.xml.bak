@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11_1">
+   <title id="title_a23">Importing/Exporting Reports</title>
+   <conbody>
+    <p>To import or export reports for use in another SenSage AP 6.2.x deployment:</p>
+    <ol id="ol_w5x_fjs_zx">
+      <li>Go to the Analyzer left-hand navigation menu, click the Administration menu, and the
+        Import/ Export sub-menu, and the Reports tab.<p>The Import and Export Data screen is
+          displayed with the reports that you have permission to view.</p><p>Figure 10-1: Import and
+          Export Data Screen with Reports Listing</p><p><image href="./media/Image_417.jpg"
+            height="293" width="551" id="image_x5x_fjs_zx"/></p></li>
+      <li>Click the reports that you want to import or export.</li>
+      <li>Click the Export or Import button to export or import the reports you selected.<ol
+          id="ol_c1z_hjs_zx">
+          <li>If you exporting a report, on the lower left-hand side of the screen, you will see the
+            export file labeled reportAutoExport.xml, which is now stored in your download folder.
+            Click the button to view the file.<p>Figure 10-2: Exporting a Report</p><p><image
+                href="./media/Image_418.jpg" height="296" width="552" id="image_y5x_fjs_zx"
+            /></p></li>
+          <li>If you are importing a report, you will see a box where you can drag and drop an
+            export file (.xml) for import. After your file is imported, you will see it in the
+            Import listing under Name with the applicable version number. It will also be displayed
+            on the Manage Reports screen.<p>Figure 10-3: Importing a Report</p><p><image
+                href="./media/Image_419.jpg" height="305" width="509" id="image_z5x_fjs_zx"/></p><p>
+              <note>NOTE: If you import reports that are already on the dashboard, when you display
+                the reports you will be able to identify them as copies, denoted with <b>v2, v3</b>,
+                etc.</note>
+            </p></li>
+        </ol></li>
+    </ol>
+  </conbody>
+</concept>

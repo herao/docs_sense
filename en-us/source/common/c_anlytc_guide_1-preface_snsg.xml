@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1">
+  <title id="title_O_82076">About Analytics Guide </title>
+  <conbody>
+    <p>This book, the <cite>Analytics Guide</cite>, describes the 6.1.1 version of SenSage AP
+      software.</p>
+    <p>It provides instructions on how to configure the Log Adapters provided with your SenSage AP
+      software. Each Log Adapter’s configuration is discussed in a separate chapter titled with the
+      name of the Log Adapter. Configuration steps include SenSage AP setup steps, source system
+      setup steps, and <codeph>syslog-ng</codeph> configurations (where needed).</p>
+    <p>The Preface contains the following topics:<ul id="ul_ahf_rlb_h1b">
+        <li><xref href="c_anlytc_guide_2-Audience-for-this-Bo_snsg.xml"/></li>
+        <li><xref href="c_common_6-Organization_snsg.xml"/></li>
+        <li><xref href="c_common-3-Road-Map-to-SenDocs_snsg.xml"/></li>
+        <li><xref href="c_common_4-DocConventions_snsg.xml"/></li>
+        <li><xref href="c_common_5-ContactingTechSupport_snsg.xml"/></li>
+      </ul></p>
+  </conbody>
+</concept>

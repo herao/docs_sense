@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_2_1">
+   <title>Postgres and Log Data Security</title>
+   <conbody>
+      <p>The SenSage EDW (Postgres) and the SenSage AP Analyzer authenticate and authorize data access
+      by three discreet security features that control:</p>
+      <ul>
+         <li>SenSage AP features a user may perform</li>
+         <li>SenSage AP Application objects a user may view and act on (that is, View, Edit, and Run
+         permissions)</li>
+         <li>SenSage AP owners of log data to ensure security and appropriate access of the data.</li>
+      </ul>
+      <p>Note that no separation exists between a defined Postgres user and role--the user and role is
+      synonymous in the SenSage AP (Postgres) Security Model. The separation of security into the
+      three separate areas noted above, allows, for example, an Analyzer Administrator not to have
+      access to a specific user’s (role’s) log data.</p>
+   </conbody>
+</concept>

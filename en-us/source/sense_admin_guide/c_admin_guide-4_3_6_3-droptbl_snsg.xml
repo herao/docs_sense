@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_6_3">
+   <title>droptbl</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>droptbl &lt;table_name&gt;</codeph>
+            </pt>
+            <pd>The droptbl action allows you to delete a specified table if none of its data is archived to a
+          Nearline storage device. If any of its data has been archived, use the retire command to
+          remove the non- archived data. Only after all of its data has been removed from the
+          Nearline storage device can you drop the table. For more information, see <xref href="c_admin_guide-4_5-Retiring-Data_snsg.xml#topic_4_5"/>. <note type="important">: <ul id="ul_wcs_vyt_vx">
+                     <li>Because typical EDW tables are gigantic in size, no undo is possible. Therefore,
+                IgniteTech recommends that you use this action with extreme caution and that you
+                back up your tables first.</li>
+                     <li>When you issue <codeph>droptbl</codeph> against a table that has any data under
+                retention on a Nearline storage device, the droptbl command fails. Its error message
+                provides the date in the future when the Nearline storage device will retire the
+                data and advises you to use retire to remove local and non-retained data.</li>
+                     <li>When you issue droptbl against a table that has data archived to a Nearline
+                storage device but the data is not under retention or the retention date has past,
+                the droptbl command fails. Its error message informs you to use retire to remove the
+                archived data before running droptbl.</li>
+                  </ul>
+               </note>
+               <p>For more information, see <b>Installing Perl Modules</b> in “Perl
+            Subroutines” in the <cite>Event Data Warehouse Guide</cite> and <xref href="c_admin_guide-4_5-Retiring-Data_snsg.xml#topic_4_5"/>.</p>
+               <p>The following example deletes the table created and
+            renamed in renametbl
+          above:</p>
+               <codeblock xml:space="preserve">atmanage slshost:8072 --namespace=external.websvcs droptbl stock_quote_log</codeblock>
+            </pd>
+         </plentry>
+      </parml>
+      <p/>
+   </conbody>
+</concept>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_1_4">
+   <title>Security Object Relationships</title>
+   <conbody>
+      <p>The following items provide a summary of the security object relationships in the SenSage AP
+      Security Model:</p>
+      <ul>
+         <li>When each SenSage AP user is defined, roles and groups are associated with each user. A
+         user’s roles are the union of all their direct roles.</li>
+         <li>A Resource Instance such as a report, schedule, etc., is defined with an action(s) that a
+         user and/or a group may perform on the instance.</li>
+         <li>Roles have a list of privileges.</li>
+         <li>Privileges control what actions a user may perform.</li>
+         <li>Users and groups control what objects a user may view and what actions users and groups can
+         perform on that object.</li>
+      </ul>
+   </conbody>
+</concept>

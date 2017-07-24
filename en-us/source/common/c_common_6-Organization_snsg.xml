@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1_2">
+   <title>Analytics Guide Organization</title>
+   <conbody>
+    <p>This book contains the following chapters:</p>
+    <ul>
+      <li><xref href="../topics-xref/c_anlytc_guide-1_1-Overview-of-Sensage-_snsg.xml"/><p>Describes
+          SenSage AP Analytics and IntelliSchema.</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-2_1-Configuring-and-Exec_snsg.xml"/><p>Provides
+          required configuration for the IT Detection Model, which uses log events and human
+          resources information to compute a daily insider threat risk score.</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-3_1-Sample-Models-for-Wo_snsg.xml"/><p>Provides
+          a list of sample models included in your system for working with Analytics
+        Workbench.</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-4-Sample-Model-Descrip_snsg.xml"/><p>Provides a
+          sample model description to include a notification when a given threshold is exceeded in a
+          report.</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-5-IntelliSchema-Views-_snsg.xml"/><p>Provides
+          reference on the IntelliSchema views on which SenSage AP Analytics reports run.</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-6-Analytics-Reports-Li_snsg.xml"/>
+        <p>Provide brief overview on each available report category provided with your SenSage AP
+          software, reports contained in them, and a brief description of each report.</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-7-Compliance-Analytics_snsg.xml"/><p>Provides
+          reference on the SenSage AP Compliance Analytics Reports</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-8-Foundation-Analytics_snsg.xml"/><p>Provides
+          reference on the SenSage AP Analytics Foundation Reports for Microsoft Windows</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-9-Foundation-Analytics_snsg.xml"/><p>Provides
+          reference on the SenSage AP Analytics Foundation Reports for Unix/Linux</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-10-Systems-Analytics-Re_snsg.xml"/><p>Provides
+          reference on the following group or reports: EDW command tools usage reports, Collector
+          activity reports, and internal system reports.</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-11-McAfee-Analytics-Rep_snsg.xml"/><p>Provides
+          reference on the SenSage AP McAfee Analytics Reports</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-12-BlueCoat-Reports_snsg.xml"/><p>Provides
+          reference on the SenSage AP BlueCoat Reports</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-13-HawkEye-G-Analytics-_snsg.xml"/><p>Provides
+          reference on the HawkEye G Analytics Reports</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-14-Panos-Reports_snsg.xml"/><p>Provides
+          reference on the SenSage AP Panos Reports</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-15-SAP-Reports_snsg.xml"/><p>Provides reference
+          on the SenSage AP SAP Reports</p></li>
+      <li><xref href="../topics-xref/c_anlytc_guide-16-Miscellaneous-Report_snsg.xml"/><p>Provides
+          reference on the SenSage AP Miscellaneous Reports.</p></li>
+      <li>Remaining chapters<p>Provide information for System Administrators on how to configure
+          SenSage AP Log Adapters for a variety of sources. Log adapters allow SenSage AP to access
+          and store data from software and hardware devices.</p></li>
+      <li>Appendix A: <xref href="../topics-xref/c_anlytc_guide-68-Appendix-A--REPORT-_snsg.xml"
+          /><p>Provide functions for common look-up and conversion operations that apply to SQL
+          reports.</p></li>
+      <li>Appendix B: <xref href="../topics-xref/c_anlytc_guide-69-Appendix-B-SYSLOG-N_snsg.xml"
+          /><p>Provides a reference for System Administrators on setting up
+            <codeph>syslog-ng</codeph>.</p></li>
+    </ul>
+   </conbody>
+</concept>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_8">
+   <title id="title_a10">Administering Deployment Manager Users</title>
+   <conbody>
+      <p>Under the Deployment Manager Admin tab, you can create a new Deployment Manager user, delete
+      an existing user, or change the username or password of an existing user.</p>
+   </conbody>
+</concept>

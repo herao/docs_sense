@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_5_7_1">
+   <title>Using the UPLOADS Command</title>
+   <conbody>
+      <p>To permanently delete the records associated with a given set of upload IDs, provide a comma-
+      separated list of upload IDs. The syntax is:</p>
+      <p>
+         <codeph>UPLOADS &lt;upload_id&gt; [, &lt;upload_id&gt;[...]][DURING &lt;timestamp&gt;,
+        &lt;timestamp&gt;]</codeph>
+      </p>
+      <p>where the DURING causes the RETIRE command to delete only the data in the specified time and
+      date range. You can choose the optional DURING clause when deleting an upload ID that
+      encompasses a very wide time and date range. Using the DURING clause can help avoid possible
+      negative impacts on performance by breaking the deletion job into a series of smaller
+      operations addressing shorter time ranges within the larger min and max timestamp of the
+      load.</p>
+      <p>Example:<codeblock xml:space="preserve">atquery localhost:8072 -e RETIRE FROM syslog 
+ UPLOADS ’31AEAF94551AA4366519F4)EB3F9A4FA’, ’F8OC8F2003D655A8444A8B4EF172EC7a’</codeblock>
+    </p>
+      <p>Example With DURING
+      clause:<codeblock xml:space="preserve">atquery localhost: 8072 -e "RETIRE FROM syslog
+ UPLOADS ’31AEAF94551AA4366519F4)EB3F9A4FA’, ’F8OC8F2003D655A8444A8B4EF172EC7a’ 
+ DURING time(’FEB 01 00:00:00 2011’), time(’May 31 23:60:00 2011’)"
+ OR DURING time (’Mar 01 00:00:00 2011’), time (’May 31 23:60:00 2011’)</codeblock>
+    </p>
+      <p>Example With FORCE
+      Keyword:<codeblock xml:space="preserve">atquery localhost:8072 -e "RETIRE FROM syslog
+ UPLOADS '31AEAF94551AA4366519F40EB3F9A4FA', 'F80C8F2003D655A8444A8B4EF172EC7A'
+ FORCE"</codeblock>
+    </p>
+   </conbody>
+</concept>

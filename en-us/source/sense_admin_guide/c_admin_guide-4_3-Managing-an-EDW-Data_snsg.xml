@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3">
+   <title id="title_a14">Managing an EDW Data Store</title>
+   <conbody>
+      <p>This section describes the <codeph>atmanage</codeph> utility. It contains the following
+        topics:<ul id="ul_hvx_4ys_vx">
+            <li>
+               <xref href="c_admin_guide-4_3_1-Synopsis_snsg.xml#topic_4_3_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_3_2-Description_snsg.xml#topic_4_3_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_3_3-Options_snsg.xml#topic_4_3_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_3_4-Arguments_snsg.xml#topic_4_3_4"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_3_5-Authentication-Manag_snsg.xml#topic_4_3_5"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-4_3_6-Table-Management_snsg.xml#topic_4_3_6"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

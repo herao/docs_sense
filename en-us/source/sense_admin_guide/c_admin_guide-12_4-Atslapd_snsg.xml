@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_12_4">
+   <title>Atslapd</title>
+   <conbody>
+      <table id="table_m5v_1vq_wx">
+         <tgroup cols="6">
+            <colspec colnum="1" colname="col1" colwidth="4.48*"/>
+            <colspec colnum="2" colname="col2" colwidth="1.62*"/>
+            <colspec colnum="3" colname="col3" colwidth="1.43*"/>
+            <colspec colnum="4" colname="col4" colwidth="1.71*"/>
+            <colspec colnum="5" colname="col5" colwidth="1*"/>
+            <colspec colnum="6" colname="col6" colwidth="2.87*"/>
+            <thead>
+               <row>
+                  <entry>Log File Name</entry>
+                  <entry>Category</entry>
+                  <entry>Purpose</entry>
+                  <entry>Log Rotate</entry>
+                  <entry>PTL</entry>
+                  <entry>Notes</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>
+                     <p>
+                        <filepath>/opt/hexis/hawkeye-ap/var/
+                log/atslapd/atslapd-&lt;date&gt;.log</filepath>
+                     </p>
+                  </entry>
+                  <entry>Debug, Monitoring</entry>
+                  <entry>ERR MON</entry>
+                  <entry>Y</entry>
+                  <entry/>
+                  <entry>
+                     <p>ATSLAPD message <note>Rotated by syslog-ng; (see
+                /etc/logrotate.d/syslog-ng)</note>
+                     </p>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

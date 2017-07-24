@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_3">
+   <title>Creating a Schedule for a Model </title>
+  <conbody>
+    <p>You can schedule a model that you created for email distribution in PDF, CSV, or Hyperlink
+      format. To do this, perform the following steps:</p><ol id="ol_sdn_gsk_3y">
+        <li>Expand the nodes <menucascade>
+            <uicontrol>Data Design</uicontrol>
+            <uicontrol>Analytics Workbench</uicontrol>
+          </menucascade> in the left panel and select the <uicontrol>Models</uicontrol> tab. The
+          Analytics Workbench is shown in the screenshot below.<image href="media/Image_371_1.png"
+            placement="break" scale="50"/></li>
+        <li>Select a model you want to schedule, click the checkbox besides the listed model. Click
+            <image href="media/button_model_schedule.png" placement="inline" scale="60"/> (create a
+          new schedule with this model).<p>The Anlytics Model Schedule Setting window opens.<image
+              href="media/Image_371_2.png" placement="break" scale="40"/></p><note>The Selected
+            model <uicontrol>Get Model COnfiguation</uicontrol> is already in the
+              <uicontrol>Scheduled Models</uicontrol> list box.</note></li>
+        <li>Set the following fields: <ul id="ul_yrc_xhl_3y">
+            <li>Enter a name for the model's schedule in the <uicontrol>Schedule Name</uicontrol>
+              textbox.</li>
+            <li>To schedule the start date and time, to run the selected model, click in the
+                <uicontrol>Start at</uicontrol> text box. Set the date and time in calendar popup.
+              You can also manually enter or modify the values in the text box. The screenshot in
+              step 2, shows the model is scheduled to start at 2 am on the 21st of December.</li>
+            <li>To repeat the scheduled run once or more at intervals, specify the values in the
+                <uicontrol>Repeat Every</uicontrol> fields: 1. specify the number of times in the
+              textbox and 2. select the required interval from the dropdown list. The screenshot in
+              step 2 shows that the model is scheduled to run at the scheduled time once every week
+              for 4 weeks.</li>
+            <li>Add more models to the schedule, from the <uicontrol>Select an Analytical Model to
+                schedule</uicontrol> dropdown list, and click <uicontrol>Add Model</uicontrol>.</li>
+            <li>To run the scheduled models at the same time, check the
+                <uicontrol>Concurent</uicontrol> checkbox.</li>
+            <li>To specify the input parameters for a scheduled models, select the required model in
+              the <uicontrol>Specify the model input parameters, model: &lt;Scheduled Model
+                Name></uicontrol> table. Each model has its own input parameter table.The following
+              screenshot shows the table for the model <uicontrol>Schema Name
+                Configuation</uicontrol>.<image href="media/Image_371_3.png" placement="break"
+                scale="50" id="image_zrc_xhl_3y"/></li>
+          </ul></li>
+        <li>Click Save Schedule.</li>
+      </ol>
+  </conbody>
+</concept>

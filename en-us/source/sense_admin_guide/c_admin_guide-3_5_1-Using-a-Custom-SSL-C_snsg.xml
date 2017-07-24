@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_5_1">
+   <title>Using a Custom SSL Certificate for Deployment Manager</title>
+   <conbody>
+      <p>To use your own SSL certificate on the Deployment Manager, perform the following steps from
+      the Deployment Manager host:</p>
+      <ol id="ol_wk2_wmh_vx">
+         <li>Stop the Ambari server:<p>
+               <codeph>ambari-server stop</codeph>
+            </p></li>
+         <li>Copy the SSL certificate to <filepath>/var/lib/ambari-server/resources/ssl.crt</filepath>
+        and the private key to <filepath>/var/lib/ambari-server/resources/ssl.key</filepath>.</li>
+         <li>Go to <filepath>/var/lib/ambari-server/keys</filepath> and delete the following:
+          <filepath>https.crt</filepath> and <filepath>https.key</filepath>.</li>
+         <li>Issue the following command to set up the certificate:<p>
+               <codeph>ambari-server setup-security</codeph>
+            </p><p>
+               <note>If the SSL key was password protected, you are prompted to enter it.</note>
+            </p></li>
+         <li>Start the Ambari server: <p>
+               <codeph>ambari-server start</codeph>
+            </p>
+         </li>
+      </ol>
+   </conbody>
+</concept>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1">
+   <title id="title_O_82076">PREFACE </title>
+   <conbody>
+    <p>This book, the SenSage AP Analyzer Guide, describes the 6.1.1 version of SenSage AP. This
+      Preface contains the following sections:<ul id="ul_j11_yxn_yx">
+        <li><xref href="c_sen_anal-1_1-Audience-for-this-Bo_crm.xml"/>, next</li>
+        <li><xref href="c_sen_anal-1_2-SenSage-AP-Analyzer-_crm.xml"/></li>
+        <li><xref href="c_sen_anal-1_3-Road-Map-to-SenSage-_crm.xml"/></li>
+        <li><xref href="c_sen_anal-1_4-Conventions-Used-in-_crm.xml"/></li>
+        <li><xref href="c_sen_anal-1_5-Contacting-Technical_crm.xml"/></li>
+      </ul></p>
+  </conbody>
+</concept>

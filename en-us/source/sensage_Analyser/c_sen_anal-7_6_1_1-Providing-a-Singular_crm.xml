@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_6_1_1">
+   <title>Providing a Singular Input Connection</title>
+   <conbody>
+    <p>When making a singular input connection:</p>
+    <ul id="ul_qbn_r4r_zx">
+      <li>
+        <p>From the output of the source component, click the "result" icon and then click the
+          "input" icon on the target component that will be connected to the source component (see
+          Figure 6-17). NEED TO USE THIS HANDS-ON TO VERIFY HOW IT WORKS</p>
+        <p>Figure 6-17: Singular Input Connection</p>
+        <p><image href="./media/Image_286.jpg" height="148" width="576" id="image_rbn_r4r_zx"/></p>
+      </li>
+      <li>
+        <p>When you connect an input to an output within a source component, valid inputs will
+          change from blue to green (see Figure 6-17). NEED TO USE THIS HANDS-ON TO VERIFY HOW IT
+          WORKS</p>
+      </li>
+      <li>
+        
+          <p>After a connector is established, you can redirect it to another component input. (see
+            Figure 6- 17). NEED TO THIS HANDS-ON</p>
+        
+      </li>
+    </ul>
+  </conbody>
+</concept>

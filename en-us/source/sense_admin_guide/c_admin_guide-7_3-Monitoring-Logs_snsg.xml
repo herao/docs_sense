@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3">
+   <title>Monitoring Logs</title>
+   <conbody>
+      <p>This section describes these topic:<ul id="ul_f4t_ntv_vx">
+            <li>
+               <xref href="c_admin_guide-7_3_1-About-Collector-logs_snsg.xml#topic_7_3_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-7_3_2-Setting-the-Logging-_snsg.xml#topic_7_3_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-7_3_3-Tailing-Logs-Files_snsg.xml#topic_7_3_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-7_3_4-Things-to-watch-out-_snsg.xml#topic_7_3_4"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

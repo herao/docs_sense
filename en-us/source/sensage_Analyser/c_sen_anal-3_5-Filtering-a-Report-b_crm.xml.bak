@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_5">
+   <title>Filtering a Report by Additional Timeframes</title>
+   <conbody>
+    <p>After zooming into one timeframe as shown in the previous section, you can filter the report
+      by an additional timeframe in the report filters area as shown below. </p>
+    <fig><title>Figure 2-8: Report Filtering by Additional Timeframes</title>
+    <image href="./media/Image_080.png" placement="break" scale="40" id="image_nh3_jcm_zx"/></fig>
+     
+    <p>You can further drill down into the data by removing values. To remove the values click the
+      labels displaying the values to the right of the chart. The removed text values are displayed
+      at the bottom of the chart. For example, in the screenshot below the hits on the site
+        <codeph>http://www.slashdot.org</codeph> are removed. The green bar in the chart is also
+      removed and the selected label to the right of the chart is also greyed out. This results list
+      at the bottom of the report no longer display items containing the hyperlink
+        <codeph>http://www.slashdot.org</codeph>.<note>Click a text area to display additional
+        filters in the filter area of the report.</note></p>
+    <fig><title>Figure 2-9: Report Drill-down</title><image href="./media/Image_081.png" placement="break" scale="40" id="image_oh3_jcm_zx"/></fig>
+  </conbody>
+</concept>

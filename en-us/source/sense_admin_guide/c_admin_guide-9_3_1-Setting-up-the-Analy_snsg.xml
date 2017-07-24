@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_3_1">
+   <title>Setting up the Analyzer Administration Account</title>
+   <conbody>
+      <p>In SenSage AP, the AD Administrator can set up an Analyzer administration login account and
+      if desired, map that account to a desired user as noted in steps 1 and 2 below.</p>
+      <ol>
+         <li>Create an enumerator user that will be used to connect to AD/LDAP. This user requires READ- ONLY
+        access to view all other AD/LDAP users who will be synchronized with AP Analyzer. <note>By
+          default, this enumerator user belongs to the Analyzer “Admin” account. Unlike all other
+          AD/LDAP users specified in AP Analyzer, the Analyzer "Admin" user is given full
+          administrative rights to AP Analyzer.</note>
+            <note type="important">: When issuing a
+          username and password for the enumerator user, be sure it is unique and not used by any
+          other AD/LDAP user. The enumerator user will be mapped to the Analyzer "Admin" user until
+          the mapping is changed.</note>
+         </li>
+         <li>If you want to designate the Analyzer "Admin" user as the SenSage AP Administrator, create
+        an appropriate Active Directory account for the SenSage AP Administrator, for example,
+          <b>AdminUser</b>. Then follow these steps: <ol>
+               <li>Log into Analyzer and go to <menucascade>
+                     <uicontrol>Administration</uicontrol>
+                     <uicontrol>Users</uicontrol>
+                  </menucascade>. </li>
+               <li>Select <b>Admin</b> and click <b>Edit</b>.</li>
+               <li>Change the DN mapping in the LDAP/AD Admin DN field to point to the <b>AdminUser</b>
+            account in AD.</li>
+            </ol>
+            <note>The Analyzer "Admin" can only be mapped to an AD SAM account name. The system
+          will make the necessary changes to the Analyzer "Admin" account (default is "Admin") so
+          that the username of the Analyzer "Admin" user becomes the SAM account name of the entered
+          DN.</note>
+            <p>The Analyzer "Admin" will now be able to log into SenSage AP Analyzer with his or her own
+          AD credentials with the username as the SAM Account name and the password the same as the
+          one used in AD/LDAP.</p>
+            <fig>
+               <title> Mapping Analyzer Admin to another Administrator Account</title>
+               <image href="./media/Image_259.jpg" placement="break" id="image_jlz_nzn_wx"/>
+            </fig>
+         </li>
+      </ol>
+   </conbody>
+</concept>

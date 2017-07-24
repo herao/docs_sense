@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_2">
+   <title>Monitoring SenSage AP</title>
+   <conbody>
+      <p>To the left of the dashboard is a summary of the nodes and the components that make up your
+      deployment. You can start and stop any of the components from the dashboard. You can browse
+      quickly through the display of icons beside each component. If a "Start" icon is displayed
+      beside a component, this can alert you that the component is not in operation.</p>
+      <p>From this dashboard, you monitor your cluster by viewing the Cluster Metrics graphs displayed
+      to the right, which show the current usage for the network, cluster load, memory and CPU. Note
+      that clicking on the icon in the corner of the Cluster Metrics area pulls up different graph
+      timetables for your selection.</p>
+      <fig id="fid_g_2_1">
+         <title>Deployment Manager Dashboard</title>
+         <image href="./media/Image_021.jpg" id="image_ly2_ndh_vx" placement="break"/>
+      </fig>
+      <p>For details on Cluster Metrics graphs, see <xref href="c_admin_guide-3_3_3-Metrics_snsg.xml#topic_3_3_3"/>. </p>
+      <p>Two tabs that allow you to monitor specific parts of your deployment:</p>
+      <ul id="ul_tzr_qdh_vx">
+         <li>
+            <b>Service tab</b> - Shows the status of the services in your SenSage AP
+          deployment.<note>In addition, this tab also contains a configuration link lets you change
+          the configuration settings from the initial installation. For details, see <xref href="c_admin_guide-3_5-Modifying-Installati_snsg.xml#topic_3_5"/>.</note>
+         </li>
+         <li>
+            <b>Host tab</b> - Shows the status of components in your SenSage AP deployment on a
+        host-by-host basis.</li>
+      </ul>
+      <p>Each of these tabs and their options are described in the following sections.</p>
+   </conbody>
+</concept>

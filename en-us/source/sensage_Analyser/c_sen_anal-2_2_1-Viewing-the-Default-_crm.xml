@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_2_1">
+   <title>Viewing the Default Dashboard</title>
+   <conbody>
+      <p>At login, the dashboard that is displayed is unlocked so that the pods are situated based
+         on the screen size of your device. The name of the dashboard is displayed at the top
+         left-corner of the screen.</p>
+      <p>If you want to resize your browser, but keep the pods in place, click the "Lock" button
+         (magnet icon). Your browser will then add scroll bars to resize without affecting the pods
+         positioning.</p>
+      <p>To maximize a pod for full screen viewing, click the option in the pod’s title bar. Click
+            <b>Escape</b> to exit full screen view and return to dashboard view.</p>
+      <section><title>Switching Between Dashboards</title>
+         <p>Click the <b>Dashboard</b> menu to display a dropdown list of all dashboards in the
+            system that you are allowed to access. Clicking a different dashboard name will access
+            that dashboard on the screen.</p>
+         <fig><title>Dashboard Menu</title><image href="./media/Image_020.png" placement="break" scale="50" id="image_k2j_5sl_zx"/></fig></section>
+   </conbody>
+</concept>

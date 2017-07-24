@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11_2">
+   <title>Importing/Exporting Dashboards</title>
+   <conbody>
+    
+      <p>To import or export dashboards for use in another SenSage AP 6.1.x deployment:</p><ol
+          id="ol_o1y_ljs_zx">
+          <li>Go to the Analyzer left-hand navigation menu, click the Administration menu, and the
+        Import/ Export sub-menu, and the Dashboards tab.<p>The Import and Export Data screen is
+          displayed with the dashboards that you have permission to view.</p><p>Figure 10-4: Import
+          and Export Data Screen with Dashboards Listing</p><p><image href="./media/Image_422.png" placement="break" scale="50"/></p></li>
+          <li>Check the dashboards that you want to import or export.</li>
+          <li>Click the Export or Import button to export or import the dashboards you
+            selected.
+            <ol id="ol_jzb_tjs_zx">
+              <li>If you exporting a report, on the lower left-hand side of the screen, you will see
+            the export file labeled dashboardAutoExport.xml, which is now stored in your download
+            folder. Click the button to view the file.<p>Figure 10-5: Exporting a
+                Dashboard</p><p><image href="./media/Image_423.png" placement="break" scale="50"/></p></li>
+              <li>If you are importing a dashboard, you will see a box where you can drag and drop
+            an export file (.xml) for import. After your file is imported, you will see it in the
+            Dashboard listing under Name with the applicable version number. It will now also appear
+            as a Dashboard selection.<p>Figure 10-6: Importing a Dashboard</p><p><image href="./media/Image_424.png" placement="break" scale="50"/></p></li>
+            </ol>
+          </li>
+        </ol>
+
+  </conbody>
+</concept>

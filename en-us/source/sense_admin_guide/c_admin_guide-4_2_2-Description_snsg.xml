@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_2_2">
+   <title>Description</title>
+   <conbody>
+      <p>The <codeph>atquery</codeph> utility processes:</p>
+      <ul>
+         <li>Data Manipulation Language (DML) statements, which query (SELECT) data in a table and
+      retire (RETIRE) data from a table in an EDW instance. <p>For more information, see Overview of AP SQL SELECT Statements in “SenSage AP SQL” of the
+        <cite>Collector Guide</cite> and <xref href="c_admin_guide-4_5-Retiring-Data_snsg.xml#topic_4_5"/>.</p>
+         </li>
+         <li>Data Definition Language (DDL) statements, which create tables, column filters, and views
+      within an EDW instance.<p>For more information on the DDL statements that the atquery command can process, see <xref href="c_admin_guide-5_3-Defining-Data-Object_snsg.xml#topic_5_3"/>.</p>
+         </li>
+      </ul>
+      <p>The <codeph>atquery</codeph> utility supports processing multiple SQL files at once. If you specify the names
+      of SQL files on the command line, they are processed in the order specified. When specifying
+      multiple files, separate each name with a space.</p>
+      <p>After processing its arguments and checking the SQL files for obvious errors, the querying
+      process proceeds as follows. For each SQL file, <codeph>atquery</codeph>:</p>
+      <ol>
+         <li>Connects to the specified host and port.</li>
+         <li>Sends the SQL file, wrapped as an XML-RPC "message" (also known as XML data).</li>
+         <li>Listens for errors, progress messages, and result records.</li>
+         <li>On the server, parses the query, sends new queries to each of the hosts in the instance, and
+        combines the results to form the final result.<note>If the <codeph>Primary</codeph> directory (which contains
+          the primary copy of log data) is unavailable, the EDW uses the <codeph>Secondary</codeph> directory (which
+          contains the backup copy of log data). If both of these directories are unavailable, the
+          query fails. If the query uses the Secondary directory, processing is slower than when it
+          uses the <codeph>Primary</codeph>. For more information about these directories, see <xref href="c_admin_guide-2_2-EDW-Architecture_snsg.xml#topic_2_2"/>.</note>
+         </li>
+      </ol>
+      <section>
+         <title>INTERNATIONAL SUPPORT FOR QUERYING DATA</title>
+         <p>The character encoding of <i>
+               <filepath>&lt;file_name&gt;.sql</filepath>
+            </i> must be UTF-8.
+        ASCII character encoding is a proper subset of UTF-8 character encoding.</p>
+         <p>For more information on character encoding, see <xref href="c_admin_guide-5_7_1-International-Suppor_snsg.xml#topic_5_7_1"/>.</p>
+      </section>
+   </conbody>
+</concept>

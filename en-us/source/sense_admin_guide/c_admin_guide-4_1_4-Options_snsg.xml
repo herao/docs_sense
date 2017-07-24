@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_4">
+   <title>Options</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--archive-add-filename</codeph>
+            </pt>
+            <pd>Passes in the name of each file in an archive. When you load multiple log files from archive
+          files, such as a .zip, .tar or .tar.gz files, this option prefixes the archive file name
+          with the names of the interior files as each is processed. This option affects the
+          $_log_filename automatic expression macro that can be used in PTL files to load the source
+          log-file name as a column value in each loaded row.</pd>
+            <pd>For more information on $_log_filename, see <xref href="c_admin_guide-4_1_7-Automatic-Expression_snsg.xml#topic_4_1_7"/> and <xref href="c_admin_guide-4_1_8-Loading-Information-_snsg.xml#topic_4_1_8"/>.
+            <note>The <codeph>--archive-add-filename</codeph> option is relevant only when loading
+              batched data, not streamed data.</note>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--archive-tempdir=&lt;directory_name&gt;</codeph>
+            </pt>
+            <pd>Specifies the temporary directory to use for loading operations that involve archive files. Use
+          this option to control where temporary files are stored when loading archive files, such
+          as .zip, .tar, or .tar.gz.</pd>
+            <pd>The default is the current working directory.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--batchload</codeph>
+            </pt>
+            <pd>Loads all files in a single operation rather than individually. Batch loads can improve performance, but the rows loaded from all files have the same value in the _uploadid column.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--clocksync</codeph>
+            </pt>
+            <pd>Corrects for client-side clock drift. <note type="important">Only use this option if
+                  the client running atload is also the client on which the log file being loaded
+                  was generated. This option attempts to compensate for clock mismatches between the
+                  client and the EDW server when determining the timestamp for rows loaded into the
+                  table.</note>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--compression={none|low|high}</codeph>
+            </pt>
+            <pd>Specifies the level of compression for storing the new data. <p>High compression decreases the
+            disk space consumed by the data store of the EDW instance, but it increases the load
+            time due extra processing overhead. The supported values are none, low, and high. The
+            default is high.</p>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--data-char-encoding=&lt;encoding&gt;</codeph>
+            </pt>
+            <pd>Specifies the character encoding of source log files processed by the atload
+               command. Supported values are:<ul>
+                  <li>UTF-8</li>
+                  <li>UTF-16</li>
+                  <li>EUC-JP</li>
+                  <li>Shift-JIS</li>
+                  <li>UJIS</li>
+               </ul> The character encoding of the log files processed during a single invocation of
+                  <codeph>atload</codeph> must all be the same. For example, assume the following
+               command-line invocation: <p>
+                  <codeblock xml:space="preserve">$&gt; atload --data-char-encoding=’UTF-8’ host5:8072 mytable \
+           MyPtl.ptl log1 log2 log3</codeblock>
+               </p> The log files log1, log2, and log3 must all be written in UTF-8. Regardless of
+               the character encoding you specify for the log files, the character encoding of the
+               PTL file must be UTF-8. The <codeph>atload</codeph> command converts source log
+               events to UTF-8 before they are evaluated by the regular expression in the PTL file
+               and stored as rows in the EDW. <p>The default encoding for log files is ISO 8859-1.
+               </p></pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--dbgprint-request</codeph>
+            </pt>
+            <pd>Dumps the client-server request, then exits. This option forces atload to print the requests that it would have sent to the EDW and stop without actually loading the data. Use this option for debugging purposes.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--filetype=&lt;type&gt;</codeph>
+            </pt>
+            <pd>Specifies the data type of the files being loaded. Sometimes the files being loaded
+               do not end with the proper extension, and the EDW cannot determine if decompression
+               is required. Allowed values for &lt;type&gt; are <filepath>ascii</filepath>,
+                  <filepath>gzip</filepath>, <filepath>bzip2</filepath>, <filepath>zip</filepath>,
+                  <filepath>tar</filepath>, <filepath>targz</filepath>, and
+                  <filepath>tarbz</filepath>. <note>The file you are loading must be of the type you
+                  specify.</note></pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--finalsummary</codeph>
+            </pt>
+            <pd>Prints a final summary table after completing its operation. Each line in the table reports information about one file-loading operation, including the number or log events loaded, performance statistics, number of retries, and success or failure.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--help, --longhelp</codeph>
+            </pt>
+            <pd>Displays online help for command in short form (<codeph>--help</codeph>), or with additional
+          detail (<codeph>--longhelp</codeph>). You can specify <codeph>--longhelp</codeph> together
+          with the <codeph>--[no]diskusage</codeph> flag to specify the computation of the disk used
+          by the load (which can be slow for large installations). When no is specified with the
+          diskusage flag,it means do not perform computation of the disk used by the load.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--matchfailures={&lt;filename&gt;|-}</codeph>
+            </pt>
+            <pd>Displays regular-expression match failures in the terminal window, or writes them to
+               a file. The PTL file contains a regular expression that parses source log events from
+               the log file. For debugging purposes it is useful to see the source log lines that
+               the regular expression fails to match. The supported values are:<ul
+                  id="ul_m2b_jyn_4y">
+                  <li>
+                     <codeph>&lt;filename&gt;</codeph>—write match failures to the specified file.
+                     The file is created if it does not exist; the file is appended to if it does
+                        exist.<note>Although you can specify the <codeph>--matchfailures</codeph>
+                        option when <codeph>atload</codeph> runs on a schedule managed by the
+                        Collector, the preferred method is to use the &lt;ParseFailures&gt; element
+                        in loader definitions and include a &lt;LogFile&gt; element.</note>
+                  </li>
+                  <li>
+                     <codeph>-</codeph>(a dash)—displays match failures in the terminal where
+                        <codeph>atload</codeph> is running. Only specify this option when you run
+                        <codeph>atload</codeph> from the command line.<note importance="high"
+                        >Specifying the <codeph>--matchfailures</codeph> option slows the operation
+                        of atload when there are many match failures. This can occur if the
+                        incorrect PTL file is specified, because the majority of source log lines
+                        will fail to match the regular expression in the PTL file.</note></li>
+               </ul><p>This option is overridden by the <codeph>--raw</codeph> option.</p></pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt><codeph>--namespace=&lt;namespace></codeph></pt>
+            <pd>The namespace in which to manage items. The default namespace is default. To specify
+               the top level, use "" (empty quotation marks).<note>When you run
+                     <codeph>atload</codeph>, you can specify a table name explicitly (for example,
+                     <filepath>ns1.ns2.ns3.mytable</filepath>) or use the
+                        <codeph>--namespace=<i>&lt;namespace></i></codeph> option. When you use the
+                  namespace option, it specifies the namespace once for the entire command; the
+                  utility prefixes the namespace to each table name used in the rest of the
+                  request.</note></pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--on-error={continue|stop}</codeph>
+            </pt>
+            <pd>Specifies how to process remaining log files after one of them fails to load. This
+               option applies only when you load multiple files with one invocation of
+                  <codeph>atload</codeph>. The supported values are: <ul>
+                  <li>
+                     <codeph>continue</codeph>—proceed to the next log file and try to load it.</li>
+                  <li>
+                     <codeph>stop</codeph>—do not load any remaining log files.</li>
+               </ul><p>The default is continue.</p></pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--override=&lt;name&gt;:&lt;value&gt;</codeph>
+            </pt>
+            <pd>Specifies values that override the default values declared for expression macros in
+               the SQL section of the PTL file. Repeat this option for each expression macro that
+               you want to override.<p>For more information, see the description for <b>Expression
+                     Macros</b>, in the Chapter <i>SenSage AP SQL</i>, in the <cite>Event Data
+                     Warehouse Guide</cite>.</p></pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--preprocregex=&lt;<i>regex&gt;</i>
+               </codeph>
+            </pt>
+            <pt>
+               <codeph>--preprocschema=&lt;name&gt;:&lt;value&gt;[,&lt;name&gt;:&lt;type&gt;[...]]</codeph>
+            </pt>
+            <pd>Applies a regular expression to each source log line being loaded before it is
+               processed by the indicated PTL file. These options let you strip out information that
+               was prefixed to the log lines during preprocessing and store it in extra columns in
+               the table.<p>For example, you can prefix each line of log data with the name of the
+                  source host that generated the data. The assumption is that a PTL file for
+                  processing the original log data already exists and that you want to re-use that
+                  PTL file for loading the annotated log data.</p><p>The regular expression
+                  indicates how to separate the annotations prefixed to log lines from the original
+                  log data. One of the matches from the regular expression must be the original line
+                  of log data. You can construct the regular expression to also return matches for
+                  the various annotations, which allows you to load those into the table along with
+                  the standard columns for that data source.</p><p>The schema indicates how to name
+                  the matches that are derived from the regular expression. One of the matches must
+                  be named ’_REST_OF_LINE_’ and must have a type of varchar. This is the match that
+                  contains the original log line of data and is fed to the PTL file. Other matches
+                  from the regular expression, if there are any, become additional columns in the
+                  target
+               table.</p><p><b>Example</b></p><codeblock xml:space="preserve">atload --preprocregex='([^,]*),(.*)' \
+       --preprocschema='UID:VARCHAR,_REST_OF_LINE_:VARCHAR' \
+       &lt;<i>host</i>&gt;:&lt;<i>port</i>&gt; &lt;<i>table_name</i>&gt; &lt;<i>filename</i>&gt;.ptl &lt;<i>log_file</i>&gt;</codeblock>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--raw</codeph>
+            </pt>
+            <pd>Prints the raw XML load results that the EDW returns, instead of printing formatted results. Use
+          this option for debugging purposes.<p>This option overrides the
+              <codeph>--matchfailures</codeph> option.</p>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--retries=&lt;n&gt;</codeph>
+            </pt>
+            <pd>Specifies the number of times to retry loading an aborted load operation. Sometimes errors that
+          cause load operations to stall and eventually abort correct themselves. Aborting stalled
+          load operations without retrying a few times results in unnecessary and time-consuming
+          recovery procedures.<p>The default is 3 retries.</p>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--retry-sleep=&lt;n&gt;</codeph>
+            </pt>
+            <pd>Specifies the number of seconds to wait before retrying an aborted load operation. Retrying a
+          load operation immediately after aborting does not give sufficient time for transient
+          errors to correct themselves.</pd>
+            <pd>The default is 45 seconds.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--segmentsize=&lt;n&gt;</codeph>
+            </pt>
+            <pd>Specifies the number of rows stored in a new EDW leaf node.  (The EDW stores data in a tree
+          structure with leaf nodes.) The default value is 250,000 rows. This value is correct for
+          most applications and should not be changed. It is recommended that you Consult IgniteTech
+          Support before changing this parameter.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--timeout=&lt;n&gt;</codeph>
+            </pt>
+            <pd>Specifies the number of seconds to wait before a stalled load operation aborts. Sometimes
+          transient errors, such as network latency, cause loads to stall. Transient errors usually
+          resolve themselves, and the load operation resumes at a regular pace. Other errors, such
+          as hardware failures or locking contention, can persist indefinitely. Setting a time-out
+          value allows a permanently stalled load to be aborted so that other load operations can
+          occur. Set the value to 0 to wait indefinitely without timing out.</pd>
+            <pd>The default value is 0.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--trickle</codeph>
+            </pt>
+            <pd>Specifies that the EDW instance use the trickle feed (or trickle load) option for
+               that LOAD, which means that the log data is loaded into an intermediate storage
+               layout in the EDW. Trickle feed can also be set with the following method in Java EDW
+               API: <codeph>LoadRequest::setTrickleFlag</codeph>. <p>To decide whether to use the
+                  trickle feed option, weigh user requirements against pros and cons and determine
+                  the best trade-off. As log files grow larger (or there is less overlap between
+                  them) a tipping point is reached in which performing normal, non-trickle loads
+                  makes most sense. On the other hand, when files are larger and there are longer
+                  time limits between the time-of-collection and the time-of-availability, the use
+                  of the trickle feed option (merge-load) starts to make more sense. Always consider
+                  the customer requirements against ideal scenarios to determine whether trickle
+                  feed is the appropriate loading solution.</p><p>
+                  <i><b>Do</b></i> use the trickle feed option in these cases:<ul id="ul_iyh_gmr_vx">
+                     <li>You have small files, collected at erratic intervals, no timestamp
+                        relationship between them, and short time limits between the
+                        time-of-collection and the time-of-availability this case, use the
+                           <codeph>--trickle</codeph> flag to load each file as it is collected.
+                        Optionally, you can add the<codeph>--trickle</codeph> flag to the
+                        Collector’s <filepath>config.xml</filepath> file as an ATLOAD option in the
+                        appropriate cLoader definition. <note>Although there are no hard and fast
+                           rules for using the trickle feed option, optimum loading conditions (for
+                           example, when there are timestamp relationships between files) make it
+                           less likely that using the trickle load option will even be
+                           helpful.</note></li>
+                     <li>You have a data set being loaded has a small number of rows (less than the
+                        run length of a leaf times the number of nodes in the EDW cluster). This
+                        type of loading ensures that the collected log data is available within a
+                        short period time in the EDW such a case the loader is typically configured
+                        to run every few minutes to push whatever data has been collected into the
+                        EDW.</li>
+                     <li>You have data being loaded that is expected to overlap (in terms of the
+                        time range of the log data) with other data sets that have been or soon will
+                        be loaded. This type of loading is for periodic data collection from a large
+                        number of sources in parallel; for example, pulling the last day's log data
+                        from 10,000 servers once a day, which results in as many log files that
+                        individually cover the same period of time this case, the result is 10,000
+                        log files each of which covered the same 24-hour period.</li>
+                  </ul></p><p>The latter two use cases cause excessive fragmentation in the EDW
+                  datastore, resulting in significant performance issues when the loads are placed
+                  directly into the EDW long term storage layout. The trickle load operation directs
+                  the data set into an intermediate storage layout which supports efficient
+                  appending of out-of-order data. This avoids the load-time performance problems
+                  associated with the fragmentation of data in the long-term storage layout.</p>
+               <p>Both of these use cases cause excessive fragmentation in the EDW datastore,
+                  resulting in significant performance issues when the loads are placed directly
+                  into the EDW long term storage layout.The trickle load operation directs the data
+                  set into an intermediate storage layout which supports efficient appending of
+                  out-of-order data. This prevents load-time performance problems associated with
+                  the fragmentation of data in the long-term storage layout. </p>
+               <p>Queries against tables that have trickle-loaded data can show some performance
+                  degradation in some cases. Most notably bloom filters do not accelerate access to
+                  data in the intermediate storage layout. If you are using trickle loads, provide a
+                  schedule for periodically running a compact operation against the target table.
+                  Schedule the compact operation to occur once a day during a period of time where
+                  there is typically little other activity. The compact operation will retrieve
+                  whatever log data has been accumulated in the intermediate storage layout and
+                  merge. </p>
+               <p>When the Collector invokes the EDW COMPACT operation, this allows the EDW data
+                  structures to stay small and prevents unnecessary delays when a manual compact
+                  operation is invoked after large amount of data is accumulated in TFL data
+                  structures. </p>
+               <p>When performing an in-line COMPACT during a load, you can set the compactquota
+                  configuration parameter in the EDW Compact Quota field of the Advanced EDW section
+                  of the SenSage AP service Configs tab of the Deployment Manager.</p>
+               <p>The parameter value is an integer indicating the percentage of RAM that should
+                  serve as the load threshold when performing the in-line COMPACT. The threshold
+                  wants to guestimate that running N parallel COMPACT operations (where 'N' is the
+                  run-queue size) will not use more than the indicated amount of RAM in the
+                  system.</p>
+               <p>Compaction parameters are also defined within a &lt;Loader&gt; section that
+                  includes:</p><ul>
+                  <li>Compaction schedule and /or</li>
+                  <li>A threshold determined by rows and/or bytes and/or load counts</li>
+                  <li>Loaders used against a given table. (more than one may be used)</li>
+                  <li>Compaction threshold statistics stored globally (within a given Collector) on
+                     a table-by-table basis.</li>
+                  <li>Compaction to lock out loads to a table globally (within given
+                     Collector).</li>
+               </ul>
+               <p>The COMPACT parameters, when used, have the following attributes that result in a
+                  compact operation when the value for the given parameter is reached.</p><ul>
+                  <li>Compaction schedule and /or</li>
+                  <li>A threshold determined by rows and/or bytes and/or load counts</li>
+                  <li>Loaders used against a given table. (more than one may be used)</li>
+                  <li>Compaction threshold statistics stored globally (within a given Collector) on
+                     a table-by-table basis.</li>
+                  <li>Compaction to lock out loads to a table globally (within given
+                     Collector).</li>
+               </ul>
+               <p>If none of the threshold options are chosen, the Collector performs compaction
+                  according to the Schedule option defined in the parameter.</p>
+               <p><b>Examples:</b></p><codeblock xml:space="preserve">&lt;!-- simple parameterized compact -&gt;
+&lt;Compact loadsThreshold="100" rowsThreshold="100000000" megsThreshold="1000000000"/&gt;
+
+&lt;!-- one parameter only, compact only at size threshold -&gt;
+&lt;Compact megsThreshold="1000"/&gt;
+
+&lt;!-- compact only at one minute after midnight - Schedule&gt;
+&lt;Compact&gt; &lt;Schedule&gt;1 0 * * *&lt;/Schedule&gt; &lt;/Compact&gt;
+
+&lt;!-- always compact at one minute after midnight, or after 10 gigs is loaded since last compact --&gt;
+&lt;Compact megsThreshold="10000"&gt;
+&lt;Schedule&gt;1 0 * * *&lt;/Schedule&gt;
+&lt;/Compact&gt;</codeblock>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--verbose=&lt;n&gt;</codeph>
+            </pt>
+            <pd>Where &lt;n&gt; is one of the following verbosity levels.   <table id="table_cn2_44l_vx">
+                  <tgroup cols="3">
+                     <colspec colnum="1" colname="col1" colwidth="1.49*"/>
+                     <colspec colnum="2" colname="col2" colwidth="1*"/>
+                     <colspec colnum="3" colname="col3" colwidth="5.06*"/>
+                     <thead>
+                        <row>
+                           <entry>Verbosity Level</entry>
+                           <entry>Meaning</entry>
+                           <entry>Description</entry>
+                        </row>
+                     </thead>
+                     <tbody>
+                        <row>
+                           <entry>1</entry>
+                           <entry>error</entry>
+                           <entry>Displays errors</entry>
+                        </row>
+                        <row>
+                           <entry>2 (default)</entry>
+                           <entry>warning</entry>
+                           <entry>Displays errors and warnings</entry>
+                        </row>
+                        <row>
+                           <entry>3</entry>
+                           <entry>progress</entry>
+                           <entry>Displays errors, warnings, progress indication with ellipses
+                              (...), and parsing or row-loading errors with exclamation marks
+                              (!)</entry>
+                        </row>
+                        <row>
+                           <entry>4</entry>
+                           <entry>everything</entry>
+                           <entry>Displays, errors, warnings, progress indication, parsing errors,
+                              and informational messages.</entry>
+                        </row>
+                     </tbody>
+                  </tgroup>
+               </table>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--version</codeph>
+            </pt>
+            <pd>Displays version of <codeph>atload</codeph>.</pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

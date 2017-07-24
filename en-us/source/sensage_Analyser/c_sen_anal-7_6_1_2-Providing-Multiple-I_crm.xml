@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_6_1_2">
+   <title>Providing Multiple Input Connections</title>
+   <conbody>
+     <p>When making a multiple input connections:</p>
+      
+        <ul id="ul_yhy_3tr_zx">
+          
+            
+          
+          <li> From the output of each source component, click the "result" icon and then click the
+        "input" icon on the target component that will be connected to a source component (see
+        Figure 6-18). <draft-comment author="Hemraj">NEED TO USE THIS HANDS-ON TO VERIFY HOW IT
+          WORKS </draft-comment><p>There are no limits to the number of connections you can define
+          to a target component.</p><p>
+          <note>When an input target component has more than one source component as its
+            input, a "blue" brick appears in the input icon on the target component.</note>
+        </p><p> Click the "blue" brick on a target component to view all of its inputs, which will
+          appear in numbered boxes in the order in which each parameter input was set to the target
+          component.</p></li>
+          <li>
+            <p>After connectors are established, you can redirect them to another component input.
+              (see Figure 6-18) NEED TO THIS HANDS-ON</p>
+          </li>
+        </ul>
+      
+    
+    <p>Figure 6-18: Multiple Input Connections</p>
+    <p><image href="./media/Image_291.jpg" height="352" width="512" id="image_c3y_3tr_zx"/></p>
+  </conbody>
+</concept>

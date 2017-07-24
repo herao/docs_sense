@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_2">
+   <title>Description</title>
+   <conbody>
+      <p>The <codeph>atmanage</codeph> utility enables management of various aspects of the EDW,
+      including managing users, roles, and permissions; creating, deleting, and renaming tables; and
+      stopping tasks.</p>
+      <p>Because atmanage requests may alter the state of the EDW, use this utility carefully. To
+      examine the current state of the EDW, use the <codeph>atview</codeph> command.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1_2">
+   <title>SenSage AP Analyzer Guide Organization</title>
+   <conbody>
+    <p>This book contains the following chapters:</p>
+    <p><xref href="c_sen_anal-2-GETTINGSTARTED_crm.xml"/>—Describes Analyzer basics to get started,
+      including an introduction to the system, how to login, use its menus and interface, navigate
+      between subcomponents, and perform timezone and access configuration.</p>
+    <p><xref href="c_sen_anal-3-VIEWINGREPORTS-CHA_crm.xml"/>—Describes describes how to use SenSage
+      AP Analyzer to view and filter reports and charts, and display data models.</p>
+    <p><xref href="c_sen_anal-4-CREATING-ANDMODIFYI_crm.xml"/>—Describes how to create an initial,
+      default dashboard, add dashboards, modify them, and use their features.</p>
+    <p><xref href="c_sen_anal-5-CREATING-MODIFYING_crm.xml"/>—Describes how to use the Analyzer
+      Report Creation Wizard to create a basic report along with optional configuration features
+      such as runtime parameters, complex data filters, and integration with data models.</p>
+    <p><xref href="c_sen_anal-6-CREATING-ANDMODIFYI_crm.xml"/>—Describes how to use SenSage AP
+      Analyzer to create and modify a chart corresponding to a report.</p>
+    <p><xref href="c_sen_anal-7-USINGANALYTICSWORK_crm.xml"/>—Describes how to use SenSage AP Data
+      Analytics Workbench, interactive and visual Data Modeling tool, to create, alter, and execute
+      data models.</p>
+    <p><xref href="c_sen_anal-8-USINGSQL-WORKBENCH-_crm.xml"/>—Describes how to use the Analyzer’s
+      Data Analytics Workbench, interactive and visual Data Modeling tool, to create, alter, and
+      execute data models.</p>
+    <p><xref href="c_sen_anal-9-MANAGINGREPORT-AND_crm.xml"/>—Describes how to manage report and
+      analytics schedules through the Analyzer’s Scheduler, where users can create report schedules
+      and view the output of scheduled reports.</p>
+    <p><xref href="c_sen_anal-10-ADMINISTERINGSENSAG_crm.xml"/>—Describes how to use SenSage AP
+      Analyzer to administer SenSage AP users, including maintenance of their assigned roles and
+      groups.</p>
+    <p><xref href="c_sen_anal-11-USINGIMPORT-EXPORT_crm.xml"/>—</p>
+    <p><xref href="c_sen_anal-12-ADMINISTERINGDATAM_crm.xml"/>—</p>
+    <p><xref href="c_sen_anal-13-APPENDIXA-NAMESPAC_crm.xml"/>—Contains both the SenSage AP version
+      5.x.x and 6.x.x procedure to limit a user’s access to a namespace(s).</p>
+    <p><xref href="c_sen_anal-14-APPENDIXB-SENSAGE_crm.xml"/>—Lists role privileges and permissions
+      that are required to perform specific actions (such as view, edit, run, delete, etc) in each
+      feature of the SenSage AP application (reporting, scheduling, etc).</p>
+  </conbody>
+</concept>

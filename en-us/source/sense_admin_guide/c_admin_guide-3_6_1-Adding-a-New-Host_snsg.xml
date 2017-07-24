@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_6_1">
+   <title>Adding a New Host</title>
+   <conbody>
+      <p>To add a new host:</p>
+      <ol id="ol_ykc_3qh_vx">
+         <li>Click the Hosts tab to go the Hosts screen:</li>
+         <li>Click the Add New Hosts button.</li>
+         <li>The Add New Hosts screen is displayed as shown in Figure 2-28.</li>
+         <li>Complete the screen by adding the names of the hosts that you want to add by supplying the
+        FQDN of each host.</li>
+         <li>To allow the Deployment Manager GUI to access the SSH Private Key that you set up (so it
+        can securely access all the hosts in the system), provide the key that is in the file
+          <filepath>~/.ssh/id_dsa</filepath> on the Deployment server for the root user. Copy and
+        paste the key in the field provided, or click <uicontrol>Choose File</uicontrol> if you want
+        the GUI to open the file and get the contents for you.<p>
+               <note>If you are using IE 9, the Choose File button may not appear. Use the text box to
+            cut and paste your private key manually.</note>
+            </p>
+         </li>
+         <li>Click <uicontrol>Register and Confirm</uicontrol>.</li>
+         <li>Follow instructions beginning with the <i>Confirm Hosts</i> section of the
+          <cite>Installation, Configuration, and Upgrade Guide</cite>.</li>
+      </ol>
+      <fig>
+         <title> Add Host Wizard</title>
+         <image href="./media/Image_067.jpg" placement="break"/>
+      </fig>
+   </conbody>
+</concept>

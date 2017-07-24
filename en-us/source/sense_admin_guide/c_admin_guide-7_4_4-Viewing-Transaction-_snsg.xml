@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_4_4">
+   <title>Viewing Transaction Recovery Data</title>
+   <conbody>
+      <p>You can selectively enable detailed logging on the transaction recovery logic in the EDW. To
+      do this, set the configuration parameter <codeph>recovery_audit</codeph> in the
+        <codeph>thttpd.conf</codeph> file to <b>true</b> to enable detailed logging of the
+      transaction recovery steps.</p>
+      <p>The existing detailed logging, which is enabled by setting the trace level to 1 (INFO) or
+      higher is not affected by the <codeph>recovery_audit</codeph> setting.</p>
+   </conbody>
+</concept>

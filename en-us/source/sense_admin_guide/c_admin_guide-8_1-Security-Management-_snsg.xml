@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_1">
+   <title id="title_a32">Security Management Overview</title>
+   <conbody>
+      <p>SenSage AP manages security through authentication and authorization of security processes,
+      providing two main verification checks, one that authenticates both users and groups and the
+      other that determines the functions they are authorized to perform. SenSage AP Account
+      Administrators manage these security processes through the SenSage AP Analyzer, which provides
+      a dashboard of account and security management tasks.</p>
+      <p>Each area of Security Management is briefly described below.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8">
+   <title>Using SQL Workbench for Code and Queries</title>
+   <conbody>
+    <p>The SQL Workbench is a tool used to run SQL queries or to create SQL code for the purposes of
+      creating a report.</p>
+    <p>
+      <note>If you are an OAE administrator writing a pass-through query, note that OAE will
+        prohibit and grant access in queries based on permissions. Thus, all objects referred to in
+        an OAE query must have necessary Postgres permissions required to execute the query.</note>
+    </p>
+    <p>This chapter contains these sections:<ul id="ul_bx2_pvr_zx">
+        <li><xref href="c_sen_anal-8_1-Creating-an-SQL-Quer_crm.xml"/></li>
+        <li><xref href="c_sen_anal-8_2-Saving-an-SQL-Query-_crm.xml"/></li>
+      </ul></p>
+  </conbody>
+</concept>

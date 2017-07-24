@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_1_3">
+   <title>How Nearline Storage Works</title>
+   <conbody>
+      <p>The figure below illustrates the states of a SenSage AP Nearline-storage archive process.</p>
+      <ul>
+         <li>
+            <b>Step 1: Initial State</b>—The data store for the EDW instance resides on the local
+    hosts, such as the three hosts shown in the figure  below.</li>
+         <li>
+            <b>Step 2: Archive Process</b>—An outside agent (a person or automated process) schedules
+        archiving of EDW data onto the Nearline storage device.</li>
+         <li>
+            <b>Step 3: Archive Complete</b>—After archiving completes, a BLOB (binary large object)
+        that contains the user's data and other associated data is created on the NLS device. A
+        reference ID to the blob is created in each data store of the EDW instance.</li>
+         <li>
+            <b>Step 4: Active</b>—When a query that requires access to the archived data on the
+        Nearline storage device is invoked on the EDW, the EDW uses the reference IDs to locate the
+        data for retrieval.</li>
+      </ul>
+      <fig>
+         <title> Archiving to Nearline Storage</title>
+         <image href="./media/Image_300.gif" placement="break"/>
+      </fig>
+   </conbody>
+</concept>

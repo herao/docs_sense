@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_8_1">
+   <title>Adding a New User</title>
+   <conbody>
+      <p>To add an new user:</p>
+      <ol id="ol_p3l_3sh_vx">
+         <li>From the Deployment Manager Dashboard, select the Admin tab.<p>The current list of users
+        are displayed. To the right, select Add Local User, as shown below.</p>
+            <fig>
+               <title> Add
+          a User</title>
+               <image href="./media/Image_075.jpg" placement="break" id="image_q3l_3sh_vx"/>
+            </fig>
+         </li>
+         <li>Enter the user information in the fields that are displayed. Check Admin and click Create.
+        <fig>
+               <title> Username and Password</title>
+               <image href="./media/Image_076.jpg" placement="break" id="image_r3l_3sh_vx"/>
+            </fig>
+            <p>The user is now added to the Deployment Manager system.</p>
+         </li>
+      </ol>
+   </conbody>
+</concept>

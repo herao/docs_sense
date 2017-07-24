@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_2">
+   <title>Creating a Report Schedule</title>
+   <conbody>
+    <p>To create a new schedule for a report:</p>
+    
+    <ol id="ol_ory_jzr_zx">
+      <li>After you have accessed the Scheduler in the Analyzer menu, click the Schedules sub-menu,
+        and click the Add a schedule button as shown below.<p>
+          <draft-comment author="Hemraj">DON’T SEE DISTRIBUTION TAB</draft-comment>
+        </p><p>Figure 8-2: Adding a Schedule</p><p><image href="./media/Image_365.jpg" height="210"
+            width="561" id="image_nry_jzr_zx"/></p><p>The Reporting Schedule Settings screen is
+          displayed to enter your report scheduling information for the new schedule.</p></li>
+      <li>Provide a name for your schedule as shown below. Note in order to save the schedule, you
+        must specify a schedule name.<p>Figure 8-3: Report Schedules Settings Screen</p><p><image
+            href="./media/Image_366.jpg" height="374" width="554" id="image_pry_jzr_zx"/></p></li>
+      <li>Click the triangle in the box labeled, "Select a Report to add to this schedule" to
+        display the dropdown list of reports that you have permission to access.<p>
+          <note>You can type part of the report name to filter the list of reports that have
+            the name matching the string you typed.</note>
+        </p><p><image href="./media/Image_367.jpg" height="238" width="571" id="image_qry_jzr_zx"
+          /></p></li>
+      <li>From the dropdown list, click the desired report. Figure 8-4: Selecting Report to Add to
+          Schedule<p>If the report was defined with parameters, they will appear to the right of the
+          report dropdown list.</p></li>
+      <li>Enter the desired parameters and any parameters required for the report.<note>NOTE: If the
+          report definition has any parameters configured as "required," then a checkbox is
+          displayed in the "Req’d" column and you must provide values for those parameters before
+          saving the schedule.</note><p>Figure 8-5: Selecting Parameters for the Reportt</p><p><image
+            href="./media/Image_368.jpg" height="326" width="563" id="image_rry_jzr_zx"/></p><p>The
+          icon with the number of parameters in red will be displayed in the list of reports to be
+          run with the schedule. You will also be alerted in "red" text if you partially complete
+          any parameter such as selecting the Operator, but not filling in a parameter value for
+          it.</p></li>
+      <li>Select any additional reports (no limit) you want to schedule. When you click the name of
+        each selected report, the parameter configuration options for that report is
+          displayed.<p>Figure 8-6: Selecting Additional Reports to Schedule</p><p><image
+            href="./media/Image_369.jpg" height="439" width="612" id="image_sry_jzr_zx"/></p></li>
+      <li>To specify the run time for these reports, enter the values for the fields labeled Start
+        at: and Repeat every: For example, the report shown below will run everyday at 2:00 AM GMT.
+        This setting is independent of the time range data in the report configured on the Next tab.
+          <p>Figure 8-7: Sample Report Schedule</p><p><image href="./media/Image_371.jpg"
+            height="380" width="572" id="image_ury_jzr_zx"/></p><p>
+          <note>If you use the manual picker to schedule the time and provide a time in the
+            past, your job will not run until the next scheduled time. Providing a time in the past
+            is the same as scheduling the first run in the future.</note>
+        </p><p>If you want to schedule a report to run at 1 am every Monday, then schedule the
+          report to start the next Monday. If you want the report to run “now”, then select “now”,
+          let the report run, and then update the schedule for next Monday. This sets the schedule
+          for the next run at your desired day and time.</p>
+      </li>
+    </ol>
+
+  </conbody>
+</concept>

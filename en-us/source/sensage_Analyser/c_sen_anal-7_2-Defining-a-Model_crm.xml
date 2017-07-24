@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_2">
+   <title id="title_a13">Defining a Model</title>
+   <conbody>
+    <p>A model component is derived from a component library which defines its functionality,
+      analogous to a Function in Microsoft Excel. It generally contains input parameters, datatype
+      identifiers, and output parameters. Figure 6-3 summarizes these model parts.</p>
+    <p>Figure 6-3: Parts of a Model</p>
+    <p><image href="./media/Image_256.jpg" height="209" width="394" id="image_f13_lbr_zx"/></p>
+  </conbody>
+</concept>

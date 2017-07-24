@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_2">
+   <title>Saving a SQL Query as a Report</title>
+   <conbody>
+    <p>You can create reports using the contents of the SQL query which you have prepared in the
+      workbench.</p>
+    <p>To edit and save a query as a report:</p>
+    <ol id="ol_y4q_3yr_zx">
+      <li>In the SQL Workbench screen, click the Edit as a report button. <p>Figure 7-7: Edit Query
+          as a Report:</p><image href="media/Image_357_1.png" placement="break" scale="60"/><p>The
+          SQL Query Report Settings screen is displayed.</p><p>Figure 7-8: SQL Query Report
+          Settings</p><image href="./media/Image_357.png" placement="break" scale="50"/></li>
+      <li>As shown in the Figure 7-8, click Add a Run Time SQL Parameter button to add parameters in
+        the SQL. Click the button multiple times to add more tokens, as shown in the figure
+          below.<p>Figure 7-9: Add Run Time SQL Parameter</p><p><image href="./media/Image_358.png" placement="break" scale="60"/></p></li>
+      <li>To edit the token, double-click on the parameters under the Label column. When edited,
+        make sure that any changes are reflected in the SQL.</li>
+      <li>If you select a date range in the Data Limits tab, you may also use the tokens :start and
+        :end to reference those dates. Add quotes around the token if SQL requires quotes for the
+        data type. Example: select columnA, columnB from schema.table where columnA =
+        ':stringToken').</li>
+      <li>Click Save Report button. For more information on running a report, and adding charts, see
+          <xref href="c_sen_anal-5-CREATING-MODIFYING_crm.xml"/> and see <xref
+          href="c_sen_anal-6-CREATING-ANDMODIFYI_crm.xml"/>.</li>
+    </ol>
+  </conbody>
+</concept>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3">
+   <title id="title_a14">Creating and Editing a Data Model</title>
+   <conbody>
+    <p>To create or edit a data model, perform the following tasks:</p>
+    <ol id="ol_ktv_vcr_zx">
+      <li>Access the Analytics Model Information screen. See step a below, to create a model or step
+        b, to edit a model.<ol id="ol_zx4_zcr_zx">
+          <li>If creating a new model, go to the Analyzer dashboard, select Data Design from the
+            dropdown list and click Analytics Workbench, and Analytics. Go to step 2.</li>
+          <li>If editing a model, go to the Analyzer dashboard, select Data Design from the dropdown
+            list and click Analytics Workbench, and Models. Find the model you want to edit. See
+            Viewing a Model for methods to access a model and then click the Information icon next
+            to the Save button. <p>A sample model canvas is displayed. Note that the libraries menus
+              is collapsed, so only the canvas is displayed without the libraries
+              palette.</p><p>Figure 6-5: Sample Model Canvas</p><p><image
+                href="./media/Image_261.jpg" height="529" width="601" id="image_hrj_5cr_zx"
+            /></p></li>
+        </ol></li>
+      <li>When you see the Analytics Model information screen, as shown below, define or edit
+        existing model information (Name, Category, Description, Tags, and Input/Output) parameters
+        by filling or revising the information screen as shown Figure 6-6 below.<p>
+          <note>NOTE: Category is required for selection whether creating a new model or editing an
+            existing one.</note>
+        </p><p>Figure 6-6: Analytics Model Information Screen</p><p><image href="./media/Image_263.jpg"
+            height="524" width="581" id="image_jrj_5cr_zx"/></p></li>
+      <li>Click Save when you have finished.<p>If the current model wasn’t previously saved, the
+          system saves it as a new model and displays the model canvas.</p></li>
+      <li>Create the model on the canvas or edit a model’s canvas:<ol id="ol_jkw_hdr_zx">
+          <li>If creating a new model or editing an existing one, use the model library to create
+            the new/ revised components for the model on the model canvas. For details on using the
+            "model library" and adding/revising model components, see “Adding and Modifying Model
+            Components to a New or Existing Model”, on page 119. See the icons used to draw models
+            on the canvas on page 125.</li>
+          <li>If adding a model component to a new or existing model, see page 119 for details. To
+            edit model components, see step d.</li>
+          <li>c If adding a model to embed in your existing model, access the model library to add
+            the embedded model. For details, see “Nesting (embedding) a Model into an Existing
+            Model”, on page 118. </li>
+          <li>If editing a model component input or output parameter, see “Adding and Modifying
+            Model Input and Output Parameters”, next.</li>
+        </ol></li>
+    </ol>
+  </conbody>
+</concept>

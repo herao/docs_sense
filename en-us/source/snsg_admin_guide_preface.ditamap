@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/map.dtd">
+<map id="cm_front_matter_preface_mini">
+    <topicref href="common/preface_holder.xml">
+        <topicref href="sense_admin_guide/c_admin_guide-1_1-Audience-for-this-Bo_snsg.xml"/>
+        <topicref href="sense_admin_guide/c_admin_guide-1_2-Administration-Guide_snsg.xml"/>
+        <topicref href="sense_admin_guide/c_admin_guide-1_3-Road-Map-to-SenSage-_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-1_3_1-Conventions-Used-in-_snsg.xml"/>
+        </topicref>
+        <topicref href="sense_admin_guide/c_admin_guide-1_4-How-to-Obtain-the-Se_snsg.xml"/>
+        <topicref href="sense_admin_guide/c_admin_guide-1_5-How-to-Upgrade-an-Ex_snsg.xml"/>
+        <topicref href="sense_admin_guide/c_admin_guide-1_6-Contacting-Technical_snsg.xml"/>
+    </topicref>
+</map>

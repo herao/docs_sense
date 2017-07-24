@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_7">
+   <title id="title_a23">Monitoring Disk Usage</title>
+   <conbody>
+      <p>You can monitor disk usage in the EDW by running one of the EDW System reports, available as
+      part of the Foundation Analytics report package. For more information, see following reports
+      in the <cite>Analytics Guide</cite>.</p>
+      <ul>
+         <li>EDW System Disk Space Usage Alerts in “Foundation Analytics Report Package”</li>
+         <li>EDW System Disk Usage Per Node in “Foundation Analytics Report Package”</li>
+         <li>EDW Percent Disk Space Usage in “Foundation Analytics Report Package” For details on
+        running these reports, see the SenSage AP Analyzer documentation.</li>
+      </ul>
+      <p>For details on running these reports, see the <cite>SenSage AP Analyzer documentation</cite>.</p>
+   </conbody>
+</concept>

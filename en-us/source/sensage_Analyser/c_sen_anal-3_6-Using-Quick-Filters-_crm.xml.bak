@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_6">
+   <title>Using Quick Filters on Report Values</title>
+  <conbody>
+    <p>You can click the filter icon to the right of each value in the report grid and select from
+      the list of available quick filters to automatically add the desired filter to that column.
+      The quick filters available depends on the type of information displayed in the column. As
+      shown in the image below, the time stamp (<uicontrol>ts</uicontrol>) column shows the time
+      related filters like day, month, etc. The <uicontrol>hyperlink</uicontrol> column shows the
+      quick filters related to string manipulation. You can apply only one quick filter per column
+      at a time. Adding a new quick filter to a column already containing one will overwrite the
+      older filter.</p>
+    <fig><title>Figure 2-10: Quick Filter</title><image href="./media/Image_085.png" placement="break" scale="40" id="image_qs1_2dm_zx"/></fig>
+    <p>For example in Figure 2-10-1 below, we can remove all items which contain the hyperlink value
+        <codeph>www.sensge.com</codeph> by selecting the quick filter <uicontrol>!=</uicontrol>. The
+      applied quick filter value (<codeph>!=www.sensage.com</codeph>) is visible in the filter text
+      field (circled in red).</p> <fig id="fig_rrl_ybs_2y">
+      <title>Figure 2-10-1</title>
+      <image href="media/Image_885.png" scale="40"/>
+    </fig>
+  </conbody>
+</concept>

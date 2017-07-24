@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_7">
+   <title id="title_a29">Backing Up and Restoring System and Log Data</title>
+   <conbody>
+      <p>Files needed to back up for restoring the system are:</p>
+      <ul>
+         <li>
+            <filepath>/opt/hexis/hawkeye-ap/etc/collector/config.xml</filepath>
+         </li>
+         <li>All MD5 data in the state directory, as specified by the <codeph>&lt;StateRoot&gt;</codeph>
+      element in <filepath>config.xml</filepath>. For more information, see <i>Root Directories Used
+        by the SenSage AP Collector</i> in “SenSage AP Collector Configuration” of the
+        <cite>Collector Guide</cite>.</li>
+      </ul>
+      <section>
+         <title>BACKING UP RAW LOG DATA</title>
+         <p>You can configure retrievers to make backups of raw, downloaded logs before beginning
+      preprocessing. Add a <codeph>&lt;BackupDir&gt;</codeph> element to the retriever configuration in
+        <filepath>&lt;SenSage_Home&gt;/ etc/collector/config.xml</filepath>, as the next example
+      shows:</p>
+         <codeblock xml:space="preserve">&lt;Retriever name="filesystem" type="filesystem" enabled="1" process="files1" method="hardlink" deleteOriginal="1" &gt;
+   ... other elements ...
+   <b>&lt;BackupDir&gt;file:</b>///nfs1/backups&lt;/BackupDir&gt;
+   
+   &lt;!-- Copies file with scp to example.com using fred's account
+   Note: this requires public/private keypairs. --&gt;
+   <b>&lt;BackupDir&gt;scp:</b>//fred@example.com/nfs2/backups&lt;/BackupDir&gt;
+   
+   &lt;!-- Copies file with scp using -C for stream compression. --&gt;
+   <b>&lt;BackupDir&gt;scpc:</b>//fred@example.com/nfs2/backups&lt;/BackupDir&gt;
+&lt;/Retriever&gt;</codeblock>
+         <p>Log files are backed up after completing an atomic file write; that is, file system copy or
+      ftp copy. You can also use scp, scpc, or an arbitrary user-specified command to do log
+      backups.</p>
+         <note type="important"> All commands are executed in parallel. If any command fails, the entire
+        backup fails, and the retriever shuts down to prevent buildup of files that have not been
+        backed up.</note>
+      </section>
+   </conbody>
+</concept>

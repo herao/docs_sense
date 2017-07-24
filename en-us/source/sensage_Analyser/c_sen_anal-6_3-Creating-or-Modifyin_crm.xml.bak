@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_6_3">
+   <title>Creating or Modifying an Area Chart</title>
+   <conbody>
+    <p>An Area Chart consists of an X-axis and a Y-axis. To create or edit an Area Chart:</p>
+    <ol id="ol_aps_gwq_zx">
+      <li>Access the area chart settings screen (for instructions see “Creating a Chart”, on page 91
+        or “Editing a Chart - THIS NEEDS VERIFICATION and SCREENSHOTS”, on page 94.</li>
+      <li>If desired, enter (in this optional field) a title for the chart for descriptive purposes
+        only.</li>
+      <li>Specify the datatype for the Y-axis (the vertical dimension) under the dropdown box
+        labelled "Plot values from the field:" shown in Figure 5-6.<p>
+          <note>NOTE: It is generally good practice to use a field with a numeric datatype for the
+            Y-axis. If you select a string datatype the system will automatically add the count()
+            aggregation function to determine the vertical height of elements in the chart, this can
+            lead to unexpected results.</note>
+        </p><p>Figure 5-6: Defining Area Chart</p><p><image href="./media/Image_217.jpg"
+            height="330" width="625" id="image_bps_gwq_zx"/></p></li>
+      <li>Specify the datatype for the X-axis (the horizontal dimension of the chart) under the
+        dropdown box labelled "Use the following field for the X-axis of the graph:" shown in Figure
+        5-6. The values in this field will be listed as labels in the chart itself. You can use
+        fields of either string or number datatypes for the Y-axis.</li>
+      <li>Click Save. <draft-comment author="Hemraj">DOES CLICKING SAVE DISPLAY THE
+          CHART?</draft-comment><p>Figure 5-7 shows the results of the configuration implemented so
+          far. Note the name of the Y- axis field shows in the "Key" box on the right and values
+          from the field "Protocol" show as labels for each value across the bottom of the
+          report.</p><p>Figure 5-7: Area Chart Configuration</p><p><image
+            href="./media/Image_219.jpg" height="300" width="611" id="image_dps_gwq_zx"/></p></li>
+      <li>Optionally, to display more information than the number in the Y-axis field, you can
+        select another field for break down; to do this, select the second field in the box
+        "--select the corresponding value label field (if any) --" as shown in Figure 5-8 in which
+        "Firewall Device" is chosen.<p>Note that the box for the second field is displayed whenever
+          a field of numeric datatype is used.</p><p>Figure 5-8: Display "Firewall Device" in "Y"
+          Axis Field of Area Chart</p><p><image href="./media/Image_220.jpg" height="303"
+            width="596" id="image_eps_gwq_zx"/></p></li>
+      <li>Click Save. DOES CLICKING SAVE DISPLAY THE CHART?<p>At this point multiple “areas” are
+          displayed on the chart as shown in Figure 5-9. Note the new listing of labels in the Key
+          box on the right.</p> Figure 5-9: Labels in the Areas Chart <p><image
+            href="./media/Image_222.jpg" height="344" width="595" id="image_gps_gwq_zx"/></p></li>
+      <li>Click the gear icon and select Edit to display the chart settings screen for the
+          chart.<p>Figure 5-10: Area Chart Settings Screen</p><p><image href="./media/Image_224.jpg"
+            height="269" width="610" id="image_ips_gwq_zx"/></p><note>
+          <p>Note the following additional viewing options at the bottom of the chart settings
+            screen: Orientation, Stacking, and Display</p>
+          <p>The “Graph style:” allows you to removing the shading below the line, converting an
+            Area Chart into a Line Chart.</p>
+          <draft-comment author="Hemraj"> WHERE IS THE GRAPH SYTLE?????</draft-comment>
+          <p><ph id="a86">The “Display:” box allows you to show or hide the labels on each axis.
+                <draft-comment author="Hemraj">DO YOU MEAN CHECKING THE DATA LABELS
+                BOX?</draft-comment></ph></p>
+        </note></li>
+    </ol>
+    
+
+  </conbody>
+</concept>

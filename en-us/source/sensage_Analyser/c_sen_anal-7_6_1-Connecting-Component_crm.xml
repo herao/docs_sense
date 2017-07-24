@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_6_1">
+   <title>Connecting Components</title>
+   <conbody>
+    <p>When connecting components, you can make a single component connection or multiple component
+      connections. Refer to the following sections for details for performing each type of
+      connection.</p>
+  </conbody>
+</concept>

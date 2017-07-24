@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_6_3">
+   <title>Scheduling and the Unchanged For Attribute</title>
+   <conbody>
+      <p>Regardless of which element you use to set the polling frequency, you can also set how long
+      source log files should remain unchanged before the retriever transfers them for processing.
+      In other words, you separately specify how frequently the Collector polls for events and how
+      long the Retriever keeps an event log file before it releases it for processing.</p>
+      <p>To set the length of time the Retriever keeps an event log file before processing, you set
+      the <codeph>&lt;UnchangedFor&gt;</codeph> attribute of the <codeph>&lt;Plugin&gt;</codeph> element. For more information about this
+      element and attribute, see Plugin in “SenSage AP Collector Configuration” of the
+      <cite>Collector Guide</cite>.</p>
+      <p>The Collector determines when to take a file for processing based upon:</p>
+      <ul>
+         <li>Polling cycle<p>The frequency set either for the <codeph>&lt;Schedule&gt;</codeph> element or
+          the <codeph>&lt;PollInterval&gt;</codeph> and <codeph>&lt;Period&gt;</codeph> elements</p>
+        or</li>
+         <li>If no values have been set for <codeph>&lt;Schedule&gt;</codeph> or
+          <codeph>&lt;PollInterval&gt;</codeph> and &lt;Period&gt;, the frequency specified for
+          <codeph>&lt;CycleDelay&gt;</codeph> (See CycleDelay in “SenSage AP Collector Configuration”
+        of the <cite>Collector Guide</cite>)<p>and</p>
+         </li>
+         <li>The value specified for the <codeph>&lt;UnchangedFor&gt;</codeph> attribute of the
+          <codeph>&lt;Plugin&gt;</codeph> element.<p>Each time it polls, the Collector uses the
+            <codeph>&lt;UnchangedFor&gt;</codeph> setting to determine whether a file has remained
+          unchanged long enough to be ready for processing.</p>
+         </li>
+      </ul>
+      <p>Figure below illustrates how the Collector processes a file when the
+        <codeph>&lt;UnchangedFor&gt;</codeph> attribute has been set to 10 minutes and the polling
+      cycle has been set to 5 minutes.</p>
+      <fig>
+         <title>Illustrating the Relationship of Schedule Frequency &amp; UnchangedFor
+       Attribute</title>
+         <image href="./media/Image_204.gif" placement="break" id="image_etr_qxy_vx"/>
+      </fig>
+      <p>As illustrated above, a log file arrives at 1:02, which is 2 minutes after the last Collector
+      poll. At 1:05 and again at 1:10, the Collector checks whether the log file has changed.
+      Because the file has not changed and 10 minutes has not elapsed since the file was written,
+      the Collector ignores the file at these times. However, at the 1:15 poll, because 10 minutes
+      has elapsed since the file was written, the Collector takes the file for processing.</p>
+      <note>The value of <codeph>&lt;CycleDelay&gt;</codeph> in <filepath>config.xml</filepath> is
+      irrelevant if you set either the <codeph>&lt;Schedule&gt;</codeph> element or the
+        <codeph>&lt;PollInterval&gt;</codeph> and <codeph>&lt;Period&gt;</codeph> elements.</note>
+   </conbody>
+</concept>

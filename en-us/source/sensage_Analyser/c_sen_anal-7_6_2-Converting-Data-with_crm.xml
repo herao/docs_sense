@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_6_2">
+   <title>Converting Data with Analytic Components</title>
+   <conbody>
+    <p>The following "conversion" analytic components are available:</p>
+    <table id="table_lhr_str_zx">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="col1"/>
+        <colspec colnum="2" colname="col2"/>
+        <colspec colnum="3" colname="col3"/>
+        <tbody>
+          <row>
+            <entry>Create Excel</entry>
+            <entry>Integer to Double</entry>
+            <entry>Table to HTML</entry>
+          </row>
+          <row>
+            <entry>CSV to Table</entry>
+            <entry>Number to Text</entry>
+            <entry>Text to Boolean</entry>
+          </row>
+          <row>
+            <entry>Double to Integer</entry>
+            <entry>PDF to Text</entry>
+            <entry>Text to Number</entry>
+          </row>
+          <row>
+            <entry>Data Type Identifiers</entry>
+            <entry>Standardize Date Text</entry>
+            <entry>Text to Timestamp</entry>
+          </row>
+          <row>
+            <entry>Integer to Boolean</entry>
+            <entry>Table to CSV</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+  </conbody>
+</concept>

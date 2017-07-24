@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_9_2_4">
+   <title>Merging the Results from Top on Each Host in the Cluster (cltop)</title>
+   <conbody>
+      <p>This section describes the <codeph>cltop</codeph> utility, which creates a merged view of the
+      operating system status across an entire cluster of computers other words, it is a
+      cluster-wide version of the <codeph>top</codeph> program.</p>
+      <p>This section contains the following topics:<ul id="ul_kzh_kfl_vx">
+         <li><xref href="#topic_3_9_2_4/3924_1"/></li>
+         <li><xref href="#topic_3_9_2_4/3924_2"/></li>
+         <li><xref href="#topic_3_9_2_4/3924_3"/></li>
+         <li><xref href="#topic_3_9_2_4/3924_4"/></li>
+         <li><xref href="#topic_3_9_2_4/3924_5"/></li>
+         </ul>
+      </p>
+      <section id="3924_1">
+         <title>SYNOPSIS</title>
+         
+            
+               <parml><plentry><pt><codeph>cltop [<i>general_options</i>] &lt;<i>instance_name</i>&gt; </codeph></pt> <pd> </pd></plentry></parml>
+            
+         
+      </section>
+      <section id="3924_2">
+         <title>ARGUMENTS</title>
+         
+            <parml>
+         <plentry>      <pt><codeph>&lt;<i>instance_name</i>&gt;</codeph></pt>
+
+            <pd><p>The instance reference is a required argument that provides the name of the EDW
+               (SLS)</p>
+            <p>instance. You can specify the instance reference in any of the following formats:</p>
+            <p>
+                     <codeph>&lt;host&gt;:&lt;port&gt;</codeph>
+                  </p>
+            <p>For example: <codeph>host1.myco.com:8072</codeph>
+            </p>
+            <p>
+               <codeph>&lt;host&gt;:&lt;instance_name&gt;</codeph>
+            </p>
+            <p>For example: <codeph>host1.myco.com:my_instance</codeph>
+            </p>
+            <p>
+               <codeph>&lt;<i>instance_name</i>&gt;</codeph>
+            </p>
+            <p>For example: <codeph>my_instance</codeph>
+            </p><note>Use the <codeph>&lt;instance_name&gt;</codeph> argument only for instances that
+               reside on the same host from which you run the command. If you specify only one instance
+               reference, the command includes all hosts that are part of that instance. </note></pd></plentry>
+         </parml>
+         
+            <note><p>You can use
+                  <codeph>&lt;host&gt;:&lt;port&gt;</codeph> and
+                  <codeph>&lt;host&gt;:&lt;instance_name&gt;</codeph> for instances that reside on
+               the local host or remote hosts.</p><p>As a convenience, you can omit this argument if you set the environment variable SLS_INSTANCE.
+               For example: <codeph>SLS_INSTANCE=localhost:8072</codeph>.</p>
+         </note>
+      </section>
+      <section id="3924_3">
+         <title>OPTIONS</title>
+         <p>
+            <parml>
+               <plentry>
+                  <pt>
+                     <codeph>[general_options]</codeph>
+                  </pt>
+                  <pd></pd>
+               </plentry>
+            </parml>
+         </p>
+         <p>See <xref href="c_admin_guide-3_9_1-General-Syntax-for-U_snsg.xml#topic_3_9_1"/>.</p>
+      </section>
+      <section id="3924_4">
+         <title>EXAMPLE</title>
+         <codeblock xml:space="preserve">% bin/cltop
+
+Welcome to cltop version #8245.
+
+Initializing (ssh) cimarron@p02.hq.myco.com
+
+cimarron@p02.hq.myco.com's password:
+Initializing (ssh) cimarron@p08.hq.myco.com
+* p02.hq:-Done- | p08.hq:-Done-
+All done.
+NODE NODE ..........CPU usage......... .............. RAM usage ............
+NUM ROLES idle busy (user+system) total free used shared cache
+02 DMNQ 0.0% | 0.6% => 0.5+0.1 1,507MB 4MB 1,502MB 0MB 0MB
+08 DMNQ 3.0% | 3.5% => 0.5+3.0 1,004MB 21MB 983MB 0MB 0MB
+
+NODE PROCESS VMEM RAM SHMEM PROC CPU INSTALL
+NUM ID (MB) (MB) (MB) STAT used TIME PORT START NAME ACTION OTHER
+08 13277 10.2 10.0 1.8 S N 9.5% 0:29 10 Dec31 10 10 /usr/local/bin/perl
+02 17851 2.5 0.3 0.3 S 0.0% 0:00 2002 2:14 cg_2002 init
+02 17854 2.1 0.2 0.2 S 0.0% 0:00 2002 2:14 cg_2002 init
+08 9522 5.6 5.5 4.8 S 0.0% 0:00 2002 2:14 cg_2002 init
+08 31134 5.6 5.6 4.9 S 0.0% 0:00 2005 3:11 cg_2005 init
+08 9519 5.0 5.0 4.1 S 0.0% 0:00 2002 2:14 cg_2002 init
+
+KEY:
+- PROC STAT:
+D uninterruptible sleep (usually IO)
+R runnable (on run queue)
+S sleeping
+T traced or stopped
+Z a defunct ('zombie') process
+W has no resident pages
+&lt; high-priority process
+N low-priority task
+L has pages locked into memory</codeblock>
+      </section>
+      <section id="3924_5">
+         <title>RETURNS</title>
+         <p>Prints out of memory usage, CPU usage and processes.</p>
+      </section>
+   </conbody>
+</concept>

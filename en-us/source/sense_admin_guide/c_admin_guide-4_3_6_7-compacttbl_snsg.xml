@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_3_6_7">
+   <title>compacttbl</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>compacttbl &lt;table_name&gt; [&lt;num_seconds&gt;] [&lt;enable_compact_archived_data&gt;][&lt;number&gt;d/m/h]</codeph>
+            </pt>
+            <pd>By default, the EDW loads new data into separately indexed fragments to avoid the
+          overhead associated with combining data into more efficient files for long-term archival.
+          If you have many loads in the same time range (especially small loads under 10,000
+          records), query performance and/or compression can suffer. <p>Optionally you can use this
+            utility to compact archived data as well as local data. To do so, set <codeph>
+                     <i>&lt;enable_compact_archived_data&gt;</i>
+                  </codeph> to <codeph>1</codeph>. You can also
+            set the number of seconds compacting occurs before it stops. The following example
+            compacts local and archived data for <b>myTable</b>; compacting stops after 10 minutes
+            (600 seconds).</p>
+               <p>
+                  <codeph>compacttbl myTable 600 1</codeph>
+               </p>
+               <p>Set the duration to
+            run compact on recent data by providing the last days, minutes, and hours. Specify the
+            duration using the following syntax:</p>
+               <p>
+                  <codeph>[&lt;number&gt;d/m/h]</codeph>
+               </p>
+               <p>The
+            following example compacts local and archived data for myTable for the last 2 days;
+            compacting stops after 10 minutes (600 seconds).</p>
+               <p>
+                  <codeph>compacttbl myTable 600 1
+              2d</codeph>
+               </p>
+               <p>Assuming that the current date and time is April 25th, 2016
+            11:40:00, in this example, the manual compact tool will compact leaves with timestamp
+            from April 23rd, 2016 00:00:00 till the current timestamp the case of days, a day is
+            always calculated from the start of the specified day (00:00 hours) till the current
+            date and is not calculated based on current hours and minutes.</p>
+               <p>Similarly, the
+            following example compacts local and archived data for the last 30 minutes; compacting
+            stops after 10 minutes (600 seconds).</p>
+               <p>
+                  <codeph>compacttbl myTable 600 1
+              30m</codeph>
+               </p>
+               <p>Assuming that the current date and time is April 25th, 2016
+            11:40:00, in this example, the manual compact tool will compact leaves with timestamp
+            from April 25th, 2016 11:10:00 till the current timestamp.</p>
+               <p>The following example
+            compacts local and archived data for the last 4 hours.</p>
+               <p>
+                  <codeph>compacttbl myTable
+              600 1 4h</codeph>
+               </p>
+               <p>Assuming that the current date and time is April 25th, 2016
+            11:40:00, in this example, the manual compact tool will compact leaves from April 25th,
+            2016 7:40:00 till the current timestamp.</p>
+               <p>
+                  <note>One day is not calculated as 24 hours, make sure that you set the compact duration
+              appropriately.</note>
+               </p>
+               <note type="important">This command cannot compact any node that stores data archived
+            to a Nearline storage device. Only after the retention period has ended can the Nearline
+            storage data be compacted. For more information, see: <ul id="ul_ghr_gd5_vx">
+                     <li>Installing Perl Modules in Chapter 8, “Perl Subroutines” in the Event Data
+                Warehouse Guide</li>
+                     <li>Compact in Chapter 2, “SenSage AP Collector Configuration” in the Collector
+                Guide</li>
+                  </ul>
+               </note>
+               <note type="important">: Consult IgniteTech Support before using this
+            command, because it can be very slow and often yields little improvement.</note>
+            </pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

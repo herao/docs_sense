@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_12_1">
+   <title id="title_a24">Adding/Deleting a Data Model Category</title>
+   <conbody>
+    <p>If you have Analyzer Administration privileges, you can add SenSage AP data model categories
+      to the Models Library. A data model category represents a grouping of models with a similar
+      processing task.</p>
+    <p>To delete or add a data model category:</p>
+    <ol id="ol_eyr_fls_zx">
+      <li>Go to the Analyzer dashboard, select the Administration menu on the left-hand side, and
+        click Analytics from the dropdown submenu. The <uicontrol>Analytics
+          Administration</uicontrol> screen is displayed as shown in Figure 11-1.<p>Figure 11-1:
+          Analytics Administration Screen</p><p>
+          <image href="./media/Image_435.png" placement="break" scale="50"/>
+        </p></li>
+      <li> To delete a category,  select the checkbox of the category you want to delete. Click the
+          <b>-</b> from the <uicontrol>Edit Categories</uicontrol> menu.<p>The <uicontrol>Please
+            Confirm</uicontrol> dialog displays, click <uicontrol>Yes</uicontrol>.<note>You can
+            select mutiple categories and delete them together.</note></p></li>
+      <li>To  add a new category, click the <b>+</b> button from the <uicontrol>Edit
+          Categories</uicontrol> menu. A new item called "New Category" is added to the list. Double
+        click on the new item and edit its name.</li>
+    </ol>
+  </conbody>
+</concept>

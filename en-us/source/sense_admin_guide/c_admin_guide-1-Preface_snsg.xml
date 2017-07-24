@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1">
+   <title id="title_O_82076">Preface</title>
+   <conbody>
+      <p>This book, the <i>Administration Guide</i>, describes the 6.1.1 version of SenSage AP
+      software.</p>
+      <p>System Administrators manage the following components and features of a SenSage AP
+      deployment, which are discussed in this manual:</p>
+      <ul>
+         <li>Event Data Warehouse (EDW)</li>
+         <li>SenSage AP Analyzer</li>
+         <li>SenSage AP Collector</li>
+         <li>Host software—some event sources require installation and configuration of SenSage AP
+         software on host machines</li>
+         <li>User management—creation of users and roles and configuration of their authentication</li>
+         <li>Nearline storage—configuration and management of Nearline storage devices for ready access
+         to archived data</li>
+      </ul>
+      <p>This Preface contains the following sections:</p>
+      <ul>
+         <li>
+            <xref href="c_admin_guide-1_1-Audience-for-this-Bo_snsg.xml#topic_1_1"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-1_2-Administration-Guide_snsg.xml#topic_1_2"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-1_3-Road-Map-to-SenSage-_snsg.xml#topic_1_3"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-1_3_1-Conventions-Used-in-_snsg.xml#topic_1_3_1"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-1_4-How-to-Obtain-the-Se_snsg.xml#topic_1_4"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-1_5-How-to-Upgrade-an-Ex_snsg.xml#topic_1_5"/>
+         </li>
+         <li>
+            <xref href="c_admin_guide-1_6-Contacting-Technical_snsg.xml#topic_1_6"/>
+         </li>
+      </ul>
+   </conbody>
+</concept>

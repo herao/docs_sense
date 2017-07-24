@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_1_10">
+   <title>Tracking Uploads in the EDW</title>
+   <conbody>
+      <p>In addition to loading the log data into the specified table(s), atload saves information in
+      the EDW about the load. You can view this information by querying against two system
+      tables:</p>
+      <ul>
+         <li>
+            <codeph>system.upload_info</codeph>
+            <p>This table enables administrators to check on upload
+          status in the system. When the system is healthy, this table returns one row for each
+          upload. When the upload data is not consistent across all the hosts in the instance, this
+          table returns a value of <codeph>false</codeph> in the CONSISTENT column for this case,
+          the table may return multiple rows with the same value in the <codeph>_uploadid</codeph>
+          column; all of these rows are marked as inconsistent.</p>
+         </li>
+         <li>
+            <codeph>system.raw_upload_info</codeph>
+            <p>This table enables a support person to troubleshoot an inconsistency problem by seeing the
+       raw data distributed across the system</p>
+         </li>
+      </ul>
+      <p>Both of these tables contain a unique identifier for the upload: the value of the _uploadid
+      column. For more information about the _uploadid column, see <xref href="c_admin_guide-4_5_7_1-Using-the-UPLOADS-Co_snsg.xml#topic_4_5_7_1"/>
+      and <xref href="c_admin_guide-4_3_6-Table-Management_snsg.xml#topic_4_3_6"/>.</p>
+      <p>These tables store additional information that includes: the minimum and maximum timestamps,
+      the number of lines in the source log data, the number of lines successfully parsed by the
+      PTL, the number of rows loaded into the specified EDW table(s), the PTL and client signatures,
+      and whether the load was successful.</p>
+      <p>Additionally, the <codeph>system.upload_info</codeph> table returns the consistency data and
+      the</p>
+      <p>
+         <codeph>system.raw_upload_info</codeph> returns the logical name of the data's source
+      host.</p>
+      <p>As it begins loading data into the log tables, the EDW inserts a new row in these system
+      tables to track the uploaditially, the value of the SUCCESSFUL column defaults to false.
+      When the load completes successfully, this column's value changes to true. By default, when
+      you query the data in the log table(s), the EDW returns data only for loads that completed
+      successfully. If you query a log table while it is still receiving data, none of the new data
+      is returned.</p>
+      <note>To view data from a failed load or from an in-progress load, specify the
+        <codeph>{INCLUDE_BAD_UPLOADS}</codeph> modifier (enclosed within curly braces) in the
+        <codeph>FROM</codeph> clause of your query. If a query and a load occur simultaneously and
+      the query continues after the load completes, you may see all, none, or part of the data from
+      the new load.</note>
+      <p>For more information, see:</p>
+      <ul>
+         <li>"system.upload_info” and “system.raw_upload_info” in the <cite>Event Data Warehouse
+          Guide</cite>.</li>
+         <li>"Including Rows from Bad Loads" in “SenSage AP SQL” of the <cite>Event Data Warehouse
+          Guide</cite>.</li>
+         <li>
+            <xref href="c_admin_guide-11_2-Checking-Locking-Sta_snsg.xml#topic_11_2"/>
+         </li>
+      </ul>
+   </conbody>
+</concept>

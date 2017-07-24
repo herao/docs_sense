@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_6">
+   <title>Adding/Modifying Groups in a Single/Multiple-AD Server Environment</title>
+  <conbody>
+    <p>This section describes how to add or modify groups. In a single/multiple-AD server
+      environment, this applies to those users who belong to a specific group DN (Distinguished
+      Name) of an AD server. Refer to the applicable section below, depending on whether you are
+      adding or modifying a group in a single-AD server environment or a multiple one.</p>
+    <p>
+      <note>IMPORTANT: Before you proceed with group synchronization, be sure that each Analyzer
+        user’s information is in synchronization with Active Directory. For more information on how
+        to synchronize AD users with Analyzer, refer to the SenSage AP Administration Guide.</note>
+    </p>
+    <p>To add/modify a SenSage AP group in a Single-AD Server Environment:</p>
+    <ol id="ol_bdw_5fs_zx">
+      <li>Go to the Analyzer, select Administration --> Groups from the dropdown submenu. The Manage
+        Groups screen is displayed as shown in Figure 9-6. See step 2 or 3 depending on whether you
+        are adding or modifying a group.<p>Figure 9-6: Manage Groups Screen</p><p><image
+            href="./media/Image_398.jpg" height="195" width="617" id="image_cdw_5fs_zx"/></p></li>
+      <li>Click Add a Group button as shown in Figure 9-7 and enter a name for the new group. In the
+        sample screen the name circulardev2 is entered.<p>Figure 9-7: Adding a New
+            Group</p><p><image href="./media/Image_399.jpg" height="239" width="569"
+            id="image_ddw_5fs_zx"/></p></li>
+      <li>If this group requires synchronization from LDAP, select the Synchronize this group from
+        LDAP checkbox and enter the following details:<p>a Select the AD server (displayed by IP
+          address) from the dropdown list. b Specify the organization’s DN.</p><p>c Specify the
+          group’s DN.</p></li>
+      <li>If modifying a group, select the group that you want to change from the Select a Group
+        dropdown. As shown in the example in Figure 9-8, when the Non_administrators group is
+        selected, the information for the group is displayed. You can modify the group name and the
+        LDAP configuration details.<p>Figure 9-8: Selecting a Group for Modification</p><p>
+          <note>NOTE: Make sure that if you modify the LDAP-related settings for a group with
+            another LDAP server, upon synchronization, the existing users in the group will be
+            removed and the new list of synced users is populated in the group.</note>
+        </p></li>
+      <li>Check users from the Not in this Group section that you want to be in the group. Click the
+        right arrow to move them into the Members of this Group column.</li>
+      <li>Click Save to save the changes.<p>Under Members of the this Group column, a list of users
+          that is synchronized with the group is displayed.</p><p>
+          <note>NOTE: If the group DN of the AD server contains those user accounts which are listed
+            under the Analyzer users list (upon synchronization), those user accounts are not
+            populated in the synched group.</note>
+        </p></li>
+      <li>If desired, you can select what the roles will be for users in this group. For details on
+        creating roles, see Adding and Modifying Roles.</li>
+    </ol>
+  </conbody>
+</concept>

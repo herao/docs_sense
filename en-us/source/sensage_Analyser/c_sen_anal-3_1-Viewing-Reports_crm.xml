@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_1">
+   <title id="title_a6">Viewing Reports</title>
+   <conbody>
+    <p>To view reports:</p>
+
+    <ol id="ol_f5x_21m_zx">
+      <li> Go to the Analyzer dashboard and select Data Design from the dropdown list, and click
+          <b>Reports</b>.<p> A list of reports that you have permission to access
+          displays.</p><p>Figure 2-1: Manage Reports Screen</p><p>
+          <image href="./media/Image_058.png" placement="break" id="image_e5x_21m_zx" scale="40"/>
+        </p><note>The Manage Reports screen lets you find a report by name, last updated, history
+          count, space, and by a report tag. Six icons provide additional information on each report
+          letting you know if a report is a summary, its date range limit (timestamp), number of
+          fields used as filters, models, chart type, and associated reports. For more details, see
+          the table under <xref href="c_sen_anal-3_7-Using-Filters-to-fin_crm.xml"/>.</note>
+      </li>
+      <li>Check the report that you want to view, click <b>Run</b>, and from the dropdown select
+          <b>View last run</b> to obtain the latest report for viewing. For a sample report display,
+        see <xref href="c_sen_anal-3_2-Viewing-a-Default-Re_crm.xml"/>, next. <p>Figure 2-2: Run
+          Latest Report for Viewing</p><p><image href="./media/Image_059.png" placement="break" scale="42"/></p>
+        <note>The <b>View Last Run</b> option will access which ever is the latest report from the
+          report’s history; the last report run can be either an ad hoc or scheduled report. For
+          details on other Run options, see <xref href="c_sen_anal-5_2-Running-a-Report_crm.xml"
+          />.</note></li>
+    </ol>
+
+
+  </conbody>
+</concept>

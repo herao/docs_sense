@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_8">
+   <title id="title_a24">System Tables</title>
+   <conbody>
+      <p>You can query the EDW to get information about your SenSage AP system such as the state of an
+      EDW instance or all defined roles and which users have been assigned to them. When you query
+      for this information, the EDW dynamically formats the result data as a standard table.</p>
+      <p>These tables return system information and are known as <i>system tables</i>. Because the
+      data returned is not saved on disk but is dynamically retrieved and formatted as a standard
+      table, they are also referred to as <i>virtual tables</i>. For a detailed description of each
+      system table, refer to <i>Appendix D: SenSage APSystem Tables</i> of the <cite>Event Data
+        Warehouse Guide</cite>.</p>
+      <p>The virtual nature of these tables is apparent when you query the EDW for all tables in your
+      instance by running the atview command; for example:</p>
+      <codeblock xml:space="preserve">atview --user=administrator --pass=&lt;<i>passwd</i>&gt; --namespace='' &lt;<i>cluster_list</i>&gt; tables</codeblock>
+      <p>The above command does not return any system tables.</p>
+      <p>Because the system tables are virtual, you cannot insert data directly into them. For
+      example, you cannot run <codeph>atload</codeph> to load a new user into
+        <codeph>system.users</codeph>.</p>
+      <p>To explore the state of your system, run the <codeph>atview</codeph> command; for more
+      information, see <xref href="c_admin_guide-4_4-Examining-the-State-_snsg.xml#topic_4_4"/> and <xref href="c_admin_guide-5_6-Monitoring-an-EDW-In_snsg.xml#topic_5_6"/>.</p>
+      <p>To explore authorization and authentication data, run the <codeph>atquery</codeph> command
+      against specific system tables.</p>
+   </conbody>
+</concept>

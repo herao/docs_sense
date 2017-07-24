@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_2">
+   <title>Adding Dashboards</title>
+   <conbody>
+    <p>After the first dashboard exists, you will see a "gear" icon in the upper right corner of the
+      screen. Click this icon to display the Dashboard settings menu and then click New Dashboard to
+      display the new dashboard screen. NEEDS NEW SCREENSHOT</p>
+    <p>Figure 3-3: Adding a Dashboard</p>
+    <p><image href="./media/Image_120.png" placement="break" scale="42"/></p>
+    <p>Follow steps 1-5 outlined in <xref href="c_sen_anal-4_1-Setting-Up-the-Initi_crm.xml"/>.</p>
+  </conbody>
+</concept>

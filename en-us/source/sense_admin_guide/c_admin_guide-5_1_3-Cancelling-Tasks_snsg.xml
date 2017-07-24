@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_1_3">
+   <title>Cancelling Tasks</title>
+   <conbody>
+      <p>To cancel a task, use "<codeph>atmanage canceltask <i>&lt;request_id&gt;</i>
+         </codeph>" as shown
+      in the following
+      example:<codeblock xml:space="preserve">atmanage --user=administrator --pass=pass:s0mep@ss \
+lmshost:8072 canceltask 673FA7200BC6F109955E227201BCEA73255</codeblock>
+      </p>
+      <p/>
+      <p>To find the internal task IDs, run "<codeph>atview tasks</codeph>".</p>
+   </conbody>
+</concept>

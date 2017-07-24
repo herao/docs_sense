@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_6_3">
+   <title>Websrv Data</title>
+   <conbody>
+      <p>The example source log file contains Web site events recorded by a Microsoft IIS web server.
+      You can find the log and related files in this location:</p>
+      <p>
+         <filepath>/opt/hexis/hawkeye-ap/example_logs/websrv</filepath>
+      </p>
+      <table id="table_wsw_dr5_vx">
+         <tgroup cols="2">
+            <colspec colnum="1" colname="col1" colwidth="1*"/>
+            <colspec colnum="2" colname="col2" colwidth="3.35*"/>
+            <tbody>
+               <row>
+                  <entry>records</entry>
+                  <entry>60,191</entry>
+               </row>
+               <row>
+                  <entry>min timestamp</entry>
+                  <entry>Wed Jan 30 07:44:37 2002 GMT (1012376677)</entry>
+               </row>
+               <row>
+                  <entry>max timestamp</entry>
+                  <entry>Sun Mar 17 18:08:45 2002 GMT (1016388525</entry>
+               </row>
+               <row>
+                  <entry>columns</entry>
+                  <entry>12</entry>
+               </row>
+               <row>
+                  <entry>data files</entry>
+                  <entry>
+                     <p>
+                        <filepath>websrv_log.gz</filepath> (495,653 bytes)</p>
+                     <p>
+                        <filepath>websrv_log_100.gz</filepath> (1734 bytes)</p>
+                     <p>
+                        <filepath>websrv_log2_100.gz</filepath> (1260 bytes)</p>
+                  </entry>
+               </row>
+               <row>
+                  <entry>parse failures</entry>
+                  <entry>88 records in <filepath>websrv_log.gz</filepath>
+                  </entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

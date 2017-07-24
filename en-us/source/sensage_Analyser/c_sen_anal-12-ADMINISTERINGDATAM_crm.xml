@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_12">
+   <title>Administering Data Models</title>
+   <conbody>
+    <p>This chapter describes how to use SenSage AP Analyzer to administer data models for Analytics
+      and contains the following sections:<ul id="ul_f3n_2ls_zx">
+        <li><xref href="c_sen_anal-12_1-AddingDeleting-a-Da_crm.xml"/></li>
+        <li><xref href="c_sen_anal-12_2-Displaying-Model-Exe_crm.xml"/></li>
+      </ul></p>
+  </conbody>
+</concept>

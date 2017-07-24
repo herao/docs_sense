@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_2_1_2">
+   <title>Backing Up Your LDAP Server</title>
+   <conbody>
+      <p>To back up your LDAP server, run the following commands as the hexis user on the host running
+      the LDAP
+      Server:<codeblock xml:space="preserve">service sensage_atslapd stop
+/opt/hexis/hawkeye-ap/sbin/slapcat -f /opt/hexis/hawkeye-ap/etc/\
+atslapd/slapd.conf | grep -v '^creat' | grep -v '^modif' &gt; /opt/data/backups/\
+backup.ldif
+service sensage_atslapd start</codeblock>
+      </p>
+   </conbody>
+</concept>

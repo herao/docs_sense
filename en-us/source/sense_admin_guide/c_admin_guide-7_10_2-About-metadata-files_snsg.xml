@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_10_2">
+   <title>About metadata files</title>
+   <conbody>
+      <p>Each gathered log file is paired with an XML-based metadata file of the same name. The
+      metadata file contains information about the source of the log data and its current status.
+      The metadata file is created when the log file is fully transferred into the Collector (that
+      is, when the <filepath>.pmd</filepath> file is created). The extension of a log file changes
+      as it moves through the system, but its corresponding metadata file keep its
+        <filepath>.meta</filepath> extension throughout.</p>
+      <p>For more information about log file names and extensions, see <xref href="c_admin_guide-7_8-Description-of-Log-F_snsg.xml#topic_7_8"/>.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5_5">
+   <title>Joining Multiple Tables in the Report</title>
+   <conbody>
+    <p>You can have an existing table in your report joined by one or more specified tables from
+      your data source.To add tables to your report:</p>
+    <ol id="ol_d54_gdq_zx">
+      <li>Perform step a or b to select table(s) for the join:
+      <ol>
+        <li>If you are not certain which table(s) to join or you want to use a field for the join
+            that you have not already selected, click the Add a table button. Go to Step 2.</li><li>If you do know which field you want to use to join the tables and you have selected that table
+            (so that it is showing in the field list), click the ‘link’ icon to the right of the
+            field name. This will save a step in the next dialog box. Go to Step 3. <p>Figure 4-17:
+              Selecting Table/Field to Join</p><p><image href="./media/Image_164.png" placement="break" scale="50"/></p></li>
+      </ol>
+      </li>
+      <li>If you clicked the Add a table button, you first need to select the columns that you want
+        to use to join the tables on the left side of the dialog box. You can filter to specific
+        fields quickly by typing in the "column name filter" box.<p>Figure 4-18: Select the First
+          Column(s) for Join</p><p><image href="./media/Image_165.jpg" height="291" width="575"
+            id="image_f54_gdq_zx"/></p></li>
+      <li>After the column(s) is selected, choose the second column you want to use. Click the arrow
+        next to a schema to expand the list of tables in that schema. Then click the arrow next to
+        the table to expand the list of columns in that table. To quickly find specific tables or
+        columns, type part of the name in the "table name filter" or "column name filter" boxes respectively.<p>
+          <note>The second column(s) can be from any table in any namespace; however, it must
+            be of the same datatype as the first field.</note>
+        </p><p><image href="./media/Image_166.png" placement="break" scale="45"/></p></li>
+      <li>Click the column name(s) that you want to use and then click Done. <p>Figure 4-19: Second
+          Column(s) for Join<image id="image_c21_jyh_3y"/></p><p>The relationship that you just
+          defined is now applied in a new grid below the fields grid. You can now add more
+          conditions for the join to the same table or add more joins to other tables.</p><p>
+          <note>The second column from the new table is not listed in the original fields grid. To
+            add columns from the second table for viewing in the report, click the Add fields
+            button. Also note that a “left join” is performed on joined tables and currently no
+            options are provided to perform a "center" or "right join."</note>
+        </p><p>Figure 4-20: Add Fields from Second Table for Display</p><p><image href="./media/Image_167.png" placement="break" scale="50"/></p><p>As
+          you select each new field that you want to appear in the report, the field will move from
+          the left side to the right side of the dialog box.</p></li>
+      <li>When finished selecting your fields, click Select. <p>Figure 4-21: Select Columns to Add
+          to Report</p><image href="./media/Image_168.png" placement="break" scale="50"/><p>After
+          you have selected your additional fields, all fields are displayed in one grid as shown in
+          Figure 4-22. The small gray text under each field shows the name of the table. To
+          avoid</p><p>confusion, you can rename the headers in fields that may have an identical
+          name in both tables.</p></li>
+      <li>When you are finished, click <b>Save </b>or choose one of the following Save Options: Save
+        and close, Save run and retain (for report history), or Save and run once (no history).
+          <p>Figure 4-22: Completed Join Display</p><p><image href="./media/Image_169.png" placement="break" scale="50"/></p>
+      </li>
+    </ol>
+
+  </conbody>
+</concept>

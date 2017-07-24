@@ -1,0 +1,1376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_13_2">
+   <title>EDW</title>
+   <conbody>
+      <p>The errors listed below represent approximately one quarter of the exceptions issued by the
+      EDW.</p>
+      <table id="table_urn_txq_wx">
+         <tgroup cols="2">
+            <colspec colnum="1" colname="col1" colwidth="1*"/>
+            <colspec colnum="2" colname="col2" colwidth="5.9*"/>
+            <thead>
+               <row>
+                  <entry>Error Code</entry>
+                  <entry>Message</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>0010004</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0010012</entry>
+                  <entry>FILE* is NULL</entry>
+               </row>
+               <row>
+                  <entry>0010014</entry>
+                  <entry>Parameter name is NULL</entry>
+               </row>
+               <row>
+                  <entry>0010019</entry>
+                  <entry>FILE* for output is NULL</entry>
+               </row>
+               <row>
+                  <entry>0010020</entry>
+                  <entry>FILE* for output is NULL</entry>
+               </row>
+               <row>
+                  <entry>0010022</entry>
+                  <entry>malformed bucket chain in Tcl_DeleteHashEntry</entry>
+               </row>
+               <row>
+                  <entry>0010023</entry>
+                  <entry>called Tcl_FindHashEntry on deleted table</entry>
+               </row>
+               <row>
+                  <entry>0010024</entry>
+                  <entry>Name is NULL</entry>
+               </row>
+               <row>
+                  <entry>0010025</entry>
+                  <entry>Value is NULL</entry>
+               </row>
+               <row>
+                  <entry>0010026</entry>
+                  <entry>called Tcl_CreateHashEntry on deleted table</entry>
+               </row>
+               <row>
+                  <entry>0010042</entry>
+                  <entry>Attempting to process data with no schema</entry>
+               </row>
+               <row>
+                  <entry>0010043</entry>
+                  <entry>Column Index out of bounds</entry>
+               </row>
+               <row>
+                  <entry>0010053</entry>
+                  <entry>Unknown P_UNIT_T</entry>
+               </row>
+               <row>
+                  <entry>0010057</entry>
+                  <entry>Unknown Data Type: $1</entry>
+               </row>
+               <row>
+                  <entry>0010058</entry>
+                  <entry>Internal Logic Error: Please contact the Development Team</entry>
+               </row>
+               <row>
+                  <entry>0010062</entry>
+                  <entry>HTTP data ended before complete content was received</entry>
+               </row>
+               <row>
+                  <entry>0010063</entry>
+                  <entry>Stream has received data of an unknown type</entry>
+               </row>
+               <row>
+                  <entry>0010064</entry>
+                  <entry>HTTP data ended before complete HTTP header was received</entry>
+               </row>
+               <row>
+                  <entry>0010066</entry>
+                  <entry>Errors while reading file</entry>
+               </row>
+               <row>
+                  <entry>0010067</entry>
+                  <entry>Unknown Data Type: $1</entry>
+               </row>
+               <row>
+                  <entry>0010071</entry>
+                  <entry>Problems compiling statement</entry>
+               </row>
+               <row>
+                  <entry>0010072</entry>
+                  <entry>pullDataSource should never be called for CPushedValueStream</entry>
+               </row>
+               <row>
+                  <entry>0010073</entry>
+                  <entry>‘processHttpData’ called after ‘getLeftOverData’</entry>
+               </row>
+               <row>
+                  <entry>0010074</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0010088</entry>
+                  <entry>EOS has already been sent</entry>
+               </row>
+               <row>
+                  <entry>0010089</entry>
+                  <entry>EOS has already been sent</entry>
+               </row>
+               <row>
+                  <entry>0010091</entry>
+                  <entry>EOS has already been sent</entry>
+               </row>
+               <row>
+                  <entry>0010093</entry>
+                  <entry>EOS has already been sent</entry>
+               </row>
+               <row>
+                  <entry>0010094</entry>
+                  <entry>EOS has already been sent</entry>
+               </row>
+               <row>
+                  <entry>0010098</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0010102</entry>
+                  <entry>Child Process Died</entry>
+               </row>
+               <row>
+                  <entry>0010124</entry>
+                  <entry>Internal Error: Unknown parsing state</entry>
+               </row>
+               <row>
+                  <entry>0010134</entry>
+                  <entry>Failed to write all the Sort Data</entry>
+               </row>
+               <row>
+                  <entry>0010140</entry>
+                  <entry>Multiple Schema Specifiers in Stream</entry>
+               </row>
+               <row>
+                  <entry>0010141</entry>
+                  <entry>Incorrect Data Type Requested</entry>
+               </row>
+               <row>
+                  <entry>0010142</entry>
+                  <entry>Unknown Internal State</entry>
+               </row>
+               <row>
+                  <entry>0010158</entry>
+                  <entry>NULL Byte found in InitialData</entry>
+               </row>
+               <row>
+                  <entry>0010159</entry>
+                  <entry>NULL Byte found in InitialData</entry>
+               </row>
+               <row>
+                  <entry>0010168</entry>
+                  <entry>Unexpected error code: $1</entry>
+               </row>
+               <row>
+                  <entry>0010176</entry>
+                  <entry>Unknown STATE Code</entry>
+               </row>
+               <row>
+                  <entry>0010178</entry>
+                  <entry>Invalid !DOCTYPE block</entry>
+               </row>
+               <row>
+                  <entry>0010179</entry>
+                  <entry>Invalid !ELEMENT block</entry>
+               </row>
+               <row>
+                  <entry>0010184</entry>
+                  <entry>Unknown Parameter Type in Table</entry>
+               </row>
+               <row>
+                  <entry>0010186</entry>
+                  <entry>Argument is not an XMLRPC Fault Response</entry>
+               </row>
+               <row>
+                  <entry>0010187</entry>
+                  <entry>Argument is not a standardized XMLRPC Fault Response</entry>
+               </row>
+               <row>
+                  <entry>0010210</entry>
+                  <entry>No Such Channel: $1</entry>
+               </row>
+               <row>
+                  <entry>0010216</entry>
+                  <entry>Invalid length on hexadecimal string: $1</entry>
+               </row>
+               <row>
+                  <entry>0010217</entry>
+                  <entry>Non-hexadecimal digit: $1</entry>
+               </row>
+               <row>
+                  <entry>0010230</entry>
+                  <entry>Non-hexadecimal digit: $1</entry>
+               </row>
+               <row>
+                  <entry>0010241</entry>
+                  <entry>Too many fields in input data</entry>
+               </row>
+               <row>
+                  <entry>0010242</entry>
+                  <entry>Too few fields in input data</entry>
+               </row>
+               <row>
+                  <entry>0010243</entry>
+                  <entry>Multiple !DOCTYPE’s in document</entry>
+               </row>
+               <row>
+                  <entry>0010252</entry>
+                  <entry>Corrupted BZIP2 data stream</entry>
+               </row>
+               <row>
+                  <entry>0010260</entry>
+                  <entry>Unknown Data Type Code</entry>
+               </row>
+               <row>
+                  <entry>0010261</entry>
+                  <entry>XMLRPC_BINARY Not Implemented Yet</entry>
+               </row>
+               <row>
+                  <entry>0010262</entry>
+                  <entry>No Regex found</entry>
+               </row>
+               <row>
+                  <entry>0010265</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0010268</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0010274</entry>
+                  <entry>Couldn’t find chunk-size in stdin stream</entry>
+               </row>
+               <row>
+                  <entry>0010284</entry>
+                  <entry>Invalid Regex Type: $1</entry>
+               </row>
+               <row>
+                  <entry>0010286</entry>
+                  <entry>All Network Communication Processes have died</entry>
+               </row>
+               <row>
+                  <entry>0010290</entry>
+                  <entry>Internal Error: Received incomplete rows</entry>
+               </row>
+               <row>
+                  <entry>0010292</entry>
+                  <entry>‘parseData’ called after ‘getLeftOverData’</entry>
+               </row>
+               <row>
+                  <entry>0010333</entry>
+                  <entry>Method should never be called</entry>
+               </row>
+               <row>
+                  <entry>0010338</entry>
+                  <entry>‘start’ called on an uninitialized object</entry>
+               </row>
+               <row>
+                  <entry>0010339</entry>
+                  <entry>‘init’ called on a non-empty object</entry>
+               </row>
+               <row>
+                  <entry>0010340</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0010347</entry>
+                  <entry>Internal Error: Stream Iter is Empty</entry>
+               </row>
+               <row>
+                  <entry>0010353</entry>
+                  <entry>Stream Iter is Empty</entry>
+               </row>
+               <row>
+                  <entry>0010355</entry>
+                  <entry>Stream Iter is Empty</entry>
+               </row>
+               <row>
+                  <entry>0010361</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0010375</entry>
+                  <entry>Invalid Regex Type: $1</entry>
+               </row>
+               <row>
+                  <entry>0010383</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0010385</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0010386</entry>
+                  <entry>Empty Passwords are not allowed</entry>
+               </row>
+               <row>
+                  <entry>0010398</entry>
+                  <entry>Unknown Permission Type: $1</entry>
+               </row>
+               <row>
+                  <entry>0010399</entry>
+                  <entry>The ‘$1’ role cannot be deleted</entry>
+               </row>
+               <row>
+                  <entry>0010400</entry>
+                  <entry>The ‘$1’ user cannot be deleted</entry>
+               </row>
+               <row>
+                  <entry>0010422</entry>
+                  <entry>Index out of bounds</entry>
+               </row>
+               <row>
+                  <entry>0010427</entry>
+                  <entry>The ‘$1’ user cannot be deleted</entry>
+               </row>
+               <row>
+                  <entry>0010453</entry>
+                  <entry>Read did not fetch an integral number of records</entry>
+               </row>
+               <row>
+                  <entry>0010455</entry>
+                  <entry>Encountered EOF while reading Data File</entry>
+               </row>
+               <row>
+                  <entry>0010456</entry>
+                  <entry>Unable to read complete row from Data File</entry>
+               </row>
+               <row>
+                  <entry>0010459</entry>
+                  <entry>Internal Logic Error: Please contact the Development Team</entry>
+               </row>
+               <row>
+                  <entry>0010467</entry>
+                  <entry>The ‘$1’ user cannot be disabled</entry>
+               </row>
+               <row>
+                  <entry>0010468</entry>
+                  <entry>The ‘$1’ role cannot be disabled</entry>
+               </row>
+               <row>
+                  <entry>0010469</entry>
+                  <entry>The ‘$1’ user cannot be removed from the ‘$2’ role</entry>
+               </row>
+               <row>
+                  <entry>0010470</entry>
+                  <entry>The ‘$1’ role cannot be deleted</entry>
+               </row>
+               <row>
+                  <entry>0010478</entry>
+                  <entry>Internal Error: Child sent a METADATA packet</entry>
+               </row>
+               <row>
+                  <entry>0010479</entry>
+                  <entry>Internal Error: Child sent a SCHEMA packet</entry>
+               </row>
+               <row>
+                  <entry>0010497</entry>
+                  <entry>The ‘$1’ permission cannot be removed from the ‘$2’ role</entry>
+               </row>
+               <row>
+                  <entry>0010498</entry>
+                  <entry>The ‘$1’ permission cannot be removed from the ‘$2’ role</entry>
+               </row>
+               <row>
+                  <entry>0010499</entry>
+                  <entry>Unable to send WAIT message to Application Server</entry>
+               </row>
+               <row>
+                  <entry>0010526</entry>
+                  <entry>Internal Logic Error: Please contact the Development Team</entry>
+               </row>
+               <row>
+                  <entry>0010528</entry>
+                  <entry>Problems compiling statement</entry>
+               </row>
+               <row>
+                  <entry>0010532</entry>
+                  <entry>Invalid SKIP-QUEUE Credentials supplied</entry>
+               </row>
+               <row>
+                  <entry>0010547</entry>
+                  <entry>Invalid language/country specifier for locale: $1/$2</entry>
+               </row>
+               <row>
+                  <entry>0010548</entry>
+                  <entry>Invalid UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010549</entry>
+                  <entry>Incomplete UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010550</entry>
+                  <entry>Invalid UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010551</entry>
+                  <entry>Incomplete UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010556</entry>
+                  <entry>Invalid UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010557</entry>
+                  <entry>Incomplete UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010558</entry>
+                  <entry>Invalid UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010561</entry>
+                  <entry>Incomplete UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010562</entry>
+                  <entry>Invalid UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010563</entry>
+                  <entry>Incomplete UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010564</entry>
+                  <entry>Index Out of Bounds: $1 &lt; 0</entry>
+               </row>
+               <row>
+                  <entry>0010565</entry>
+                  <entry>Invalid UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010566</entry>
+                  <entry>Incomplete UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010567</entry>
+                  <entry>Index Out of Bounds: $1 &gt; $2</entry>
+               </row>
+               <row>
+                  <entry>0010568</entry>
+                  <entry>Invalid UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010569</entry>
+                  <entry>Invalid UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010570</entry>
+                  <entry>Incomplete UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010571</entry>
+                  <entry>Internal Error: Incomplete ROLES Definition</entry>
+               </row>
+               <row>
+                  <entry>0010574</entry>
+                  <entry>Invalid UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010575</entry>
+                  <entry>Incomplete UTF-8 Encoding in ‘$1’ at position $2</entry>
+               </row>
+               <row>
+                  <entry>0010587</entry>
+                  <entry>Internal Error: Incomplete row</entry>
+               </row>
+               <row>
+                  <entry>0010619</entry>
+                  <entry>Parameter $1 is not a constant string</entry>
+               </row>
+               <row>
+                  <entry>0010708</entry>
+                  <entry>Failure while reading from ‘$1’</entry>
+               </row>
+               <row>
+                  <entry>0010713</entry>
+                  <entry>Invalid Regex Type: $1</entry>
+               </row>
+               <row>
+                  <entry>0010715</entry>
+                  <entry>Invalid Regex Type: $1</entry>
+               </row>
+               <row>
+                  <entry>0010717</entry>
+                  <entry>Could not open shared secret file</entry>
+               </row>
+               <row>
+                  <entry>0020033</entry>
+                  <entry>Invalid table name</entry>
+               </row>
+               <row>
+                  <entry>0020050</entry>
+                  <entry>columns array requires at least one column</entry>
+               </row>
+               <row>
+                  <entry>0020053</entry>
+                  <entry>Problems compiling statement</entry>
+               </row>
+               <row>
+                  <entry>0020057</entry>
+                  <entry>internal error: identifier not compiled</entry>
+               </row>
+               <row>
+                  <entry>0020069</entry>
+                  <entry>Must have either/or sql/plan request</entry>
+               </row>
+               <row>
+                  <entry>0020095</entry>
+                  <entry>Not a create-table command</entry>
+               </row>
+               <row>
+                  <entry>0020103</entry>
+                  <entry>Incorrect Data Type Requested</entry>
+               </row>
+               <row>
+                  <entry>0020108</entry>
+                  <entry>Expected non-zero-length field name</entry>
+               </row>
+               <row>
+                  <entry>0020109</entry>
+                  <entry>Expected non-zero-length field name (2)</entry>
+               </row>
+               <row>
+                  <entry>0020118</entry>
+                  <entry>Expected XMLRPC Structure</entry>
+               </row>
+               <row>
+                  <entry>0020129</entry>
+                  <entry>Expected non-zero-length field name</entry>
+               </row>
+               <row>
+                  <entry>0020130</entry>
+                  <entry>Expected non-zero-length field name</entry>
+               </row>
+               <row>
+                  <entry>0020135</entry>
+                  <entry>Query plan not parsable</entry>
+               </row>
+               <row>
+                  <entry>0020140</entry>
+                  <entry>Bad partition column node</entry>
+               </row>
+               <row>
+                  <entry>0020141</entry>
+                  <entry>Expected partition column name</entry>
+               </row>
+               <row>
+                  <entry>0020143</entry>
+                  <entry>Execution plan is NULL</entry>
+               </row>
+               <row>
+                  <entry>0020144</entry>
+                  <entry>For now we must have partition column</entry>
+               </row>
+               <row>
+                  <entry>0020146</entry>
+                  <entry>Didn’t find any incoming links</entry>
+               </row>
+               <row>
+                  <entry>0020147</entry>
+                  <entry>Don’t know muxer type</entry>
+               </row>
+               <row>
+                  <entry>0020154</entry>
+                  <entry>Execution plan is NULL</entry>
+               </row>
+               <row>
+                  <entry>0020173</entry>
+                  <entry>OOB isn’t a failure OOB</entry>
+               </row>
+               <row>
+                  <entry>0020183</entry>
+                  <entry>Unexpected out-of-space</entry>
+               </row>
+               <row>
+                  <entry>0020222</entry>
+                  <entry>Expected to catch exception</entry>
+               </row>
+               <row>
+                  <entry>0020224</entry>
+                  <entry>Expected to catch exception (2)</entry>
+               </row>
+               <row>
+                  <entry>0020225</entry>
+                  <entry>Too many value streams</entry>
+               </row>
+               <row>
+                  <entry>0020226</entry>
+                  <entry>Bad data type</entry>
+               </row>
+               <row>
+                  <entry>0020241</entry>
+                  <entry>Missing +/- on sorting column</entry>
+               </row>
+               <row>
+                  <entry>0020251</entry>
+                  <entry>Unexpected domain</entry>
+               </row>
+               <row>
+                  <entry>0020255</entry>
+                  <entry>Non-addamark exception caught</entry>
+               </row>
+               <row>
+                  <entry>0020256</entry>
+                  <entry>Cannot use function in this case</entry>
+               </row>
+               <row>
+                  <entry>0020260</entry>
+                  <entry>Cannot use function in this case</entry>
+               </row>
+               <row>
+                  <entry>0020268</entry>
+                  <entry>Bad state</entry>
+               </row>
+               <row>
+                  <entry>0020273</entry>
+                  <entry>Can’t send OOB onto stream</entry>
+               </row>
+               <row>
+                  <entry>0020277</entry>
+                  <entry>Can’t shutdown output</entry>
+               </row>
+               <row>
+                  <entry>0020302</entry>
+                  <entry>Muxer not currently sending data</entry>
+               </row>
+               <row>
+                  <entry>0020322</entry>
+                  <entry>Setting up slave nodes again</entry>
+               </row>
+               <row>
+                  <entry>0020345</entry>
+                  <entry>Pushing column without values</entry>
+               </row>
+               <row>
+                  <entry>0020347</entry>
+                  <entry>Metadata not sent yet</entry>
+               </row>
+               <row>
+                  <entry>0020365</entry>
+                  <entry>No clients</entry>
+               </row>
+               <row>
+                  <entry>0020366</entry>
+                  <entry>Index out of range</entry>
+               </row>
+               <row>
+                  <entry>0020367</entry>
+                  <entry>Request already set</entry>
+               </row>
+               <row>
+                  <entry>0020368</entry>
+                  <entry>Index out of range</entry>
+               </row>
+               <row>
+                  <entry>0020369</entry>
+                  <entry>Index out of range</entry>
+               </row>
+               <row>
+                  <entry>0020370</entry>
+                  <entry>Muxer already set</entry>
+               </row>
+               <row>
+                  <entry>0020371</entry>
+                  <entry>Index out of range</entry>
+               </row>
+               <row>
+                  <entry>0020372</entry>
+                  <entry>Muxer not currently sending data</entry>
+               </row>
+               <row>
+                  <entry>0020376</entry>
+                  <entry>Expecting one client only</entry>
+               </row>
+               <row>
+                  <entry>0020377</entry>
+                  <entry>Expecting one client only</entry>
+               </row>
+               <row>
+                  <entry>0020394</entry>
+                  <entry>Problems compiling statement</entry>
+               </row>
+               <row>
+                  <entry>0020903</entry>
+                  <entry>Expected to catch exception (2)</entry>
+               </row>
+               <row>
+                  <entry>0020908</entry>
+                  <entry>Expected to catch exception</entry>
+               </row>
+               <row>
+                  <entry>0020981</entry>
+                  <entry>Expecting one client only</entry>
+               </row>
+               <row>
+                  <entry>0020983</entry>
+                  <entry>Expecting one client only</entry>
+               </row>
+               <row>
+                  <entry>0020989</entry>
+                  <entry>Expecting one client only</entry>
+               </row>
+               <row>
+                  <entry>0025001</entry>
+                  <entry>Non-null fatalFunc</entry>
+               </row>
+               <row>
+                  <entry>0030001</entry>
+                  <entry>Index out of bounds</entry>
+               </row>
+               <row>
+                  <entry>0030007</entry>
+                  <entry>Perl tried to die!</entry>
+               </row>
+               <row>
+                  <entry>0030010</entry>
+                  <entry>Invalid data found in INT32 field</entry>
+               </row>
+               <row>
+                  <entry>0030011</entry>
+                  <entry>Integer overflow/underflow</entry>
+               </row>
+               <row>
+                  <entry>0030012</entry>
+                  <entry>Invalid data found in DOUBLE field</entry>
+               </row>
+               <row>
+                  <entry>0030013</entry>
+                  <entry>Floating Point overflow/underflow</entry>
+               </row>
+               <row>
+                  <entry>0030014</entry>
+                  <entry>Invalid data found in BOOLEAN field</entry>
+               </row>
+               <row>
+                  <entry>0030015</entry>
+                  <entry>BASE64 not implemented</entry>
+               </row>
+               <row>
+                  <entry>0030016</entry>
+                  <entry>CDATA found in non-scalar data type</entry>
+               </row>
+               <row>
+                  <entry>0030017</entry>
+                  <entry>Unknown XML-RPC Datatype</entry>
+               </row>
+               <row>
+                  <entry>0030018</entry>
+                  <entry>Incorrect Data Type Requested</entry>
+               </row>
+               <row>
+                  <entry>0030019</entry>
+                  <entry>Incorrect Data Type Requested</entry>
+               </row>
+               <row>
+                  <entry>0030020</entry>
+                  <entry>Incorrect Data Type Requested</entry>
+               </row>
+               <row>
+                  <entry>0030021</entry>
+                  <entry>Incorrect Data Type Requested</entry>
+               </row>
+               <row>
+                  <entry>0030023</entry>
+                  <entry>Incorrect Data Type Requested</entry>
+               </row>
+               <row>
+                  <entry>0030024</entry>
+                  <entry>Incorrect Data Type Requested</entry>
+               </row>
+               <row>
+                  <entry>0030026</entry>
+                  <entry>Incorrect Data Type Requested</entry>
+               </row>
+               <row>
+                  <entry>0030028</entry>
+                  <entry>The ETL ‘SELECT’ Statement must be FROM ‘stdin’</entry>
+               </row>
+               <row>
+                  <entry>0030046</entry>
+                  <entry>Internal Error: Unknown XMLRPC Parsing State</entry>
+               </row>
+               <row>
+                  <entry>0030048</entry>
+                  <entry>Bad XMLRPC: No</entry>
+               </row>
+               <row>
+                  <entry>0030049</entry>
+                  <entry>Internal Error: Unexpected State Stack</entry>
+               </row>
+               <row>
+                  <entry>0030050</entry>
+                  <entry>Bad XMLRPC: No</entry>
+               </row>
+               <row>
+                  <entry>0030051</entry>
+                  <entry>Internal Error: Unknown XMLRPC Parsing State</entry>
+               </row>
+               <row>
+                  <entry>0030052</entry>
+                  <entry>Bad XMLRPC: Unexpected CDATA found</entry>
+               </row>
+               <row>
+                  <entry>0030058</entry>
+                  <entry>Internal Error: State Stack is empty</entry>
+               </row>
+               <row>
+                  <entry>0030059</entry>
+                  <entry>Internal Error: Index out of bounds</entry>
+               </row>
+               <row>
+                  <entry>0030067</entry>
+                  <entry>Unexpected XML tag (was expecting ‘param’)</entry>
+               </row>
+               <row>
+                  <entry>0030068</entry>
+                  <entry>Unexpected XML tag (was expecting ‘value’)</entry>
+               </row>
+               <row>
+                  <entry>0030070</entry>
+                  <entry>Unexpected XML tag (was expecting ‘member’)</entry>
+               </row>
+               <row>
+                  <entry>0030074</entry>
+                  <entry>Unexpected XML tag (was expecting ‘data’)</entry>
+               </row>
+               <row>
+                  <entry>0030075</entry>
+                  <entry>Found two ‘data’ tags for the same array</entry>
+               </row>
+               <row>
+                  <entry>0030076</entry>
+                  <entry>Unexpected XML tag (was expecting ‘value’)</entry>
+               </row>
+               <row>
+                  <entry>0030077</entry>
+                  <entry>Unexpected XML tag (was expecting ‘value’)</entry>
+               </row>
+               <row>
+                  <entry>0030078</entry>
+                  <entry>Unexpected XML tag (wasn’t expecting any tags)</entry>
+               </row>
+               <row>
+                  <entry>0030079</entry>
+                  <entry>Unknown XMLRPC Parsing State</entry>
+               </row>
+               <row>
+                  <entry>0030080</entry>
+                  <entry>Unexpected end-tag</entry>
+               </row>
+               <row>
+                  <entry>0030082</entry>
+                  <entry>Unexpected State Stack</entry>
+               </row>
+               <row>
+                  <entry>0030083</entry>
+                  <entry>Missing required subparts for ‘member’ block</entry>
+               </row>
+               <row>
+                  <entry>0030084</entry>
+                  <entry>Unknown XMLRPC Parsing State</entry>
+               </row>
+               <row>
+                  <entry>0030085</entry>
+                  <entry>Unexpected CDATA found</entry>
+               </row>
+               <row>
+                  <entry>0030091</entry>
+                  <entry>State Stack is empty</entry>
+               </row>
+               <row>
+                  <entry>0030092</entry>
+                  <entry>Index out of bounds</entry>
+               </row>
+               <row>
+                  <entry>0030097</entry>
+                  <entry>!IS_OP</entry>
+               </row>
+               <row>
+                  <entry>0030108</entry>
+                  <entry>Regex not compiled</entry>
+               </row>
+               <row>
+                  <entry>0030118</entry>
+                  <entry>!IS_CONST</entry>
+               </row>
+               <row>
+                  <entry>0030128</entry>
+                  <entry>Bad XMLRPC: No the</entry>
+               </row>
+               <row>
+                  <entry>0030129</entry>
+                  <entry>Bad XMLRPC: No the</entry>
+               </row>
+               <row>
+                  <entry>0030136</entry>
+                  <entry>Ran out of data</entry>
+               </row>
+               <row>
+                  <entry>0030143</entry>
+                  <entry>Unknown DataType</entry>
+               </row>
+               <row>
+                  <entry>0030149</entry>
+                  <entry>!IS_OP</entry>
+               </row>
+               <row>
+                  <entry>0030150</entry>
+                  <entry>!IS_CONST</entry>
+               </row>
+               <row>
+                  <entry>0030159</entry>
+                  <entry>Perl interpreter not initialized</entry>
+               </row>
+               <row>
+                  <entry>0030171</entry>
+                  <entry>Unknown DataType</entry>
+               </row>
+               <row>
+                  <entry>0030173</entry>
+                  <entry>Cannot open file</entry>
+               </row>
+               <row>
+                  <entry>0030216</entry>
+                  <entry>Invalid ORIENTATION code</entry>
+               </row>
+               <row>
+                  <entry>0030218</entry>
+                  <entry>Unknown FORMAT code</entry>
+               </row>
+               <row>
+                  <entry>0030220</entry>
+                  <entry>Unknown FORMAT code</entry>
+               </row>
+               <row>
+                  <entry>0030221</entry>
+                  <entry>XML Encoding not implemented for COLUMN orientation</entry>
+               </row>
+               <row>
+                  <entry>0030223</entry>
+                  <entry>Unknown FORMAT code</entry>
+               </row>
+               <row>
+                  <entry>0030224</entry>
+                  <entry>BINARY Encoding not implemented for ROW orientation</entry>
+               </row>
+               <row>
+                  <entry>0030225</entry>
+                  <entry>Invalid FORMAT code</entry>
+               </row>
+               <row>
+                  <entry>0030226</entry>
+                  <entry>Invalid SQLTYP code</entry>
+               </row>
+               <row>
+                  <entry>0030228</entry>
+                  <entry>GZIP Compression not implemented</entry>
+               </row>
+               <row>
+                  <entry>0030229</entry>
+                  <entry>Unknown COMPRESSION code</entry>
+               </row>
+               <row>
+                  <entry>0030450</entry>
+                  <entry>Unimplemented Data Type</entry>
+               </row>
+               <row>
+                  <entry>0030464</entry>
+                  <entry>invalid type code</entry>
+               </row>
+               <row>
+                  <entry>0030563</entry>
+                  <entry>Attempt to consume more data than exists</entry>
+               </row>
+               <row>
+                  <entry>0030585</entry>
+                  <entry>Bad state, cannot send message</entry>
+               </row>
+               <row>
+                  <entry>0030593</entry>
+                  <entry>Application server is NULL</entry>
+               </row>
+               <row>
+                  <entry>0030650</entry>
+                  <entry>Content type is NULL</entry>
+               </row>
+               <row>
+                  <entry>0030668</entry>
+                  <entry>Internal Error: Unable to read MemTotal from meminfo</entry>
+               </row>
+               <row>
+                  <entry>0030669</entry>
+                  <entry>Internal Error: Unable to read MemFree from meminfo</entry>
+               </row>
+               <row>
+                  <entry>0030670</entry>
+                  <entry>Internal Error: Unable to read Cached from meminfo</entry>
+               </row>
+               <row>
+                  <entry>0030671</entry>
+                  <entry>Internal Error: Unable to read Buffers from meminfo</entry>
+               </row>
+               <row>
+                  <entry>0030707</entry>
+                  <entry>No manager</entry>
+               </row>
+               <row>
+                  <entry>0030708</entry>
+                  <entry>No manager</entry>
+               </row>
+               <row>
+                  <entry>0030709</entry>
+                  <entry>No manager</entry>
+               </row>
+               <row>
+                  <entry>0030710</entry>
+                  <entry>No manager</entry>
+               </row>
+               <row>
+                  <entry>0030711</entry>
+                  <entry>Consuming too much or negative</entry>
+               </row>
+               <row>
+                  <entry>0030712</entry>
+                  <entry>Weird state</entry>
+               </row>
+               <row>
+                  <entry>0030713</entry>
+                  <entry>Unconsuming negative bytes</entry>
+               </row>
+               <row>
+                  <entry>0030719</entry>
+                  <entry>Not first vs. first</entry>
+               </row>
+               <row>
+                  <entry>0030720</entry>
+                  <entry>Should not be called when no buffer</entry>
+               </row>
+               <row>
+                  <entry>0030721</entry>
+                  <entry>Already managed</entry>
+               </row>
+               <row>
+                  <entry>0030984</entry>
+                  <entry>!IS_OP</entry>
+               </row>
+               <row>
+                  <entry>0030985</entry>
+                  <entry>!IS_CONST</entry>
+               </row>
+               <row>
+                  <entry>0030993</entry>
+                  <entry>Only select from stdin allowed</entry>
+               </row>
+               <row>
+                  <entry>0030994</entry>
+                  <entry>Problems compiling statement</entry>
+               </row>
+               <row>
+                  <entry>0031012</entry>
+                  <entry>!IS_OP</entry>
+               </row>
+               <row>
+                  <entry>0031014</entry>
+                  <entry>!IS_CONST</entry>
+               </row>
+               <row>
+                  <entry>0031050</entry>
+                  <entry>name must not be null</entry>
+               </row>
+               <row>
+                  <entry>0031051</entry>
+                  <entry>value must not be null</entry>
+               </row>
+               <row>
+                  <entry>0031067</entry>
+                  <entry>pullDataSource should never be called</entry>
+               </row>
+               <row>
+                  <entry>0031102</entry>
+                  <entry>order info may not be NULL</entry>
+               </row>
+               <row>
+                  <entry>0031160</entry>
+                  <entry>No Channels</entry>
+               </row>
+               <row>
+                  <entry>0031341</entry>
+                  <entry>val == NULL</entry>
+               </row>
+               <row>
+                  <entry>0031413</entry>
+                  <entry>Incorrect Data Type Requested</entry>
+               </row>
+               <row>
+                  <entry>0031417</entry>
+                  <entry>Regex not compiled</entry>
+               </row>
+               <row>
+                  <entry>0031418</entry>
+                  <entry>Regex not compiled</entry>
+               </row>
+               <row>
+                  <entry>0031471</entry>
+                  <entry>ORDER by not allowed</entry>
+               </row>
+               <row>
+                  <entry>0031473</entry>
+                  <entry>UNION not allowed</entry>
+               </row>
+               <row>
+                  <entry>0031586</entry>
+                  <entry>Internal Error: Incomplete row</entry>
+               </row>
+               <row>
+                  <entry>0031587</entry>
+                  <entry>Internal Error: Incomplete row</entry>
+               </row>
+               <row>
+                  <entry>0040001</entry>
+                  <entry>first argument must be a constant</entry>
+               </row>
+               <row>
+                  <entry>0060012</entry>
+                  <entry>Bad channel index</entry>
+               </row>
+               <row>
+                  <entry>0070011</entry>
+                  <entry>Empty UserNames are Invalid</entry>
+               </row>
+               <row>
+                  <entry>0070024</entry>
+                  <entry>Could not open file $1 for reading</entry>
+               </row>
+               <row>
+                  <entry>0070025</entry>
+                  <entry>Out of memory</entry>
+               </row>
+               <row>
+                  <entry>0070026</entry>
+                  <entry>Guest role entry not found</entry>
+               </row>
+               <row>
+                  <entry>0070036</entry>
+                  <entry>Administrator role entry not found</entry>
+               </row>
+               <row>
+                  <entry>0070049</entry>
+                  <entry>Empty role names are invalid</entry>
+               </row>
+               <row>
+                  <entry>0070051</entry>
+                  <entry>Empty Permission Names are invalid</entry>
+               </row>
+               <row>
+                  <entry>0070067</entry>
+                  <entry>Could not open shared secret file</entry>
+               </row>
+               <row>
+                  <entry>0070072</entry>
+                  <entry>Out of memory</entry>
+               </row>
+               <row>
+                  <entry>0070091</entry>
+                  <entry>Administrator user entry not found</entry>
+               </row>
+               <row>
+                  <entry>0070092</entry>
+                  <entry>Guest user entry not found</entry>
+               </row>
+               <row>
+                  <entry>0070110</entry>
+                  <entry>Cannot delete built-in permission ‘$1’</entry>
+               </row>
+               <row>
+                  <entry>0070203</entry>
+                  <entry>Out of memory</entry>
+               </row>
+               <row>
+                  <entry>0080002</entry>
+                  <entry>Unix socket file name too long: $1</entry>
+               </row>
+               <row>
+                  <entry>0080004</entry>
+                  <entry>No near line storage socket specified</entry>
+               </row>
+               <row>
+                  <entry>0080005</entry>
+                  <entry>Bad reply from near line server</entry>
+               </row>
+               <row>
+                  <entry>0080006</entry>
+                  <entry>Got reply from server before Hello</entry>
+               </row>
+               <row>
+                  <entry>0080008</entry>
+                  <entry>Bad hello response from server</entry>
+               </row>
+               <row>
+                  <entry>0080009</entry>
+                  <entry>Bad StartTime</entry>
+               </row>
+               <row>
+                  <entry>0080010</entry>
+                  <entry>Bad EndTime</entry>
+               </row>
+               <row>
+                  <entry>0080013</entry>
+                  <entry>No matching pending store request</entry>
+               </row>
+               <row>
+                  <entry>0080014</entry>
+                  <entry>Internal Logic Error: Please contact the Development Team</entry>
+               </row>
+               <row>
+                  <entry>0080018</entry>
+                  <entry>Problems compiling statement</entry>
+               </row>
+               <row>
+                  <entry>0080021</entry>
+                  <entry>Connection to Near Line Server lost during setNSI command</entry>
+               </row>
+               <row>
+                  <entry>0080023</entry>
+                  <entry>Connection to Nearline storage server lost</entry>
+               </row>
+               <row>
+                  <entry>0080024</entry>
+                  <entry>Failed to complete near line storage server operations</entry>
+               </row>
+               <row>
+                  <entry>0080036</entry>
+                  <entry>The ETL ‘SELECT’ Statement must be FROM ‘stdin’</entry>
+               </row>
+               <row>
+                  <entry>0080038</entry>
+                  <entry>Only select from stdin allowed</entry>
+               </row>
+               <row>
+                  <entry>0080039</entry>
+                  <entry>Problems compiling statement</entry>
+               </row>
+               <row>
+                  <entry>0080186</entry>
+                  <entry>No table specified</entry>
+               </row>
+               <row>
+                  <entry>0080199</entry>
+                  <entry>Bad keytype</entry>
+               </row>
+               <row>
+                  <entry>0080207</entry>
+                  <entry>Bad string format</entry>
+               </row>
+               <row>
+                  <entry>0080221</entry>
+                  <entry>Attempt to write read only DB file ‘$1’</entry>
+               </row>
+               <row>
+                  <entry>0080228</entry>
+                  <entry>Attempt to write read only DB file ‘$1’</entry>
+               </row>
+               <row>
+                  <entry>0080229</entry>
+                  <entry>Bad operation ‘$1’</entry>
+               </row>
+               <row>
+                  <entry>0080233</entry>
+                  <entry>UPLOADID must be first CSV column</entry>
+               </row>
+               <row>
+                  <entry>0080234</entry>
+                  <entry>gzopen failure</entry>
+               </row>
+               <row>
+                  <entry>0080237</entry>
+                  <entry>No table specified</entry>
+               </row>
+               <row>
+                  <entry>0080238</entry>
+                  <entry>Auth type mismatch $1 vs. $2</entry>
+               </row>
+               <row>
+                  <entry>0080239</entry>
+                  <entry>$1 was invoked on multiple requests</entry>
+               </row>
+               <row>
+                  <entry>0080242</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0080243</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0080244</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0080245</entry>
+                  <entry>Shim not implemented</entry>
+               </row>
+               <row>
+                  <entry>0080246</entry>
+                  <entry>No active master node(s) found for query</entry>
+               </row>
+               <row>
+                  <entry>0080253</entry>
+                  <entry>Unexpected EOF talking to Atalla at ‘$1’</entry>
+               </row>
+               <row>
+                  <entry>0080267</entry>
+                  <entry>Bad response code to LA GUID request ‘$1’</entry>
+               </row>
+               <row>
+                  <entry>0080268</entry>
+                  <entry>LA GUID cound mismatch in reply ‘$1’</entry>
+               </row>
+               <row>
+                  <entry>0080277</entry>
+                  <entry>Attempt to sign digest failed</entry>
+               </row>
+               <row>
+                  <entry>0080278</entry>
+                  <entry>Attempt to get binary value of NULL</entry>
+               </row>
+               <row>
+                  <entry>0080286</entry>
+                  <entry>Can’t find host ‘$1’</entry>
+               </row>
+               <row>
+                  <entry>0080296</entry>
+                  <entry>Can’t find upload ID entry for $1</entry>
+               </row>
+               <row>
+                  <entry>0080297</entry>
+                  <entry>TASCMConfig should be of the form LAIP:PORT/MGRIP:PORT</entry>
+               </row>
+               <row>
+                  <entry>0090022</entry>
+                  <entry>Error querying system.upload_info table</entry>
+               </row>
+               <row>
+                  <entry>0090023</entry>
+                  <entry>For table ‘$1’ upload id not found: ‘$2’</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+   </conbody>
+</concept>

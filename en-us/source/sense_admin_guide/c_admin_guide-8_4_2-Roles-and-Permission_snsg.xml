@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_8_4_2">
+   <title>Roles and Permissions in the Analyzer Database</title>
+   <conbody>
+      <p>All information for authorizing access to functionality or data in the application is stored
+      in the Analyzer database. Therefore, in order for a user in LDAP to be able to use the
+      Analyzer application, the user must be created in the Analyzer database and given appropriate
+      permissions. When an administrator creates a new user and LDAP authentication is in use, the
+      administrator must pick from a list of users that are present in LDAP.</p>
+      <note>In AP Analyzer, you can add or modify a user's first, last name, or email address and
+      synchronize this information with LDAP. For details, see the <cite>SenSage AP Analyzer
+        Guide</cite>.</note>
+   </conbody>
+</concept>

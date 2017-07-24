@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_2">
+   <title>Starting, Stopping, and Restarting the Collector</title>
+   <conbody>
+      <p>You can start, stop, and restart SenSage AP components, including the Collector, from the
+      Deployment Manager. For details, see <xref href="c_admin_guide-3_7_2-Starting-Stopping-_snsg.xml#topic_3_7_2"/>.</p>
+   </conbody>
+</concept>

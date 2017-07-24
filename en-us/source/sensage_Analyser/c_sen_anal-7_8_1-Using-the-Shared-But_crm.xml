@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_8_1">
+   <title>Using the Shared Button Option</title>
+   <conbody>
+    <p>The Shared Button option is found on the Models Menu bar and the current sharing status is
+      found on the Model Listing, which allows you to filter by the status, as shown in Figure
+      6-23.</p>
+    <p>To share a model with another user you need to select desired models and click the "Share
+      model" button. Shared models are visible to all users.</p>
+    <p>Figure 6-23: Model Listing with Sharing Status</p>
+    <p><image href="./media/Image_344.jpg" height="320" width="469" id="image_sxg_hvr_zx"/></p>
+    <p>To remove sharing selected models you can click on “Unsharing model" button.</p>
+  </conbody>
+</concept>

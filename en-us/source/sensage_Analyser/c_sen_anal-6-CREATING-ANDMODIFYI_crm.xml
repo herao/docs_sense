@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_6">
+   <title>Creating and Modifying Charts for a Report</title>
+   <conbody>
+    <p>This chapter describes how to use SenSage AP Analyzer to create and modify a chart
+      corresponding to a report. To use this chapter.</p>
+    <p>IMPORTANT: First read general information on Creating or Editing a chart and then go to the
+      application section for details on how to fill out the Chart Settings screen to create or
+      modify a specific chart type.</p>
+    <p>This chapter contains these sections:<ul id="ul_xf1_m4q_zx">
+        <li><xref href="c_sen_anal-6_1-Creating-a-Chart_crm.xml"/></li>
+        <li><xref href="c_sen_anal-6_2-Editing-a-Chart---TH_crm.xml"/></li>
+        <li><xref href="c_sen_anal-6_4-Creating-or-Modifyin_crm.xml"/></li>
+        <li><xref href="c_sen_anal-6_5-Creating-or-Modifyin_crm.xml"/></li>
+        <li><xref href="c_sen_anal-6_6-Creating-or-Modifyin_crm.xml"/></li>
+        <li><xref href="c_sen_anal-6_7-Creating-or-Modifyin_crm.xml"/></li>
+        <li><xref href="c_sen_anal-6_8-Creating-or-Modifyin_crm.xml"/></li>
+      </ul></p>
+  </conbody>
+</concept>

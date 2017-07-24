@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_3_4">
+   <title>Configuring Multiple-AD Integration</title>
+   <conbody>
+      <p>This section describes the process of configuring multiple AD servers for integration with
+      Analyzer.</p>
+      <ol>
+         <li>Go to the Deployment Manager console and make sure that you have configured your first
+            AD server as noted in the previous section.<note>In Deployment Manager, the required
+               value that you enter in the LDAP/AD Admin DN field is the fully- distinguished name
+               of a user with a valid SAM Account namein AD. The system will look up your user-entry
+               in the first server. Once it finds the Sam Account name of the user, it makes the
+               necessary changes to the Analyzer administrative account (which by default is
+               "admin") so that the username of the administrative user becomes the Sam Account name
+               of the entered DN.</note></li>
+         <li>From the Deployment Manager console, go to the Services tab and select the SenSage AP
+         cluster link.</li>
+         <li>Stop the SenSage AP cluster.</li>
+         <li>In the Analyzer host, locate the following
+                  path:<p><filepath>/opt/hexis/hawkeye-ap/analyzer/config</filepath>
+            </p></li>
+         <li>Using the vi editor, open the <filepath>ldap.properties</filepath> file and add an
+            entry for each additional AD server. Specify these details in the following
+            format:<codeblock xml:space="preserve">auth.ldap.url.1=ldap:&lt;LDAP_Host_Name_1&gt;
+auth.ldap.manager.dn.1=CN=administrator,CN=Users,DC=dev1-ap,DC=local
+auth.ldap.manager.password.1=passwordvalue1
+auth.ldap.user.dn.pattern.1=OU=companyname,DC=dev1-ap,DC=local
+auth.ldap.url.2=ldap:&lt;LDAP_Host_Name_2&gt;
+auth.ldap.manager.dn.2=CN=administrator,CN=Users,DC=dev2-ap,DC=local
+auth.ldap.manager.password.2=passwordvalue2
+auth.ldap.user.dn.pattern.2=OU=companyname,DC=dev2-ap,DC=local</codeblock></li>
+         <li>Start the SenSage AP cluster.</li>
+         <li>Go to the next section to synchronize users’ AD servers.</li>
+      </ol>
+   </conbody>
+</concept>

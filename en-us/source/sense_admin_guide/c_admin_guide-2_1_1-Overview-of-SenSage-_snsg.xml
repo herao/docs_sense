@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_2_1_1">
+   <title>Overview of SenSage AP Components and Processing</title>
+   <conbody>
+      <p>The SenSage AP system supports the industry's most comprehensive event management
+      capabilities. Its patented data model and compression technology facilitate online storage of
+      massive volumes of data across an entire network. The SenSage AP architecture enables rapid
+      querying of and visibility into security threats.</p>
+      <p>Linear scalability through clustering provides the flexibility needed to support new
+      applications and devices as requirements growtegration capabilities allow SenSage AP to
+      use external enterprise authentication authorities to validate and manage SenSage AP users and
+      external Nearline storage devices to archive SenSage AP data addition, you can forward
+      alerts to enterprise security management products, pagers, phones, and portals.</p>
+      <p>A SenSage AP system comprises the following core components:</p>
+      <ul id="ul_oxy_xxg_vx">
+         <li>
+            <b>Event Data Warehouse (EDW)</b>—stores event data from multiple sources in a scalable and
+        highly compressed format. Parallel processing enables clustered servers to execute as a
+        single instance, allowing high-speed loading and querying on terabytes of data.<ul>
+               <li>
+                  <b> Analyzer</b>—Command-line utilities communicate with the Analyzer to access stored
+            data and configuration information. The Analyzer lets authorized users view reports,
+            alerts, and dashboards, manage assets, enable and disable Parser rules, run reports,
+            schedule jobs, and manage users and roles. The Application Manager is implemented as a
+            set of services that run within a Tomcat Application Server, which is installed and
+            configured transparently during installation of SenSage AP software.</li>
+               <li>
+                  <b>Open Access Extension (OAE)</b>—provides access to data stored in the EDW via
+            standard database connectivity tools such as ODBC and JDBC.</li>
+               <li>
+                  <b>LDAP</b>—provides authentication services for a SenSage AP deployment.</li>
+            </ul>
+         </li>
+         <li>
+            <b>Collector</b>—pulls event data from disparate sources. It uses retrievers that define how
+        the Collector obtains batched event data from event sources and log adapters that define how
+        incoming batched data is parsed and stored in the EDW. The Collector uses a file system
+        retriever to pull data that is stored in syslog-ng, the industry standard in receiving event
+        data from internal and external sources.</li>
+         <li>
+            <b>Syslog-ng</b>—The industry standard in bifurcating data into the batch modes.</li>
+      </ul>
+      <fig>
+         <title>SenSage AP Architecture and Data</title>
+         <image href="./media/Image_015.jpg" placement="break"/>
+      </fig>
+      <p>The above figure illustrates the complete SenSage AP architecture. As illustrated, events
+      enter the SenSage AP system from any of many external systems, such as network devices and
+      software applications. Events enter in the following way:</p>
+      <ul>
+         <li>Batched—Events are collected from log files and other event repositories maintained by
+      network devices, operating systems, and software applications.</li>
+         <li>The Collector polls a data source or repository to retrieve event data, which it loads into
+      the EDW. The EDW makes the event data available to the Analyzer for reporting. Administration
+      users can access EDW data using the Deployment Manager.</li>
+      </ul>
+      <p>For more information:</p>
+      <ul>
+         <li> To learn more about configuring retrievers and the Collector, see the chapter <b>SenSage AP
+          Collector Configuration</b> in the<cite> Collector Guide</cite>.</li>
+         <li> To learn more about administering the Collector, see <xref href="c_admin_guide-7-Administering-the-Co_snsg.xml#topic_7"/>.</li>
+         <li> For more information about the EDW and SenSage AP SQL: <ul id="ul_pml_kzg_vx">
+               <li>see, chapters <xref href="c_admin_guide-3-ManagingSensageAP_snsg.xml#topic_3"/> and <xref href="c_admin_guide-4-Sensage-Loading-Que_snsg.xml#topic_4"/> of this
+            guide.</li>
+               <li>see, chapters <b>SenSage AP SQL</b> and <b>SenSage AP ConsoleSenSage AP SQL
+              Functions</b> of the <cite>Event Data Warehouse Guide</cite>.</li>
+            </ul>
+         </li>
+      </ul>
+   </conbody>
+</concept>

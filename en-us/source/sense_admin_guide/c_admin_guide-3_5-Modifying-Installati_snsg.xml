@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_3_5">
+   <title id="title_a7">Modifying Installation Configuration Settings</title>
+   <conbody>
+      <p>The Config tab on the Services page allows you view existing parameter settings and change
+      those affected by any updates you have made to your deployment. Click the
+        <uicontrol>Configs</uicontrol> link shown below to bring up the Configuration page (Figure
+      2-27)</p>
+      <fig>
+         <title> Configuration Link (NEW SCREENSHOT)</title>
+         <image href="./media/Image_057.jpg" placement="break"/>
+      </fig>
+      <p>Scroll through the Configuration page to find the parameter settings that you need to change.
+      Description for the parameters are available when you hover your mouse over each of the
+      parameter fields. Those parameters that you cannot change are grayed out or left blank.</p>
+      <draft-comment author="Hemraj" translate="no">NEED NEW
+        SCREENSHOT</draft-comment>
+      <fig>
+         <title> First Section of Configuration Page</title>
+         <image href="./media/Image_058.jpg" placement="break"/>
+      </fig>
+      <p>The following table describes the Analyzer configuration parameters on the configuration
+      page. These parameters</p>
+      <table id="table_ixt_3lh_vx">
+         <tgroup cols="2">
+            <colspec colnum="1" colname="col1"/>
+            <colspec colnum="2" colname="col2"/>
+            <thead>
+               <row>
+                  <entry>Configuration Parameter</entry>
+                  <entry>Description</entry>
+               </row>
+            </thead>
+            <tbody>
+               <row>
+                  <entry>LDAP/AD Base URL</entry>
+                  <entry>This is the LDAP/AD Base URL for the Active Directory Server in a single-server
+              environment or the base URL for the first server defined in a multi-server environment
+              (in which the remaining servers are defined directly in the properties file.</entry>
+               </row>
+               <row>
+                  <entry>LDAP/AD Server URL</entry>
+                  <entry>This is the LDAP/AD Server UURL for the Active Directory Server in a
+              single-server environment or the base URL for the first server defined in a
+              multi-server environment (in which the remaining servers are defined directly in the
+              properties file.</entry>
+               </row>
+               <row>
+                  <entry>LDAP/AD Manager DN</entry>
+                  <entry>This is the distinguished name that uniquely identifes an entry in the LDAP
+              Directory Information Tree and in this case represents the Common Name (CN),
+              Organizational Unit (OU), and Domain Component (DC). This entry cannot be changed.
+                <draft-comment author="Hemraj" translate="no">Is this correct or not changed the first
+                time?</draft-comment>For example:
+              <codeblock xml:space="preserve">CN=analyzeradmin,OU=hexis,DC=customer,DC=com
+CN=analyzeradmin</codeblock>
+                  </entry>
+               </row>
+               <row>
+                  <entry>LDAP/AD Username</entry>
+                  <entry>The user name of the Analyzer Administrator.</entry>
+               </row>
+               <row>
+                  <entry>LDAP/AD Password</entry>
+                  <entry>The password of the Analyzer Administrator.</entry>
+               </row>
+               <row>
+                  <entry>LDAP/AD Password to authenticate</entry>
+                  <entry>The LDAP password to authenticate with LDAP/AD- NEED MORE DETAIL</entry>
+               </row>
+               <row>
+                  <entry>LDAP/AD User pattern</entry>
+                  <entry>The required user pattern in the following format:
+              CN=users,DC=dev-ap,DC=local</entry>
+               </row>
+               <row>
+                  <entry>Test Connection</entry>
+                  <entry>Used to check whether the credentials (defined above) are accurately
+              configured.</entry>
+               </row>
+               <row>
+                  <entry>SMTP Port</entry>
+                  <entry>Port on which the SMTP server listens and is used for emails. <draft-comment author="Hemraj" translate="no">IS THERE A COMMON PORT NUMBER FOR THIS?</draft-comment>
+                  </entry>
+               </row>
+               <row>
+                  <entry>SMTP Authenticate Users</entry>
+                  <entry>The SMTP login user that is used to send emails.</entry>
+               </row>
+               <row>
+                  <entry>SMTP Password</entry>
+                  <entry>The password for the SMTP user.</entry>
+               </row>
+               <row>
+                  <entry>SMTP From</entry>
+                  <entry>The originating user<draft-comment author="Hemraj" translate="no">???</draft-comment> for
+              SMTP</entry>
+               </row>
+               <row>
+                  <entry>SMTP From Email Address</entry>
+                  <entry>The originating email address for SMTP</entry>
+               </row>
+               <row>
+                  <entry>SMTP Start TLS Enables</entry>
+                  <entry>Used to enable secure connections to send emails.</entry>
+               </row>
+            </tbody>
+         </tgroup>
+      </table>
+      <p>
+         <draft-comment author="Hemraj" translate="no">ALL OF THESE PARMETERS NEED MORE DETAIL (SEE FIRST
+        ONE)</draft-comment>
+      </p>
+      <section>
+         <title>Configuring SSL for the Deployment Manager</title>
+         <p>Connections to the Deployment Manager are protected by SSL, using a self-signed SSL
+        certificate that is generated automatically during the installation or upgrade process. You
+        can replace the automatically generated self-signed SSL certificate with your own
+        certificate. For more information, see <xref href="c_admin_guide-3_5_1-Using-a-Custom-SSL-C_snsg.xml#topic_3_5_1"/>. The self- signed SSL
+        certificate is valid for one year. You can replace an expired certificate for the Deployment
+        Manager (see <xref href="c_admin_guide-3_5_2-Replacing-an-Expired_snsg.xml#topic_3_5_2"/>) and the Analyzer (see <xref href="c_admin_guide-3_5_3-Using-a-Custom-Certi_snsg.xml#topic_3_5_3"/>).</p>
+         <p>Additionally, the Deployment Manager manages AP components on each host of the AP
+            cluster via SSL connections, using SSL certificates that were generated during
+            installation on each AP host in the cluster. These certificates are set to expire in 3
+            years. When the certificates expire, the Deployment Manager will be unable to manage the
+            hosts in the AP cluster, although the AP functions will continue to work. To re-enable
+            the Deployment Manager's capability to manage the AP cluster after the SSL certificate
+            expires, follow the procedure described in <xref
+               href="c_admin_guide-3_5_4-Replacing-Expired-SS_snsg.xml#topic_3_5_4"/>.</p>
+      </section>
+   </conbody>
+</concept>

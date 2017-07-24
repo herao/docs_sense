@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_5_7_2">
+   <title>Using the "BEFORE &lt;timestamp_expression&gt;" Command</title>
+   <conbody>
+      <p>To permanently delete the records whose date and time precede a specified timestamp
+      expression, follow the BEFORE key word with a timestamp expression. The syntax is:</p>
+      <p>
+         <codeph>BEFORE &lt;timestamp_expression&gt;</codeph>
+      </p>
+      <p>where <codeph>&lt;<i>timestamp_expression</i>&gt; </codeph>can use any SenSage AP SQL
+         expression that evaluates to a timestamp data type. For
+         example:<codeblock xml:space="preserve">atquery localhost:8072 -e "RETIRE FROM syslog
+ BEFORE time('Aug 26 11:02:34 2005')"</codeblock>
+      </p>
+      <p>Example With FORCE
+         Keyword:<codeblock xml:space="preserve">atquery localhost:8072 -e "RETIRE FROM syslog
+ BEFORE time('Aug 26 11:02:34 2005') FORCE"</codeblock>
+      </p>
+      <p>For more information, see <b>Time Functions</b> in “SenSage AP ConsoleSenSage AP SQL
+      Functions” of the <cite>Event Data Warehouse Guide</cite>.</p>
+   </conbody>
+</concept>

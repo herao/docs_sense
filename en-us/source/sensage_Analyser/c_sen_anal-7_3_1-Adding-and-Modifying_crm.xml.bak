@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_7_3_1">
+   <title>Adding and Modifying Model Input and Output Parameters</title>
+   <conbody>
+    
+      <p>Models can accept input parameters and can return results. The count of input and output
+        parameters inside a function will be equal to this count when you drop a model inside
+        another model. You can see the equality of parameters on the slide with red, green, blue and
+        pink lines. Count of input and output parameters is unlimited. DON’T SEE THIS ON THE
+          SLIDE.</p>
+     <p>On a model component, when you want to add either an input or output
+          parameter:</p><ol id="ol_pmv_vdr_zx">
+          <li>Right-click the "input" or "result" icon on a model.</li>
+          <li>Select "Make model input".<p>A purple model input icon is displayed to enter your
+              input. Provide the name of your input or output parameter. The system provides a
+              datatype identifier to indentify the type of data that is applicable for any given
+              input or output parameter or property. IS AN ERROR MESSAGE DISPLAYED IF THE DATATYPE
+              IS INCORRECT?</p><p>
+              <note>NOTE: Types are represented with a different icon for each data type. Depending
+                on the datatype of your parameter, you will see one of the following icon types
+                beside your parameter entry as noted in Figure 6-7.</note>
+            </p><p>Figure 6-7: Icon Types for Parameters</p><p><image href="./media/Image_267.jpg"
+                height="260" width="464" id="image_qmv_vdr_zx"/></p><p>Figure 6-8 below displays the
+              icons for the following datatypes: the green calculator icon represents an integer,
+              the grey calculator icon represents a number, the text icon represents a text, the
+              calendar icon represents a timestamp.</p><p>Figure 6-8: Example of Icon Types in a
+              Component</p><p><image href="./media/Image_268.jpg" height="231" width="431"
+                id="image_rmv_vdr_zx"/></p></li>
+          <li>If you have a list of parameter values that are required with your Analytic Component,
+            you will be prompted to provide the value in a text. A list is a data structure
+            consisting of a collection of elements of the same data type. CHECK THIS. After you
+            click Save, a blue rectangular box appears in the datatype icon to denote that more than
+            one parameter value is assigned.<p>Figure 6-9 provides an example of three components
+              that accept a list of values. Concatenate Strings accepts a list of text values and
+              returns a concatenated text in a single text variable.</p><p>Standard Deviation
+              accepts a list of numbers and returns a standard deviation value of the input numbers.
+              Split String component accepts Input and Delimiter values and returns a list of text
+              values.</p><p>Figure 6-9: Example of Input Parameter List</p><p><image
+                href="./media/Image_269.jpg" height="275" width="419" id="image_smv_vdr_zx"
+            /></p></li>
+          <li>Click Save. NEED TO CHECK WHEN SAVE IS CLICKED.<note>NOTE: The count of input and
+              output parameters inside a function will be equal to this count when you drop this
+              model inside another model. You can see the equality of parameters on the slide with
+              red, green, blue and pink lines. Count of input and output parameters is unlimited.
+              DON’T SEE THIS ON THE SLIDE.</note></li>
+        </ol>
+    
+    <p>To modify either an input or output parameter:</p>
+    <ol id="ol_umv_vdr_zx">
+      <li>Right-click the "input" or "result" icon on a model.</li>
+      <li>Click the option corresponding to what you want to modify as noted below (see Figure 6-10
+        and Figure 6-11).<ul id="ul_vmv_vdr_zx">
+          <li>
+            <p>To rename a parameter, click "Rename Parameter" in the popup menu. Change the name of
+              the parameter in the text box and click the Save to right of the text box.</p>
+          </li>
+          <li>
+            <p>To assign a default value to an input parameter, allowing this value for use if the
+              parameter for this model is not assigned, click "Set Parameter Value" in the popup
+              menu. Change the value in the text box and click Save to the right of the text
+              box.</p>
+          </li>
+          <li>
+            <p>To delete a parameter, click "Delete" in the popup menu. Click Save. CHECK THIS TO
+              SEE IF SAVE APPEARS</p>
+          </li>
+          <li>
+            <p>To copy a parameter, click "Copy" in the popup menu. Then go to the model component
+              where you we want to copy the parameter. Click the "input" or "result" icon and paste
+              the parameter name in text box.</p>
+          </li>
+          <li>
+            <p>To specify a bounded/unbounded state for the parameter, right-click "Make Bounded
+              (List)" or "Make Unbounded (List)" Click Save. NEED TO CHECK THIS.</p>
+          </li>
+        </ul></li>
+    </ol>
+    <p>Figure 6-10: Setting Model Input Parameter</p>
+    <p><image href="./media/Image_271.jpg" height="138" width="599" id="image_wmv_vdr_zx"/></p>
+    <p>Figure 6-11: Setting Model Output Parameter</p>
+    <p><image href="./media/Image_272.jpg" height="144" width="570" id="image_xmv_vdr_zx"/></p>
+  </conbody>
+</concept>

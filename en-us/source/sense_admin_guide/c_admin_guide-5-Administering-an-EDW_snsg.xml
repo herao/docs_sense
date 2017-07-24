@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_5">
+   <title>Administering an EDW Instance</title>
+   <conbody>
+      <p>This chapter contains the following sections:<ul id="ul_qsd_sr5_vx">
+            <li>
+               <xref href="c_admin_guide-5_1-Task-Priority-and-Qu_snsg.xml#topic_5_1"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-5_2-Backup-and-Restore_snsg.xml#topic_5_2"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-5_3-Defining-Data-Object_snsg.xml#topic_5_3"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-5_4-Listing-Deleting-a_snsg.xml#topic_5_4"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-5_5-Modifying-Table-Sche_snsg.xml#topic_5_5"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-5_6-Monitoring-an-EDW-In_snsg.xml#topic_5_6"/>
+            </li>
+            <li>
+               <xref href="c_admin_guide-5_7-Monitoring-Disk-Usag_snsg.xml#topic_5_7"/>
+            </li>
+         </ul>
+      </p>
+   </conbody>
+</concept>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1_5">
+   <title>Contacting Technical Support</title>
+   <conbody>
+    <p>For additional help: <ul id="ul_m21_dpk_qy">
+        <li>call +1 650 830-0484</li>
+        <li>Log into the IgniteTech Technical Support web page under Services at <xref
+            href="http://www.ignitetech.com" format="html" scope="external"
+            >http://www.ignitetech.com</xref> for additional information on contacting support to
+          escalate help on issues that impact your production environment.</li>
+      </ul></p>
+  </conbody>
+</concept>

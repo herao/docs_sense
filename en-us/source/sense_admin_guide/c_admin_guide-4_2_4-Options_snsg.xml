@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_4_2_4">
+   <title>Options</title>
+   <conbody>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--version</codeph>
+            </pt>
+            <pd>Displays version of atquery.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--help, --longhelp</codeph>
+            </pt>
+            <pd>Displays online help for command in short form (<codeph>--help</codeph>), or with additional
+          detail (<codeph>--longhelp</codeph>).</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--namespace=&lt;namespace&gt;</codeph>
+            </pt>
+            <pd>The namespace in which to find the specified table or view. The default namespace is
+               default. To specify the top level, use "" (empty quotation marks).<p>When you run
+                  atquery, you can specify the namespace as a prefix to the table or view name (for
+                  example, ns1.ns2.ns3.mytable) or use the
+                     <codeph>--namespace=&lt;namespace&gt;</codeph> flag to specify the
+                  namespace.</p><note>When you use the namespace flag, you can specify the namespace
+                  once for an entire command; SenSage AP prepends the specified namespace to each
+                  table or view name used in the rest of the request.</note></pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--verbose=&lt;n&gt;</codeph>
+            </pt>
+            <pd>Where <i>&lt;n&gt; </i>represents result set(0), errors(1), warnings(2), progress(3), or
+          everything(4). Default is 2.<table id="table_v34_ggp_4y">
+                  <tgroup cols="3">
+                     <colspec colnum="1" colname="col1" colwidth="1.12*"/>
+                     <colspec colnum="2" colname="col2" colwidth="1*"/>
+                     <colspec colnum="3" colname="col3" colwidth="3.85*"/>
+                     <thead>
+                        <row>
+                           <entry>Verbose Level</entry>
+                           <entry>Meaning</entry>
+                           <entry>Description</entry>
+                        </row>
+                     </thead>
+                     <tbody>
+                        <row>
+                           <entry/>
+                           <entry>result set only</entry>
+                           <entry>
+                              <p>Displays only the result set of the query. Use the --format option
+                                 to specify the text format of the result set.</p>
+                              <p>For more information, see <xref
+                                    href="c_admin_guide-4_2_8-Scripting-Support-An_snsg.xml#topic_4_2_8"
+                                 />.</p>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry>1</entry>
+                           <entry>error</entry>
+                           <entry>Displays the result set and only errors; ignores all
+                              non-errors</entry>
+                        </row>
+                        <row>
+                           <entry>2</entry>
+                           <entry>warning</entry>
+                           <entry>Displays the result set and warnings and errors; uses dots (...)
+                              to indicate progress and exclamation points (!) to indicate parsing
+                              errors</entry>
+                        </row>
+                        <row>
+                           <entry>3</entry>
+                           <entry>progress</entry>
+                           <entry>Shows progress in greater detail than level 2</entry>
+                        </row>
+                        <row>
+                           <entry>4</entry>
+                           <entry>everything</entry>
+                           <entry>Displays all informational messages</entry>
+                        </row>
+                     </tbody>
+                  </tgroup>
+               </table>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--override=&lt;name&gt;:&lt;value&gt;</codeph>
+            </pt>
+            <pd>Overrides default values for expression macros defined in SQL statements. You can repeat this
+          option to override default values for different expression macros.</pd>
+            <pd>For more information, see <b>Expression Macros</b> in Chapter 3, “SenSage AP SQL” in the
+            <cite>Event Data Warehouse Guide</cite>.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--ansi</codeph>
+            </pt>
+            <pd>Optionally triggers "ANSI" mode for a given query when using Open Access Extension
+               (OAE). The inet datatype family code has a value of "none" (which means that an empty
+               string was converted to an inet address) or "invalid" (which means a non-empty string
+               that did not contain a valid IPv4/IPv6 address was converted to an inet address) ANSI
+               mode, at query-time when these two special inet values exist they are transformed
+               into "0.0.0.0/0" so that the original inet values, "none" or "invalid" are never
+                  displayed.<note>The actual data persisted to disk and into the Bloom Filters and
+                  Index files is not changed. This allows the EDW to behave as expected in "Native
+                  Mode".</note></pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--tableswap=&lt;name&gt;:&lt;newname&gt;</codeph>
+            </pt>
+            <pd>Substitutes table names in FROM clauses with another table name. You can repeat this
+               option to substitute different tables in different FROM clauses, such as in
+               sub-SELECTs and subqueries.<p>When building libraries of queries, it is often helpful
+                  to replace the tables in the FROM clause with different tables, chosen at the time
+                  the query is run. The <codeph>--tableswap</codeph> option enables this
+                  functionality, which operates in the same way as the processing directive WITH
+                     <i>&lt;name&gt;</i> AS TABLE <i>&lt;newname&gt;</i>.</p><p>For more
+                  information, see <b>Table-Name Substitutes</b> in Chapter 3, “SenSage AP SQL” in
+                  the Event Data Warehouse Guide.</p>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>-expression=&lt;<i>SQL_stmt</i>&gt;</codeph>
+            </pt>
+            <pt>
+               <codeph>-e=&lt;SQL_stmt&gt; (alias)</codeph>
+            </pt>
+            <pd>Executes the given SQL statement. Both of these options allow you to specify an inline SQL
+          statement as a command-line option. You can specify multiple queries this way.<p>
+                  <note type="tip">Alternatively, you can specify a single hyphen at the end of the
+                     line preceding the SQL statement, and on a new line, type the SELECT statement
+                     followed by EOF (^D). For
+                     example:<codeblock xml:space="preserve">atquery --user=administrator --pass=pass:s0mep@ss \
+localhost:8072 --namespace='system' -
+SELECT * FROM users;</codeblock>
+                  </note>
+               </p>
+               <p>The statement above returns the same results
+            as:<codeblock xml:space="preserve">atquery --user=administrator --pass=pass:s0mep@ss localhost:8072 \
+--namespace='system' -expression='SELECT * FROM users;'</codeblock>
+               </p>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--postproc={&lt;filename&gt;|&lt;perl_code&gt;}</codeph>
+            </pt>
+            <pd>Optionally post-processes the rows in the final result set of a query. Post-processing logic is
+          written in Perl code, which you supply from a file or the command line. When you provide
+            <i>&lt;perl_code&gt;</i>, start the value with an open curly brace ({).<p>Use
+            postprocessing to change the rows in results sets as they come back from the EDW, before
+            the client application receives them. A postprocessor might do the following:<ul id="ul_fnt_k3p_4y">
+                     <li>Recalculate values in particular column, perhaps through lookup</li>
+                     <li>Aggregate data returned from the EDW in some special way</li>
+                     <li>Change the set of columns contained in the result set.</li>
+                  </ul>
+               </p>
+               <p>For more information, see <xref href="c_admin_guide-4_2_10-Query-Postprocessor_snsg.xml#topic_4_2_10"/>.</p>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--format=&lt;string&gt;</codeph>
+            </pt>
+            <pd>To format the result rows, &lt;<i>string</i>&gt; must be one of the following:<ul id="ul_afp_s3p_4y">
+                  <li>max_width — pipe-delimited that spaces the columns to the maximum-width value</li>
+                  <li>tsv — tab-separated values</li>
+                  <li>csv — comma-separated values</li>
+                  <li>psv — pipe-symbol-separated values</li>
+                  <li>dots — a max_width variant meant for two-column results</li>
+               </ul>
+               <p>The default is <codeph>max_width</codeph>.</p>
+               <note> Specify only tsv, csv, or psv
+            if you specify --verbose=0.</note>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--timeout=&lt;seconds&gt;</codeph>
+            </pt>
+            <pd>Specifies how long to let queries run before they time out. The default is 0, which indicates no
+          timeout.</pd>
+            <pd>Automatically cancels a query that is taking too long. This is useful for scripting
+          atquery when you are concerned that a query may "hang" for some reason.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--[no]raw</codeph>
+            </pt>
+            <pd>This option forces atquery to print the raw XML load results that the EDW returns, instead of
+          the preformatted results that atquery usually shows. This is useful for debugging. </pd>
+            <pd>The default is <codeph>noraw</codeph>.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--[no]dbgprint-request</codeph>
+            </pt>
+            <pd>Dumps the client-server request, then exits. The default is
+            <codeph>--nodbgprint-request</codeph>.</pd>
+            <pd>This option forces <codeph>atquery</codeph> to print the execution requests that it
+          would have sent to the EDW, and then stops execution rather than proceeding with the query
+          or queries. This is useful for debugging situations and for understanding the EDW
+          API.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--progress-type=&lt;type&gt;</codeph>
+            </pt>
+            <pd>For verbose level 3 and above, this option controls what type of progress indicators to return;
+          they include:<ul>
+                  <li>
+                     <codeph>dot</codeph> — prints only periods, which indicate that the query is
+              running, but does not provide any hints about when it will finish. This indicator is
+              useful when you do not want to see the query details, but want to know that the query
+              is working and has not hung.</li>
+                  <li>
+                     <codeph>all</codeph> — the default, this indicator provides instance-wide
+              statistics, which roll up progress indicators sent by each host in the instance.</li>
+                  <li>
+                     <codeph>unfmt</codeph> — prints details in a more machine-readable format; for
+              example, suitable for incorporating progress feedback into applications.</li>
+                  <li>
+                     <codeph>host</codeph> — prints very verbose per-host details.</li>
+               </ul>The example below illustrates the format of the <b>all</b>
+          indicator:<codeblock xml:space="preserve">- 97.0s elapsed, on select 1/3, pass 2/3, during 1/2, about 32% done (some at
+select 2/3)
+- selecting 1970-01-01 00:00:00 GMT from L0307060456
+- time range 1970-01-01 00:00:00 ------|------------------ 1970-01-01 00:00:03
+- scanned 17M records, 227K rps ( 180K rps average)
+- aggregated 591K records, 7,306 rps ( 6,101 rps average) into 6,669 groups
+- RAM free 2,521MB of 4,747MB total (53%), min is perf02: 579MB (36%)</codeblock>
+            </pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--detailedprogress</codeph>
+            </pt>
+            <pd>In addition, displays per-query or per-host progress.</pd>
+         </plentry>
+      </parml>
+      <parml>
+         <plentry>
+            <pt>
+               <codeph>--skip-queues</codeph>
+            </pt>
+            <pd>Ignores task priority queuing. For more information, see <xref href="c_admin_guide-5_1-Task-Priority-and-Qu_snsg.xml#topic_5_1"/>.</pd>
+         </plentry>
+      </parml>
+   </conbody>
+</concept>

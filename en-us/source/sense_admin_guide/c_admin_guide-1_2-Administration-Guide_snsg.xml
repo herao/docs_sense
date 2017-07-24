@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1_2">
+   <title>Administration Guide Organization</title>
+   <conbody>
+      <ul id="ul_gf3_s2f_vx">
+         <li>
+            <p>This book contains the following chapters:</p>
+         </li>
+         <li>
+            <p>
+               <xref href="c_admin_guide-2-Introduction_snsg.xml#topic_2"/>—Provides an overview of SenSage AP system administration tasks
+          and SenSage AP architecture</p>
+         </li>
+         <li>
+            <p>
+               <xref href="c_admin_guide-3-ManagingSensageAP_snsg.xml#topic_3"/>—Describes how to use Deployment Manager to monitor and
+          configure SenSage AP and perform standard operations. Also included are utility tools for
+          general tasks that support SenSage AP configuration and management.</p>
+         </li>
+         <li>
+            <p>
+               <xref href="c_admin_guide-4-Sensage-Loading-Que_snsg.xml#topic_4"/>—Describes the utilities that SenSage AP provides for loading,
+          querying, managing, viewing, and retiring data.</p>
+         </li>
+         <li>
+            <p>
+               <xref href="c_admin_guide-5-Administering-an-EDW_snsg.xml#topic_5"/>—Describes how to back up and restore EDW tables, restore hosts
+          in an EDW instance, monitor the system, and archive data.</p>
+         </li>
+         <li>
+            <p>
+               <xref href="c_admin_guide-6-Replacing-a-Failed-E_snsg.xml#topic_6"/>—Describes the process for handling a failed EDW node.</p>
+         </li>
+         <li>
+            <p>
+               <xref href="c_admin_guide-7-Administering-the-Co_snsg.xml#topic_7"/>—Describes how to perform various administrative tasks for the
+          optimal operation of the Collector, including starting the Collector, monitoring Collector
+          operational logs for errors, handling bad load operations, and backing up processed log
+          files.</p>
+         </li>
+         <li>
+            <p>
+               <xref href="c_admin_guide-8-Managing-SecurityU_snsg.xml#topic_8"/>—Describes how to configure authentication and authorization
+          and provides an overview on administering users, roles and permissions.</p>
+         </li>
+         <li>
+            <p>
+               <xref href="c_admin_guide-10-ARCHIVING-TONEARLIN_snsg.xml#topic_10"/>—Describes how to archive data to Nearline storage.</p>
+         </li>
+         <li>
+            <p>
+               <xref href="c_admin_guide-11-TROUBLESHOOTING_snsg.xml#topic_11"/>—Describes basic troubleshooting.</p>
+         </li>
+         <li>
+            <p>
+               <xref href="c_admin_guide-12-LOGFILEAPPENDIX_snsg.xml#topic_12"/>—Presents reference material on log files.</p>
+         </li>
+         <li>
+            <p>
+               <xref href="c_admin_guide-13-ERRORCODES_snsg.xml#topic_13"/>—Presents reference material on error codes.</p>
+         </li>
+         <li>
+            <p>
+               <xref href="c_admin_guide-14-TIMEZONES_snsg.xml#topic_14"/>—Presents reference material on time zones.</p>
+         </li>
+      </ul>
+   </conbody>
+</concept>

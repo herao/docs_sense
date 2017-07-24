@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+         id="topic_10_2_2_3">
+   <title>Configuring a Centera Unit for Single-Instance Storage</title>
+   <conbody>
+      <p>The Centera provides multiple ways to generate unique IDs (references) that identify the
+      event-log data archived to it. For optimal storage capacity, IgniteTech recommends that you
+      configure your Centera unit for single-instance storage; EDW saves two copies of all event-log
+      data (primary and secondary), using single-instance storage cuts data storage in half.</p>
+      <note>Configuring your SenSage AP installation such that multiple inserts to the same table occur
+      at the same time reduces the benefit of single-instance storage for data loaded simultaneously
+      to the same table.</note>
+   </conbody>
+</concept>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_9_2">
+   <title id="title_a38">What you Need to Know before Integrating Active Directory/LDAP</title>
+   <conbody>
+      <p>You can configure AD/LDAP integration on a new SenSage AP deployment or migrate an existing
+      SenSage AP deployment to use AD integration. Whether you are using a new deployment or
+      migrating to an existing one, the process is the same.</p>
+      <p>Following is a brief overview of the AD/LDAP preparation, configuration, and integration
+      process. The actual configuration and integration steps are described in detail in Setting Up
+      Active Directory.</p>
+      <ol>
+         <li>To prepare for AD/LDAP integration:<ol>
+               <li>The AD Administrator creates a AD/LDAP Enumerator user account; a default Analyzer
+            "Admin" that is already in the Analyzer system will be mapped to the AD (enumerator)
+                user.<note type="important">: User names are case sensitive in SenSage AP and Active
+              Directory will preserve the case of the name as entered by the AD Administrator into
+              the SAM field, from which AP user names are derived.</note>
+               </li>
+               <li>For a new SenSage AP deployment, an administrator is required to identify all users,
+            roles and permissions in the organization. For an existing deployment, an administrator
+            is required to identify all existing roles and users prior to beginning the integration.
+            For details, see the following section, <i>Mapping Users and Groups</i>.</li>
+               <li>In the Active Directory Console, the AD Administrator adds a <b>hexis</b> OU and adds
+            any desired users and groups to the OU (directory or via OU Association).</li>
+            </ol>
+         </li>
+         <li>To perform set up tasks such as user sync or group sync, the Analyzer "Admin" is required
+        to log into the Analyzer for the first time with the AD Enumerator DN password.</li>
+         <li>In Deployment Manager, the SenSage AP Service Configuration screen is used to configure a
+        single AD server as noted in <xref href="c_admin_guide-9_3_3-Configuring-Single-A_snsg.xml#topic_9_3_3"/>. Additional servers must be
+        configured in the Analyzer Host as noted in <xref href="c_admin_guide-9_3_4-Configuring-Multiple_snsg.xml#topic_9_3_4"/>.</li>
+         <li>In AP Analyzer, the Analyzer "Admin" can populate users by synchronizing with AD
+        immediately, or by creating a schedule to synchronize periodically. The Analyzer "Admin" can
+        also edit the populated user accounts and add additional accounts manually through mapping
+        AD server mapping details to each user account.</li>
+         <li>In AP Analyzer, the Analyzer "Admin" can create a group and synchronize the group with
+        the selected AD/LDAP server mapping details.</li>
+      </ol>
+      <p>
+         <note>When groups are synchronized from Analyzer, all <i>existing</i> users (if migrating to
+        AD/LDAP from an existing SenSage AP deployment) under the specified DN pattern will be
+        updated in Analyzer. This means that the membership group in Analyzer will match the
+        membership of the group in AD.</note>
+      </p>
+   </conbody>
+</concept>

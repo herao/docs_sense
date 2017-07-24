@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_1_4">
+   <title id="title_a2">How to Obtain the SenSage AP License</title>
+   <conbody>
+      <p>Beginning with SenSage AP 5.0.0, you are required to have a license key to run your cluster.
+      Each EDW cluster will require its own, valid license key. Trying to upgrade to 6.1.1 without a
+      valid license will cause the upgrade to fail.</p>
+      <p>Your license is contained in a license key file that you must copy to each EDW node in your
+      cluster. A successful query against your EDW cluster confirms that you have correctly
+      installed a valid license key for your cluster.</p>
+      <p>If you haven’t received your license key, contact your IgniteTech representative. When you
+      receive the key, you need to copy it over to the following placeholder files on each EDW node
+      in your cluster.</p>
+      <p>
+         <filepath>&lt;install-root&gt;/etc/sls/instance/&lt;cluster-name&gt;/LICENSE</filepath>
+      </p>
+      <p>When the new license key, LICENSE, is copied to all EDW nodes, you can restart each EDW
+      normally.</p>
+      <p>Do not alter the license key file in any way. Even a whitespace change will render the file
+      invalid as the embedded digital signature is computed against the exact sequence of bytes in
+      the original license key file.</p>
+      <p>If there is an issue with the LICENSE file, you will see one of the following errors when
+      submitting queries to the EDW cluster:</p>
+      <p>Trial License has expired - The license was tied to a trial period, which has expired.</p>
+      <p>Missing or Invalid License -The LICENSE file specified in the athttpd.conf file on some node
+      is not valid or is missing.</p>
+      <p>EDW configured for more cores then the license allows - The number of physical cores that the
+      cluster is configured to use is larger than the licensed limit.</p>
+      <p>Product is operating under a Trial License and evidence of clock tampering has been noted -
+      the system is running under a trial license and there is evidence that the system clock has
+      been pushed back.</p>
+      <p>
+         <note>"Cluster size" is defined in terms of physical cores. Many Intel CPUs support
+        hyperthreading in which a single physical core appears to the Linux kernel as two logical
+        cores. The <filepath>cluster.xml</filepath> file defines how many logical cores each EDW node will use. The EDW
+        licensing logic looks at the <filepath>cluster.xml</filepath> file and the hardware that the EDW is running on to
+        determine the total number of physical cores that the cluster has been configured to use. If the <filepath>cluster.xml</filepath> file does not specify a number of cores for an EDW node, it is
+        assumed that it will use all cores on that server.</note>
+      </p>
+      <p>If you need to resolve a licensing issue, contact IgniteTech Support.</p>
+   </conbody>
+</concept>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_11_3">
+   <title>Monitoring for Inconsistent Loads</title>
+   <conbody>
+      <p>IgniteTech recommends that you regularly query the <codeph>system.upload_info</codeph> table
+      for loads with inconsistent data. Data is inconsistent when it is not replicated correctly
+      across all hosts in an EDW instance. Rows with the value <codeph>false</codeph> in the
+      CONSISTENT column identify loads with inconsistent data.</p>
+      <p>When you discover loads with inconsistent data through a query of
+        <codeph>system.upload_info</codeph>, run a separate query of the
+        <codeph>system.raw_upload_info</codeph> table and capture the results in a file. Then,
+      contact IgniteTech Support for assistance.</p>
+      <p>For more information on the system tables, see "system.upload_info" and
+      “system.raw_upload_info”, in the <cite>Event Data Warehouse Guide</cite>.</p>
+   </conbody>
+</concept>

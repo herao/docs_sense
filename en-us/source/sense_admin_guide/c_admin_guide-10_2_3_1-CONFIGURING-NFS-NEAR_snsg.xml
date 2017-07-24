@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+         id="topic_10_2_3_1">
+   <title>CONFIGURING NFS NEARLINE STORAGE FOR SENSAGE AP SYSTEM USERS WITH DIFFERENT IDS</title>
+   <conbody>
+      <p>The SenSage AP system user is known on remote file systems by the numeric user ID, not by the
+   alphanumeric user name. This can cause a problem for Nearline storage if the numeric user IDs for
+   the SenSage AP system user are different on different EDW hosts. In this situation, you must
+   create a different NFS share for each of the user IDs assigned to the SenSage AP system user on
+   the EDW hosts.</p>
+      <p>For example, assume you have a 3-host EDW instance. The SenSage AP system user has
+    "<codeph>4321</codeph>" as the user ID on two of the hosts; the user ID is
+    "<codeph>5432</codeph>" on the other host.</p>
+      <p>
+         <image href="./media/Image_306.gif" placement="break" id="image_owd_1mq_wx"/>
+      </p>
+      <p>All three hosts use the same local mount point, "<codeph>/nss</codeph>". The two hosts where
+   the user ID is "<codeph>4321</codeph>" mount the share "<codeph>Host-A:/nss</codeph>"; the other
+   host where the user ID is "<codeph>5432</codeph>" mounts the share
+   "<codeph>Host-B:/nss</codeph>". Alternate shares do not need to be on separate hosts; you can
+   export and share different directories from the same remote host.</p>
+      <p>As an alternative, you can change the user IDs for the SenSage AP system user to be the same on
+   all EDW hosts.</p>
+   </conbody>
+</concept>

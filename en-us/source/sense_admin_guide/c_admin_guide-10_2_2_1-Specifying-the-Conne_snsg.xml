@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+         id="topic_10_2_2_1">
+   <title>Specifying the Connection Specification</title>
+   <conbody>
+      <p>The connection specification includes parameters legal in Centera for
+        <codeph>FPPool_Open</codeph>. These parameters include:</p>
+      <ul id="ul_wyc_kjl_py">
+         <li>Host Identifiers—for more information, see <xref href="c_admin_guide-10_2_2_1_1-Specifying-Host-Iden_snsg.xml#topic_10_2_2_1_1"/>.</li>
+         <li>PEA file location—for more information, see <xref href="c_admin_guide-10_2_2_1_2-Specifying-the-PEA-F_snsg.xml#topic_10_2_2_1_2"/>.</li>
+         <li>The username/secret for the PAI module to be used by the application—for more information,
+        see <xref href="c_admin_guide-10_2_2_1_3-Specifying-the-Usern_snsg.xml#topic_10_2_2_1_3"/>.</li>
+      </ul>
+      <p>The full syntax for the connection specification is one of the
+      following:<codeblock xml:space="preserve">&lt;IP_Address&gt;[:&lt;port&gt;]|&lt;Host_Name&gt;[:&lt;port&gt;]?&lt;path_to_PEA_file_on_SLS_hosts&gt;</codeblock>
+      </p>
+      <p>or<codeblock xml:space="preserve">&lt;IP_Address&gt;[:&lt;port&gt;]|&lt;Host_Name&gt;[:&lt;port&gt;]?name=&lt;username&gt;,secret=&lt;password&gt;</codeblock>
+      </p>
+   </conbody>
+</concept>

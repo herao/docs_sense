@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap
+  PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap>
+   <booktitle>
+      <booklibrary>Analytics Guide</booklibrary>
+      <mainbooktitle>SenSage Standard 2016 (v6.1.1) August 2, 2016</mainbooktitle>
+   </booktitle>
+<!--   <bookmeta>
+      <author>Aurea Software GmbH</author>
+      <category>Vertical</category>
+      <prodinfo>
+         <prodname>
+            <keyword
+               conref="common/c_productnames.xml#c_productnames_125613/prodnameattribute_125613"
+            />
+         </prodname>
+         <vrmlist>
+            <vrm version="2013" modification="initial DITA release"/>
+         </vrmlist>
+         <brand/>
+      </prodinfo>
+      <!-\- organization element does 2 things: enables PDF security, and defines the password in the organization element. Comment out entire bookrights container element if you don't want to secure your PDF.   The example below uses a conref to get the password.-\->
+      <bookrights>
+         <bookowner>
+            <organization>
+               <keyword
+                  conref="common/c_productnames.xml#c_productnames_125613/pdfpassword_125613"
+               />
+            </organization>
+         </bookowner>
+      </bookrights>
+   </bookmeta>-->
+   <frontmatter audience="pdf">
+      <booklists>
+         <toc/>
+      </booklists>
+   </frontmatter>
+</bookmap>

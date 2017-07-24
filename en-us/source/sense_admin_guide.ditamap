@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap
+  PUBLIC "-//OASIS//DTD DITA BookMap//EN" "bookmap.dtd">
+<bookmap xtrc="" xml:lang="en-US">
+   <title>Sensage Administration Guide</title>
+   <chapter href="sense_admin_guide/c_admin_guide-2-Introduction_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-2_1-Overview-of-SenSage-_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-2_1_1-Overview-of-SenSage-_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-2_2-EDW-Architecture_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-2_2_1-About-the-Event-Data_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-2_2_2-Software-for-the-EDW_snsg.xml"/>
+      </topicref>
+   </chapter>
+   <chapter href="sense_admin_guide/c_admin_guide-3-ManagingSensageAP_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-3_1-Logging-into-SenSage_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-3_2-Monitoring-SenSage-A_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-3_3-Services-Tab_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-3_3_1-Summary_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_3_2-Alerts-and-Health-Ch_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_3_3-Metrics_snsg.xml">
+               <topicref href="sense_admin_guide/c_admin_guide-3_3_4-PostgreSQL-General_snsg.xml"/>
+               <topicref href="sense_admin_guide/c_admin_guide-3_3_5-PostgreSQL-BulkReque_snsg.xml"/>
+               <topicref href="sense_admin_guide/c_admin_guide-3_3_6-Tomcat-Usage_snsg.xml"/>
+               <topicref href="sense_admin_guide/c_admin_guide-3_3_7-Tomcat-Internal_snsg.xml"/>
+            </topicref>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-3_4-Hosts-Tab_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-3_4_1-Host-Summary_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_4_2-Components_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_4_3-Host-Metrics_snsg.xml">
+               <topicref href="sense_admin_guide/c_admin_guide-3_4_3_1-Disk-Usage_snsg.xml"/>
+               <topicref href="sense_admin_guide/c_admin_guide-3_4_3_2-Cluster-Load_snsg.xml"/>
+               <topicref href="sense_admin_guide/c_admin_guide-3_4_3_3-Memory-Usage_snsg.xml"/>
+               <topicref href="sense_admin_guide/c_admin_guide-3_4_3_4-Processes-Usage_snsg.xml"/>
+               <topicref href="sense_admin_guide/c_admin_guide-3_4_3_5-Network-Usage_snsg.xml"/>
+               <topicref href="sense_admin_guide/c_admin_guide-3_4_3_6-CPU-Usage_snsg.xml"/>
+            </topicref>
+         </topicref>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-3_5-Modifying-Installati_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-3_5_1-Using-a-Custom-SSL-C_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-3_5_2-Replacing-an-Expired_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-3_5_3-Using-a-Custom-Certi_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-3_5_4-Replacing-Expired-SS_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-3_6-Configuring-a-SenSag_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-3_6_1-Adding-a-New-Host_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-3_7-Managing-SenSage-AP-_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-3_7_1-Starting-Stopping-_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-3_7_2-Starting-Stopping-_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-3_7_3-Listing-all-EDW-Inst_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-3_7_4-Disabling-or-Deactiv_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-3_7_4_1-Reactivating_snsg.xml"/>
+         </topicref>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-3_8-Administering-Deploy_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-3_8_1-Adding-a-New-User_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-3_8_2-Deleting-or-Modifyin_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-3_9-Using-Utility-Tools_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-3_9_1-General-Syntax-for-U_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-3_9_1_1-Options-Default-Valu_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_9_1_2-Getting-Help_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_9_1_3-Editing-Parameters_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_9_1_4-Control-of-execution_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_9_1_5-Remote-Execution_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_9_1_6-Shared-Mandatory-Fie_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-3_9_2-Utility-Tool-Descrip_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-3_9_2_1-Comparing-Files-or-D_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_9_2_2-Running-a-Command-on_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_9_2_3-Copying-Files-and-Di_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_9_2_4-Merging-the-Results-_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-3_9_2_5-Listing-hosts-in-the_snsg.xml"/>
+         </topicref>
+      </topicref>
+   </chapter>
+   <chapter href="sense_admin_guide/c_admin_guide-4-Sensage-Loading-Que_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-4_1-Loading-Data-into-th_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-4_1_1-Synopsis_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_1_2-Description_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-4_1_2_1-International-Suppor_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-4_1_3-Arguments_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_1_4-Options_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_1_5-Parameters_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-4_1_5_1-Authentication-Optio_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_1_5_2-Setting-the-ADDAMARK_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-4_1_6-Loading-Archive-File_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_1_7-Automatic-Expression_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-4_1_7_1-_log_filename_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_1_7_2-_log_srchost_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-4_1_8-Loading-Information-_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_1_9-Reading-Log-Data-fro_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_1_10-Tracking-Uploads-in-_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_1_11-Errors-and-Return-Va_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-4_2-Querying-Data_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-4_2_1-Synopsis_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_2_2-Description_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_2_3-Arguments_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_2_4-Options_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_2_5-Parameters_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-4_2_5_1-Authentication-Optio_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-4_2_6-Return-Codes-And-Err_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_2_7-Replay-Support_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_2_8-Scripting-Support-An_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_2_9-Turning-sql-Files-i_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_2_10-Query-Postprocessor_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-4_2_10_1-What-is-a-Postproces_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_2_10_2-Query-Postprocessor-_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_2_10_3-Query-Postprocessor-_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_2_10_4-Query-Postprocessor-_snsg.xml"/>
+         </topicref>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-4_3-Managing-an-EDW-Data_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-4_3_1-Synopsis_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_3_2-Description_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_3_3-Options_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_3_1-Information-about-at_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_3_2-Specify-a-Namespace_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_3_3-Authentication-Optio_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_3_4-Debugging_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-4_3_4-Arguments_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_3_5-Authentication-Manag_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_3_6-Table-Management_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_6_1-createtbl_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_6_2-renametbl_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_6_3-droptbl_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_6_4-backuptbl_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_6_5-restoretbl_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_6_6-canceltask_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_6_7-compacttbl_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_6_8-force-upgrade_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_3_6_9-Errors-and-Return-Va_snsg.xml"/>
+         </topicref>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-4_4-Examining-the-State-_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-4_4_1-Synopsis_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_4_2-Description_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_4_3-Options_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-4_4_3_1-Information-About-at_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_4_3_2-Namespace-Identifica_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_4_3_3-Authentication-Optio_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_4_3_4-Debugging_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-4_4_4-Arguments_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_4_5-Usage-and-Examples_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-4_4_5_1-tables-Viewing-Tabl_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_4_5_2-namespaces-Viewing-_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_4_5_3-columns-Viewing-Col_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_4_5_4-columns-table_name_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_4_5_5-tasks-Showing-Tasks_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_4_5_6-disk-Showing-Disk-C_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_4_5_7-tabledisk-table_nam_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-4_4_6-Errors-and-Return-Va_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-4_5-Retiring-Data_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-4_5_1-Synopsis_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_5_2-Description_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_5_3-Options_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_5_4-Parameters_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_5_5-Arguments_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_5_6-Using-the-FORCE-Keyw_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_5_7-Specifying-the-Data-_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-4_5_7_1-Using-the-UPLOADS-Co_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_5_7_2-Using-the-BEFORE-t_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-4_5_8-Permissions-Required_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-4_5_9-Interrupting-Deletio_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-4_6-Errors-and-Return-Va_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-4_6_1-Example-Event-Log-Da_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-4_6_2-Tuxedo-Data_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_6_3-Websrv-Data_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-4_6_4-Windows-Data_snsg.xml"/>
+         </topicref>
+      </topicref>
+   </chapter>
+   <chapter href="sense_admin_guide/c_admin_guide-5-Administering-an-EDW_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-5_1-Task-Priority-and-Qu_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-5_1_1-How-the-Event-Data-W_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_1_2-Monitoring-Task-Prio_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_1_3-Cancelling-Tasks_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-5_2-Backup-and-Restore_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-5_2_1-Backing-Up-and-Resto_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-5_2_1_1-Overview_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-5_2_1_2-Backing-Up-Your-LDAP_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-5_2_1_3-Restoring-Your-LDAP-_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-5_2_1_4-Backing-Up-Your-Post_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-5_2_1_5-Restoring-Your-Postg_snsg.xml"/>
+         </topicref>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-5_3-Defining-Data-Object_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-5_4-Listing-Deleting-a_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-5_4_1-Listing-Tables_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_4_2-Deleting-Tables_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_4_3-Renaming-Tables_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-5_5-Modifying-Table-Sche_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-5_5_1-Accessing-the-ALTER-_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_5_2-Adding-Columns_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_5_3-Renaming-Existing-Co_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_5_4-Modifying-Data-Types_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_5_5-Splitting-a-Column_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_5_6-Exiting-ALTER-TABLE-_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_5_7-Batch-Execution-of-A_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_5_8-General-Consideratio_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_5_9-NearLine-Storage-Co_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-5_6-Monitoring-an-EDW-In_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-5_6_1-Monitoring-CPU-and-M_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-5_6_2-Verify-Hosts-Are-Up-_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-5_7-Monitoring-Disk-Usag_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-5_7_1-International-Suppor_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-5_8-System-Tables_snsg.xml"/>
+   </chapter>
+   <chapter href="sense_admin_guide/c_admin_guide-6-Replacing-a-Failed-E_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-6_1-Overview_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-6_2-Replacing-a-Failed-E_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-6_3-Recovering-from-mult_snsg.xml"/>
+   </chapter>
+   <chapter href="sense_admin_guide/c_admin_guide-7-Administering-the-Co_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-7_1-Preparing-Log-Data-f_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-7_2-Starting-Stopping-_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-7_3-Monitoring-Logs_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-7_3_1-About-Collector-logs_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-7_3_1_1-Logging-to-syslog_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-7_3_1_2-To-set-File-Based-Lo_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-7_3_1_3-Setting-Both-syslog-_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-7_3_1_4-Log-Formats-for-Tran_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-7_3_1_5-Log-Formats-for-Acti_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-7_3_2-Setting-the-Logging-_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-7_3_3-Tailing-Logs-Files_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-7_3_4-Things-to-watch-out-_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-7_3_4_1-Failed-Retrievers_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-7_3_4_2-Failed-Loaders_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-7_3_4_3-Failed-Loads_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-7_3_4_4-Parse-Failures_snsg.xml"/>
+         </topicref>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-7_4-Handling-Unsuccessfu_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-7_4_1-About-Unsuccessful-L_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-7_4_2-Viewing-Data-from-Un_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-7_4_3-Tracking-Uploads-in-_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-7_4_4-Viewing-Transaction-_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-7_5-Running-Multiple-Col_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-7_6-Scheduling-Retriever_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-7_6_1-The-Schedule-Element_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-7_6_2-The-PollInterval-and_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-7_6_3-Scheduling-and-the-U_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-7_7-Backing-Up-and-Resto_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-7_8-Description-of-Log-F_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-7_8_1-Syntax-for-Log-File-_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-7_8_2-Extensions-for-Log-F_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-7_9-EnablingDisabling-L_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-7_10-Reprioritizing-Log-F_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-7_10_1-Prioritizing-Log-Fil_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-7_10_2-About-metadata-files_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-7_11-Cleaning-Up-Processe_snsg.xml"/>
+   </chapter>
+   <chapter href="sense_admin_guide/c_admin_guide-8-Managing-SecurityU_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-8_1-Security-Management-_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-8_1_1-User-Authentication_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-8_1_1_1-User-Authentication-_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-8_1_2-User-Authorization_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-8_1_3-User-Administration_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-8_1_4-Security-Object-Rela_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-8_1_5-SenSage-AP-Authoriza_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-8_2-SenSage-AP-Security-_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-8_2_1-Postgres-and-Log-Dat_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-8_2_2-Predefined-SenSage-A_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-8_2_3-Setting-up-Analyzer-_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-8_2_4-Revoking-SenSage-AP-_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-8_3-Configuring-Native-A_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-8_3_1-Native-First-Time-Lo_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-8_4-Configuring-LDAP-Int_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-8_4_1-Designating-LDAP-use_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-8_4_2-Roles-and-Permission_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-8_4_3-LDAP-First-Time-Logi_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-8_4_3_1-Analyzer-Database-an_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-8_4_4-Setting-Up-the-Analy_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-8_4_5-Useful-SQL-Scripts-f_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-8_5-FAQs_snsg.xml"/>
+   </chapter>
+   <chapter href="sense_admin_guide/c_admin_guide-9-ConfiguringActiveD_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-9_1-Overview_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-9_1_1-Using-Active-Directo_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-9_2-What-you-Need-to-Kno_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-9_2_1-Consideration-for-Ma_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-9_3-Setting-up-Active-Di_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-9_3_1-Setting-up-the-Analy_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-9_3_2-Configuring-Objects-_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-9_3_2_1-Recommendations_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-9_3_3-Configuring-Single-A_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-9_3_4-Configuring-Multiple_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-9_3_5-UpdatingScheduling-_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-9_3_6-Synchronizing-Groups_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-9_4-Maintaining-Active-D_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-9_5-Troubleshooting_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-9_6-FAQs_snsg.xml"/>
+   </chapter>
+   <chapter href="sense_admin_guide/c_admin_guide-10-ARCHIVING-TONEARLIN_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-10_1-Nearline-Storage-Ov_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-10_1_1-Models-for-Managing-_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-10_1_2-Types-of-Nearline-St_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-10_1_3-How-Nearline-Storage_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-10_1_4-Managing-the-Archivi_snsg.xml"/>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-10_2-Initially-Configurin_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-10_2_1-Defining-and-Managin_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-10_2_2-Specifying-NSAs-for-_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-10_2_2_1-Specifying-the-Conne_snsg.xml">
+               <topicref href="sense_admin_guide/c_admin_guide-10_2_2_1_1-Specifying-Host-Iden_snsg.xml"/>
+               <topicref href="sense_admin_guide/c_admin_guide-10_2_2_1_2-Specifying-the-PEA-F_snsg.xml"/>
+               <topicref href="sense_admin_guide/c_admin_guide-10_2_2_1_3-Specifying-the-Usern_snsg.xml"/>
+            </topicref>
+            <topicref href="sense_admin_guide/c_admin_guide-10_2_2_2-Specifying-Data-Rete_snsg.xml"/>
+            <topicref href="sense_admin_guide/c_admin_guide-10_2_2_3-Configuring-a-Center_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-10_2_3-Specifying-NSAs-for-_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-10_2_3_1-CONFIGURING-NFS-NEAR_snsg.xml"/>
+         </topicref>
+      </topicref>
+      <topicref href="sense_admin_guide/c_admin_guide-10_3-Archiving-of-Local-D_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-10_3_1-Syntax_snsg.xml"/>
+      </topicref>
+   </chapter>
+   <chapter href="sense_admin_guide/c_admin_guide-11-TROUBLESHOOTING_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-11_1-Checking-Space-for-t_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-11_2-Checking-Locking-Sta_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-11_3-Monitoring-for-Incon_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-11_4-Handling-Rendezvous-_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-11_5-Improving-Query-Perf_snsg.xml">
+         <topicref href="sense_admin_guide/c_admin_guide-11_5_1-Generating-a-SQL-Que_snsg.xml"/>
+         <topicref href="sense_admin_guide/c_admin_guide-11_5_2-Enhancing-Performanc_snsg.xml">
+            <topicref href="sense_admin_guide/c_admin_guide-11_5_2_1-Setting-the-TopQuery_snsg.xml"/>
+         </topicref>
+         <topicref href="sense_admin_guide/c_admin_guide-11_5_3-Using-Best-Practices_snsg.xml"/>
+      </topicref>
+   </chapter>
+<!--   <chapter href="sense_admin_guide/c_admin_guide-12-LOGFILEAPPENDIX_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-12_1-Analyzer_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-12_2-Analytics-Installer_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-12_3-Atpgsql_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-12_4-Atslapd_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-12_5-Collector_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-12_6-Nearline-Storage_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-12_7-SenSage-AP_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-12_8-EDW_snsg.xml"/>
+   </chapter>
+   <chapter href="sense_admin_guide/c_admin_guide-13-ERRORCODES_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-13_1-Collector_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-13_2-EDW_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-13_3-SenSage-AP-Retriever_snsg.xml"/>
+   </chapter>
+   <chapter href="sense_admin_guide/c_admin_guide-14-TIMEZONES_snsg.xml">
+      <topicref href="sense_admin_guide/c_admin_guide-14_1-Time-Zone-Conversion_snsg.xml"/>
+      <topicref href="sense_admin_guide/c_admin_guide-14_2-Supported-Time-Zones_snsg.xml"/>
+   </chapter>
+   <chapter href="sense_admin_guide/c_admin_guide-15-FILESMANAGED-BYDEP_snsg.xml"/>--></bookmap>

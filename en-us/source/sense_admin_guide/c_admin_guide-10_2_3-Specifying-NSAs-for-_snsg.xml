@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept
+  PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" id="topic_10_2_3">
+   <title>Specifying NSAs for Remote File Systems</title>
+   <conbody>
+      <p>When you specify the NSA for a remote file system, precede the network storage address
+      with:</p>
+      <p>
+         <codeph>directory://</codeph>
+      </p>
+      <p>The complete NSA syntax for a remote file system is:</p>
+      <p>
+         <codeph>directory://&lt;<i>
+               <b>local-NFS-mount-point</b>
+            </i>
+            <i>&gt;</i>
+         </codeph>
+      </p>
+      <p>Substitute &lt;<i>local-NFS-mount-point</i>&gt; with the local mount point that you will use on
+      all hosts in the EDW instance.</p>
+      <p>
+         <b>Example</b>
+      </p>
+      <p>
+         <codeph>directory:///nss</codeph>
+      </p>
+      <p>Generally, you set up one remote host as the Nearline target for all EDW hosts when you use
+      remote file systems for Nearline storage.</p>
+      <note>Before you mount your NFS mountpoint as a hard or soft mount, consider the following:<ul>
+            <li>
+               <b>hard mount</b>—If the connection to the remote file system breaks, the NFS server hangs
+          indefinitely while it waits for the IO request to complete. When the NFS server hangs, the
+          archive process also hangs while it waits for the remote file system to return online.
+          This situation does not cause other operations to hang but it prevents the archive
+          operation from completing and logging an error.</li>
+            <li>
+               <b>soft mount</b>—If the connection to the remote file system fails, the NFS server fails
+          all IO requests, which causes the EDW to fail the archive operation.</li>
+         </ul>
+      </note>
+   </conbody>
+</concept>
